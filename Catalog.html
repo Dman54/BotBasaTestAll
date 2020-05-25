@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Экспериментальный шаблон</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+  <!-- IonIcons -->
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css" />
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css" />
+  <link rel="stylesheet" href="Mystyles0.css" />
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet" />
+</head>
+
+<!--------------------------------------------BODY ID=FIRSTBODY-------------------------------------------------------------------------------------->
+
+<body id="firstbody" class="catalog-page layout-fixed main-body_added sidebar-collapse">
+  <!---------------------------------------------NAV ID=FIRSTNAV--------------------------------------------------------------------------------------------->
+  <nav id="firstnav" class="header nav-header_added navbar navbar-expand navbar-white navbar-light">
+    <a href="index0.html" class="brand-link">
+      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+        style="opacity: 0.8;" />
+      <span class="brand-text font-weight-light">Bot Basa</span>
+    </a>
+    <!-- Left navbar links -->
+    <div id="gamburger_added" class="navbar-nav gamburger_added">
+      <a class="nav-link" href="#"><i class="fas fa-bars"></i></a>
+    </div>
+    <div id="closeicon_added"><i class="fas fa-times"></i></div>
+    <ul class="navbar-nav navbar-nav_added">
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="Catalog.html#" class="nav-link">Каталог</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#AllMyChannel.html" class="nav-link">Справка</a>
+      </li>
+    </ul>
+    <!-- SEARCH FORM -->
+    <div id="searchhover_added"><i class="fas fa-search"></i></div>
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Поиск" aria-label="Search" />
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!--Bascet-->
+      <li class="nav-item dropdown Fontsizeicon">
+        <!--Добавили стиль шрифта-->
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="fas fa-shopping-basket"></i>
+          <span class="badge badge-danger navbar-badge">5</span>
+        </a>
+
+
+
+      </li>
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown Fontsizeicon">
+        <!--Добавили стиль шрифта-->
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-comments"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle" />
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Brad Diesel
+                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">Call me whenever you can...</p>
+                <p class="text-sm text-muted">
+                  <i class="far fa-clock mr-1"></i> 4 Hours Ago
+                </p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3" />
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  John Pierce
+                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">I got your message bro</p>
+                <p class="text-sm text-muted">
+                  <i class="far fa-clock mr-1"></i> 4 Hours Ago
+                </p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3" />
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Nora Silvester
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">The subject goes here</p>
+                <p class="text-sm text-muted">
+                  <i class="far fa-clock mr-1"></i> 4 Hours Ago
+                </p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+        </div>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown Fontsizeicon">
+        <!--Добавили стиль шрифт-->
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown show">
+        <a class="nav-link dropdown-toggle user-panel_added" data-toggle="dropdown" href="#" aria-expanded="true">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image" />
+          <!-- <span class="caret"></span> -->
+        </a>
+
+        <div class="dropdown-menu" x-placement="bottom-start" style="
+              position: absolute;
+              transform: translate3d(-5px, 40px, 0px);
+              top: 0px;
+              left: 0px;
+              will-change: transform;
+            ">
+          <!-- <a class="dropdown-item" tabindex="-1" href="#">Александр Пирс</a> -->
+          <a class="dropdown-item" tabindex="-1" href="index0latest.html">Профиль</a>
+          <a class="dropdown-item" tabindex="-1" href="#">Настроить что-то</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" tabindex="-1" href="#">Выйти</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <!---------------------------------------------////////////////NAV ID=FIRSTNAV--------------------------------------------------------------------------------------------->
+  <!--------------------------------------------DIV ID=FIRSTWRAPPER-------------------------------------------------------------------------------------->
+
+  <div id="firstwrapper" class="wrapper">
+    <!--------------------------------------------NAV ID=SECONDNAV-------------------------------------------------------------------------------------->
+
+    <nav id="secondnav" class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+
+        <li>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Dashboard v3</li>
+          </ol>
+        </li>
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+        </a>
+        <div style="position: absolute; right: 50%"><a class="nav-link" data-widget="pushmenu" href="#"
+            role="button"><img src="img/telegram.png" style="height: 32px; width: 32px;" <="" div=""> Telegram</a>
+        </div>
+      </ul> <!-- Right navbar links -->
+    </nav>
+    <!--------------------------------------------///////////////////NAV ID=SECONDNAV-------------------------------------------------------------------------------------->
+
+
+    <!--------------------------------------------DIV ID=CONTENT-------------------------------------------------------------------------------------->
+
+    <div id="content" class="content-wrapper">
+
+      <section data-sectionNumber='0' class="channels active">
+
+        <div class="container-fluid">
+          <ul class="nav nav-tabs" id="custom-content-below-tab" role="tablist"
+            style="padding-top: 10px; padding-left: 10px">
+            <li class="nav-item">
+              <a class="nav-link active" id="custom-content-below-home-tab" data-toggle="pill"
+                href="#custom-content-below-channels" role="tab" aria-controls="custom-content-below-channels"
+                aria-selected="false">Каналы</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="custom-content-below-profile-tab" data-toggle="pill"
+                href="#custom-content-below-bots" role="tab" aria-controls="custom-content-below-bots"
+                aria-selected="false">Боты</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="custom-content-below-messages-tab" data-toggle="pill"
+                href="#custom-content-below-chats" role="tab" aria-controls="custom-content-below-chats"
+                aria-selected="false">Чаты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content" id="custom-content-below-tabContent">
+          <div class="tab-pane fade active show" id="custom-content-below-channels" role="tabpanel"
+            aria-labelledby="custom-content-below-channels-tab">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item d-sm-inline-block">
+                <button type="button" class="btn" style="background-color: #FFCD24">
+                  Добавить канал
+                </button>
+              </li>
+            </ul>
+            <div class="container-fluid">
+              <div class="row">
+                <dl class="sub-nav">
+                  <dd class="active"><a class="filter filter-category" data-category="" href="#">Все</a></dd>
+                  <dd class=""><a href="#" class="filter filter-category" data-category="blogs">Блоги</a>
+                  </dd>
+                  <dd class=""><a href="#" class="filter filter-category" data-category="entertainment">Юмор и
+                      развлечения</a>
+                  </dd>
+                  <dd class=""><a href="#" class="filter filter-category" data-category="business">Бизнес и стартапы</a>
+                  </dd>
+                  <dd class=""><a href="#" class="filter filter-category" data-category="news">Новости и СМИ</a>
+
+                  </dd>
+                  <dt style="width:80px; float:right; text-align:right">Категория</dt>
+
+                  <dd class="dropdown ">
+                    <a href="#" class="more-categories-button" data-default-text="Еще категории">
+                      <span>Еще категории</span>
+                      <b class="caret"></b>
+                    </a>
+                  </dd>
+
+                  <div class="clearfix"></div>
+                  <div class="more-categories-list hide" style="margin-top:10px;">
+                    <dd><a href="#" class="filter filter-category " data-category="sales">Продажи</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="music">Музыка</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="crypto">Криптовалюты</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="art">Искусство и фото</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="sport">Здоровье и Спорт</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="politics">Политика</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="video">Видео и фильмы</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="marketing">Маркетинг, PR, реклама</a>
+                    </dd>
+                    <dd><a href="#" class="filter filter-category " data-category="edutainment">Познавательное</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="tech">Технологии</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="education">Образование</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="travels">Путешествия</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="psychology">Психология</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="books">Книги</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="beauty">Мода и красота</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="gaming">Игры и приложения</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="quotes">Цитаты</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="economics">Экономика</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="career">Карьера</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="food">Еда и кулинария</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="auto">Авто</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="language">Лингвистика</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="religion">Религия</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="design">Дизайн</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="catalogs">Каталоги каналов и
+                        ботов</a>
+                    </dd>
+                    <dd><a href="#" class="filter filter-category " data-category="telegram">Telegram</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="babies">Семья и дети</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="animals">Животные</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="health">Медицина</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="handmade">Рукоделие</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="stickers">Каталоги стикеров</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="lifehack">Лайфхаки</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="adult">Для взрослых</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="other">Другое</a></dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-5 col">
+                  <div class="row">
+                    <dl class="sub-nav">
+                      <!-- <dt style="width:20px;">Красивая картинка</dt> -->
+                      <dd class="">
+                        <a class="filter filter-verified" href="#">
+                          Только подтвержденные каналы </a>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-7 col">
+                  <div class="row">
+                    <dl class="sub-nav">
+                      <div class="large-text-right medium-text-right small-only-text-center">
+                        <dt style="height:20px;">&nbsp;</dt>
+                        <dd class="dropup" style="float:none;">
+                          <a class="button-extended" href="#">
+                            Расширенный поиск <b class="caret"></b>
+                          </a>
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="row extended-search-container hide">
+                <dl class="sub-nav" style="display:flex; padding-top:0px;">
+                  <div class="col col-lg-3 col-md-6" style="background-color:#ededed">
+                    <div>
+                      <dt style="margin-left:0px; margin-top:10px; color:#444444;">Подписчиков</dt>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="row">
+                      <div class="col col-lg-6 col-md-6 col-sm-6">
+                        <input type="text" value="" name="subscribers[from]" placeholder="от"
+                          class="filter filter-search" height="30"
+                          style="height:30px; font-size:13px; padding:0 0.5rem;">
+                      </div>
+                      <div class="col col-lg-6 col-md-6 col-sm-6">
+                        <input type="text" value="" name="subscribers[to]" placeholder="до" class="filter filter-search"
+                          height="30" style="height:30px; font-size:13px; padding:0 0.5rem;">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col col-lg-3 col-md-6">
+                    <div>
+                      <dt style="margin-left:0px; margin-top:10px; color:#444444;">Охват 1 поста</dt>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="row">
+                      <div class="col col-lg-6 col-md-6 col-sm-6">
+                        <input type="text" value="" name="post_reach[from]" placeholder="от"
+                          class="filter filter-search" height="30"
+                          style="height:30px; font-size:13px; padding:0 0.5rem;">
+                      </div>
+                      <div class="col col-lg-6 col-md-6 col-sm-6">
+                        <input type="text" value="" name="post_reach[to]" placeholder="до" class="filter filter-search"
+                          height="30" style="height:30px; font-size:13px; padding:0 0.5rem;">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col col-lg-3 col-md-6" style="background-color:#ededed">
+                    <div>
+                      <dt style="margin-left:0px; margin-top:10px; color:#444444;">ERR %</dt>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="row">
+                      <div class="col col-lg-6 col-md-6 col-sm-6">
+                        <input type="text" value="" name="err[from]" placeholder="от" class="filter filter-search"
+                          height="30" style="height:30px; font-size:13px; padding:0 0.5rem;">
+                      </div>
+                      <div class="col col-lg-6 col-md-6 col-sm-6">
+                        <input type="text" value="" name="err[to]" placeholder="до" class="filter filter-search"
+                          height="30" style="height:30px; font-size:13px; padding:0 0.5rem;">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col col-lg-3 col-md-6">
+                    <div>
+                      <dt style="margin-left:0px; margin-top:10px; color:#444444;">Стоимость рекламы ( руб. )</dt>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="row">
+                      <div class="col col-lg-5 col-md-5 col-sm-5">
+                        <input type="text" value="" name="price[from]" placeholder="от" class="filter filter-search"
+                          height="30" style="height:30px; font-size:13px; padding:0 0.5rem;">
+                      </div>
+                      <div class="col col-lg-5 col-md-5 col-sm-5">
+                        <input type="text" value="" name="price[to]" placeholder="до" class="filter filter-search"
+                          height="30" style="height:30px; font-size:13px; padding:0 0.5rem;">
+                      </div>
+                      <div class="col col-lg-2 col-md-2 col-sm-2 text-center"
+                        style="margin-left:0px; padding-left:0px; text-align:center;">
+                        <dd class="" style="margin-left:0px; margin-top:4px; float:none;">
+                          <a class="filter filter-vp" data-price="vp" href="#" title="Взаимопиар">ВП</a>
+                        </dd>
+                      </div>
+                    </div>
+                  </div>
+                </dl>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <noindex>
+                <div class="row r-blocks">
+                  <span>
+                    <a target="_blank" href="/my/ads">реклама</a>
+                  </span>
+                  <div class="col r-blocks-items col-sm-12 col-md-6 col-lg-4"
+                    data-src="https://teleg.run/LinkBazaBot?start=ref=141505811" data-target="104930">
+                    <div class="r-title">Бот для продвижения telegram каналов</div>
+                    <div>
+                      <div class="r-image-container">
+                        <img src="tgstat_images/dbe31e98a115842249a227b023113cc0.jpg" width="70"
+                          class="img-thumbnail r-image">
+                        <!-- <img src="/hit.php?t=h&amp;a=104930&amp;r=0.2564776687478012"> -->
+                      </div>
+                      <div>
+                        <div class="r-description ">Автоматическое продвижение каналов через подборки</div>
+                        <div class="r-action-container">
+                          <a href="#" class="btn btn-primary btn-sm r-action-btn">Добавить канал </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col r-blocks-items col-md-6 col-lg-4" data-src="https://ttttt.me/TGStat_Bot"
+                    data-target="103151">
+                    <div class="r-title">TGStat Bot</div>
+                    <div>
+                      <div class="r-image-container">
+                        <img src="tgstat_images/7659a51c94158f7026fb13a6702e0009.jpg" width="70"
+                          class="img-thumbnail r-image">
+                        <!-- <img src="/hit.php?t=h&amp;a=103151&amp;r=0.8374779219684718"> -->
+                      </div>
+                      <div>
+                        <div class="r-description ">Бот для получения статистики каналов не выходя из Telegram</div>
+                        <div class="r-action-container">
+                          <a href="#" class="btn btn-primary btn-sm r-action-btn">Перейти в бота</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col r-blocks-items col-md-6 col-lg-4" data-src="https://ttttt.me/TGAlertsBot"
+                    data-target="103155">
+                    <div class="r-title">TGAlertsBot</div>
+                    <div>
+                      <div class="r-image-container">
+                        <img src="tgstat_images/7659a51c94158f7026fb13a6702e00c9.jpg" width="70"
+                          class="img-thumbnail r-image">
+                        <!-- <img src="/hit.php?t=h&amp;a=103155&amp;r=0.6259602568804004"> -->
+                      </div>
+                      <div>
+                        <div class="r-description ">Мониторинг упоминаний ключевых слов в каналах и чатах.</div>
+                        <div class="r-action-container">
+                          <a href="#" class="btn btn-primary btn-sm r-action-btn">Перейти в бота</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </noindex>
+            </div>
+            <div class="container-fluid">
+              <div class="row margin-top15 margin-bottom15 sticky-left-column"
+                style="z-index:100; background-color:#f9f9f9; border: 1px #c0c3c6 solid; padding:13px;">
+                <div class="col-sm-12 col-md-12 col-lg-3 col">
+                  <input type="text" name="search" value="" class="filter filter-search" placeholder="Поиск канала">
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-9 col">
+                  <div class="filter filter-sort desc" data-sort="members" data-direction="desc">
+                    <a href="#" title="Количество подписчиков на данный момент">Подписчики</a>
+                    <a href="#"></a>
+                  </div>
+
+                  <div class="filter filter-sort " data-sort="members_growth" data-direction="desc">
+                    <a href="#" title="Количество новых подписчиков за выбранный период">Прирост</a>
+                    <a href="#"></a>
+                  </div>
+
+                  <div class="filter filter-sort" data-sort="views_count" data-direction="desc">
+                    <a href="#" title="Количество просмотров всех публикаций за выбранный период">Суммарный<br>охват</a>
+                    <a href="#"></a>
+                  </div>
+
+                  <div class="filter filter-sort" data-sort="views_per_post" data-direction="desc">
+                    <a href="#" title="Средний охват одной публикации">Охват <br>1 поста</a>
+                    <a href="#"></a>
+                  </div>
+
+                  <div class="filter filter-sort" data-sort="err_percent" data-direction="desc">
+                    <a href="#"
+                      title="(Engagement rate by reach) Уровень вовлеченности аудитории (= Охват 1 поста / Кол-во подписчиков * 100)">ERR
+                      %</a>
+                    <a href="#"></a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid channels_list_body sticky-canceller-container">
+              <div class="row channel">
+                <span class='id-channel d-none'>4</span>
+                <span class="d-none">4</span>
+
+                <div class="col-sm-12 col-md-12 col-lg-3 col">
+                  <div class="row">
+                    <div class="col-sm-3 col-md-2 col-lg-4 col">
+                      <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">
+                        <div style="position:relative" class="">
+                          <img src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
+                            class="b-lazy img-thumbnail b-loaded">
+
+                          <span style="position:absolute; top:8%; left:8%">
+                            <img src="tgstat_images/verified.png" width="20" height="20"
+                              title="У канала есть подтвержденный владелец на сайте TGStat">
+                          </span>
+
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-sm-7 col-md-6 col-lg-8 col">
+                      <div class="channel-list-title">
+
+                        <b>ЖЮ</b>
+
+                      </div>
+                      <div>
+                        <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">AAAAAEDvhYLA-ZoI1386Eg</a>
+                      </div>
+                      <div>
+                        <a href="/entertainment" style="color:gray; font-size:11px;">Юмор и развлечения</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-12 col-lg-9 show-for-large col">
+                  <div>
+                    <a data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
+                      href="#" class="popup_ajax table-link">
+                      907.9k
+                    </a>
+                    &nbsp;
+                  </div>
+                  <div>
+                    <a data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
+                      href="#" class="popup_ajax table-link">
+                      <span class="green">+1.5k</span>
+                    </a>
+                    &nbsp;
+                  </div>
+                  <div>
+                    <a data-width="800" data-height="200" data-src="/ru/channels/121/views" data-type="ajax" href="#"
+                      class="popup_ajax table-link">
+                      4.5m
+                    </a>
+                    <sup class="red">-8.2%</sup>
+                    &nbsp;
+                  </div>
+                  <div>
+                    232.8k
+                    &nbsp;
+                  </div>
+                  <div>
+                    25.6%
+                    &nbsp;
+                  </div>
+                  <div>
+                    <a data-width="800" data-height="200" data-src="/ru/channels/121/reposts" data-type="ajax" href="#"
+                      class="popup_ajax table-link">
+                      1597.3
+                    </a>
+                    &nbsp;
+                  </div>
+                  <div class="price-info" style="float:left; margin-top:20px; font-size:11px; width:auto">
+                    <span data-widget="control-sidebar2" data-slide="true">
+                      <span class="fa fa-rub price-icon active" style="color:white; margin-right:5px;"></span>&nbsp;69
+                      900
+                    </span>
+                  </div>
+                </div>
+                <a href="#" style="position: absolute; right: 8px; bottom: 8px"
+                  class="btn btn-primary btn-sm r-action-btn">Подробнее</a>
+              </div>
+
+            </div>
+          </div>
+          <div class="tab-pane fade" id="custom-content-below-bots" role="tabpanel"
+            aria-labelledby="custom-content-below-bots-tab">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item d-sm-inline-block">
+                <button type="button" class="btn" style="background-color: #FFCD24">
+                  Добавить бота
+                </button>
+              </li>
+            </ul>
+            <div class="container-fluid">
+              <div class="row">
+                <dl class="sub-nav">
+                  <dd class="active"><a class="filter filter-category" data-category="" href="#">Все</a></dd>
+                  <dd class=""><a href="#" class="filter filter-category" data-category="blogs">Блоги</a>
+                  </dd>
+                  <dd class=""><a href="#" class="filter filter-category" data-category="entertainment">Юмор и
+                      развлечения</a>
+                  </dd>
+                  <dd class=""><a href="#" class="filter filter-category" data-category="business">Бизнес и стартапы</a>
+                  </dd>
+                  <dd class=""><a href="#" class="filter filter-category" data-category="news">Новости и СМИ</a>
+
+                  </dd>
+                  <dt style="width:80px; float:right; text-align:right">Категория</dt>
+
+                  <dd class="dropdown ">
+                    <a href="#" class="more-categories-button" data-default-text="Еще категории">
+                      <span>Еще категории</span>
+                      <b class="caret"></b>
+                    </a>
+                  </dd>
+
+                  <div class="clearfix"></div>
+                  <div class="more-categories-list hide" style="margin-top:10px;">
+                    <dd><a href="#" class="filter filter-category " data-category="sales">Продажи</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="music">Музыка</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="crypto">Криптовалюты</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="art">Искусство и фото</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="sport">Здоровье и Спорт</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="politics">Политика</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="video">Видео и фильмы</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="marketing">Маркетинг, PR, реклама</a>
+                    </dd>
+                    <dd><a href="#" class="filter filter-category " data-category="edutainment">Познавательное</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="tech">Технологии</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="education">Образование</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="travels">Путешествия</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="psychology">Психология</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="books">Книги</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="beauty">Мода и красота</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="gaming">Игры и приложения</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="quotes">Цитаты</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="economics">Экономика</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="career">Карьера</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="food">Еда и кулинария</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="auto">Авто</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="language">Лингвистика</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="religion">Религия</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="design">Дизайн</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="catalogs">Каталоги каналов и
+                        ботов</a>
+                    </dd>
+                    <dd><a href="#" class="filter filter-category " data-category="telegram">Telegram</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="babies">Семья и дети</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="animals">Животные</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="health">Медицина</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="handmade">Рукоделие</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="stickers">Каталоги стикеров</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="lifehack">Лайфхаки</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="adult">Для взрослых</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="other">Другое</a></dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="custom-content-below-chats" role="tabpanel"
+            aria-labelledby="custom-content-below-chats-tab">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item d-sm-inline-block">
+                <button type="button" class="btn" style="background-color: #FFCD24">
+                  Добавить чат
+                </button>
+              </li>
+            </ul>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-5 col">
+                  <div class="row">
+                    <dl class="sub-nav">
+                      <!-- <dt style="width:20px;">Красивая картинка</dt> -->
+                      <dd class="">
+                        <a class="filter filter-verified" href="#">
+                          Только подтвержденные каналы </a>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-7 col">
+                  <div class="row">
+                    <dl class="sub-nav">
+                      <div class="large-text-right medium-text-right small-only-text-center">
+                        <dt style="height:20px;">&nbsp;</dt>
+                        <dd class="dropup" style="float:none;">
+                          <a class="button-extended" href="#">
+                            Расширенный поиск <b class="caret"></b>
+                          </a>
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="tab-custom-content">
+          <p class="lead mb-0">Custom Content goes here</p>
+        </div> -->
+      </section>
+
+      <!-- Content Header (Page header) -->
+      <!-- <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Главная стр</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Главная</a></li>
+              <li class="breadcrumb-item active">Главная стр</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div> -->
+      <!-- /.content-header -->
+
+      <!-- Main content -->
+
+      <!--------------------------------------------//////////////////////DIV ID=CONTENT-------------------------------------------------------------------------------------->
+
+      <!--/. container-fluid -->
+
+      <!-- /.content -->
+    </div>
+    <!--------------------------------------------/////////////////DIV ID=FIRSTWRAPPER-------------------------------------------------------------------------------------->
+
+    <!--------------------------------------------ASIDE ID=RIGHTASIDE-------------------------------------------------------------------------------------->
+
+    <aside id="rightaside" class="control-sidebar control-sidebar-gray">
+      <div class="channel-no-selected">
+        Канал не выбран, выберите его или приобретите.
+      </div>
+      <div class="channel-selected">
+        <div class="id-channel-text">Номер текущего канала: <span id='id-channel-in-rightsidebar'></span></div>
+        <img class="channel-img" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
+        <div class="channel-name">ЖЮ</div>
+        <div class="channel-category">Юмор и развлечения</div>
+        <div class="channel-adprice">Стоимость рекламы ... <span>700р</span></div>
+        <div class="channel-description">
+          Медиа о вирусных видео в сети.
+          <br>
+          • По вопросам рекламы:
+          <a rel="nofollow" target="_blank" href="https://ttttt.me/zhoraoga">@zhoraoga</a>
+          <br>
+          • Пригласить друга:
+          <a href="https://tgstat.ru/channel/@lifeyt">@lifeyt</a>
+        </div>
+        <div class="channel-bot">Бот для продвижения <span>no</span></div>
+        <div class="channel-subscribes">
+          <div class="channel-subscribes-name">Подписчики</div>
+          <div class="channel-subscribes-all">Всего <span>900 273</span></div>
+          <div class="channel-subscribes-day">за день <span>-1 600</span></div>
+          <div class="channel-subscribes-week">за неделю <span>-9 200</span></div>
+          <div class="channel-subscribes-mounth">за месяц <span>-3 800</span></div>
+        </div>
+        <div class="channel-views">
+          <div class="channel-views-name">Просмотры</div>
+          <div class="channel-views-number24h">Количество постов за 24ч <span>25</span></div>
+          <div class="channel-views-number24h">Просмотров на пост за 24ч <span>168 280</span></div>
+        </div>
+        <button type="button" class="btn" style="background-color: #FFCD24">
+          Подробнее
+        </button>
+        <button type="button" class="btn" style="background-color: #FFCD24">
+          Купить рекламу
+        </button>
+      </div>
+    </aside>
+    <!--------------------------------------------////////////////ASIDE ID=RIGHTASIDE-------------------------------------------------------------------------------------->
+
+    <!--------------------------------------------FOOTER ID=MAINFOOTER-------------------------------------------------------------------------------------->
+
+    <footer id="mainfooter" class="main-footer">
+      <strong>Copyright &copy; 2014-2019
+        <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
+      All rights reserved.
+      <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 3.0.4
+      </div>
+    </footer>
+
+    <!--------------------------------------------//////////////////FOOTER ID=MAINFOOTER-------------------------------------------------------------------------------------->
+  </div>
+  <!--------------------------------------------///////////////////DIV ID=FIRSTWRAPPER-------------------------------------------------------------------------------------->
+
+  <!-- REQUIRED SCRIPTS -->
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- overlayScrollbars -->
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.min.js"></script>
+  <!-- AdminLTE App -->
+  <!-- <script src="../../dist/js/adminlte.min.js"></script> -->
+
+  <!-- OPTIONAL SCRIPTS -->
+  <!-- AdminLTE for demo purposes -->
+
+  <!--Скрипт который заполняет правый сайдбар-->
+  <!--<script src="dist/js/demo.js"></script>-->
+  <script src="database.js"></script>
+  <!-- page script -->
+  <script>
+    // скрипты для открытия и закрытия меню на небольших экранах (клик по гамбургеру и значку закрытия или самому новому меню)
+    $("#gamburger_added, #closeicon_added").on("click", function (e) {
+      $(".navbar-nav_added").toggleClass("displayok");
+      $("body").toggleClass("modal-open");
+      $("#closeicon_added").toggleClass("displayok");
+    });
+    $(".navbar-nav_added").on("click", function (e) {
+      if ($(".navbar-nav_added").hasClass("displayok")) {
+        $(".navbar-nav_added").toggleClass("displayok");
+        $("body").toggleClass("modal-open");
+        $("#closeicon_added").toggleClass("displayok");
+      }
+    });
+    // код для отображения формы поиска при клике на иконку поиска на маленьких экранах
+    $("#searchhover_added").on("click", function (e) {
+      $(".nav-header_added .form-inline").toggleClass("displayok");
+    });
+
+    // Отображение всех категорий при клике
+    $(".more-categories-button").on("click", function (e) {
+      $(".more-categories-list").toggleClass("hide");
+    });
+    // Отображение расширенного поиска при клике
+    $(".button-extended").on("click", function (e) {
+      $(".extended-search-container").toggleClass("hide");
+    });
+
+    let roleNavList = $("nav[data-selectRoleContent_added]");
+    let roleList = $("ul[data-selectRole_added='true'] li a");
+    let AllRoleSections = $("[data-sectionNumber]");
+    let AllRoleLinks = $("[data-sectionContent]");
+
+    // загрузка разного основного контента в зависимости от активного пункта меню слева
+    AllRoleLinks.on("click", function (e) {
+      e.preventDefault();
+      if ($(this).hasClass("active")) return;
+      let indexOfAllRoleLinks = $(this).attr('data-sectionContent');
+      AllRoleLinks.removeClass("active");
+      AllRoleSections.removeClass("active");
+      $(this).addClass("active");
+      $(`[data-sectionNumber=${indexOfAllRoleLinks}]`).addClass("active");
+    });
+
+    // Смена стилей и панели навигации для активной роли и для активного пукта меню
+    roleList.on("click", function (e) {
+      if ($(this).hasClass("active")) return;
+      roleList.removeClass("active");
+      $(this).addClass("active");
+      roleNavList.removeClass("displayok");
+      let indexOfRoleList = roleList.index($(this));
+      $(roleNavList.get(indexOfRoleList)).addClass("displayok");
+      roleNavList.find('.channels-link').get(indexOfRoleList).click();
+    });
+
+  </script>
+</body>
+<!--------------------------------------------/////////////BODT ID=FIRSTBODY-------------------------------------------------------------------------------------->
+
+</html>

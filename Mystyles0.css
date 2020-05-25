@@ -1,0 +1,944 @@
+/* Если у body есть класс main-body_added, то внутри такого body любому элементу с классом main-sidebar задается внутренний отступ сверху.
+В данном случае применятся для левого сайдбара, чтобы он был ниже самого верхнего меню */
+.main-body_added .main-sidebar {
+  padding-top: 4.5rem;
+}
+
+/* Самое верхнее меню имеет класс nav-header_added. Оно
+фиксированно расположено,
+сверху,
+поверх других блоков,
+занимает всю ширину */
+.main-body_added .nav-header_added {
+  position: fixed;
+  top: 0;
+  z-index: 1039;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Для второго горизонтального меню задаем сверху границу, чтобы оно отделялось на глаз,
+задаем внешний отступ сверху, чтобы оно не было под первым меню  */
+.main-body_added .main-header {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  margin-top: 4.5rem;
+  background: #f4f6f9;
+}
+
+/* Задаем цвет тексту Лого (ссылка с наименованием бренда и Лого),
+цвет черный с прозрачностью в 50% */
+.main-body_added a.brand-link {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Задаем при наведении цвет тексту Лого (ссылка с наименованием бренда и Лого),
+цвет черный с прозрачностью в 30% */
+.main-body_added a.brand-link:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Старые тестовые стили для первого блока контента */
+.first-block {
+  padding-top: 1rem;
+}
+
+/* Перемещаем правый сайдбар на передний план (над вторым меню), делаем внутренний отступ сверху, чтобы было красивее */
+.main-body_added .control-sidebar {
+  display: block;
+  top: 72px;
+  transition: right 0.7s ease;
+  z-index: 1034;
+  padding-top: 0.75rem;
+  right: -400px;
+  width: 400px;
+  padding: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  overflow-y: auto;
+  height: auto;
+}
+
+.control-sidebar.show {
+  display: block;
+  right: 0;
+}
+
+.control-sidebar-gray {
+  /* background: #f4f6f9; */
+  background: #f2f2f2;
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* Скрываем добавленный гамбургер (элемент, по нажатию на который будет появляться меню на небольших экранах) */
+.gamburger_added {
+  display: none;
+  font-size: 22px;
+}
+
+/* Скрываем добавленный значок закрытия меню, появляющегося на небольших экранах.
+Этот значок позиционируется относительно окна браузера,
+он на переднем плане,
+отступы справ и слева от кона браузера 0.5 * 16 px,
+при наведении курсор будет в виде пальца,
+размер шрифта и цвет */
+#closeicon_added {
+  display: none;
+  position: absolute;
+  z-index: 1050;
+  right: 0.5rem;
+  top: 0.5rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  /* font-weight: thin; */
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* При навдении на этот крестик меняется его прозрачность цвета */
+#closeicon_added:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Скрываем добавленный значок поиска, появляющегося на небольших экранах */
+#searchhover_added {
+  display: none;
+  margin-left: 0.5rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Первые адаптивные изменения при ширине меньше или равно 1222px */
+@media (max-width: 1222px) {
+  /* При клике на гамбургер к body добавляется класс modal-open, у него есть стиль, который убирает возможность скролить контент внутри body */
+  body.modal-open {
+    overflow: hidden;
+  }
+
+  /* Отображаем гамбургер */
+  .gamburger_added {
+    display: block;
+  }
+
+  /* Скрываем сам список элементов меню, задаем ему анимацию всех свойств продолжительностью в 1 секунду */
+  .main-body_added .nav-header_added .navbar-nav_added {
+    display: none;
+    transition: all 1s ease;
+  }
+
+  /* Когда меню открывется, у него добавляется класс displayok, задаем ему стили:
+  отображаем как флекс-элемент,
+  выравниваем относительно окна браузера,
+  ширина 100% родителя, минимальная высота в 100% от высоты окна браузера,
+  выносим его на более ближний план,
+  задаем расположение элементов в столбик,
+  отступы слева и сверху нулевые,
+  белый фон с 15% прозрачностью,
+  выравниваем элементы по горизонтали по центру,
+  равномерно распределяем элементы по вертикали с равными отступами серху и снизу них,
+  высота 100%,
+  убираем отображение скролбара и возможности скролить */
+  .main-body_added .nav-header_added .navbar-nav_added.displayok {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 1040;
+    flex-direction: column;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.85);
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  /* отображаем элементы данного списка как блочные, были в строку (!important применяем в исключительных ситуациях, чтобы стиль точно (99%) применился) */
+  .main-body_added .nav-header_added .navbar-nav_added.displayok li {
+    display: block !important;
+  }
+
+  /* менем цвет текста ссылок данных элементов списка, отображаем сами ссылки как строчные, задаем размер шрифта */
+  .main-body_added .nav-header_added .navbar-nav_added.displayok li a {
+    /* color: rgb(255, 255, 255); */
+    color: rgba(0, 0, 0, 0.5);
+    display: inline;
+    font-size: 1.5rem;
+  }
+
+  /* меняем цвет текста данных ссылок при наведении */
+  .main-body_added .nav-header_added .navbar-nav_added.displayok li a:hover {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  /* Иконке также добавляем класс при нажатии на гамбургер, этот класс отображает иконку */
+  #closeicon_added.displayok {
+    display: block;
+  }
+}
+
+/* адаптивные изменения при ширине меньше или равно 777px */
+@media (max-width: 777px) {
+  /* Убираем фиксированную ширину (250px) для текста лого */
+  .main-body_added.layout-fixed .brand-link {
+    width: auto;
+  }
+}
+
+/* адаптивные изменения при ширине меньше или равно 670px */
+@media (max-width: 670px) {
+  /* Скрываем текст справа от лого */
+  .main-body_added.layout-fixed .brand-link .brand-text {
+    display: none;
+  }
+}
+
+/* адаптивные изменения при ширине меньше или равно 545px */
+@media (max-width: 545px) {
+  /* отображаем новый значок для поиска */
+  #searchhover_added {
+    display: block;
+  }
+
+  /* стили для класса формы поиска form-inline выравнивают её относительно окна браузера и скрывают её */
+  .nav-header_added .form-inline {
+    position: absolute;
+    left: 7rem;
+    top: 3rem;
+    display: none;
+  }
+
+  /* При нажатии на иконку поиска форме добавляется класс displayok, который её отображает, добавляет скругленную границу вокруг с тенью */
+  .nav-header_added .form-inline.displayok {
+    display: block;
+    border: 1px solid rgba(1, 1, 1, 0.2);
+    border-radius: 0.25rem;
+    box-shadow: 3px 3px 9px 3px #ddd;
+  }
+}
+
+/* Убираем изменение размеров и исчезновение текста справа от лого при сворачивании левого сайдбара */
+@media (min-width: 992px) {
+  .sidebar-mini.sidebar-collapse.layout-fixed .brand-link {
+    width: 250px;
+  }
+
+  .sidebar-mini.sidebar-collapse .brand-text {
+    /* ,.sidebar-mini.sidebar-collapse .nav-sidebar .nav-link p
+  ,.sidebar-mini.sidebar-collapse .sidebar .user-panel>.info { */
+    margin-left: 0px;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* Стили для блока с иконкой пользователя */
+.user-panel_added {
+  padding-right: 0.5rem !important;
+  padding-top: 0.25rem;
+}
+
+/* Стили для иконки пользователя */
+.user-panel_added img {
+  height: auto;
+  margin-right: 0.25rem;
+  width: 2.1rem;
+}
+
+/*Стили для значков рядом с иконкой пользователя*/
+.Fontsizeicon {
+  font-size: 22px;
+}
+
+/*Выравнивание первого элемента во втором меню*/
+.paddingmenu a {
+  padding: 4px;
+}
+
+/* Отступ сверху и нижняя граница для блока с выбором роли в левом сайдбаре */
+#leftaside .nav-sidebar {
+  margin-top: 0.5rem;
+  border-bottom: 1px solid #fff;
+  border-radius: 0.25rem;
+}
+
+/* Скрытые блоки навигации в сайдбаре слева */
+nav[data-selectRoleContent_added] {
+  display: none;
+}
+
+/* Показываемые блоки навигации в сайдбаре слева */
+nav[data-selectRoleContent_added].displayok {
+  display: block;
+}
+
+/* Меняем цвет дропдауна выбора ролей в системе*/
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active {
+  background-color: #1a252f;
+}
+
+/* Меняем Настройки хлебных крошек*/
+.breadcrumb {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  background: none;
+}
+
+/* Убираем фон у контекнта */
+.content-wrapper {
+  background: none;
+}
+
+/* Фон и цвет текста для активного пункта меню слева под ролями */
+.sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #343a40;
+  /* background-color: #1a252f; */
+}
+
+/* скрываем все секции */
+[data-sectionNumber] {
+  display: none;
+}
+
+/* показываем только ту секцию, которой соотвествует активный пункт меню слева под ролями */
+[data-sectionNumber].active {
+  display: block;
+}
+
+/* Отступ снизу для блоков продвижения */
+.promotion .promotion-item {
+  max-height: 250px;
+  height: 250px;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #343a40, #707c92);
+  color: #fff;
+}
+
+.carousel-item .promotion-item {
+  /* background: linear-gradient(90deg, #343a40, #707c92);
+  color: #fff; */
+}
+
+.promotion .promotion-item {
+  transition: transform 0.3s, box-shadow 0.3s;
+  transition-timing-function: ease;
+}
+
+.promotion .promotion-item:hover {
+  box-shadow: 0 12px 36px 0 rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+}
+
+.promotion-item .row > div:first-child {
+  text-align: center;
+}
+
+.promotion-item img {
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  padding: 25px;
+}
+
+.promotion-itemText {
+  padding-top: 1.5rem;
+  padding-right: 10%;
+}
+
+.promotion-itemText h3 {
+  margin-bottom: 1rem;
+}
+
+/* Положение кнопки "Подробнее" для блоков продвижения */
+.ribbon-button {
+  position: absolute;
+  left: 0.5rem;
+  bottom: 1.5rem;
+  z-index: 11;
+}
+
+/* Отступы для контента */
+.content-wrapper {
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+}
+
+/* Отступы для верхнего и нижнего меню */
+.main-header,
+.header {
+  padding-left: 1rem;
+  padding-right: 1.6rem;
+}
+
+/* Дни календаря для постов */
+.dayNumber,
+.monthNumber {
+  font-weight: bold;
+}
+
+.weekendDay {
+  color: red;
+}
+
+.calendarList {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendarList-item {
+  list-style: none;
+  width: 100%;
+  margin-right: 1rem;
+}
+
+.calendarList-item:last-of-type {
+  margin-right: 0;
+}
+
+.publication {
+  padding: 0;
+}
+
+.publication-item {
+  position: relative;
+  list-style: none;
+  background-color: rgba(128, 128, 128, 0.1);
+  padding: 0.5rem;
+  margin-top: 0.75rem;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.publication-item:not(.publication-item-no):hover {
+  background-color: #1f3b6b;
+  color: white;
+}
+
+.publication-item:not(.publication-item-no):hover .circle {
+  background-color: white;
+  color: #1f3b6b;
+}
+
+.publication-item-no {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  cursor: inherit;
+}
+
+.circle {
+  border: 1px solid #aaa;
+  box-shadow: inset 1px 1px 3px #fff;
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+  position: absolute;
+  right: 0.25rem;
+  top: 5px;
+  margin: 4px;
+  display: inline-block;
+  /* vertical-align: middle; */
+  background: #aaaaaa4f;
+}
+
+.circle:hover {
+  background: radial-gradient(#aaa, #fff);
+}
+
+.circle:active {
+  background: #6363634f;
+}
+
+.circle:before,
+.circle:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* PLUS */
+.circle.plus:before,
+.circle.plus:after {
+  background: green;
+  box-shadow: 1px 1px 1px #ffffff9e;
+}
+
+.circle.plus:before {
+  width: 2px;
+  margin: 3px auto;
+}
+
+.circle.plus:after {
+  margin: auto 3px;
+  height: 2px;
+  box-shadow: none;
+}
+
+/* MINUS */
+.circle.minus:before {
+  background: #cc0000;
+  margin: auto 3px;
+  height: 2px;
+  box-shadow: 0px 1px 1px #ffffff9e;
+}
+
+/* CROSS */
+.circle.cross:after,
+.circle.cross:before {
+  background: #000;
+  margin: auto 4px;
+  height: 2px;
+  transform: rotateZ(45deg);
+  box-shadow: 0px 1px 1px #ffffff9e;
+}
+
+.circle.cross:after {
+  transform: rotateZ(-45deg);
+}
+
+/*****************************************************/
+/* Стили для Мои каналы, взяты на 90% с сайта tgstat */
+/*****************************************************/
+
+/* Стили для строк фильтров */
+.sub-nav {
+  background-color: #f2f2f2;
+  padding: 10px 10px 0 0;
+  margin-bottom: 0;
+  /* display: block; */
+  overflow: hidden;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.sub-nav dt {
+  text-transform: uppercase;
+}
+
+.sub-nav dt,
+.sub-nav dd,
+.sub-nav li {
+  color: #999999;
+  float: left;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 0.77778rem;
+  font-weight: normal;
+  /* margin-bottom: 5px; */
+  margin-left: 0.88889rem;
+  margin-bottom: 10px;
+}
+
+.sub-nav dt a,
+.sub-nav dd a,
+.sub-nav li a {
+  text-decoration: none;
+  color: #5f5f5f;
+  cursor: default;
+  font-weight: normal;
+  /* padding: 0.16667rem 0.88889rem; */
+  padding: 0.16667rem 7px;
+}
+
+.sub-nav dt.active a,
+.sub-nav dt a:hover,
+.sub-nav dd.active a,
+.sub-nav dd a:hover,
+.sub-nav li.active a,
+.sub-nav li a:hover {
+  border-radius: 3px;
+  background: #5f5f5f;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: normal;
+  /* padding: 0.16667rem 0.88889rem; */
+  padding: 0.16667rem 7px;
+}
+
+.sub-nav input {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-top: 4px solid \9;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.more-categories-list.hide {
+  display: none;
+}
+
+.large-text-right {
+  text-align: right;
+}
+
+.extended-search-container {
+  margin-top: -1.25rem;
+}
+
+.extended-search-container.hide {
+  display: none;
+}
+
+div.r-blocks {
+  position: relative;
+  /* margin: 5px; */
+  /* height: 128px; */
+  background-color: #f4f6ff;
+  /* background-color: #f6f6f6; */
+  /* background-color: #fff3d9; */
+  /* border: 1px #c0c3c6 solid; */
+  border: 1px #88bdf9 solid;
+  border-radius: 4px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+div.r-blocks span {
+  bottom: -1px;
+  right: -1px;
+  font-size: 10px;
+  padding: 0px 7px 2px 7px;
+  border-top-left-radius: 5px;
+  background-color: #f4f6ff;
+  position: absolute;
+  border-bottom-right-radius: 3px;
+  border: 1px #88bdf9 solid;
+}
+
+div.r-blocks .r-blocks-items {
+  padding-top: 8px;
+  padding-bottom: 12px;
+  /* margin-top: 8px; */
+  /* margin-bottom: 12px; */
+  padding-left: 12px;
+  cursor: pointer;
+}
+
+div.r-blocks .r-blocks-items:nth-child(2n + 1) {
+  border-left: 1px #a7cfff dotted;
+  border-right: 1px #a7cfff dotted;
+}
+
+div.r-blocks span a {
+  color: #1e82ff;
+}
+
+div.r-blocks .r-title {
+  /* margin-top: 8px; */
+  margin-bottom: 5px;
+  font-weight: bold;
+  height: 21px;
+  overflow: hidden;
+}
+
+div.r-blocks .r-image-container {
+  float: left;
+  margin-right: 10px;
+}
+
+div.r-blocks .r-description {
+  font-size: 0.8rem;
+  line-height: 1.55em;
+  height: 40px;
+}
+
+div.r-blocks .r-action-container {
+  margin-top: -2px;
+}
+
+div.r-blocks .r-action-btn {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+div.r-blocks .r-action-btn {
+  height: 33px;
+}
+
+.sticky-left-column {
+  margin-bottom: 1rem;
+}
+
+.sticky-left-column input {
+  width: 100%;
+  padding: 0.25rem;
+}
+
+div.filter-sort a {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+div.filter-sort a:first-child {
+  border-bottom: 1px #2199e8 dotted;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+div.filter-sort.desc a:last-child:after {
+  content: "↓";
+}
+
+.filter-sort {
+  overflow-x: hidden;
+  float: left;
+  width: calc(100% / 6);
+}
+
+.channels_list_body div.channel {
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px #f2f2f2 solid;
+  position: relative;
+}
+
+.channels_list_body div.row {
+  background-color: #f9f9f9;
+}
+
+.img-thumbnail {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 5rem;
+  height: auto;
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.channel-list-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 22px;
+}
+
+.price-info {
+  border-radius: 3px;
+  background: #6880a8;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: normal;
+  /* padding: 0.16667rem 0.88889rem; */
+  padding: 0.16667rem 7px;
+}
+
+a.table-link {
+  border-bottom: 1px #2199e8 dotted;
+  text-decoration: none;
+  color: black;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.fa-ruble:before,
+.fa-rouble:before,
+.fa-rub:before {
+  content: "\f158";
+}
+
+/* Конец стилей из tgstat */
+
+#closeicon2_added {
+  position: absolute;
+  z-index: 1035;
+  right: 0.5rem;
+  top: 0.5rem;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#closeicon2_added:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.channel-img {
+  text-align: center;
+}
+
+.channel-img img {
+  max-width: 150px;
+  max-height: 150px;
+  width: 100%;
+}
+
+.channel-name {
+  font-style: 2rem;
+}
+
+.channel-adprice,
+.channel-subscribes-all,
+.channel-subscribes-day,
+.channel-subscribes-week,
+.channel-subscribes-mounth,
+.channel-views-number24h,
+.channel-views-number24h {
+  overflow: hidden;
+}
+
+.channel-adprice:after,
+.channel-subscribes-all:after,
+.channel-subscribes-day:after,
+.channel-subscribes-week:after,
+.channel-subscribes-mounth:after,
+.channel-views-number24h:after,
+.channel-views-number24h:after {
+  content: "..............................................................................";
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.channel-adprice span:first-of-type,
+.channel-subscribes-all span:first-of-type,
+.channel-subscribes-day span:first-of-type,
+.channel-subscribes-week span:first-of-type,
+.channel-subscribes-mounth span:first-of-type,
+.channel-views-number24h span:first-of-type,
+.channel-views-number24h span:first-of-type {
+  float: left;
+}
+
+.channel-adprice span:last-of-type,
+.channel-subscribes-all span:last-of-type,
+.channel-subscribes-day span:last-of-type,
+.channel-subscribes-week span:last-of-type,
+.channel-subscribes-mounth span:last-of-type,
+.channel-views-number24h span:last-of-type,
+.channel-views-number24h span:last-of-type {
+  float: right;
+}
+
+.channel-description {
+  margin-top: 0.5rem;
+}
+
+.channel-description::before {
+  content: "Информация";
+  display: block;
+}
+
+.channel-subscribes,
+.channel-views {
+  font-size: 1.1875rem;
+}
+
+.channel-subscribes::before {
+  content: "Подписчики";
+  display: block;
+}
+
+.channel-views::before {
+  content: "Просмотры";
+  display: block;
+}
+
+.channel-views {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.channel-bot {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.channel .show-for-large div {
+  float: left;
+  /* min-width: 120px; */
+  width: calc(100% / 6);
+}
+
+.channel-selected button:last-of-type {
+  float: right;
+}
+
+.tab-content {
+  position: relative;
+}
+
+.tab-pane ul.navbar-nav {
+  position: absolute;
+  right: 0;
+  top: -2.625rem;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  z-index: 11;
+  color: #343a40;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.brown {
+  color: rgb(219, 219, 52);
+  font-weight: bold;
+}
+
+.carousel-indicators li {
+  background-color: #343a40;
+}
+
+.carousel-control-next {
+  justify-content: flex-end;
+}
+
+.carousel-control-prev {
+  justify-content: flex-start;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-item {
+    transition: all 0.6s ease;
+  }
+}
+
+#channelsList {
+  margin-bottom: 1rem;
+}
+
+.paginationjs {
+  display: flex;
+  justify-content: center;
+}
+
+#carouselExampleIndicators2 .carousel-control-next,
+#carouselExampleIndicators2 .carousel-control-prev {
+  width: 1rem;
+}
+
+#carouselExampleIndicators2 .carousel-control-prev {
+  left: -1rem;
+}
+
+#carouselExampleIndicators2 .carousel-control-next {
+  right: -1rem;
+}
