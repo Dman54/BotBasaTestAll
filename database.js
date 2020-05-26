@@ -7107,7 +7107,8 @@ let allChannels = [{
 function template(data) {
   console.log(data);
   curItem = data;
-  return `<div class="row channel">
+  return `<div class="row channel ribboned">
+    <div class="ribbon-sign"></div>
     <span class="d-none">${curItem.id}</span>
 
     <div class="col-sm-12 col-md-12 col-lg-3 col">
@@ -7198,7 +7199,7 @@ function templateAll(data) {
   for (x = 0; x < data.length; x++) {
     let curItem = data[x];
     // if (!curItem.errors == "NULL" || !curItem.status == "active" || curItem.members_count < 1000) continue;
-    elements = elements + `<div class="row channel">
+    elements = elements + `<div class="row channel${x % 2 == 0 ? ' ribboned': ''}">
     <span class="d-none">${curItem.id}</span>
 
     <div class="col-sm-12 col-md-12 col-lg-3 col">
@@ -7249,39 +7250,98 @@ function templateAll(data) {
         &nbsp;
       </div>
       <div>
-        <a data-width="800" data-height="200" data-src="/ru/channels/121/views" data-type="ajax" href="#"
-          class="popup_ajax table-link">
-          4.5m
-        </a>
-        <sup class="red">-8.2%</sup>
-        &nbsp;
+        <div class="price-info">
+          <span data-widget="control-sidebar2" data-slide="true">
+            69
+            900&nbsp;
+            <span class="fa fa-rub price-icon active"></span></span>
+        </div>
+      </div>
+      <div class="long-description">
+        ${curItem.description ? curItem.description : 'Нет описания'}
       </div>
       <div>
-        232.8k
-        &nbsp;
+        <!-- star rating #1 -->
+        <div class="star-rating__container">
+          <div class="star-rating__wrapper" itemprop="aggregateRating" itemscope
+            itemtype="http://schema.org/AggregateRating">
+            <div class="star-rating__avg" itemprop="ratingValue"></div>
+            <div class="star-rating star-rating_active" data-id="page-${x+1}">
+              <div class="star-rating__bg">
+                <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path fill="currentColor"
+                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                  </path>
+                </svg>
+                <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path fill="currentColor"
+                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                  </path>
+                </svg>
+                <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path fill="currentColor"
+                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                  </path>
+                </svg>
+                <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path fill="currentColor"
+                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                  </path>
+                </svg>
+                <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                  <path fill="currentColor"
+                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                  </path>
+                </svg>
+              </div>
+              <div class="star-rating__live">
+                <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                  data-rating="1">
+                  <path fill="currentColor"
+                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                  </path>
+                </svg>
+                <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                  data-rating="2">
+                  <path fill="currentColor"
+                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                  </path>
+                </svg>
+                <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                  data-rating="3">
+                  <path fill="currentColor"
+                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                  </path>
+                </svg>
+                <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                  data-rating="4">
+                  <path fill="currentColor"
+                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                  </path>
+                </svg>
+                <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                  data-rating="5">
+                  <path fill="currentColor"
+                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div class="star-rating__votes">
+              <div class="star-rating__votes_count"><span class="star-rating__votes_number"
+                  itemprop="reviewCount"></span><span class="star-rating__votes_text"></span></div>
+              <div class="star-rating__votes_message d-none">Оцени!</div>
+            </div>
+          </div>
+        </div>
       </div>
       <div>
-        25.6%
-        &nbsp;
-      </div>
-      <div>
-        <a data-width="800" data-height="200" data-src="/ru/channels/121/reposts" data-type="ajax" href="#"
-          class="popup_ajax table-link">
-          1597.3
-        </a>
-        &nbsp;
-      </div>
-      <div class="price-info" style="float:left; margin-top:20px; font-size:11px; width:auto">
-        <span data-widget="control-sidebar2" data-slide="true">
-          <span class="fa fa-rub price-icon active" style="color:white; margin-right:5px;"></span>&nbsp;69
-          900
-        </span>
+        <div class="ribbon-sign"></div>
       </div>
     </div>
-    <a href="#" onClick="goToDashboard(${curItem.id})" style="position: absolute; right: 8px; bottom: 8px"
+    <a href="#" onClick="goToDashboard(${curItem.id})"
       class="btn btn-primary btn-sm r-action-btn">Подробнее</a>
-  </div>
-  ` + "\n";
+  </div>` + "\n";
   }
   return elements;
 }
@@ -7290,7 +7350,8 @@ function templateAll(data) {
 //   for (x = 0; x < allChannels.length; x++) {
 //     let curItem = allChannels[x];
 //     if (!curItem.errors == "NULL" || !curItem.status == "active" || curItem.members_count < 1000) continue;
-//     elements = elements.add(`<div class="row channel">
+//     elements = elements.add(`<div class="row channel ribboned">
+//     <div class="ribbon-sign"></div>
 //     <span class="d-none">${curItem.id}</span>
 
 //     <div class="col-sm-12 col-md-12 col-lg-3 col">
