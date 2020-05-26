@@ -603,14 +603,15 @@ nav[data-selectRoleContent_added].displayok {
 }
 
 div.r-blocks {
-  /* position: relative; */
+  position: relative;
   margin-top: 1rem;
   /* margin-bottom: 1rem; */
 }
 
 div.r-blocks span {
-  bottom: -1px;
-  right: -1px;
+  z-index: 1;
+  bottom: 16px;
+  right: 7px;
   font-size: 10px;
   padding: 0px 7px 2px 7px;
   border-top-left-radius: 5px;
