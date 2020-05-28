@@ -32,7 +32,7 @@
 .main-body_added a.brand-link {
   color: rgba(0, 0, 0, 0.5);
   padding: 0;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 /* Убираем внешние отступы и ограничение высоты для картинки Лого */
@@ -1354,3 +1354,14 @@ a.table-link {
 }
 
 /* end star_rating.css */
+
+.form-inline {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  .form-inline .custom-select,
+  .form-inline .input-group {
+    width: 100%;
+  }
+}
