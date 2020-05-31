@@ -28,7 +28,6 @@
   <!---------------------------------------------NAV ID=FIRSTNAV--------------------------------------------------------------------------------------------->
   <nav id="firstnav" class="header nav-header_added navbar navbar-expand navbar-white navbar-light">
     <a href="index0latest.html" class="brand-link">
-      <!-- class="brand-link" -->
       <img src="Logo.png" alt="LinkBaza Logo" class="brand-image" />
       <!-- <span class="brand-text font-weight-light">Bot Basa</span> -->
     </a>
@@ -47,7 +46,7 @@
     </ul>
     <!-- SEARCH FORM -->
     <div id="searchhover_added"><i class="fas fa-search"></i></div>
-    <form class="form-inline ml-3">
+    <form class="form-inline ml-4 mr-4">
       <div class="input-group input-group-sm">
         <input class="form-control form-control-navbar" type="search" placeholder="Поиск" aria-label="Search" />
         <div class="input-group-append">
@@ -67,15 +66,12 @@
           <i class="fas fa-shopping-basket"></i>
           <span class="badge badge-danger navbar-badge">5</span>
         </a>
-
-
-
       </li>
       <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown Fontsizeicon">
         <!--Добавили стиль шрифта-->
         <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
+          <i class="fas fa-comments"></i>
           <span class="badge badge-danger navbar-badge">3</span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -140,7 +136,7 @@
       <li class="nav-item dropdown Fontsizeicon">
         <!--Добавили стиль шрифт-->
         <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-bell"></i>
+          <i class="fas fa-bell"></i>
           <span class="badge badge-warning navbar-badge">15</span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -177,7 +173,6 @@
               left: 0px;
               will-change: transform;
             ">
-          <!-- <a class="dropdown-item" tabindex="-1" href="#">Александр Пирс</a> -->
           <a class="dropdown-item" tabindex="-1" href="index0latest.html">Профиль</a>
           <a class="dropdown-item" tabindex="-1" href="#">Настроить что-то</a>
           <div class="dropdown-divider"></div>
@@ -209,8 +204,9 @@
 
         <a class="nav-link" data-widget="pushmenu" href="#" role="button">
         </a>
-        <div style="position: absolute; right: 50%"><a class="nav-link" data-widget="pushmenu" href="#"
-            role="button"><img src="img/telegram.png" style="height: 32px; width: 32px;"> Telegram</a>
+        <div style="position: absolute; right: 50%">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><img src="img/telegram.png"
+              style="height: 32px; width: 32px;"> Telegram</a>
         </div>
       </ul> <!-- Right navbar links -->
     </nav>
@@ -385,7 +381,7 @@
       <section data-sectionNumber='0' class="channels active">
         <div class="container-fluid">
           <ul class="nav nav-tabs" id="custom-content-below-tab0" role="tablist"
-            style="padding-top: 10px; padding-left: 10px">
+            style="padding-top: 2rem; padding-left: 10px">
             <li class="nav-item">
               <a class="nav-link active" id="custom-content-below-home-tab0" data-toggle="pill"
                 href="#custom-content-below-channels0" role="tab" aria-controls="custom-content-below-channels0"
@@ -409,8 +405,8 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item d-sm-inline-block">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle dropdown-icon" data-toggle="dropdown"
-                    aria-expanded="false">
+                  <button type="button" class="btn btn-default btn-blue dropdown-toggle dropdown-icon"
+                    data-toggle="dropdown" aria-expanded="false">
                     Выберите канал
                     <div class="dropdown-menu" role="menu" style="">
                       <a class="dropdown-item" href="#">Канал 1</a>
@@ -421,119 +417,180 @@
                         новый канал</a>
                     </div>
                   </button>
+                  <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
+                    style="background-color: #FFCD24">
+                    Добавить канал <span class="plus"></span>
+                  </button>
                 </div>
-                <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
-                  style="background-color: #FFCD24">
-                  Добавить канал
-                </button>
               </li>
             </ul>
+            <div class="container-fluid">
+              <noindex>
+                <div class="row r-blocks">
 
+                  <div class="col-sm-12 col-md-6 col-lg-4" data-src="https://teleg.run/LinkBazaBot?start=ref=141505811"
+                    data-target="104930">
+                    <div class="col r-blocks-items">
+                      <div class="r-image-container">
+                        <img src="tgstat_images/dbe31e98a115842249a227b023113cc0.jpg" width="70"
+                          class="img-thumbnail r-image">
+                      </div>
+                      <div class="r-title">Бот для продвижения telegram каналов</div>
+                      <div>
+                        <div class="r-description ">Автоматическое продвижение каналов через подборки</div>
+                        <div class="r-action-container">
+                          <a href="#" data-toggle="modal" data-target="#modalCreateChannel"
+                            class="btn btn-default btn-sm r-action-btn">Добавить канал </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4" data-src="https://ttttt.me/TGStat_Bot" data-target="103151">
+                    <div class="col r-blocks-items">
+                      <div class="r-image-container">
+                        <img src="tgstat_images/7659a51c94158f7026fb13a6702e0009.jpg" width="70"
+                          class="img-thumbnail r-image">
+                      </div>
+                      <div class="r-title">TGStat Bot</div>
+                      <div>
+                        <div class="r-description ">Бот для получения статистики каналов не выходя из Telegram</div>
+                        <div class="r-action-container">
+                          <a href="#" class="btn btn-default btn-sm r-action-btn">Перейти в бота</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4" data-src="https://ttttt.me/TGAlertsBot" data-target="103155">
+                    <div class="col r-blocks-items">
+                      <div class="r-image-container">
+                        <img src="tgstat_images/7659a51c94158f7026fb13a6702e00c9.jpg" width="70"
+                          class="img-thumbnail r-image">
+                      </div>
+                      <div class="r-title">TGAlertsBot</div>
+                      <div>
+                        <div class="r-description ">Мониторинг упоминаний ключевых слов в каналах и чатах.</div>
+                        <div class="r-action-container">
+                          <a href="#" class="btn btn-default btn-sm r-action-btn">Перейти в бота</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </noindex>
+            </div>
             <form method="get" enctype="multipart/form-data" id="searchChannels" name="searchChannels" action="">
               <div class="container-fluid">
-                <div class="row">
-                  <dl class="sub-nav">
-                    <dd class="active"><a class="filter filter-category" data-category="" href="#">Все</a></dd>
-                    <dd class=""><a href="#" class="filter filter-category" data-category="blogs">Блоги</a>
-                    </dd>
-                    <dd class=""><a href="#" class="filter filter-category" data-category="entertainment">Юмор и
-                        развлечения</a>
-                    </dd>
-                    <dd class=""><a href="#" class="filter filter-category" data-category="business">Бизнес и
-                        стартапы</a>
-                    </dd>
-                    <dd class=""><a href="#" class="filter filter-category" data-category="news">Новости и СМИ</a>
+                <dl class="sub-nav sub-nav-first">
+                  <dd class="active"><a class="filter filter-category" data-category="" href="#">Все</a></dd>
+                  <dd class=""><a href="#" class="filter filter-category" data-category="blogs">Блоги</a>
+                  </dd>
+                  <dd class=""><a href="#" class="filter filter-category" data-category="entertainment">Юмор и
+                      развлечения</a>
+                  </dd>
+                  <dd class=""><a href="#" class="filter filter-category" data-category="business">Бизнес и
+                      стартапы</a>
+                  </dd>
+                  <dd class=""><a href="#" class="filter filter-category" data-category="news">Новости и СМИ</a>
 
-                    </dd>
-                    <dt style="width:80px; float:right; text-align:right">Категория</dt>
+                  </dd>
+                  <dt style="width:80px; float:right; text-align:right">Категория</dt>
 
-                    <dd class="dropdown ">
-                      <a href="#" class="more-categories-button" data-default-text="Еще категории">
-                        <span>Еще категории</span>
-                        <b class="caret"></b>
-                      </a>
-                    </dd>
+                  <dd class="dropdown ">
+                    <a href="#" class="more-categories-button" data-default-text="Еще категории">
+                      <span>Еще категории</span>
+                      <b class="caret"></b>
+                    </a>
+                  </dd>
 
-                    <div class="clearfix"></div>
-                    <div class="more-categories-list hide" style="margin-top:10px;">
-                      <dd><a href="#" class="filter filter-category " data-category="sales">Продажи</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="music">Музыка</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="crypto">Криптовалюты</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="art">Искусство и фото</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="sport">Здоровье и Спорт</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="politics">Политика</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="video">Видео и фильмы</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="marketing">Маркетинг, PR,
-                          реклама</a>
-                      </dd>
-                      <dd><a href="#" class="filter filter-category " data-category="edutainment">Познавательное</a>
-                      </dd>
-                      <dd><a href="#" class="filter filter-category " data-category="tech">Технологии</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="education">Образование</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="travels">Путешествия</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="psychology">Психология</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="books">Книги</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="beauty">Мода и красота</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="gaming">Игры и приложения</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="quotes">Цитаты</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="economics">Экономика</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="career">Карьера</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="food">Еда и кулинария</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="auto">Авто</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="language">Лингвистика</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="religion">Религия</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="design">Дизайн</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="catalogs">Каталоги каналов и
-                          ботов</a>
-                      </dd>
-                      <dd><a href="#" class="filter filter-category " data-category="telegram">Telegram</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="babies">Семья и дети</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="animals">Животные</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="health">Медицина</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="handmade">Рукоделие</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="stickers">Каталоги стикеров</a>
-                      </dd>
-                      <dd><a href="#" class="filter filter-category " data-category="lifehack">Лайфхаки</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="adult">Для взрослых</a></dd>
-                      <dd><a href="#" class="filter filter-category " data-category="other">Другое</a></dd>
-                    </div>
-                  </dl>
+                  <div class="clearfix"></div>
+                  <div class="more-categories-list hide" style="margin-top:10px;">
+                    <dd><a href="#" class="filter filter-category " data-category="sales">Продажи</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="music">Музыка</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="crypto">Криптовалюты</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="art">Искусство и фото</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="sport">Здоровье и Спорт</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="politics">Политика</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="video">Видео и фильмы</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="marketing">Маркетинг, PR,
+                        реклама</a>
+                    </dd>
+                    <dd><a href="#" class="filter filter-category " data-category="edutainment">Познавательное</a>
+                    </dd>
+                    <dd><a href="#" class="filter filter-category " data-category="tech">Технологии</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="education">Образование</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="travels">Путешествия</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="psychology">Психология</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="books">Книги</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="beauty">Мода и красота</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="gaming">Игры и приложения</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="quotes">Цитаты</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="economics">Экономика</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="career">Карьера</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="food">Еда и кулинария</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="auto">Авто</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="language">Лингвистика</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="religion">Религия</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="design">Дизайн</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="catalogs">Каталоги каналов и
+                        ботов</a>
+                    </dd>
+                    <dd><a href="#" class="filter filter-category " data-category="telegram">Telegram</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="babies">Семья и дети</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="animals">Животные</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="health">Медицина</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="handmade">Рукоделие</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="stickers">Каталоги стикеров</a>
+                    </dd>
+                    <dd><a href="#" class="filter filter-category " data-category="lifehack">Лайфхаки</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="adult">Для взрослых</a></dd>
+                    <dd><a href="#" class="filter filter-category " data-category="other">Другое</a></dd>
+                  </div>
+                </dl>
+                <div class="clearfix"></div>
+              </div>
+              <div class="container-fluid">
+                <div class="search-container">
+                  <span class="search_wrap">
+                    <i class="fas fa-search"></i>
+                    <input type="search" name="search" value="" class="filter filter-search form-control2"
+                      placeholder="Поиск канала">
+                  </span>
+                  <button type="submit" name="search_channels" id="search_channels"
+                    class="btn btn-primary btn-sm r-action-btn">Поиск</button>
+
+                  <a class="button-extended" href="#">
+                    Расширенный поиск
+                  </a>
                 </div>
               </div>
               <div class="container-fluid">
-                <div class="row">
-                  <!-- <div class="col-sm-12 col-md-6 col-lg-5 col">
-                    <div class="row"> -->
-                  <dl class="sub-nav">
-                    <!-- <dt style="width:20px;">Красивая картинка</dt> -->
-                    <dd class="">
-                      <a class="filter filter-verified" href="#">
-                        Только подтвержденные каналы </a>
-                    </dd>
-                  </dl>
-                  <!-- </div>
-                  </div> -->
-
-                  <!-- <div class="col-sm-12 col-md-6 col-lg-7 col">
-                    <div class="row">
-                      <dl class="sub-nav">
-                        <div class="large-text-right medium-text-right small-only-text-center">
-                          <dt style="height:20px;">&nbsp;</dt>
-                          <dd class="dropup" style="float:none;">
-                            <a class="button-extended" href="#">
-                              Расширенный поиск <b class="caret"></b>
-                            </a>
-                          </dd>
-                        </div>
-                      </dl>
-                    </div>
-                  </div> -->
-                </div>
-              </div>
-              <div class="container-fluid">
-                <div class="row extended-search-container">
-                  <dl class="sub-nav" style="display:flex; padding-top:0px;">
-                    <div class="col col-lg-3 col-md-6" style="background-color:#ededed">
+                <div class="extended-search-container sub-nav hide">
+                  <div class="extended-search-first-part">
+                    <span class="select-wrapper">
+                      <select id="languageSelect" name="languageSelect" class="form-control2">
+                        <option selected="" disabled="">Язык канала</option>
+                        <option value="Русский">Русский</option>
+                        <option value="English">English</option>
+                        <option value="Deutsch">Deutsch</option>
+                        <option value="Another">Another</option>
+                      </select>
+                    </span>
+                    <span class="custom-control custom-checkbox">
+                      <input id="onlyVerifedChannels" type="checkbox" class="custom-control-input">
+                      <label for="onlyVerifedChannels" class="custom-control-label form-check-label">Только
+                        подтвержденные каналы</label>
+                    </span>
+                    <span class="custom-control custom-checkbox">
+                      <input id="mutualPiar" type="checkbox" checked="checked" class="custom-control-input">
+                      <label for="mutualPiar" class="custom-control-label form-check-label">Взаимопиар</label>
+                    </span>
+                  </div>
+                  <div class="row">
+                    <!-- style="display:flex; padding-top:0px; -->
+                    <div class="col col-lg-3 col-md-6">
                       <div>
                         <dt style="margin-left:0px; margin-top:10px; color:#444444;">Подписчиков</dt>
                       </div>
@@ -571,7 +628,7 @@
                       </div>
                     </div>
 
-                    <div class="col col-lg-3 col-md-6" style="background-color:#ededed">
+                    <div class="col col-lg-3 col-md-6">
                       <div>
                         <dt style="margin-left:0px; margin-top:10px; color:#444444;">ERR %</dt>
                       </div>
@@ -602,135 +659,58 @@
                           <input type="text" value="" name="price[to]" placeholder="до" class="filter filter-search"
                             height="30" style="height:30px; font-size:13px; padding:0 0.5rem;">
                         </div>
-                        <div class="col col-lg-2 col-md-2 col-sm-2 text-center"
+                        <!-- <div class="col col-lg-2 col-md-2 col-sm-2 text-center"
                           style="margin-left:0px; padding-left:0px; text-align:center;">
                           <dd class="" style="margin-left:0px; margin-top:4px; float:none;">
                             <a class="filter filter-vp" data-price="vp" href="#" title="Взаимопиар">ВП</a>
                           </dd>
-                        </div>
+                        </div> -->
                       </div>
                     </div>
-                  </dl>
-                </div>
-              </div>
 
-              <div class="container-fluid sub-nav">
-                <div class="row">
-                  <div class="col-sm-12 col-md-12 col-lg-8 col">
-                  </div>
-                  <div class="col-sm-12 col-md-12 col-lg-4 col">
-                    <input type="text" name="search" value="" class="filter filter-search"
-                      placeholder="Название или описание канала">
-                    <button type="submit" name="search_channels" id="search_channels"
-                      class="button button_v2 mt_30 relative">Поиск</button>
                   </div>
                 </div>
+
               </div>
             </form>
             <div class="container-fluid">
-              <noindex>
-                <div class="row r-blocks">
-                  <span>
-                    <a target="_blank" href="/my/ads">реклама</a>
-                  </span>
-                  <div class="col-sm-12 col-md-6 col-lg-4" data-src="https://teleg.run/LinkBazaBot?start=ref=141505811"
-                    data-target="104930">
-                    <div class="col r-blocks-items">
-                      <div class="r-title">Бот для продвижения telegram каналов</div>
-                      <div>
-                        <div class="r-image-container">
-                          <img src="tgstat_images/dbe31e98a115842249a227b023113cc0.jpg" width="70"
-                            class="img-thumbnail r-image">
-                          <!-- <img src="/hit.php?t=h&amp;a=104930&amp;r=0.2564776687478012"> -->
-                        </div>
-                        <div>
-                          <div class="r-description ">Автоматическое продвижение каналов через подборки</div>
-                          <div class="r-action-container">
-                            <a href="#" data-toggle="modal" data-target="#modalCreateChannel"
-                              class="btn btn-primary btn-sm r-action-btn">Добавить канал </a>
-                          </div>
-                        </div>
-                      </div>
+              <div class="channels-sortpanel">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-3 col">
+                    <!-- <input type="text" name="search" value="" class="filter filter-search" placeholder="Поиск канала"> -->
+                  </div>
+                  <div class="col-sm-12 col-md-12 col-lg-9 col">
+                    <div class="filter filter-sort desc" data-sort="members" data-direction="desc">
+                      <a href="#" title="Количество подписчиков на данный момент">Подписчики</a>
+                      <a href="#"></a>
                     </div>
-                  </div>
 
-                  <div class="col-md-6 col-lg-4" data-src="https://ttttt.me/TGStat_Bot" data-target="103151">
-                    <div class="col r-blocks-items">
-                      <div class="r-title">TGStat Bot</div>
-                      <div>
-                        <div class="r-image-container">
-                          <img src="tgstat_images/7659a51c94158f7026fb13a6702e0009.jpg" width="70"
-                            class="img-thumbnail r-image">
-                          <!-- <img src="/hit.php?t=h&amp;a=103151&amp;r=0.8374779219684718"> -->
-                        </div>
-                        <div>
-                          <div class="r-description ">Бот для получения статистики каналов не выходя из Telegram</div>
-                          <div class="r-action-container">
-                            <a href="#" class="btn btn-primary btn-sm r-action-btn">Перейти в бота</a>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="filter filter-sort " data-sort="members_growth" data-direction="desc">
+                      <a href="#" title="Количество новых подписчиков за выбранный период">Прирост</a>
+                      <a href="#"></a>
                     </div>
-                  </div>
 
-                  <div class="col-md-6 col-lg-4" data-src="https://ttttt.me/TGAlertsBot" data-target="103155">
-                    <div class="col r-blocks-items">
-                      <div class="r-title">TGAlertsBot</div>
-                      <div>
-                        <div class="r-image-container">
-                          <img src="tgstat_images/7659a51c94158f7026fb13a6702e00c9.jpg" width="70"
-                            class="img-thumbnail r-image">
-                          <!-- <img src="/hit.php?t=h&amp;a=103155&amp;r=0.6259602568804004"> -->
-                        </div>
-                        <div>
-                          <div class="r-description ">Мониторинг упоминаний ключевых слов в каналах и чатах.</div>
-                          <div class="r-action-container">
-                            <a href="#" class="btn btn-primary btn-sm r-action-btn">Перейти в бота</a>
-                          </div>
-                        </div>
-                      </div>
+                    <div class="filter filter-sort" data-sort="ad_price" data-direction="desc">
+                      <a href="#" title="Стоимость рекламы">Стоимость рекламы</a>
+                      <a href="#"></a>
                     </div>
-                  </div>
-                </div>
-              </noindex>
-            </div>
-            <div class="container-fluid">
-              <div class="row margin-top15 margin-bottom15 sticky-left-column"
-                style="z-index:100; background-color:#f9f9f9; border: 1px #c0c3c6 solid; padding:13px;">
-                <div class="col-sm-12 col-md-12 col-lg-3 col">
-                  <!-- <input type="text" name="search" value="" class="filter filter-search" placeholder="Поиск канала"> -->
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-9 col">
-                  <div class="filter filter-sort desc" data-sort="members" data-direction="desc">
-                    <a href="#" title="Количество подписчиков на данный момент">Подписчики</a>
-                    <a href="#"></a>
-                  </div>
 
-                  <div class="filter filter-sort " data-sort="members_growth" data-direction="desc">
-                    <a href="#" title="Количество новых подписчиков за выбранный период">Прирост</a>
-                    <a href="#"></a>
-                  </div>
+                    <div class="filter filter-sort" data-sort="description" data-direction="desc">
+                      <a href="#" title="Описание канала не более 70 символов">Описание</a>
+                      <a href="#"></a>
+                    </div>
 
-                  <div class="filter filter-sort" data-sort="ad_price" data-direction="desc">
-                    <a href="#" title="Стоимость рекламы">Стоимость<br>рекламы</a>
-                    <a href="#"></a>
-                  </div>
+                    <div class="filter filter-sort" data-sort="raitings" data-direction="desc">
+                      <a href="#" title="Рейтинг канала по пятибалльной шкале">Рейтинг</a>
+                      <a href="#"></a>
+                    </div>
 
-                  <div class="filter filter-sort" data-sort="description" data-direction="desc">
-                    <a href="#" title="Описание канала не более 70 символов">Описание</a>
-                    <a href="#"></a>
-                  </div>
+                    <div class="filter filter-sort" data-sort="favorites" data-direction="desc">
+                      <a href="#" title="Находится ли канал в избранном">Избранное</a>
+                      <a href="#"></a>
+                    </div>
 
-                  <div class="filter filter-sort" data-sort="raitings" data-direction="desc">
-                    <a href="#" title="Рейтинг канала по пятибалльной шкале">Рейтинг</a>
-                    <a href="#"></a>
                   </div>
-
-                  <div class="filter filter-sort" data-sort="favorites" data-direction="desc">
-                    <a href="#" title="Находится ли канал в избранном">Избранное</a>
-                    <a href="#"></a>
-                  </div>
-
                 </div>
               </div>
             </div>
@@ -746,8 +726,8 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item d-sm-inline-block">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle dropdown-icon" data-toggle="dropdown"
-                    aria-expanded="false">
+                  <button type="button" class="btn btn-default btn-blue dropdown-toggle dropdown-icon"
+                    data-toggle="dropdown" aria-expanded="false">
                     Выберите канал
                     <div class="dropdown-menu" role="menu" style="">
                       <a class="dropdown-item" href="#">Канал 1</a>
@@ -758,11 +738,11 @@
                         новый канал</a>
                     </div>
                   </button>
+                  <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
+                    style="background-color: #FFCD24">
+                    Добавить канал <span class="plus"></span>
+                  </button>
                 </div>
-                <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
-                  style="background-color: #FFCD24">
-                  Добавить канал
-                </button>
               </li>
             </ul>
             <div class="container-fluid"></div>
@@ -772,8 +752,8 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item d-sm-inline-block">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle dropdown-icon" data-toggle="dropdown"
-                    aria-expanded="false">
+                  <button type="button" class="btn btn-default btn-blue dropdown-toggle dropdown-icon"
+                    data-toggle="dropdown" aria-expanded="false">
                     Выберите канал
                     <div class="dropdown-menu" role="menu" style="">
                       <a class="dropdown-item" href="#">Канал 1</a>
@@ -784,11 +764,11 @@
                         новый канал</a>
                     </div>
                   </button>
+                  <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
+                    style="background-color: #FFCD24">
+                    Добавить канал <span class="plus"></span>
+                  </button>
                 </div>
-                <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
-                  style="background-color: #FFCD24">
-                  Добавить канал
-                </button>
               </li>
             </ul>
             <div class="container-fluid"></div>
@@ -845,8 +825,8 @@
           <ul class="navbar-nav ml-auto" style="float:right">
             <li class="nav-item d-sm-inline-block">
               <div class="btn-group">
-                <button type="button" class="btn btn-default dropdown-toggle dropdown-icon" data-toggle="dropdown"
-                  aria-expanded="false">
+                <button type="button" class="btn btn-default btn-blue dropdown-toggle dropdown-icon"
+                  data-toggle="dropdown" aria-expanded="false">
                   Выберите канал
                   <div class="dropdown-menu" role="menu" style="">
                     <a class="dropdown-item" href="#">Канал 1</a>
@@ -857,11 +837,11 @@
                       новый канал</a>
                   </div>
                 </button>
+                <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
+                  style="background-color: #FFCD24">
+                  Добавить канал <span class="plus"></span>
+                </button>
               </div>
-              <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
-                style="background-color: #FFCD24">
-                Добавить канал
-              </button>
             </li>
           </ul>
         </div>
@@ -1085,25 +1065,20 @@
         <div class="container-fluid first-block">
           <noindex>
             <div class="row r-blocks">
-              <span>
-                <a target="_blank" href="/my/ads">реклама</a>
-              </span>
+
               <div class="col-sm-12 col-md-6 col-lg-4" data-src="https://teleg.run/LinkBazaBot?start=ref=141505811"
                 data-target="104930">
                 <div class="col r-blocks-items">
+                  <div class="r-image-container">
+                    <img src="tgstat_images/dbe31e98a115842249a227b023113cc0.jpg" width="70"
+                      class="img-thumbnail r-image">
+                  </div>
                   <div class="r-title">Бот для продвижения telegram каналов</div>
                   <div>
-                    <div class="r-image-container">
-                      <img src="tgstat_images/dbe31e98a115842249a227b023113cc0.jpg" width="70"
-                        class="img-thumbnail r-image">
-                      <!-- <img src="/hit.php?t=h&amp;a=104930&amp;r=0.2564776687478012"> -->
-                    </div>
-                    <div>
-                      <div class="r-description ">Автоматическое продвижение каналов через подборки</div>
-                      <div class="r-action-container">
-                        <a href="#" data-toggle="modal" data-target="#modalCreateChannel"
-                          class="btn btn-primary btn-sm r-action-btn">Добавить канал </a>
-                      </div>
+                    <div class="r-description ">Автоматическое продвижение каналов через подборки</div>
+                    <div class="r-action-container">
+                      <a href="#" data-toggle="modal" data-target="#modalCreateChannel"
+                        class="btn btn-default btn-sm r-action-btn">Добавить канал </a>
                     </div>
                   </div>
                 </div>
@@ -1111,18 +1086,15 @@
 
               <div class="col-md-6 col-lg-4" data-src="https://ttttt.me/TGStat_Bot" data-target="103151">
                 <div class="col r-blocks-items">
+                  <div class="r-image-container">
+                    <img src="tgstat_images/7659a51c94158f7026fb13a6702e0009.jpg" width="70"
+                      class="img-thumbnail r-image">
+                  </div>
                   <div class="r-title">TGStat Bot</div>
                   <div>
-                    <div class="r-image-container">
-                      <img src="tgstat_images/7659a51c94158f7026fb13a6702e0009.jpg" width="70"
-                        class="img-thumbnail r-image">
-                      <!-- <img src="/hit.php?t=h&amp;a=103151&amp;r=0.8374779219684718"> -->
-                    </div>
-                    <div>
-                      <div class="r-description ">Бот для получения статистики каналов не выходя из Telegram</div>
-                      <div class="r-action-container">
-                        <a href="#" class="btn btn-primary btn-sm r-action-btn">Перейти в бота</a>
-                      </div>
+                    <div class="r-description ">Бот для получения статистики каналов не выходя из Telegram</div>
+                    <div class="r-action-container">
+                      <a href="#" class="btn btn-default btn-sm r-action-btn">Перейти в бота</a>
                     </div>
                   </div>
                 </div>
@@ -1130,22 +1102,20 @@
 
               <div class="col-md-6 col-lg-4" data-src="https://ttttt.me/TGAlertsBot" data-target="103155">
                 <div class="col r-blocks-items">
+                  <div class="r-image-container">
+                    <img src="tgstat_images/7659a51c94158f7026fb13a6702e00c9.jpg" width="70"
+                      class="img-thumbnail r-image">
+                  </div>
                   <div class="r-title">TGAlertsBot</div>
                   <div>
-                    <div class="r-image-container">
-                      <img src="tgstat_images/7659a51c94158f7026fb13a6702e00c9.jpg" width="70"
-                        class="img-thumbnail r-image">
-                      <!-- <img src="/hit.php?t=h&amp;a=103155&amp;r=0.6259602568804004"> -->
-                    </div>
-                    <div>
-                      <div class="r-description ">Мониторинг упоминаний ключевых слов в каналах и чатах.</div>
-                      <div class="r-action-container">
-                        <a href="#" class="btn btn-primary btn-sm r-action-btn">Перейти в бота</a>
-                      </div>
+                    <div class="r-description ">Мониторинг упоминаний ключевых слов в каналах и чатах.</div>
+                    <div class="r-action-container">
+                      <a href="#" class="btn btn-default btn-sm r-action-btn">Перейти в бота</a>
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
           </noindex>
         </div>
@@ -1881,8 +1851,8 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item d-sm-inline-block">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle dropdown-icon" data-toggle="dropdown"
-                    aria-expanded="false">
+                  <button type="button" class="btn btn-default btn-blue dropdown-toggle dropdown-icon"
+                    data-toggle="dropdown" aria-expanded="false">
                     Выберите бота
                     <div class="dropdown-menu" role="menu" style="">
                       <a class="dropdown-item" href="#">Бот 1</a>
@@ -1893,11 +1863,11 @@
                         новый канал</a>
                     </div>
                   </button>
+                  <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
+                    style="background-color: #FFCD24">
+                    Добавить бота <span class="plus"></span>
+                  </button>
                 </div>
-                <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
-                  style="background-color: #FFCD24">
-                  Добавить бота
-                </button>
               </li>
             </ul>
           </ul>
@@ -1948,8 +1918,8 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item d-sm-inline-block">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-default dropdown-toggle dropdown-icon" data-toggle="dropdown"
-                    aria-expanded="false">
+                  <button type="button" class="btn btn-default btn-blue dropdown-toggle dropdown-icon"
+                    data-toggle="dropdown" aria-expanded="false">
                     Выберите чат
                     <div class="dropdown-menu" role="menu" style="">
                       <a class="dropdown-item" href="#">Чат 1</a>
@@ -1960,11 +1930,11 @@
                         новый чат</a>
                     </div>
                   </button>
+                  <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
+                    style="background-color: #FFCD24">
+                    Добавить чат <span class="plus"></span>
+                  </button>
                 </div>
-                <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
-                  style="background-color: #FFCD24">
-                  Добавить чат
-                </button>
               </li>
             </ul>
           </ul>
@@ -2534,473 +2504,9 @@
 
   <script src="database.js"></script>
   <!-- page script -->
+  <script src="myScript.js"></script>
+  <script src="ChartsScript.js"></script>
 
-  <script>
-    // скрипты для открытия и закрытия меню на небольших экранах (клик по гамбургеру и значку закрытия или самому новому меню)
-    $("#gamburger_added, #closeicon_added").on("click", function (e) {
-      $(".navbar-nav_added").toggleClass("displayok");
-      $("body").toggleClass("modal-open");
-      $("#closeicon_added").toggleClass("displayok");
-    });
-    $(".navbar-nav_added").on("click", function (e) {
-      if ($(".navbar-nav_added").hasClass("displayok")) {
-        $(".navbar-nav_added").toggleClass("displayok");
-        $("body").toggleClass("modal-open");
-        $("#closeicon_added").toggleClass("displayok");
-      }
-    });
-    // код для отображения формы поиска при клике на иконку поиска на маленьких экранах
-    $("#searchhover_added").on("click", function (e) {
-      $(".nav-header_added .form-inline").toggleClass("displayok");
-    });
-
-    let roleNavList = $("nav[data-selectRoleContent_added]");
-    let roleList = $("ul[data-selectRole_added='true'] li a");
-    let AllRoleSections = $("[data-sectionNumber]");
-    let AllRoleLinks = $("[data-sectionContent]");
-
-    // загрузка разного основного контента в зависимости от активного пункта меню слева
-    AllRoleLinks.on("click", function (e) {
-      e.preventDefault();
-      if ($(this).hasClass("active")) return;
-      let indexOfAllRoleLinks = $(this).attr('data-sectionContent');
-      AllRoleLinks.removeClass("active");
-      AllRoleSections.removeClass("active");
-      $(this).addClass("active");
-      $(`[data-sectionNumber=${indexOfAllRoleLinks}]`).addClass("active");
-    });
-
-    // Смена стилей и панели навигации для активной роли и для активного пукта меню
-    roleList.on("click", function (e) {
-      if ($(this).hasClass("active")) return;
-      roleList.removeClass("active");
-      $(this).addClass("active");
-      roleNavList.removeClass("displayok");
-      let indexOfRoleList = roleList.index($(this));
-      $(roleNavList.get(indexOfRoleList)).addClass("displayok");
-      roleNavList.find('.channels-link').get(indexOfRoleList).click();
-    });
-
-    // Отображение всех категорий при клике
-    $(".more-categories-button").on("click", function (e) {
-      $(".more-categories-list").toggleClass("hide");
-    });
-    // Отображение расширенного поиска при клике
-    // $(".button-extended").on("click", function (e) {
-    //   $(".extended-search-container").toggleClass("hide");
-    // });
-
-    // date creation
-    function getMonday(d) {
-      d = new Date(d);
-      var day = d.getDay(),
-        diff = d.getDate() - day + (day == 0 ? -6 : 1); // adjust when day is sunday
-      return new Date(d.setDate(diff));
-    }
-
-    let days = ['Воскресенье',
-      'Понедельник',
-      'Вторник',
-      'Среда',
-      'Четверг',
-      'Пятница',
-      'Суббота'
-    ];
-
-    function printDay(now, withYear = false) {
-      return '' + days[now.getDay()] + ', ' + ((now.getDate() < 10) ? ('0' + now.getDate()) : (now.getDate())) + '.' +
-        ((now.getMonth() < 9) ? ('0' + (now.getMonth() + 1)) : (now.getMonth() + 1)) + ((withYear) ? ('.' + now
-          .getFullYear()) : '');
-    }
-
-    function printDayHTML(now, withYear = false) {
-      let weekend = now.getDay() == 0 || now.getDay() == 6;
-      return '<span class="calendarDate' + ((weekend) ? (' weekendDay') : ('')) + '"><span class="dayName">' + days[now
-          .getDay()] +
-        '</span>, <span class="dayNumber">' + ((now
-          .getDate() < 10) ? ('0' + now.getDate()) : (now.getDate())) +
-        '</span>.<span class="monthNumber">' +
-        ((now.getMonth() < 9) ? ('0' + (now.getMonth() + 1)) : (now.getMonth() + 1)) + '</span>' + ((withYear) ? ('.' +
-          now
-          .getFullYear()) : '') + '</span>';
-    }
-
-    let WeekBegin = new Date();
-    WeekBegin = getMonday(WeekBegin.setDate(WeekBegin.getDate() - 7));
-    for (let i = 0; i < 21; i++) {
-      $($(".calendarList .calendarList-item").get(i)).prepend("" + printDayHTML(WeekBegin) + "");
-      // console.log(printDay(WeekBegin));
-      WeekBegin.setDate(WeekBegin.getDate() + 1);
-    }
-
-    // pagination
-    let buttonsToSidebar;
-    let GlobalIdChannel = null;
-    let GlobalNameChannel = null;
-    let dataContainer = $('#channelsList .data-container');
-    $('#channelsList').pagination({
-      dataSource: allChannels,
-      pageSize: 10,
-      className: 'paginationjs-theme-blue paginationjs-big',
-      callback: function (data, pagination) {
-        dataContainer.html(templateAll(data));
-        buttonsToSidebar = $("[data-widget='control-sidebar2']");
-        buttonsToSidebar.on('click', ChangeRightSidebar);
-        changeRaitingListeners();
-      }
-    })
-
-    // right sidebar open\close and reload content
-    $("#closeicon2_added").on('click', function () {
-      sidebar.removeClass('show');
-    });
-    let sidebar = $("#rightaside");
-
-    function DrawRightSidebar(element) {
-      sidebar.find('.channel-selected').html(`<div class="id-channel-text">Номер текущего канала: <span id='id-channel-in-rightsidebar'>${element.id}</span></div>
-        <div class="channel-img">
-          <img src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="${element.title}<">
-        </div>
-        <h3 class="channel-name">${element.title}</h3>
-        <div class="channel-category">Юмор и развлечения</div>
-        <div class="channel-adprice"><span>Стоимость рекламы </span> <span>700р</span></div>
-        <div class="channel-description">
-          ${element.description}
-        </div>
-        <div class="channel-bot">Бот для продвижения <span>no</span></div>
-        <div class="channel-subscribes">
-          <!-- <div class="channel-subscribes-name">Подписчики</div> -->
-          <div class="channel-subscribes-all"><span>Всего </span> <span>${element.members_count}</span></div>
-          <div class="channel-subscribes-day"><span>за день </span> <span>-1 600</span></div>
-          <div class="channel-subscribes-week"><span>за неделю </span> <span>-9 200</span></div>
-          <div class="channel-subscribes-mounth"><span>за месяц </span> <span>-3 800</span></div>
-        </div>
-        <div class="channel-views">
-          <!-- <div class="channel-views-name">Просмотры</div> -->
-          <div class="channel-views-number24h">Количество постов<br /><span>за 24ч </span> <span>25</span></div>
-          <div class="channel-views-number24h">Просмотров на пост<br /><span>за 24ч </span> <span>168 280</span></div>
-        </div>
-        <button type="button" onClick="goToDashboard(${element.id});$('#closeicon2_added').click();" class="btn" style="background-color: #FFCD24">
-          Подробнее
-        </button>
-        <button type="button" class="btn" style="background-color: #FFCD24">
-          Купить рекламу
-        </button>`)
-    }
-
-    function reloadRightSidebar(id) {
-      let element = allChannels.find(function (element) {
-        return element.id == id;
-      });
-      DrawRightSidebar(element);
-    }
-
-    function ChangeRightSidebar() {
-      id = $(this).closest('.channel').find('span')[0].textContent;
-      if (GlobalIdChannel !== id) {
-        reloadRightSidebar(id);
-        if (!sidebar.hasClass('show')) {
-          sidebar.addClass('show');
-        }
-        GlobalIdChannel = id;
-        GlobalNameChannel = allChannels.find(function (element) {
-          return element.id == id;
-        });
-        GlobalNameChannel = GlobalNameChannel.title;
-
-        $('[data-ids="CurrentChannelNumber"]').html(id);
-        $('[data-ids="CurrentChannelName"]').html(GlobalNameChannel);
-
-      } else {
-        sidebar.toggleClass('show');
-      }
-    }
-
-    function goToDashboard(id) {
-      AllRoleLinks[1].click();
-    }
-
-    function goToChannelsList() {
-      AllRoleLinks[0].click();
-    }
-
-    $('.goToChannelsList').on('click', function (e) {
-      goToChannelsList();
-    });
-
-    $('[data-ids="goToChannelsList"]').on('click', function (e) {
-      goToChannelsList();
-      $('#exampleModalLong').modal('toggle');
-    });
-
-    // исправлен глюк, что модальное окно не появлялось у вложенного списка
-    $('a.dropdown-item[data-toggle="modal"]').on('click', function (e) {
-      $('#modalCreateChannel').modal('toggle');
-    })
-
-    // модальное окно с добавлением канала
-    $('label[for="useTelegramTitle"]').on('click', function (e) {
-      $('.use_telegram_title_hidden').toggleClass('d-none');
-    })
-    $('label[for="useTelegramDescription"]').on('click', function (e) {
-      $('.use_telegram_description_hidden').toggleClass('d-none');
-    })
-
-    // добавление в закладки
-    $('.ribbon-sign').on('click', function () {
-      $(this).closest('.channel').toggleClass('ribboned');
-    })
-    // var carouselLength = $('.carousel-item').length - 1;
-
-    // // If there is more than one item
-    // if (carouselLength) {
-    //   $('.carousel-control-next').removeClass('d-none');
-    // }
-
-    // $('.carousel').on('slide.bs.carousel', function (e) {
-    //   // First one
-    //   if (e.to == 0) {
-    //     $('.carousel-control-prev').addClass('d-none');
-    //     $('.carousel-control-next').removeClass('d-none');
-    //   } // Last one
-    //   else if (e.to == carouselLength) {
-    //     $('.carousel-control-prev').removeClass('d-none');
-    //     $('.carousel-control-next').addClass('d-none');
-    //   } // The rest
-    //   else {
-    //     $('.carousel-control-prev').removeClass('d-none');
-    //     $('.carousel-control-next').removeClass('d-none');
-    //   }
-    // });
-
-  </script>
-
-  <script>
-    // charts drawing 
-    $(function () {
-      /* ChartJS
-       * -------
-       * Here we will create a few charts using ChartJS
-       */
-
-      //--------------
-      //- AREA CHART -
-      //--------------
-
-      // Get context with jQuery - using jQuery's .get() method.
-      var areaChartCanvas = $("#areaChart").get(0).getContext("2d");
-
-      var areaChartData = {
-        labels: [
-          "Январь",
-          "Февраль",
-          "Март",
-          "Апрель",
-          "Май",
-          "Июнь",
-          "Июль",
-        ],
-        datasets: [{
-            label: "Telegram",
-            backgroundColor: "rgba(60,141,188,0.9)",
-            borderColor: "rgba(60,141,188,0.8)",
-            pointRadius: false,
-            pointColor: "#3b8bba",
-            pointStrokeColor: "rgba(60,141,188,1)",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(60,141,188,1)",
-            data: [28, 48, 40, 19, 86, 27, 90],
-          },
-          {
-            label: "Facebook",
-            backgroundColor: "rgba(210, 214, 222, 1)",
-            borderColor: "rgba(210, 214, 222, 1)",
-            pointRadius: false,
-            pointColor: "rgba(210, 214, 222, 1)",
-            pointStrokeColor: "#c1c7d1",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(220,220,220,1)",
-            data: [65, 59, 80, 81, 56, 55, 40],
-          },
-          {
-            label: "Instagram",
-            backgroundColor: "rgba(180, 150, 70, 1)",
-            borderColor: "rgba(180, 150, 70, 1)",
-            pointRadius: false,
-            pointColor: "rgba(180, 150, 70, 1)",
-            pointStrokeColor: "#dee",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(180, 150, 70, 1)",
-            data: [70, 62, 10, 30, 40, 50, 60],
-          },
-        ],
-      };
-
-      var areaChartOptions = {
-        maintainAspectRatio: true,
-        responsive: true,
-        legend: {
-          display: true,
-        },
-        scales: {
-          xAxes: [{
-            gridLines: {
-              display: false,
-            },
-          }, ],
-          yAxes: [{
-            gridLines: {
-              display: false,
-            },
-          }, ],
-        },
-      };
-
-      // This will get the first returned node in the jQuery collection.
-      var areaChart = new Chart(areaChartCanvas, {
-        type: "line",
-        data: areaChartData,
-        options: areaChartOptions,
-      });
-    });
-
-  </script>
-  <!-- 
-  <script>
-    $(function () {
-      //-------------
-      //- LINE CHART -
-      //--------------
-      var lineChartCanvas = $("#lineChart").get(0).getContext("2d");
-      var lineChartOptions = jQuery.extend(true, {}, areaChartOptions);
-      var lineChartData = jQuery.extend(true, {}, areaChartData);
-      for (let index = 0; index < lineChartData.datasets.length; index++) {
-        lineChartData.datasets[index].fill = false;
-      }
-      // lineChartData.datasets[0].fill = false;
-      // lineChartData.datasets[1].fill = false;
-      // lineChartData.datasets[2].fill = false;
-      lineChartOptions.datasetFill = true;
-
-      var lineChart = new Chart(lineChartCanvas, {
-        type: "line",
-        data: lineChartData,
-        options: lineChartOptions,
-      });
-
-      //-------------
-      //- BAR CHART -
-      //-------------
-      var barChartCanvas = $("#barChart").get(0).getContext("2d");
-      var barChartData = jQuery.extend(true, {}, areaChartData);
-      // можно поменять порядок источников
-      // var temp0 = areaChartData.datasets[0]
-      // var temp1 = areaChartData.datasets[1]
-      // var temp2 = areaChartData.datasets[2]
-      // barChartData.datasets[0] = temp2
-      // barChartData.datasets[1] = temp0
-      // barChartData.datasets[2] = temp1
-
-      var barChartOptions = {
-        responsive: true,
-        maintainAspectRatio: true,
-        datasetFill: true,
-      };
-
-      var barChart = new Chart(barChartCanvas, {
-        type: "bar",
-        data: barChartData,
-        options: barChartOptions,
-      });
-
-      /*
-      //---------------------
-      //- STACKED BAR CHART -
-      //---------------------
-      var stackedBarChartCanvas = $('#stackedBarChart').get(0).getContext('2d')
-      var stackedBarChartData = jQuery.extend(true, {}, barChartData)
-
-      var stackedBarChartOptions = {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          xAxes: [{
-            stacked: true,
-          }],
-          yAxes: [{
-            stacked: true
-          }]
-        }
-      }
-
-      var stackedBarChart = new Chart(stackedBarChartCanvas, {
-        type: 'bar',
-        data: stackedBarChartData,
-        options: stackedBarChartOptions
-      })
-      */
-
-      //-------------
-      //- DONUT CHART -
-      //-------------
-      // Get context with jQuery - using jQuery's .get() method.
-      var donutChartCanvas = $("#donutChart").get(0).getContext("2d");
-      var donutData = {
-        labels: [
-          "Русский",
-          "Английский",
-          "Китайский",
-          "Немецкий",
-          "Украинский",
-          "Другие",
-        ],
-        datasets: [{
-          data: [700, 900, 800, 333, 150, 123],
-          backgroundColor: [
-            "#f56954",
-            "#00a65a",
-            "#f39c12",
-            "#00c0ef",
-            "#3c8dbc",
-            "#d2d6de",
-          ],
-        }, ],
-      };
-      var donutOptions = {
-        maintainAspectRatio: true,
-        responsive: true,
-      };
-      //Create pie or douhnut chart
-      // You can switch between pie and douhnut using the method below.
-      var donutChart = new Chart(donutChartCanvas, {
-        type: "doughnut",
-        data: donutData,
-        options: donutOptions,
-      });
-
-      /*
-      //-------------
-      //- PIE CHART -
-      //-------------
-      // Get context with jQuery - using jQuery's .get() method.
-      var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
-      var pieData = donutData;
-      var pieOptions = {
-        maintainAspectRatio: false,
-        responsive: true,
-      }
-      //Create pie or douhnut chart
-      // You can switch between pie and douhnut using the method below.
-      var pieChart = new Chart(pieChartCanvas, {
-        type: 'pie',
-        data: pieData,
-        options: pieOptions
-      })
-      */
-    });
-
-  </script>
-   -->
 </body>
 <!--------------------------------------------/////////////BODT ID=FIRSTBODY-------------------------------------------------------------------------------------->
 
