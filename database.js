@@ -7129,9 +7129,7 @@ function template(data) {
         </div>
         <div class="col-sm-7 col-md-6 col-lg-8 col">
           <div class="channel-list-title">
-
             <b>${curItem.title}</b>
-
           </div>
           <div>
             <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">AAAAAEDvhYLA-ZoI1386Eg</a>
@@ -7213,7 +7211,6 @@ function templateAll(data) {
             <img src="tgstat_images/verified.png" width="20" height="20"
               title="У канала есть подтвержденный владелец на сайте TGStat">
           </span>
-
         </div>
       </a>
       <div class="channel-block-title">

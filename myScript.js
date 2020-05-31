@@ -121,34 +121,70 @@ $("#closeicon2_added").on('click', function () {
 let sidebar = $("#rightaside");
 
 function DrawRightSidebar(element) {
-  sidebar.find('.channel-selected').html(`<div class="id-channel-text">Номер текущего канала: <span id='id-channel-in-rightsidebar'>${element.id}</span></div>
-    <div class="channel-img">
-      <img src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="${element.title}<">
+  sidebar.find('.channel-selected').html(`<div class="id-channel-text d-none">Номер текущего канала: <span id='id-channel-in-rightsidebar'>${element.id}</span></div>
+    <div class="channel-top-block">
+      <div class="channel-img">
+        <img src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="${element.title}<">
+      </div>
+      <div class="channel-header">
+        <h3 class="channel-name">${element.title}</h3>
+        <div class="channel-category">Юмор и развлечения</div>
+      </div>
     </div>
-    <h3 class="channel-name">${element.title}</h3>
-    <div class="channel-category">Юмор и развлечения</div>
-    <div class="channel-adprice"><span>Стоимость рекламы </span> <span>700р</span></div>
     <div class="channel-description">
       ${element.description}
     </div>
-    <div class="channel-bot">Бот для продвижения <span>no</span></div>
+    <div class="channel-adprice">
+      <div class="channel-adprice-name">
+        Стоимость рекламы:
+      </div>
+      <div class="channel-adprice-content">
+        <div class="channel-adprice-number">
+          56100&nbsp;<span class="fa fa-rub"></span>
+        </div>
+        <div class="price-info">
+          <span><i class="far fa-clock"></i> 1/24</span>
+        </div>
+        <button type="button" class="btn" style="background-color: #007BFF">
+          <i class="fas fa-shopping-cart"></i> В корзину
+        </button>
+      </div>
+    </div>
     <div class="channel-subscribes">
-      <!-- <div class="channel-subscribes-name">Подписчики</div> -->
-      <div class="channel-subscribes-all"><span>Всего </span> <span>${element.members_count}</span></div>
-      <div class="channel-subscribes-day"><span>за день </span> <span>-1 600</span></div>
-      <div class="channel-subscribes-week"><span>за неделю </span> <span>-9 200</span></div>
-      <div class="channel-subscribes-mounth"><span>за месяц </span> <span>-3 800</span></div>
+      <div class="channel-subscribes-name">Подписчики</div>
+      <div class="channel-subscribes-content">
+        <div class="channel-subscribes-all"><div>Всего </div> <div>${element.members_count}</div></div>
+        <div class="channel-subscribes-day"><div>За день </div> <div>-1 600</div></div>
+        <div class="channel-subscribes-week"><div>За неделю </div> <div>-9 200</div></div>
+        <div class="channel-subscribes-mounth"><div>За месяц </div> <div>-3 800</div></div>
+      </div>
     </div>
     <div class="channel-views">
-      <!-- <div class="channel-views-name">Просмотры</div> -->
-      <div class="channel-views-number24h">Количество постов<br /><span>за 24ч </span> <span>25</span></div>
-      <div class="channel-views-number24h">Просмотров на пост<br /><span>за 24ч </span> <span>168 280</span></div>
+      <div class="channel-views-name">Просмотры</div>
+      <div class="channel-views-content">
+        <div class="channel-views-day"><div>За день </div> <div>-1 600</div></div>
+        <div class="channel-views-week"><div>За неделю </div> <div>-9 200</div></div>
+        <div class="channel-views-mounth"><div>За месяц </div> <div>-3 800</div></div>
+      </div>
     </div>
-    <button type="button" onClick="goToDashboard(${element.id});$('#closeicon2_added').click();" class="btn" style="background-color: #FFCD24">
+    <div class="channel-posts">
+      <div class="channel-posts-name">Посты</div>
+      <div class="channel-posts-content">
+        <div class="channel-posts-day"><div>За день </div> <div>-1 600</div></div>
+        <div class="channel-posts-week"><div>За неделю </div> <div>-9 200</div></div>
+        <div class="channel-posts-mounth"><div>За месяц </div> <div>-3 800</div></div>
+        </div>
+    </div>
+    <div class="channel-err">
+      <div class="channel-err-name">ERR%</div>
+      <div class="channel-err-content">
+        <div class="channel-err-day"><div>За день </div> <div>67%</div></div>
+        <div class="channel-err-week"><div>За неделю </div> <div>54%</div></div>
+        <div class="channel-err-mounth"><div>За месяц </div> <div>60%</div></div>
+      </div>
+    </div>
+    <button type="button" onClick="goToDashboard(${element.id});$('#closeicon2_added').click();" class="btn" style="color:white; border-radius:0; width:100%; background-color: #537ABB">
       Подробнее
-    </button>
-    <button type="button" class="btn" style="background-color: #FFCD24">
-      Купить рекламу
     </button>`)
 }
 
@@ -214,6 +250,23 @@ $('label[for="useTelegramDescription"]').on('click', function (e) {
 $('.ribbon-sign').on('click', function () {
   $(this).closest('.channel').toggleClass('ribboned');
 })
+
+// изменение количества записей на странице
+$('#ChangePagesCounter').on('click', function (e) {
+  dataContainer = $('#channelsList .data-container');
+  $('#channelsList').pagination({
+    dataSource: allChannels,
+    pageSize: +$('#PagesCounter').val(),
+    className: 'paginationjs-theme-blue paginationjs-big',
+    callback: function (data, pagination) {
+      dataContainer.html(templateAll(data));
+      buttonsToSidebar = $("[data-widget='control-sidebar2']");
+      buttonsToSidebar.on('click', ChangeRightSidebar);
+      changeRaitingListeners();
+    }
+  })
+})
+
 // var carouselLength = $('.carousel-item').length - 1;
 
 // // If there is more than one item

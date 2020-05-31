@@ -540,7 +540,12 @@
 
               </div>
             </div>
-
+            <div class="pagesCounter">
+              <span>Записей на странице </span>
+              <input id="PagesCounter" value="10" type="text">
+              <button type="submit" name="ChangePagesCounter" id="ChangePagesCounter"
+                class="btn btn-primary btn-sm r-action-btn">Применить</button>
+            </div>
             <div class="container-fluid channels_list_body sticky-canceller-container">
               <div class="channel ribboned">
                 <div class="row">
@@ -847,15 +852,17 @@
 
     <!--------------------------------------------ASIDE ID=RIGHTASIDE-------------------------------------------------------------------------------------->
 
-    <aside id="rightaside" class="control-sidebar control-sidebar-gray">
+    <aside id="rightaside" class="control-sidebar">
       <div id="closeicon2_added" class="closeicon displayok"><i class="fas fa-times"></i></div>
       <div class="channel-selected">
-        <div class="id-channel-text">Номер текущего канала: <span id='id-channel-in-rightsidebar'></span></div>
-        <div class="channel-img">
-          <img src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
+        <div class="id-channel-text d-none">Номер текущего канала: <span id='id-channel-in-rightsidebar'></span></div>
+        <div class="channel-top-block">
+          <div class="channel-img">
+            <img src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
+          </div>
+          <h3 class="channel-name">ЖЮ</h3>
+          <div class="channel-category">Юмор и развлечения</div>
         </div>
-        <h3 class="channel-name">ЖЮ</h3>
-        <div class="channel-category">Юмор и развлечения</div>
         <div class="channel-adprice"><span>Стоимость рекламы </span> <span>700р</span></div>
         <div class="channel-description">
           Медиа о вирусных видео в сети.
