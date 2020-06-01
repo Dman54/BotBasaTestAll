@@ -7194,6 +7194,13 @@ function template(data) {
 
 function templateAll(data) {
   var elements = "";
+  let btnText;
+  if ($("body").hasClass("catalog-page")) {
+    btnText = 'Подробнее';
+  } else {
+    btnText = 'Выбрать';
+  }
+
   for (x = 0; x < data.length; x++) {
     let curItem = data[x];
     // if (!curItem.errors == "NULL" || !curItem.status == "active" || curItem.members_count < 1000) continue;
@@ -7202,7 +7209,7 @@ function templateAll(data) {
       `<div class="channel${x % 2 == 0 ? " ribboned" : ""}${x < 3 ? " top" : ""}${x%5 > 1 ? " new" : ""}">
   <div class="row">
     <span class="d-none">${curItem.id}</span>
-    <div class="col-sm-12 col-md-12 col-lg-3 col channel-first-part">
+    <div class="col-sm-12 col-md-12 col-lg-2 col channel-first-part">
       <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">
         <div style="position:relative" class="">
           <img alt="${curItem.service_description}" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
@@ -7224,13 +7231,16 @@ function templateAll(data) {
           <a href="/entertainment" style="color:gray; font-size:11px;">${curItem.channel_category_id}</a>
         </div>
       </div>
-      <div class="channel-block-button">
-        <a href="#" onClick="goToDashboard(${curItem.id})"
-          class="btn btn-primary btn-sm r-action-btn">Подробнее</a>
-      </div>
     </div>
 
-    <div class="col-sm-12 col-md-12 col-lg-9 show-for-large col">
+    <div class="col-sm-12 col-md-12 col-lg-10 show-for-large col">
+      <div class="long-description">
+        ${
+          curItem.service_description
+            ? curItem.service_description
+            : "Нет описания"
+        }
+      </div>
       <div>
         <a data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
           href="#" class="popup_ajax table-link">
@@ -7256,19 +7266,16 @@ function templateAll(data) {
           <i class="fas fa-shopping-cart"></i>
         </div>
       </div>
-      <div class="long-description">
-        ${
-          curItem.service_description
-            ? curItem.service_description
-            : "Нет описания"
-        }
+      <div class="channel-block-button">
+        <a href="#" onClick="goToDashboard(${curItem.id})"
+          class="btn btn-primary btn-sm r-action-btn">${btnText}</a>
       </div>
       <div>
         <!-- star rating #1 -->
         <div class="star-rating__container">
           <div class="star-rating__wrapper" itemprop="aggregateRating" itemscope
             itemtype="http://schema.org/AggregateRating">
-            <div class="star-rating__avg" itemprop="ratingValue"></div>
+            <div class="star-rating__avg" itemprop="ratingValue">5</div>
             <div class="star-rating star-rating_active" data-id="page-${x + 1}">
               <div class="star-rating__bg">
                 <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -7333,7 +7340,7 @@ function templateAll(data) {
             <div class="star-rating__votes">
               <div class="star-rating__votes_count"><span class="star-rating__votes_number"
                   itemprop="reviewCount"></span><span class="star-rating__votes_text"></span></div>
-              <div class="star-rating__votes_message d-none">Оцени!</div>
+              <div class="star-rating__votes_message d-none"></div>
             </div>
           </div>
         </div>

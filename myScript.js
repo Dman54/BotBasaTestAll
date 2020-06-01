@@ -217,11 +217,11 @@ function ChangeRightSidebar() {
 }
 
 function goToDashboard(id) {
-  AllRoleLinks[1].click();
+  AllRoleLinks[2].click();
 }
 
 function goToChannelsList() {
-  AllRoleLinks[0].click();
+  AllRoleLinks[1].click();
 }
 
 $('.goToChannelsList').on('click', function (e) {

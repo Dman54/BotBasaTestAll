@@ -494,10 +494,17 @@
             <div class="container-fluid">
               <div class="channels-sortpanel">
                 <div class="row">
-                  <div class="col-sm-12 col-md-12 col-lg-3 col">
+                  <div class="col-sm-12 col-md-12 col-lg-2 col">
                     <!-- <input type="text" name="search" value="" class="filter filter-search" placeholder="Поиск канала"> -->
                   </div>
-                  <div class="col-sm-12 col-md-12 col-lg-9 col">
+
+                  <div class="col-sm-12 col-md-12 col-lg-10 col">
+
+                    <div class="filter filter-sort" data-sort="description" data-direction="desc">
+                      <a href="#" title="Описание канала не более 70 символов">Описание</a>
+                      <a href="#"></a>
+                    </div>
+
                     <div class="filter filter-sort desc" data-sort="members" data-direction="desc">
                       <a href="#" title="Количество подписчиков на данный момент">Подписчики</a>
                       <a href="#"></a>
@@ -513,8 +520,9 @@
                       <a href="#"></a>
                     </div>
 
-                    <div class="filter filter-sort" data-sort="description" data-direction="desc">
-                      <a href="#" title="Описание канала не более 70 символов">Описание</a>
+                    <div class="filter filter-sort" style="visibility:hidden;" data-sort="raitings"
+                      data-direction="desc">
+                      <a href="#" title="Рейтинг канала по пятибалльной шкале">Рейтинг</a>
                       <a href="#"></a>
                     </div>
 
@@ -544,12 +552,12 @@
               <button type="submit" name="ChangePagesCounter" id="ChangePagesCounter"
                 class="btn btn-primary btn-sm r-action-btn">Применить</button>
             </div>
-            <div class="container-fluid channels_list_body sticky-canceller-container">
+            <!-- <div class="container-fluid channels_list_body sticky-canceller-container">
               <div class="channel ribboned">
                 <div class="row">
                   <span class="d-none">-1001371894354</span>
 
-                  <div class="col-sm-12 col-md-12 col-lg-3 col channel-first-part">
+                  <div class="col-sm-12 col-md-12 col-lg-2 col channel-first-part">
                     <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">
                       <div style="position:relative" class="">
                         <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
@@ -564,9 +572,7 @@
                     </a>
                     <div class="channel-block-title">
                       <div class="channel-list-title">
-
                         <b>Академия Джо Рогана</b>
-
                       </div>
                       <div>
                         <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">Перейти на канал</a>
@@ -575,13 +581,12 @@
                         <a href="/entertainment" style="color:gray; font-size:11px;">21</a>
                       </div>
                     </div>
-                    <div class="channel-block-button">
-                      <a href="#" onclick="goToDashboard(-1001371894354)"
-                        class="btn btn-primary btn-sm r-action-btn">Подробнее</a>
-                    </div>
                   </div>
 
-                  <div class="col-sm-12 col-md-12 col-lg-9 show-for-large col">
+                  <div class="col-sm-12 col-md-12 col-lg-10 show-for-large col">
+                    <div class="long-description">
+                      Джо Роган в Телеграмме
+                    </div>
                     <div>
                       <a data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
                         href="#" class="popup_ajax table-link">
@@ -607,11 +612,11 @@
                         <i class="fas fa-shopping-cart"></i>
                       </div>
                     </div>
-                    <div class="long-description">
-                      Джо Роган в Телеграмме
+                    <div class="channel-block-button">
+                      <a href="#" onclick="goToDashboard(-1001371894354)"
+                        class="btn btn-primary btn-sm r-action-btn">Подробнее</a>
                     </div>
                     <div>
-                      <!-- star rating #1 -->
                       <div class="star-rating__container">
                         <div class="star-rating__wrapper" itemprop="aggregateRating" itemscope=""
                           itemtype="http://schema.org/AggregateRating">
@@ -693,7 +698,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
 
           </div>
           <div class="tab-pane fade" id="custom-content-below-bots" role="tabpanel"
