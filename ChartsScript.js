@@ -222,7 +222,7 @@ $(function () {
   // $(function () {
 
   // изменение текущего канала и его контента при переключении слайдов в Dashboard
-  let $carousel = $('#carouselExampleIndicators');
+  let $carousel = $('#carouselExampleIndicators2'); // only for dashboard carousel
   let channelStats = $('.channel-stats');
   let channelChart = $('.channel-chart');
 

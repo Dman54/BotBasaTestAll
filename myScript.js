@@ -251,6 +251,232 @@ $('.ribbon-sign').on('click', function () {
   $(this).closest('.channel').toggleClass('ribboned');
 })
 
+// кнопки продвижения
+function DrawRightSidebarPromotion(element) {
+  sidebar.find('.channel-selected').html(`
+  <div class="rightSidebarPromotion">
+    <div class="rightSidebarPromotion-name">Выберите канал</div>
+    <ul class="nav" id="rightSidebarPromotionSelects" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="rightSidebarPromotionSelectsmy" data-toggle="pill"
+          href="#rightSidebarPromotionSelectsmyContent" role="tab" aria-controls="custom-content-below-compilations3"
+          aria-selected="false">Свои (0)</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="rightSidebarPromotionSelectsother" data-toggle="pill"
+          href="#rightSidebarPromotionSelectsotherContent" role="tab" aria-controls="custom-content-below-mutualPR3"
+          aria-selected="false">Приглашенные (0)</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="rightSidebarPromotionSelectsContent">
+      <div class="tab-pane fade active show" id="rightSidebarPromotionSelectsmyContent" role="tabpanel"
+        aria-labelledby="rightSidebarPromotionSelectsmyContent-tab">
+        <div class="channels-for-select">
+          <div class="channel-for-select">
+            <div class="channel-first-part">
+              <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">
+                <div style="position:relative" class="">
+                  <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" class="b-lazy img-thumbnail b-loaded">
+                </div>
+              </a>
+              <div class="channel-block-title">
+                <div class="channel-list-title">
+                  <b>Академия Джо Рогана</b>
+                </div>
+                <div>
+                  Юмор и развлечения
+                </div>
+              </div>
+            </div>
+            <div class="channel-second-part">
+              <div class="channels-for-select-vip">VIP</div>
+              <span class="custom-control custom-checkbox">
+                <input id="useChannel" name="useChannel" type="checkbox" checked="checked" class="custom-control-input">
+                <label for="useChannel" class="custom-control-label form-check-label"></label>
+              </span>
+            </div>
+          </div>
+          <div class="channel-for-select">
+            <div class="channel-first-part">
+              <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">
+                <div style="position:relative" class="">
+                  <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" class="b-lazy img-thumbnail b-loaded">
+                </div>
+              </a>
+              <div class="channel-block-title">
+                <div class="channel-list-title">
+                  <b>Академия Джо Рогана</b>
+                </div>
+                <div>
+                  Юмор и развлечения
+                </div>
+              </div>
+            </div>
+            <div class="channel-second-part">
+              <div class="channels-for-select-vip">VIP</div>
+              <span class="custom-control custom-checkbox">
+                <input id="useChannel2" name="useChannel2" type="checkbox" checked="checked" class="custom-control-input">
+                <label for="useChannel2" class="custom-control-label form-check-label"></label>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="rightSidebarPromotionSelectsotherContent" role="tabpanel"
+        aria-labelledby="rightSidebarPromotionSelectsotherContent-tab">
+        <div class="channels-for-select">
+          <div class="channel-for-select">
+            <div class="channel-first-part">
+              <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">
+                <div style="position:relative" class="">
+                  <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" class="b-lazy img-thumbnail b-loaded">
+                </div>
+              </a>
+              <div class="channel-block-title">
+                <div class="channel-list-title">
+                  <b>Академия Джо Рогана</b>
+                </div>
+                <div>
+                  Юмор и развлечения
+                </div>
+              </div>
+            </div>
+            <div class="channel-second-part">
+              <div class="channels-for-select-vip">VIP</div>
+              <span class="custom-control custom-checkbox">
+                <input id="useChannel3" name="useChannel3" type="checkbox" checked="checked" class="custom-control-input">
+                <label for="useChannel3" class="custom-control-label form-check-label"></label>
+              </span>
+            </div>
+          </div>
+          <div class="channel-for-select">
+            <div class="channel-first-part">
+              <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">
+                <div style="position:relative" class="">
+                  <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" class="b-lazy img-thumbnail b-loaded">
+                </div>
+              </a>
+              <div class="channel-block-title">
+                <div class="channel-list-title">
+                  <b>Академия Джо Рогана</b>
+                </div>
+                <div>
+                  Юмор и развлечения
+                </div>
+              </div>
+            </div>
+            <div class="channel-second-part">
+              <div class="channels-for-select-vip">VIP</div>
+              <span class="custom-control custom-checkbox">
+                <input id="useChannel4" name="useChannel4" type="checkbox" checked="checked" class="custom-control-input">
+                <label for="useChannel4" class="custom-control-label form-check-label"></label>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn">
+      Добавить канал
+    </button>
+  </div>`);
+}
+
+function ChangeRightSidebarPromotion() {
+  id = $(this).closest('.promotion').find('span')[0].textContent;
+  if (GlobalIdChannel !== id) {
+    DrawRightSidebarPromotion(id);
+    if (!sidebar.hasClass('show')) {
+      sidebar.addClass('show');
+    }
+    GlobalIdChannel = id;
+    // GlobalNameChannel = allChannels.find(function (element) {
+    //   return element.id == id;
+    // });
+    // GlobalNameChannel = GlobalNameChannel.title;
+
+    // $('[data-ids="CurrentChannelNumber"]').html(id);
+    // $('[data-ids="CurrentChannelName"]').html(GlobalNameChannel);
+
+  } else {
+    sidebar.toggleClass('show');
+  }
+  $('.channels-for-select-vip').on('click', function (e) {
+    $(this).toggleClass('active');
+  })
+}
+
+let buttonsPromotionToSidebar;
+buttonsPromotionToSidebar = $("[data-widget='control-sidebar-promotion']");
+buttonsPromotionToSidebar.on('click', ChangeRightSidebarPromotion);
+
+function DrawRightSidebarSelectChannel() {
+  sidebar.find('.channel-selected').html(`
+  <div class="rightSidebarPromotion">
+    <div class="rightSidebarPromotion-name">Выберите канал</div>
+    <div class="channels-for-select">
+      <div class="channel-for-select">
+        <div class="channel-first-part">
+          <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">
+            <div style="position:relative" class="">
+              <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" class="b-lazy img-thumbnail b-loaded">
+            </div>
+          </a>
+          <div class="channel-block-title">
+            <div class="channel-list-title">
+              <b>Академия Джо Рогана</b>
+            </div>
+            <div>
+              Юмор и развлечения
+            </div>
+          </div>
+        </div>
+        <div class="channel-second-part">
+          <span class="custom-control custom-checkbox">
+            <input id="useChannel" name="useChannel" type="checkbox" checked="checked" class="custom-control-input">
+            <label for="useChannel" class="custom-control-label form-check-label"></label>
+          </span>
+        </div>
+      </div>
+      <div class="channel-for-select">
+        <div class="channel-first-part">
+          <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">
+            <div style="position:relative" class="">
+              <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" class="b-lazy img-thumbnail b-loaded">
+            </div>
+          </a>
+          <div class="channel-block-title">
+            <div class="channel-list-title">
+              <b>Академия Джо Рогана</b>
+            </div>
+            <div>
+              Юмор и развлечения
+            </div>
+          </div>
+        </div>
+        <div class="channel-second-part">
+          <span class="custom-control custom-checkbox">
+            <input id="useChannel2" name="useChannel2" type="checkbox" checked="checked" class="custom-control-input">
+            <label for="useChannel2" class="custom-control-label form-check-label"></label>
+          </span>
+        </div>
+      </div>
+    </div>
+    <button type="button" class="btn">
+      Добавить канал
+    </button>
+  </div>`);
+}
+
+function ChangeRightSidebarSelectChannel() {
+  DrawRightSidebarSelectChannel();
+  sidebar.toggleClass('show');
+}
+
+let buttonsSelectChannelToSidebar;
+buttonsSelectChannelToSidebar = $("[data-widget='control-sidebar-select-channel']");
+buttonsSelectChannelToSidebar.on('click', ChangeRightSidebarSelectChannel);
+
 // изменение количества записей на странице
 $('#ChangePagesCounter').on('click', function (e) {
   dataContainer = $('#channelsList .data-container');
@@ -265,4 +491,10 @@ $('#ChangePagesCounter').on('click', function (e) {
       changeRaitingListeners();
     }
   })
+})
+
+
+$(function () {
+  $('[data-toggle="popover"]').popover();
+  $('[data-toggle="tooltip"]').tooltip();
 })
