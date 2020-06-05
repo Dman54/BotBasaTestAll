@@ -166,13 +166,7 @@
           <!-- <span class="caret"></span> -->
         </a>
 
-        <div class="dropdown-menu" x-placement="bottom-start" style="
-              position: absolute;
-              transform: translate3d(-5px, 40px, 0px);
-              top: 0px;
-              left: 0px;
-              will-change: transform;
-            ">
+        <div class="dropdown-menu" x-placement="bottom-start">
           <a class="dropdown-item" data-sectioncontent="12" tabindex="-1" href="index0latest.html">Личный кабинет</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" tabindex="-1" href="#">Выйти</a>
@@ -203,9 +197,8 @@
 
         <a class="nav-link" data-widget="pushmenu" href="#" role="button">
         </a>
-        <div style="position: absolute; right: 50%">
-          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><img src="img/telegram.png"
-              style="height: 32px; width: 32px;"> Telegram</a>
+        <div class="navbar-nav-telegram">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><img src="img/telegram.png"> Telegram</a>
         </div>
       </ul> <!-- Right navbar links -->
     </nav>
@@ -228,7 +221,7 @@
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-            <ul data-selectRole_added="true" class="nav nav-treeview" style="display: block;">
+            <ul data-selectRole_added="true" class="nav nav-treeview">
               <li class="nav-item">
                 <a href="#" data-Role_added='1' class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
@@ -403,12 +396,11 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item d-sm-inline-block">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-default btn-blue" data-widget="control-sidebar-select-channel"
+                  <button type="button" class="btn btn-blue" data-widget="control-sidebar-select-channel"
                     data-slide="true">
                     Выберите канал
                   </button>
-                  <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
-                    style="background-color: #FFCD24">
+                  <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
                     Добавить канал <span class="plus"></span>
                   </button>
                 </div>
@@ -524,7 +516,7 @@
                             <div class="price-info">
                               <span><i class="far fa-clock"></i> 1/24</span>
                             </div>
-                            <button type="button" class="btn" style="background-color: #007BFF">
+                            <button type="button" class="btn btn-primary">
                               <i class="fas fa-shopping-cart"></i> В корзину
                             </button>
                           </div>
@@ -582,7 +574,7 @@
                             <div class="price-info">
                               <span><i class="far fa-clock"></i> 1/24</span>
                             </div>
-                            <button type="button" class="btn" style="background-color: #007BFF">
+                            <button type="button" class="btn btn-primary">
                               <i class="fas fa-shopping-cart"></i> В корзину
                             </button>
                           </div>
@@ -599,7 +591,6 @@
                 <div class="col">
                   <button type="button" class="btn btn-default btn-blue">
                     <a class="" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                      <!-- carousel-control-prev -->
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="">Предыдущий канал</span>
                     </a>
@@ -626,7 +617,6 @@
                 <div class="col">
                   <button type="button" class="btn btn-default btn-blue">
                     <a class="" href="#carouselExampleIndicators" role="button" data-slide="next">
-                      <!-- carousel-control-next -->
                       <span class="">Следущий канал</span>
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     </a>
@@ -635,245 +625,61 @@
               </div>
             </div>
 
-            <!-- <form method="get" enctype="multipart/form-data" id="searchChannels" name="searchChannels" action="">
-              <div class="container-fluid">
-                <dl class="sub-nav sub-nav-first">
-                  <dd class="active"><a class="filter filter-category" data-category="" href="#">Все</a></dd>
-                  <dd class=""><a href="#" class="filter filter-category" data-category="blogs">Блоги</a>
-                  </dd>
-                  <dd class=""><a href="#" class="filter filter-category" data-category="entertainment">Юмор и
-                      развлечения</a>
-                  </dd>
-                  <dd class=""><a href="#" class="filter filter-category" data-category="business">Бизнес и
-                      стартапы</a>
-                  </dd>
-                  <dd class=""><a href="#" class="filter filter-category" data-category="news">Новости и СМИ</a>
-
-                  </dd>
-                  <dt style="width:80px; float:right; text-align:right">Категория</dt>
-
-                  <dd class="dropdown ">
-                    <a href="#" class="more-categories-button" data-default-text="Еще категории">
-                      <span>Еще категории</span>
-                      <b class="caret"></b>
-                    </a>
-                  </dd>
-
-                  <div class="clearfix"></div>
-                  <div class="more-categories-list hide" style="margin-top:10px;">
-                    <dd><a href="#" class="filter filter-category " data-category="sales">Продажи</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="music">Музыка</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="crypto">Криптовалюты</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="art">Искусство и фото</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="sport">Здоровье и Спорт</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="politics">Политика</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="video">Видео и фильмы</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="marketing">Маркетинг, PR,
-                        реклама</a>
-                    </dd>
-                    <dd><a href="#" class="filter filter-category " data-category="edutainment">Познавательное</a>
-                    </dd>
-                    <dd><a href="#" class="filter filter-category " data-category="tech">Технологии</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="education">Образование</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="travels">Путешествия</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="psychology">Психология</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="books">Книги</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="beauty">Мода и красота</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="gaming">Игры и приложения</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="quotes">Цитаты</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="economics">Экономика</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="career">Карьера</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="food">Еда и кулинария</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="auto">Авто</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="language">Лингвистика</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="religion">Религия</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="design">Дизайн</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="catalogs">Каталоги каналов и
-                        ботов</a>
-                    </dd>
-                    <dd><a href="#" class="filter filter-category " data-category="telegram">Telegram</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="babies">Семья и дети</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="animals">Животные</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="health">Медицина</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="handmade">Рукоделие</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="stickers">Каталоги стикеров</a>
-                    </dd>
-                    <dd><a href="#" class="filter filter-category " data-category="lifehack">Лайфхаки</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="adult">Для взрослых</a></dd>
-                    <dd><a href="#" class="filter filter-category " data-category="other">Другое</a></dd>
-                  </div>
-                </dl>
-                <div class="clearfix"></div>
-              </div>
-              <div class="container-fluid">
-                <div class="search-container">
-                  <span class="search_wrap">
-                    <i class="fas fa-search"></i>
-                    <input type="search" name="search" value="" class="filter filter-search form-control2"
-                      placeholder="Поиск канала">
-                  </span>
-                  <button type="submit" name="search_channels" id="search_channels"
-                    class="btn btn-primary btn-sm r-action-btn">Поиск</button>
-
-                  <a class="button-extended" href="#">
-                    Расширенный поиск
-                  </a>
-                </div>
-              </div>
-              <div class="container-fluid">
-                <div class="extended-search-container sub-nav hide">
-                  <div class="extended-search-first-part">
-                    <span class="select-wrapper">
-                      <select id="languageSelect" name="languageSelect" class="form-control2">
-                        <option selected="" disabled="">Язык канала</option>
-                        <option value="Русский">Русский</option>
-                        <option value="English">English</option>
-                        <option value="Deutsch">Deutsch</option>
-                        <option value="Another">Another</option>
-                      </select>
-                    </span>
-                    <span class="custom-control custom-checkbox">
-                      <input id="onlyVerifedChannels" type="checkbox" class="custom-control-input">
-                      <label for="onlyVerifedChannels" class="custom-control-label form-check-label">Только
-                        подтвержденные каналы</label>
-                    </span>
-                    <span class="custom-control custom-checkbox">
-                      <input id="mutualPiar" type="checkbox" checked="checked" class="custom-control-input">
-                      <label for="mutualPiar" class="custom-control-label form-check-label">Взаимопиар</label>
-                    </span>
-                  </div>
-                  <div class="row">
-                    <div class="col col-lg-3 col-md-6">
-                      <div>
-                        <dt style="margin-left:0px; margin-top:10px; color:#444444;">Подписчиков</dt>
-                      </div>
-                      <div class="clearfix"></div>
-                      <div class="row">
-                        <div class="col col-lg-6 col-md-6 col-sm-6">
-                          <input type="text" value="" name="subscribers[from]" placeholder="от"
-                            class="filter filter-search" height="30"
-                            style="height:30px; font-size:13px; padding:0 0.5rem;">
-                        </div>
-                        <div class="col col-lg-6 col-md-6 col-sm-6">
-                          <input type="text" value="" name="subscribers[to]" placeholder="до"
-                            class="filter filter-search" height="30"
-                            style="height:30px; font-size:13px; padding:0 0.5rem;">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col col-lg-3 col-md-6">
-                      <div>
-                        <dt style="margin-left:0px; margin-top:10px; color:#444444;">Охват 1 поста</dt>
-                      </div>
-                      <div class="clearfix"></div>
-                      <div class="row">
-                        <div class="col col-lg-6 col-md-6 col-sm-6">
-                          <input type="text" value="" name="post_reach[from]" placeholder="от"
-                            class="filter filter-search" height="30"
-                            style="height:30px; font-size:13px; padding:0 0.5rem;">
-                        </div>
-                        <div class="col col-lg-6 col-md-6 col-sm-6">
-                          <input type="text" value="" name="post_reach[to]" placeholder="до"
-                            class="filter filter-search" height="30"
-                            style="height:30px; font-size:13px; padding:0 0.5rem;">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col col-lg-3 col-md-6">
-                      <div>
-                        <dt style="margin-left:0px; margin-top:10px; color:#444444;">ERR %</dt>
-                      </div>
-                      <div class="clearfix"></div>
-                      <div class="row">
-                        <div class="col col-lg-6 col-md-6 col-sm-6">
-                          <input type="text" value="" name="err[from]" placeholder="от" class="filter filter-search"
-                            height="30" style="height:30px; font-size:13px; padding:0 0.5rem;">
-                        </div>
-                        <div class="col col-lg-6 col-md-6 col-sm-6">
-                          <input type="text" value="" name="err[to]" placeholder="до" class="filter filter-search"
-                            height="30" style="height:30px; font-size:13px; padding:0 0.5rem;">
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col col-lg-3 col-md-6">
-                      <div>
-                        <dt style="margin-left:0px; margin-top:10px; color:#444444;">Стоимость рекламы ( руб. )</dt>
-                      </div>
-                      <div class="clearfix"></div>
-                      <div class="row">
-                        <div class="col col-lg-5 col-md-5 col-sm-5">
-                          <input type="text" value="" name="price[from]" placeholder="от" class="filter filter-search"
-                            height="30" style="height:30px; font-size:13px; padding:0 0.5rem;">
-                        </div>
-                        <div class="col col-lg-5 col-md-5 col-sm-5">
-                          <input type="text" value="" name="price[to]" placeholder="до" class="filter filter-search"
-                            height="30" style="height:30px; font-size:13px; padding:0 0.5rem;">
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-
-              </div>
-            </form> -->
-
             <div class="container-fluid">
               <div class="channels-sortpanel">
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-2 col">
-                    <!-- <input type="text" name="search" value="" class="filter filter-search" placeholder="Поиск канала"> -->
                   </div>
                   <div class="col-sm-12 col-md-12 col-lg-10 col">
-
                     <div class="filter filter-sort" data-sort="description" data-direction="desc">
                       <a href="#" title="Описание канала не более 70 символов">Описание</a>
                       <a href="#"></a>
                     </div>
-
                     <div class="filter filter-sort desc" data-sort="members" data-direction="desc">
                       <a href="#" title="Количество подписчиков на данный момент">Подписчики</a>
                       <a href="#"></a>
                     </div>
-
                     <div class="filter filter-sort " data-sort="members_growth" data-direction="desc">
                       <a href="#" title="Количество новых подписчиков за выбранный период">Прирост</a>
                       <a href="#"></a>
                     </div>
-
                     <div class="filter filter-sort" data-sort="ad_price" data-direction="desc">
                       <a href="#" title="Стоимость рекламы">Стоимость рекламы</a>
                       <a href="#"></a>
                     </div>
-
-                    <div class="filter filter-sort" style="visibility:hidden;" data-sort="raitings"
-                      data-direction="desc">
+                    <div class="filter filter-sort invisible" data-sort="raitings" data-direction="desc">
                       <a href="#" title="Рейтинг канала по пятибалльной шкале">Рейтинг</a>
                       <a href="#"></a>
                     </div>
-
                     <div class="filter filter-sort" data-sort="raitings" data-direction="desc">
                       <a href="#" title="Рейтинг канала по пятибалльной шкале">Рейтинг</a>
                       <a href="#"></a>
                     </div>
-
                     <div class="filter filter-sort" data-sort="favorites" data-direction="desc">
                       <a href="#" title="Находится ли канал в избранном">Избранное</a>
                       <a href="#"></a>
                     </div>
-
                   </div>
                 </div>
               </div>
             </div>
-
             <div class="inner-left preview" id="channelsList">
               <div class="data-container container-fluid channels_list_body sticky-canceller-container">
-
               </div>
+            </div>
+            <div class="pagesCounter">
+              <span>Записей на странице </span>
+              <span class="select-wrapper">
+                <select id="PagesCounter" name="PagesCounter" class="form-control2">
+                  <option selected="" value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                  <option value="75">75</option>
+                  <option value="100">100</option>
+                </select>
+              </span>
+              <button type="submit" name="ChangePagesCounter" id="ChangePagesCounter"
+                class="btn btn-primary btn-sm r-action-btn">Применить</button>
             </div>
           </div>
           <div class="tab-pane fade" id="custom-content-below-mychannels0" role="tabpanel"
@@ -881,12 +687,11 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item d-sm-inline-block">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-default btn-blue" data-widget="control-sidebar-select-channel"
+                  <button type="button" class="btn btn-blue" data-widget="control-sidebar-select-channel"
                     data-slide="true">
                     Выберите канал
                   </button>
-                  <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
-                    style="background-color: #FFCD24">
+                  <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
                     Добавить канал <span class="plus"></span>
                   </button>
                 </div>
@@ -899,12 +704,11 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item d-sm-inline-block">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-default btn-blue" data-widget="control-sidebar-select-channel"
+                  <button type="button" class="btn btn-blue" data-widget="control-sidebar-select-channel"
                     data-slide="true">
                     Выберите канал
                   </button>
-                  <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
-                    style="background-color: #FFCD24">
+                  <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
                     Добавить канал <span class="plus"></span>
                   </button>
                 </div>
@@ -913,11 +717,9 @@
             <div class="container-fluid"></div>
           </div>
         </div>
-
       </section>
 
       <section data-sectionNumber='1' class="dashboard">
-
         <div class="container-fluid">
           <ul class="nav nav-tabs" id="custom-content-below-tab1" role="tablist">
             <li class="nav-item">
@@ -943,15 +745,14 @@
             aria-labelledby="custom-content-below-channels-tab1">
 
             <div class="container-fluid">
-              <ul class="navbar-nav ml-auto" style="float:right">
+              <ul class="navbar-nav ml-auto">
                 <li class="nav-item d-sm-inline-block">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-default btn-blue" data-widget="control-sidebar-select-channel"
+                    <button type="button" class="btn btn-blue" data-widget="control-sidebar-select-channel"
                       data-slide="true">
                       Выберите канал
                     </button>
-                    <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
-                      style="background-color: #FFCD24">
+                    <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
                       Добавить канал <span class="plus"></span>
                     </button>
                   </div>
@@ -1070,7 +871,7 @@
                             <div class="price-info">
                               <span><i class="far fa-clock"></i> 1/24</span>
                             </div>
-                            <button type="button" class="btn" style="background-color: #007BFF">
+                            <button type="button" class="btn btn-primary">
                               <i class="fas fa-shopping-cart"></i> В корзину
                             </button>
                           </div>
@@ -1128,7 +929,7 @@
                             <div class="price-info">
                               <span><i class="far fa-clock"></i> 1/24</span>
                             </div>
-                            <button type="button" class="btn" style="background-color: #007BFF">
+                            <button type="button" class="btn btn-primary">
                               <i class="fas fa-shopping-cart"></i> В корзину
                             </button>
                           </div>
@@ -1265,9 +1066,7 @@
                         <div class=""></div>
                       </div>
                     </div>
-                    <canvas id="areaChart"
-                      style="min-height: 320px; max-height: 960px; max-width: 100%; display: block;"
-                      class="chartjs-render-monitor"></canvas>
+                    <canvas id="areaChart" class="chartjs-render-monitor"></canvas>
                   </div>
                 </div>
                 <!-- /.card-body -->
@@ -1313,8 +1112,7 @@
                 <!-- <button type="button" class="btn btn-success btn-sm">
                   <a href="index3.html" class="nav-link">Добавить канал</a>
                 </button> -->
-                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModalLong"
-                  style="background-color: #FFCD24">
+                <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#exampleModalLong">
                   Добавить пост
                 </button>
               </li>
@@ -1760,7 +1558,7 @@
                             <div class="price-info">
                               <span><i class="far fa-clock"></i> 1/24</span>
                             </div>
-                            <button type="button" class="btn" style="background-color: #007BFF">
+                            <button type="button" class="btn btn-primary">
                               <i class="fas fa-shopping-cart"></i> В корзину
                             </button>
                           </div>
@@ -1818,7 +1616,7 @@
                             <div class="price-info">
                               <span><i class="far fa-clock"></i> 1/24</span>
                             </div>
-                            <button type="button" class="btn" style="background-color: #007BFF">
+                            <button type="button" class="btn btn-primary">
                               <i class="fas fa-shopping-cart"></i> В корзину
                             </button>
                           </div>
@@ -1999,7 +1797,7 @@
                         <i class="fas fa-link orangebg bigfa"></i>
                       </div>
                       <div>
-                        <i class="fas fa-pen whitebg bluetext midfa pad8"></i>
+                        <i class="fas fa-pen whitebg bluetext midfa pad8 br3"></i>
                       </div>
                     </div>
                   </div>
@@ -2044,7 +1842,7 @@
                         <i class="fas fa-link orangebg bigfa"></i>
                       </div>
                       <div>
-                        <i class="fas fa-pen whitebg bluetext midfa pad8"></i>
+                        <i class="fas fa-pen whitebg bluetext midfa pad8 br3"></i>
                       </div>
                     </div>
                   </div>
@@ -2090,7 +1888,7 @@
                         <i class="fas fa-link orangebg bigfa"></i>
                       </div>
                       <div>
-                        <i class="fas fa-pen whitebg bluetext midfa pad8"></i>
+                        <i class="fas fa-pen whitebg bluetext midfa pad8 br3"></i>
                       </div>
                     </div>
                   </div>
@@ -2265,10 +2063,10 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item d-sm-inline-block">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-default btn-blue dropdown-toggle dropdown-icon"
-                    data-toggle="dropdown" aria-expanded="false">
+                  <button type="button" class="btn btn-blue dropdown-toggle dropdown-icon" data-toggle="dropdown"
+                    aria-expanded="false">
                     Выберите бота
-                    <div class="dropdown-menu" role="menu" style="">
+                    <div class="dropdown-menu" role="menu">
                       <a class="dropdown-item" href="#">Бот 1</a>
                       <a class="dropdown-item" href="#">Бот 2</a>
                       <a class="dropdown-item" href="#">Бот 3</a>
@@ -2277,8 +2075,7 @@
                         новый канал</a>
                     </div>
                   </button>
-                  <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
-                    style="background-color: #FFCD24">
+                  <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
                     Добавить бота <span class="plus"></span>
                   </button>
                 </div>
@@ -2331,10 +2128,10 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item d-sm-inline-block">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-default btn-blue dropdown-toggle dropdown-icon"
-                    data-toggle="dropdown" aria-expanded="false">
+                  <button type="button" class="btn btn-blue dropdown-toggle dropdown-icon" data-toggle="dropdown"
+                    aria-expanded="false">
                     Выберите чат
-                    <div class="dropdown-menu" role="menu" style="">
+                    <div class="dropdown-menu" role="menu">
                       <a class="dropdown-item" href="#">Чат 1</a>
                       <a class="dropdown-item" href="#">Чат 2</a>
                       <a class="dropdown-item" href="#">Чат 3</a>
@@ -2343,8 +2140,7 @@
                         новый чат</a>
                     </div>
                   </button>
-                  <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
-                    style="background-color: #FFCD24">
+                  <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
                     Добавить чат <span class="plus"></span>
                   </button>
                 </div>
@@ -2398,12 +2194,11 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item d-sm-inline-block">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-default btn-blue" data-widget="control-sidebar-select-channel"
+                  <button type="button" class="btn btn-blue" data-widget="control-sidebar-select-channel"
                     data-slide="true">
                     Выберите канал
                   </button>
-                  <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
-                    style="background-color: #FFCD24">
+                  <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
                     Добавить канал <span class="plus"></span>
                   </button>
                 </div>
@@ -2446,7 +2241,7 @@
                     <div class="channel-adprice-number">
                       256100&nbsp;<span class="fa fa-rub"></span>
                     </div>
-                    <button type="button" class="btn" style="background-color: #007BFF">
+                    <button type="button" class="btn btn-primary">
                       Пополнить баланс
                     </button>
                   </div>
@@ -2506,9 +2301,8 @@
                   </select>
                 </div>
               </div>
-              <div class="container-fluid" style="text-align: center;">
-                <button type="submit" class="btn"
-                  style="color:white; border-radius:3px; width:200px; background-color: #537ABB; margin-bottom:1.75rem; margin-top:1.5rem;">
+              <div class="container-fluid text-center">
+                <button type="submit" class="btn btn-blue mb-175 mt-15 w200px">
                   Сохранить
                 </button>
               </div>
@@ -2519,12 +2313,11 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item d-sm-inline-block">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-default btn-blue" data-widget="control-sidebar-select-channel"
+                  <button type="button" class="btn btn-blue" data-widget="control-sidebar-select-channel"
                     data-slide="true">
                     Выберите канал
                   </button>
-                  <button type="button" class="btn" data-toggle="modal" data-target="#modalCreateChannel"
-                    style="background-color: #FFCD24">
+                  <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
                     Добавить канал <span class="plus"></span>
                   </button>
                 </div>
@@ -2563,7 +2356,7 @@
                 <div class="profile-block profile-block-buttons">
                   <div class="profile-name">Отправьте приглашение на почту</div>
                   <div class="goToChannel ">Введите E-mail</div>
-                  <button type="button" class="btn" style="background-color: #007BFF">
+                  <button type="button" class="btn btn-primary">
                     Отправить
                   </button>
                   <div>На указанный адрес будет отправлено приглашение в LinkBaza. Вы можете отправлять только 3
@@ -2725,10 +2518,10 @@
           <div class="channel-views-number24h">Количество постов<br /><span>за 24ч </span> <span>25</span></div>
           <div class="channel-views-number24h">Просмотров на пост<br /><span>за 24ч </span> <span>168 280</span></div>
         </div>
-        <button type="button" class="btn" style="background-color: #FFCD24">
+        <button type="button" class="btn btn-yellow">
           Подробнее
         </button>
-        <button type="button" class="btn" style="background-color: #FFCD24">
+        <button type="button" class="btn btn-yellow">
           Купить рекламу
         </button>
       </div>
@@ -2772,6 +2565,7 @@
               </div>
               <div class="modal-left-part-date">
                 <input type="date" id="start" name="trip-start" value="2021-05-15" min="2020-06-06" max="2022-05-15">
+                <label for="start"><i class="far fa-calendar"></i></label>
                 <!-- 15.05.2021 -->
                 <!-- <i class="far fa-calendar"></i> -->
               </div>
@@ -2865,7 +2659,7 @@
                 <option value="Юмор и развлечения4">Юмор и развлечения4</option>
               </select>
             </span>
-            <button style="width: 100%;margin-top:1.75rem" type="submit" class="btn btn-primary">Добавить канал</button>
+            <button type="submit" class="btn btn-primary w100 mt-175">Добавить канал</button>
           </form>
         </div>
         <div class="modal-right-part">
@@ -2873,13 +2667,11 @@
             Добавление канала
           </div>
           <div class="modal-right-part-content">
-            Добавить канал в каталог можно с помощью этой формы или через нашего <b
-              style="text-decoration: underline;">бота</b> в Telegram.
+            Добавить канал в каталог можно с помощью этой формы или через нашего <b class="tdu">бота</b> в Telegram.
           </div>
           <div class="modal-right-part-content">
-            Вне зависимости от выбранного способа <b style="color:#EA9C71;font-size:1.25rem;">обязательно сделайте бота
-              администратором
-              канала</b>
+            Вне зависимости от выбранного способа <b class="orange-text fz-125">обязательно сделайте бота
+              администратором канала</b>
           </div>
           <div class="goToChannel">
             <i class="fas fa-robot"></i>

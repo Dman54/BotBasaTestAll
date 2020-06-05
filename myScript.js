@@ -142,10 +142,10 @@ function DrawRightSidebar(element) {
         <div class="channel-adprice-number">
           56100&nbsp;<span class="fa fa-rub"></span>
         </div>
-        <div class="price-info">
+        <div class="price-info btn btn-blue">
           <span><i class="far fa-clock"></i> 1/24</span>
         </div>
-        <button type="button" class="btn" style="background-color: #007BFF">
+        <button type="button" class="btn btn-primary">
           <i class="fas fa-shopping-cart"></i> В корзину
         </button>
       </div>
@@ -183,7 +183,7 @@ function DrawRightSidebar(element) {
         <div class="channel-err-mounth"><div>За месяц </div> <div>60%</div></div>
       </div>
     </div>
-    <button type="button" onClick="goToDashboard(${element.id});$('#closeicon2_added').click();" class="btn" style="color:white; border-radius:0; width:100%; background-color: #537ABB">
+    <button type="button" onClick="goToDashboard(${element.id});$('#closeicon2_added').click();" class="btn btn-blue w100 br0">
       Подробнее
     </button>`)
 }
@@ -275,7 +275,7 @@ function DrawRightSidebarPromotion(element) {
           <div class="channel-for-select">
             <div class="channel-first-part">
               <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">
-                <div style="position:relative" class="">
+                <div>
                   <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" class="b-lazy img-thumbnail b-loaded">
                 </div>
               </a>
@@ -299,7 +299,7 @@ function DrawRightSidebarPromotion(element) {
           <div class="channel-for-select">
             <div class="channel-first-part">
               <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">
-                <div style="position:relative" class="">
+                <div>
                   <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" class="b-lazy img-thumbnail b-loaded">
                 </div>
               </a>
@@ -328,7 +328,7 @@ function DrawRightSidebarPromotion(element) {
           <div class="channel-for-select">
             <div class="channel-first-part">
               <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">
-                <div style="position:relative" class="">
+                <div>
                   <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" class="b-lazy img-thumbnail b-loaded">
                 </div>
               </a>
@@ -352,7 +352,7 @@ function DrawRightSidebarPromotion(element) {
           <div class="channel-for-select">
             <div class="channel-first-part">
               <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">
-                <div style="position:relative" class="">
+                <div>
                   <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" class="b-lazy img-thumbnail b-loaded">
                 </div>
               </a>
@@ -418,7 +418,7 @@ function DrawRightSidebarSelectChannel() {
       <div class="channel-for-select">
         <div class="channel-first-part">
           <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">
-            <div style="position:relative" class="">
+            <div>
               <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" class="b-lazy img-thumbnail b-loaded">
             </div>
           </a>
@@ -441,7 +441,7 @@ function DrawRightSidebarSelectChannel() {
       <div class="channel-for-select">
         <div class="channel-first-part">
           <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">
-            <div style="position:relative" class="">
+            <div>
               <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" class="b-lazy img-thumbnail b-loaded">
             </div>
           </a>
@@ -479,6 +479,9 @@ buttonsSelectChannelToSidebar.on('click', ChangeRightSidebarSelectChannel);
 
 // изменение количества записей на странице
 $('#ChangePagesCounter').on('click', function (e) {
+  console.log($('#channelsList'));
+  console.log($('#channelsList').__proto__.pagination.defaults.pageSize);
+  if ($('#channelsList').__proto__.pagination.defaults.pageSize == +$('#PagesCounter').val()) return;
   dataContainer = $('#channelsList .data-container');
   $('#channelsList').pagination({
     dataSource: allChannels,

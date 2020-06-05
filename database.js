@@ -7147,14 +7147,12 @@ function template(data) {
           href="#" class="popup_ajax table-link">
           ${curItem.members_count}
         </a>
-        &nbsp;
       </div>
       <div>
         <a data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
           href="#" class="popup_ajax table-link">
           <span class="green">+1.5k</span>
         </a>
-        &nbsp;
       </div>
       <div>
         <a data-width="800" data-height="200" data-src="/ru/channels/121/views" data-type="ajax" href="#"
@@ -7162,27 +7160,22 @@ function template(data) {
           4.5m
         </a>
         <sup class="red">-8.2%</sup>
-        &nbsp;
       </div>
       <div>
         232.8k
-        &nbsp;
       </div>
       <div>
         25.6%
-        &nbsp;
       </div>
       <div>
         <a data-width="800" data-height="200" data-src="/ru/channels/121/reposts" data-type="ajax" href="#"
           class="popup_ajax table-link">
           1597.3
         </a>
-        &nbsp;
       </div>
-      <div class="price-info" style="float:left; margin-top:20px; font-size:11px; width:auto">
+      <div class="price-info btn btn-blue" style="float:left; margin-top:20px; font-size:11px; width:auto">
         <span data-widget="control-sidebar2" data-slide="true">
-          <span class="fa fa-rub price-icon active" style="color:white; margin-right:5px;"></span>&nbsp;69
-          900
+          <span class="fa fa-rub price-icon active" style="color:white; margin-right:5px;"></span>&nbsp;69&nbsp;900
         </span>
       </div>
     </div>
@@ -7246,21 +7239,16 @@ function templateAll(data) {
           href="#" class="popup_ajax table-link">
           ${curItem.members_count}
         </a>
-        &nbsp;
       </div>
       <div>
         <a data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
           href="#" class="popup_ajax table-link">
           <span class="green">+1.5k</span>
         </a>
-        &nbsp;
       </div>
       <div class="buycolumn">
-        <div class="price-info">
-          <span data-widget="control-sidebar2" data-slide="true">
-            69
-            900&nbsp;
-            <span class="fa fa-rub price-icon active"></span></span>
+        <div class="price-info btn btn-blue">
+          <span data-widget="control-sidebar2" data-slide="true">69&nbsp;900&nbsp;<span class="fa fa-rub price-icon active"></span></span>
         </div>
         <div class="buy-info">
           <i class="fas fa-shopping-cart"></i>
@@ -7412,14 +7400,12 @@ function templateAll(data) {
 //           href="#" class="popup_ajax table-link">
 //           ${curItem.members_count}
 //         </a>
-//         &nbsp;
 //       </div>
 //       <div>
 //         <a data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
 //           href="#" class="popup_ajax table-link">
 //           <span class="green">+1.5k</span>
 //         </a>
-//         &nbsp;
 //       </div>
 //       <div>
 //         <a data-width="800" data-height="200" data-src="/ru/channels/121/views" data-type="ajax" href="#"
@@ -7427,27 +7413,22 @@ function templateAll(data) {
 //           4.5m
 //         </a>
 //         <sup class="red">-8.2%</sup>
-//         &nbsp;
 //       </div>
 //       <div>
 //         232.8k
-//         &nbsp;
 //       </div>
 //       <div>
 //         25.6%
-//         &nbsp;
 //       </div>
 //       <div>
 //         <a data-width="800" data-height="200" data-src="/ru/channels/121/reposts" data-type="ajax" href="#"
 //           class="popup_ajax table-link">
 //           1597.3
 //         </a>
-//         &nbsp;
 //       </div>
-//       <div class="price-info" style="float:left; margin-top:20px; font-size:11px; width:auto">
+//       <div class="price-info btn btn-blue" style="float:left; margin-top:20px; font-size:11px; width:auto">
 //         <span data-widget="control-sidebar2" data-slide="true">
-//           <span class="fa fa-rub price-icon active" style="color:white; margin-right:5px;"></span>&nbsp;69
-//           900
+//           <span class="fa fa-rub price-icon active" style="color:white; margin-right:5px;"></span>&nbsp;69&nbsp;900
 //         </span>
 //       </div>
 //     </div>
