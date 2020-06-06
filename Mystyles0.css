@@ -62,7 +62,7 @@
 .main-body_added .control-sidebar {
   display: block;
   top: 72px;
-  transition: right 0.7s ease;
+  transition: right 0.3s ease;
   z-index: 1034;
   /* padding-top: 0.75rem; */
   right: -400px;
@@ -473,7 +473,7 @@ nav[data-selectRoleContent_added].displayok {
   width: 150px;
 }
 
-.carousel-item-wrapper>*:first-child {
+.carousel-item-wrapper>div:first-of-type {
   flex: 1;
   margin-left: 0;
 }
@@ -539,13 +539,78 @@ nav[data-selectRoleContent_added].displayok {
 }
 
 /* Дни календаря для постов */
-.dayNumber,
-.monthNumber {
-  font-weight: bold;
+.posts-carousel {
+  margin-top: 2.5rem;
+  margin-bottom: 2.25rem;
 }
 
-.weekendDay {
+.posts-carousel-toppart {
+  margin-bottom: 1.25rem;
+}
+
+.posts-carousel-btn {
+  padding: 0;
+  border-radius: 3px;
+}
+
+.posts-carousel-btn a {
+  display: block;
+  padding: 0.25rem 0;
+}
+
+.posts-carousel-dates {
+  display: inline-block;
+  color: #289DE9;
+  padding: 0 1.5rem;
+}
+
+.posts-carousel-dates>span {
+  display: none;
+}
+
+.posts-carousel-dates>span.active {
+  display: inline-block;
+}
+
+/* .dayNumber,
+.monthNumber {
+  font-weight: bold;
+} */
+
+/* .weekendDay {
   color: red;
+} */
+
+.calendarDate {
+  background-color: #A8DAFF;
+  border-radius: 3px 3px 0px 0px;
+  padding: 0.375rem 0.625rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.calendarDate-after {
+  cursor: pointer;
+  content: '+';
+  display: block;
+  width: 100%;
+  height: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1rem;
+  color: #fff;
+  background-color: #79B2F0;
+  border-radius: 0px 0px 3px 3px;
+  margin-bottom: 0.625rem;
+}
+
+.calendarDate-top:hover .calendarDate {
+  background-color: #63BCFF;
+  color: #fff;
+}
+
+.calendarDate-top:hover .calendarDate-after {
+  background-color: #4A96E8;
 }
 
 .calendarList {
@@ -571,31 +636,34 @@ nav[data-selectRoleContent_added].displayok {
 .publication-item {
   position: relative;
   list-style: none;
-  background-color: rgba(128, 128, 128, 0.1);
-  padding: 0.5rem;
-  margin-top: 0.75rem;
+  background-color: #F3F6F9;
+  border-radius: 3px;
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.3125rem;
   vertical-align: middle;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.publication-item:not(.publication-item-no):hover {
-  background-color: #1f3b6b;
-  color: white;
+.publication-item:hover {
+  background-color: #007BFF;
+  color: #fff;
 }
 
-.publication-item:not(.publication-item-no):hover .circle {
-  background-color: white;
-  color: #1f3b6b;
+.publication-item:hover i {
+  color: #fff;
 }
 
-.publication-item-no {
+/* .publication-item-no {
   text-align: center;
   color: rgba(0, 0, 0, 0.3);
   font-weight: bold;
   cursor: inherit;
-}
+} */
 
-.circle {
+/* .circle {
   border: 1px solid #aaa;
   box-shadow: inset 1px 1px 3px #fff;
   width: 22px;
@@ -606,11 +674,10 @@ nav[data-selectRoleContent_added].displayok {
   top: 5px;
   margin: 4px;
   display: inline-block;
-  /* vertical-align: middle; */
   background: #aaaaaa4f;
-}
+} */
 
-.circle:hover {
+/* .circle:hover {
   background: radial-gradient(#aaa, #fff);
 }
 
@@ -626,10 +693,10 @@ nav[data-selectRoleContent_added].displayok {
   left: 0;
   right: 0;
   bottom: 0;
-}
+} */
 
 /* PLUS */
-.circle.plus:before,
+/* .circle.plus:before,
 .circle.plus:after {
   background: green;
   box-shadow: 1px 1px 1px #ffffff9e;
@@ -644,18 +711,18 @@ nav[data-selectRoleContent_added].displayok {
   margin: auto 3px;
   height: 2px;
   box-shadow: none;
-}
+} */
 
 /* MINUS */
-.circle.minus:before {
+/* .circle.minus:before {
   background: #cc0000;
   margin: auto 3px;
   height: 2px;
   box-shadow: 0px 1px 1px #ffffff9e;
-}
+} */
 
 /* CROSS */
-.circle.cross:after,
+/* .circle.cross:after,
 .circle.cross:before {
   background: #000;
   margin: auto 4px;
@@ -666,7 +733,9 @@ nav[data-selectRoleContent_added].displayok {
 
 .circle.cross:after {
   transform: rotateZ(-45deg);
-}
+} */
+
+/* ~ END ~ Дни календаря для постов */
 
 /*****************************************************/
 /* Стили для Мои каналы, взяты на 90% с сайта tgstat */
@@ -784,6 +853,14 @@ nav[data-selectRoleContent_added].displayok {
   /* Safari and Chrome */
   appearance: none;
   cursor: pointer;
+}
+
+.channels-sortpanel .select-wrapper:after {
+  display: none;
+}
+
+.channels-sortpanel select.form-control2 {
+  width: 100%;
 }
 
 .select-wrapper {
@@ -959,9 +1036,13 @@ div.filter-sort.asc a:last-child:after {
   background-color: #e8ecef;
   border-radius: 3px;
   padding: 0.25rem;
+  display: flex;
+  align-self: center;
 }
 
 .channels_list_body div.channel {
+  display: flex;
+  align-items: center;
   background-color: #f9f9f9;
   margin-bottom: 10px;
   padding: 10px 0.5rem;
@@ -969,8 +1050,63 @@ div.filter-sort.asc a:last-child:after {
   position: relative;
 }
 
-.channels_list_body div.channel>.row {
-  align-items: center;
+.channels-sortpanel>*,
+.channels_list_body div.channel>* {
+  text-align: center;
+  flex: 2;
+}
+
+.channels-sortpanel>*:first-child,
+.channels_list_body div.channel>*:first-child {
+  flex: 3;
+}
+
+.channels-sortpanel>*:first-child,
+.channels_list_body div.channel>*:first-child {
+  /* max-width: 250px; */
+  min-width: 250px;
+}
+
+.channels-sortpanel>*:nth-child(2),
+.channels_list_body div.channel>*:nth-child(2) {
+  /* max-width: 170px; */
+  min-width: 170px;
+}
+
+.channels-sortpanel>*:nth-child(3),
+.channels_list_body div.channel>*:nth-child(3) {
+  /* max-width: 90px; */
+  min-width: 90px;
+}
+
+.channels-sortpanel>*:nth-child(4),
+.channels_list_body div.channel>*:nth-child(4) {
+  /* max-width: 80px; */
+  min-width: 80px;
+}
+
+.channels-sortpanel>*:nth-child(5),
+.channels_list_body div.channel>*:nth-child(5) {
+  /* max-width: 124px; */
+  min-width: 124px;
+}
+
+.channels-sortpanel>*:nth-child(6),
+.channels_list_body div.channel>*:nth-child(6) {
+  /* max-width: 170px; */
+  min-width: 170px;
+}
+
+.channels-sortpanel>*:nth-child(7),
+.channels_list_body div.channel>*:nth-child(7) {
+  /* max-width: 80px; */
+  min-width: 80px;
+}
+
+.channels-sortpanel>*:last-child,
+.channels_list_body div.channel>*:last-child {
+  /* max-width: 100px; */
+  min-width: 100px;
 }
 
 /* .channels_list_body div.row {
@@ -1009,8 +1145,15 @@ div.filter-sort.asc a:last-child:after {
 
 .channel-list-title {
   overflow: hidden;
-  text-overflow: ellipsis;
+  /* text-overflow: ellipsis; */
   max-height: 22px;
+}
+
+.channel-block-title .goToChannel {
+  /* padding: 0; */
+  /* background-color: transparent; */
+  margin-top: 0.25rem;
+  display: inline-block;
 }
 
 .price-info {
@@ -1085,6 +1228,8 @@ a.table-link:hover {
   font-size: 1.5rem;
   margin-bottom: 0;
   font-family: "Roboto";
+  max-height: 1.875rem;
+  overflow: hidden;
 }
 
 .channel-header {
@@ -1094,6 +1239,10 @@ a.table-link:hover {
 .channel-description {
   padding: 1rem;
   background: #f3f6f9;
+  /* height: 10rem; */
+  max-height: 11.9375rem;
+  min-height: 11rem;
+  overflow: hidden;
 }
 
 .channel-adprice-content {
@@ -1539,6 +1688,10 @@ a.table-link:hover {
   width: 1px !important;
 } */
 
+.channels_list_body div.channel.active {
+  border: 1px solid #007bff;
+}
+
 .channel:not(.ribboned) .ribbon-sign {
   color: #dcdcdc;
 }
@@ -1593,6 +1746,11 @@ a.table-link:hover {
   border-bottom: 10px solid transparent;
 } */
 
+.channel_category_id {
+  color: gray;
+  font-size: 11px;
+}
+
 /* begin star_rating.css */
 .star-rating__container {
   display: inline-block;
@@ -1615,21 +1773,21 @@ a.table-link:hover {
   display: flex;
 }
 
-.star-rating__bg {
+/* .star-rating__bg {
   flex-direction: column;
   align-items: center;
   white-space: nowrap;
-}
+} */
 
 /* .star-rating__bg div {
   display: flex;
 } */
 
-.star-rating__live {
+/* .star-rating__live {
   flex-direction: column;
   align-items: center;
   white-space: nowrap;
-}
+} */
 
 /* .star-rating__live div {
   display: flex;
@@ -1783,9 +1941,29 @@ select.form-control2 {
   align-items: center;
 }
 
+.channel-first-part>div:first-of-type {
+  cursor: pointer;
+}
+
+.channel-first-part .channel-list-title {
+  cursor: pointer;
+}
+
 .channel-first-part .channel-block-title {
+  text-align: left;
   margin-left: 0.625rem;
   flex: 1;
+}
+
+.verified-channel-img {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+}
+
+.verified-channel-img img {
+  width: 20px;
+  height: 20px;
 }
 
 .btn {
@@ -1794,6 +1972,15 @@ select.form-control2 {
 
 .btn-primary:hover {
   background-color: #3295FF;
+}
+
+.btn.btn-light-blue {
+  color: white;
+  background-color: #A8DAFF;
+}
+
+.btn.btn-light-blue:hover {
+  background-color: #63BCFF;
 }
 
 .btn.btn-blue {
@@ -1892,10 +2079,11 @@ select.form-control2 {
 }
 
 .pagesCounter {
-  width: 100%;
+  float: right;
+  /* width: 100%;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: center; */
   margin: 1rem auto;
   position: absolute;
   bottom: -15px;
@@ -2377,8 +2565,20 @@ input:checked+.slider:before {
   color: #fff;
 }
 
+.fas.lightbluetext {
+  color: #007BFF;
+}
+
+.fas.lightbluetext:hover {
+  color: #fff;
+}
+
 .fas.pad8 {
   padding: 0.5rem;
+}
+
+.pad0 {
+  padding: 0;
 }
 
 .promotion-info {
@@ -2520,6 +2720,9 @@ input:checked+.slider:before {
 .modal-left-part,
 .modal-right-part {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .modal-left-part-name {
@@ -2553,6 +2756,10 @@ input:checked+.slider:before {
 
 .modal-right-part-content {
   margin-bottom: 1.125rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .fz-125 {

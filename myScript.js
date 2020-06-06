@@ -79,14 +79,15 @@ function printDay(now, withYear = false) {
 
 function printDayHTML(now, withYear = false) {
   let weekend = now.getDay() == 0 || now.getDay() == 6;
-  return '<span class="calendarDate' + ((weekend) ? (' weekendDay') : ('')) + '"><span class="dayName">' + days[now
+  weekend = false;
+  return '<div class="calendarDate-top" data-toggle="modal" data-target="#exampleModalLong"><div class="calendarDate' + ((weekend) ? (' weekendDay') : ('')) + '"><span class="dayName">' + days[now
       .getDay()] +
     '</span>, <span class="dayNumber">' + ((now
       .getDate() < 10) ? ('0' + now.getDate()) : (now.getDate())) +
     '</span>.<span class="monthNumber">' +
     ((now.getMonth() < 9) ? ('0' + (now.getMonth() + 1)) : (now.getMonth() + 1)) + '</span>' + ((withYear) ? ('.' +
       now
-      .getFullYear()) : '') + '</span>';
+      .getFullYear()) : '') + '</div><div class="calendarDate-after">+</div></div>';
 }
 
 let WeekBegin = new Date();
@@ -101,10 +102,11 @@ for (let i = 0; i < 21; i++) {
 let buttonsToSidebar;
 let GlobalIdChannel = null;
 let GlobalNameChannel = null;
+let curPageSize = 10;
 let dataContainer = $('#channelsList .data-container');
 $('#channelsList').pagination({
   dataSource: allChannels,
-  pageSize: 10,
+  pageSize: curPageSize,
   className: 'paginationjs-theme-blue paginationjs-big',
   callback: function (data, pagination) {
     dataContainer.html(templateAll(data));
@@ -196,7 +198,12 @@ function reloadRightSidebar(id) {
 }
 
 function ChangeRightSidebar() {
-  id = $(this).closest('.channel').find('span')[0].textContent;
+  let curChannelEl = $(this).closest('.channel');
+  id = curChannelEl.find('span')[0].textContent;
+  if (!curChannelEl.hasClass('active')) {
+    $(this).closest('.channels_list_body').find('.channel').removeClass('active');
+    curChannelEl.addClass('active');
+  }
   if (GlobalIdChannel !== id) {
     reloadRightSidebar(id);
     if (!sidebar.hasClass('show')) {
@@ -479,13 +486,12 @@ buttonsSelectChannelToSidebar.on('click', ChangeRightSidebarSelectChannel);
 
 // изменение количества записей на странице
 $('#ChangePagesCounter').on('click', function (e) {
-  console.log($('#channelsList'));
-  console.log($('#channelsList').__proto__.pagination.defaults.pageSize);
-  if ($('#channelsList').__proto__.pagination.defaults.pageSize == +$('#PagesCounter').val()) return;
+  if (curPageSize == +$('#PagesCounter').val()) return;
+  curPageSize = +$('#PagesCounter').val();
   dataContainer = $('#channelsList .data-container');
   $('#channelsList').pagination({
     dataSource: allChannels,
-    pageSize: +$('#PagesCounter').val(),
+    pageSize: curPageSize,
     className: 'paginationjs-theme-blue paginationjs-big',
     callback: function (data, pagination) {
       dataContainer.html(templateAll(data));
@@ -496,8 +502,14 @@ $('#ChangePagesCounter').on('click', function (e) {
   })
 })
 
+let postsCarouselDates = $('.posts-carousel-dates>span');
+$('#carouselExampleIndicators3').on('slide.bs.carousel', function (e) {
+  // console.log(e.to);
+  postsCarouselDates.removeClass('active');
+  $(postsCarouselDates[e.to]).addClass('active');
+})
 
 $(function () {
-  $('[data-toggle="popover"]').popover();
+  // $('[data-toggle="popover"]').popover();
   $('[data-toggle="tooltip"]').tooltip();
 })

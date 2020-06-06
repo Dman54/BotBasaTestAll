@@ -7104,94 +7104,13 @@ let allChannels = [{
   },
 ];
 
-function template(data) {
-  console.log(data);
-  curItem = data;
-  return `<div class="row channel ribboned">
-    <div class="ribbon-sign"></div>
-    <span class="d-none">${curItem.id}</span>
-
-    <div class="col-sm-12 col-md-12 col-lg-3 col">
-      <div class="row">
-        <div class="col-sm-3 col-md-2 col-lg-4 col">
-          <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">
-            <div style="position:relative" class="">
-              <img alt="${curItem.description}" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
-                class="b-lazy img-thumbnail b-loaded">
-
-              <span style="position:absolute; top:8%; left:8%">
-                <img src="tgstat_images/verified.png" width="20" height="20"
-                  title="У канала есть подтвержденный владелец на сайте TGStat">
-              </span>
-
-            </div>
-          </a>
-        </div>
-        <div class="col-sm-7 col-md-6 col-lg-8 col">
-          <div class="channel-list-title">
-            <b>${curItem.title}</b>
-          </div>
-          <div>
-            <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">AAAAAEDvhYLA-ZoI1386Eg</a>
-          </div>
-          <div>
-            <a href="/entertainment" style="color:gray; font-size:11px;">${curItem.channel_category_id}</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-sm-12 col-md-12 col-lg-9 show-for-large col">
-      <div>
-        <a data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
-          href="#" class="popup_ajax table-link">
-          ${curItem.members_count}
-        </a>
-      </div>
-      <div>
-        <a data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
-          href="#" class="popup_ajax table-link">
-          <span class="green">+1.5k</span>
-        </a>
-      </div>
-      <div>
-        <a data-width="800" data-height="200" data-src="/ru/channels/121/views" data-type="ajax" href="#"
-          class="popup_ajax table-link">
-          4.5m
-        </a>
-        <sup class="red">-8.2%</sup>
-      </div>
-      <div>
-        232.8k
-      </div>
-      <div>
-        25.6%
-      </div>
-      <div>
-        <a data-width="800" data-height="200" data-src="/ru/channels/121/reposts" data-type="ajax" href="#"
-          class="popup_ajax table-link">
-          1597.3
-        </a>
-      </div>
-      <div class="price-info btn btn-blue" style="float:left; margin-top:20px; font-size:11px; width:auto">
-        <span data-widget="control-sidebar2" data-slide="true">
-          <span class="fa fa-rub price-icon active" style="color:white; margin-right:5px;"></span>&nbsp;69&nbsp;900
-        </span>
-      </div>
-    </div>
-    <a href="#" onClick="goToDashboard(${curItem.id})" style="position: absolute; right: 8px; bottom: 8px"
-      class="btn btn-primary btn-sm r-action-btn">Подробнее</a>
-  </div>
-  `;
-}
-
 function templateAll(data) {
   var elements = "";
   let btnText;
   if ($("body").hasClass("catalog-page")) {
-    btnText = 'Подробнее';
+    btnText = "Подробнее";
   } else {
-    btnText = 'Выбрать';
+    btnText = "Выбрать";
   }
 
   for (x = 0; x < data.length; x++) {
@@ -7199,245 +7118,151 @@ function templateAll(data) {
     // if (!curItem.errors == "NULL" || !curItem.status == "active" || curItem.members_count < 1000) continue;
     elements =
       elements +
-      `<div class="channel${x % 2 == 0 ? " ribboned" : ""}${x < 3 ? " top" : ""}${x%5 > 1 ? " new" : ""}">
-  <div class="row">
+      `
+<div class="channel${x % 2 == 0 ? " ribboned" : ""}${
+        x < 3 ? " top" : ""
+      }${x % 5 > 1 ? " new" : ""}">
+  <div class="channel-first-part">
     <span class="d-none">${curItem.id}</span>
-    <div class="col-sm-12 col-md-2 col-lg-2 col channel-first-part">
-      <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">
-        <div style="position:relative" class="">
-          <img alt="${curItem.service_description}" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
-            class="b-lazy img-thumbnail b-loaded">
-          <span style="position:absolute; top:-1px; left:-1px">
-            <img src="tgstat_images/verified.png" width="20" height="20"
-              title="У канала есть подтвержденный владелец на сайте TGStat">
-          </span>
-        </div>
+    <div class="position-relative" data-widget="control-sidebar2" data-slide="true">
+      <img alt="${
+        curItem.service_description
+      }" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
+        class="b-lazy img-thumbnail b-loaded">
+      <span class="verified-channel-img">
+        <img src="tgstat_images/verified.png" title="У канала есть подтвержденный владелец на сайте TGStat">
+      </span>
+    </div>
+    <div class="channel-block-title">
+      <div class="channel-list-title" data-widget="control-sidebar2" data-slide="true">
+        <b>${curItem.title}</b>
+      </div>
+      <a href="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg" target="_blank" class="goToChannel">
+        <span>Перейти на канал</span>
+        <i class="fas fa-external-link-alt"></i>
       </a>
-      <div class="channel-block-title">
-        <div class="channel-list-title">
-          <b>${curItem.title}</b>
-        </div>
-        <div>
-          <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">Перейти на канал</a>
-        </div>
-        <div style="display:none">
-          <a href="/entertainment" style="color:gray; font-size:11px;">${curItem.channel_category_id}</a>
-        </div>
+      <div class="d-none">
+        <a href="/entertainment" class="channel_category_id">${
+          curItem.channel_category_id
+        }</a>
       </div>
     </div>
-
-    <div class="col-sm-12 col-md-10 col-lg-10 show-for-large col">
-      <div class="long-description">
-        ${
-          curItem.service_description
-            ? curItem.service_description
-            : "Нет описания"
-        }
-      </div>
-      <div>
-        <a data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
-          href="#" class="popup_ajax table-link">
-          ${curItem.members_count}
-        </a>
-      </div>
-      <div>
-        <a data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
-          href="#" class="popup_ajax table-link">
-          <span class="green">+1.5k</span>
-        </a>
-      </div>
-      <div class="buycolumn">
-        <div class="price-info btn btn-blue">
-          <span data-widget="control-sidebar2" data-slide="true">69&nbsp;900&nbsp;<span class="fa fa-rub price-icon active"></span></span>
-        </div>
-        <div class="buy-info">
-          <i class="fas fa-shopping-cart"></i>
-        </div>
-      </div>
-      <div class="channel-block-button">
-        <a href="#" onClick="goToDashboard(${curItem.id})"
-          class="btn btn-primary btn-sm r-action-btn">${btnText}</a>
-      </div>
-      <div>
-        <!-- star rating #1 -->
-        <div class="star-rating__container">
-          <div class="star-rating__wrapper" itemprop="aggregateRating" itemscope
-            itemtype="http://schema.org/AggregateRating">
-            <div class="d-none star-rating__avg" itemprop="ratingValue"></div>
-            <div title="Средний рейтинг: 5" class="star-rating star-rating_active" data-id="page-${x + 1}">
-              <div class="star-rating__bg">
-                <div>
-                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                    <path fill="currentColor"
-                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                    </path>
-                  </svg>
-                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                    <path fill="currentColor"
-                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                    </path>
-                  </svg>
-                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                    <path fill="currentColor"
-                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                    </path>
-                  </svg>
-                </div>
-                <div>
-                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                    <path fill="currentColor"
-                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                    </path>
-                  </svg>
-                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-                    <path fill="currentColor"
-                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                    </path>
-                  </svg>
-                </div>
-              </div>
-              <div class="star-rating__live">
-                <div>
-                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
-                    data-rating="1">
-                    <path fill="currentColor"
-                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                    </path>
-                  </svg>
-                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
-                    data-rating="2">
-                    <path fill="currentColor"
-                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                    </path>
-                  </svg>
-                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
-                    data-rating="3">
-                    <path fill="currentColor"
-                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                    </path>
-                  </svg>
-                </div>
-                <div>
-                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
-                    data-rating="4">
-                    <path fill="currentColor"
-                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                    </path>
-                  </svg>
-                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
-                    data-rating="5">
-                    <path fill="currentColor"
-                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-                    </path>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div class="star-rating__votes">
-              <div class="star-rating__votes_count"><span class="star-rating__votes_number"
-                  itemprop="reviewCount"></span><span class="star-rating__votes_text"></span></div>
-              <div class="star-rating__votes_message d-none"></div>
-            </div>
+  </div>
+  <div class="long-description">
+    ${
+      curItem.service_description
+        ? curItem.service_description
+        : "Нет описания"
+    }
+  </div>
+  <div data-widget="control-sidebar2" data-slide="true">
+    <a data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
+      href="#" class="popup_ajax table-link">
+      ${curItem.members_count}
+    </a>
+  </div>
+  <div data-widget="control-sidebar2" data-slide="true">
+    <a data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
+      href="#" class="popup_ajax table-link">
+      <span class="green">+1.5k</span>
+    </a>
+  </div>
+  <div class="buycolumn">
+    <div class="price-info btn btn-blue">
+      <span data-widget="control-sidebar2" data-slide="true">69&nbsp;900&nbsp;<span class="fa fa-rub price-icon active"></span></span>
+    </div>
+    <div class="buy-info">
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+  </div>
+  <div>
+    <!-- star rating #1 -->
+    <div class="star-rating__container">
+      <div class="star-rating__wrapper" itemprop="aggregateRating" itemscope
+        itemtype="http://schema.org/AggregateRating">
+        <div class="d-none star-rating__avg" itemprop="ratingValue"></div>
+        <div title="Средний рейтинг: 5" class="star-rating star-rating_active" data-id="page-${
+          x + 1
+        }">
+          <div class="star-rating__bg">
+            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path fill="currentColor"
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+              </path>
+            </svg>
+            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path fill="currentColor"
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+              </path>
+            </svg>
+            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path fill="currentColor"
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+              </path>
+            </svg>
+            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path fill="currentColor"
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+              </path>
+            </svg>
+            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+              <path fill="currentColor"
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+              </path>
+            </svg>
+          </div>
+          <div class="star-rating__live">
+            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+              data-rating="1">
+              <path fill="currentColor"
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+              </path>
+            </svg>
+            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+              data-rating="2">
+              <path fill="currentColor"
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+              </path>
+            </svg>
+            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+              data-rating="3">
+              <path fill="currentColor"
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+              </path>
+            </svg>
+            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+              data-rating="4">
+              <path fill="currentColor"
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+              </path>
+            </svg>
+            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+              data-rating="5">
+              <path fill="currentColor"
+                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+              </path>
+            </svg>
           </div>
         </div>
-      </div>
-      <div>
-        <div class="ribbon-sign">
-          <i class="fas fa-heart"></i>
+        <div class="star-rating__votes">
+          <div class="star-rating__votes_count"><span class="star-rating__votes_number"
+              itemprop="reviewCount"></span><span class="star-rating__votes_text"></span></div>
+          <div class="star-rating__votes_message d-none"></div>
         </div>
       </div>
     </div>
   </div>
-  </div>` +
+  <div>
+    <div class="ribbon-sign">
+      <i class="fas fa-heart"></i>
+    </div>
+  </div>
+  <div class="channel-block-button">
+    <a href="#" onClick="goToDashboard(${curItem.id})"
+      class="btn btn-primary btn-sm r-action-btn">${btnText}</a>
+  </div>
+</div>` +
       "\n";
   }
   return elements;
 }
-// $(document).ready(function () {
-//   var elements = $();
-//   for (x = 0; x < allChannels.length; x++) {
-//     let curItem = allChannels[x];
-//     if (!curItem.errors == "NULL" || !curItem.status == "active" || curItem.members_count < 1000) continue;
-//     elements = elements.add(`<div class="row channel ribboned">
-//     <div class="ribbon-sign"></div>
-//     <span class="d-none">${curItem.id}</span>
-
-//     <div class="col-sm-12 col-md-12 col-lg-3 col">
-//       <div class="row">
-//         <div class="col-sm-3 col-md-2 col-lg-4 col">
-//           <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">
-//             <div style="position:relative" class="">
-//               <img alt="${curItem.description}" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
-//                 class="b-lazy img-thumbnail b-loaded">
-
-//               <span style="position:absolute; top:8%; left:8%">
-//                 <img src="tgstat_images/verified.png" width="20" height="20"
-//                   title="У канала есть подтвержденный владелец на сайте TGStat">
-//               </span>
-
-//             </div>
-//           </a>
-//         </div>
-//         <div class="col-sm-7 col-md-6 col-lg-8 col">
-//           <div class="channel-list-title">
-
-//             <b>${curItem.title}</b>
-
-//           </div>
-//           <div>
-//             <a href="https://tgstat.ru/channel/AAAAAEDvhYLA-ZoI1386Eg">Перейти на канал</a>
-//           </div>
-//           <div>
-//             <a href="/entertainment" style="color:gray; font-size:11px;">${curItem.channel_category_id}</a>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-
-//     <div class="col-sm-12 col-md-12 col-lg-9 show-for-large col">
-//       <div>
-//         <a data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
-//           href="#" class="popup_ajax table-link">
-//           ${curItem.members_count}
-//         </a>
-//       </div>
-//       <div>
-//         <a data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
-//           href="#" class="popup_ajax table-link">
-//           <span class="green">+1.5k</span>
-//         </a>
-//       </div>
-//       <div>
-//         <a data-width="800" data-height="200" data-src="/ru/channels/121/views" data-type="ajax" href="#"
-//           class="popup_ajax table-link">
-//           4.5m
-//         </a>
-//         <sup class="red">-8.2%</sup>
-//       </div>
-//       <div>
-//         232.8k
-//       </div>
-//       <div>
-//         25.6%
-//       </div>
-//       <div>
-//         <a data-width="800" data-height="200" data-src="/ru/channels/121/reposts" data-type="ajax" href="#"
-//           class="popup_ajax table-link">
-//           1597.3
-//         </a>
-//       </div>
-//       <div class="price-info btn btn-blue" style="float:left; margin-top:20px; font-size:11px; width:auto">
-//         <span data-widget="control-sidebar2" data-slide="true">
-//           <span class="fa fa-rub price-icon active" style="color:white; margin-right:5px;"></span>&nbsp;69&nbsp;900
-//         </span>
-//       </div>
-//     </div>
-//     <a href="#" onClick="goToDashboard(${curItem.id})" style="position: absolute; right: 8px; bottom: 8px"
-//       class="btn btn-primary btn-sm r-action-btn">Подробнее</a>
-//   </div>
-//   `);
-//   }
-
-//   $('.channels_list_body').append(elements);
-
-// });
