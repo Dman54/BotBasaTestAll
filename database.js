@@ -7119,9 +7119,9 @@ function templateAll(data) {
     elements =
       elements +
       `
-<div class="channel${x % 2 == 0 ? " ribboned" : ""}${
-        x < 3 ? " top" : ""
-      }${x % 5 > 1 ? " new" : ""}">
+<div class="channel${x % 2 == 0 ? " ribboned" : ""}${x < 3 ? " top" : ""}${
+        x % 5 > 1 ? " new" : ""
+      }">
   <div class="channel-first-part">
     <span class="d-none">${curItem.id}</span>
     <div class="position-relative" data-widget="control-sidebar2" data-slide="true">
@@ -7150,23 +7150,22 @@ function templateAll(data) {
   </div>
   <div class="long-description">
     ${
-      curItem.service_description
-        ? curItem.service_description
-        : "Нет описания"
+      curItem.service_description ? curItem.service_description : "Нет описания"
     }
   </div>
-  <div data-widget="control-sidebar2" data-slide="true">
-    <a data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
+  <div>
+    <a data-widget="control-sidebar2" data-slide="true" data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
       href="#" class="popup_ajax table-link">
       ${curItem.members_count}
     </a>
   </div>
-  <div data-widget="control-sidebar2" data-slide="true">
-    <a data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
+  <div>
+    <a data-widget="control-sidebar2" data-slide="true" data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
       href="#" class="popup_ajax table-link">
       <span class="green">+1.5k</span>
     </a>
   </div>
+  <div class="flex-break"></div>
   <div class="buycolumn">
     <div class="price-info btn btn-blue">
       <span data-widget="control-sidebar2" data-slide="true">69&nbsp;900&nbsp;<span class="fa fa-rub price-icon active"></span></span>
@@ -7245,7 +7244,7 @@ function templateAll(data) {
           </div>
         </div>
         <div class="star-rating__votes">
-          <div class="star-rating__votes_count"><span class="star-rating__votes_number"
+          <div class="star-rating__votes_count d-none"><span class="star-rating__votes_number"
               itemprop="reviewCount"></span><span class="star-rating__votes_text"></span></div>
           <div class="star-rating__votes_message d-none"></div>
         </div>

@@ -111,7 +111,10 @@ $('#channelsList').pagination({
   callback: function (data, pagination) {
     dataContainer.html(templateAll(data));
     buttonsToSidebar = $("[data-widget='control-sidebar2']");
-    buttonsToSidebar.on('click', ChangeRightSidebar);
+    buttonsToSidebar.on('click', function (e) {
+      e.preventDefault();
+      ChangeRightSidebar(this);
+    });
     changeRaitingListeners();
   }
 })
@@ -197,11 +200,11 @@ function reloadRightSidebar(id) {
   DrawRightSidebar(element);
 }
 
-function ChangeRightSidebar() {
-  let curChannelEl = $(this).closest('.channel');
+function ChangeRightSidebar(el) {
+  let curChannelEl = $(el).closest('.channel');
   id = curChannelEl.find('span')[0].textContent;
   if (!curChannelEl.hasClass('active')) {
-    $(this).closest('.channels_list_body').find('.channel').removeClass('active');
+    $(el).closest('.channels_list_body').find('.channel').removeClass('active');
     curChannelEl.addClass('active');
   }
   if (GlobalIdChannel !== id) {
@@ -496,7 +499,10 @@ $('#ChangePagesCounter').on('click', function (e) {
     callback: function (data, pagination) {
       dataContainer.html(templateAll(data));
       buttonsToSidebar = $("[data-widget='control-sidebar2']");
-      buttonsToSidebar.on('click', ChangeRightSidebar);
+      buttonsToSidebar.on('click', function (e) {
+        e.preventDefault();
+        ChangeRightSidebar(this);
+      });
       changeRaitingListeners();
     }
   })
