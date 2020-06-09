@@ -32,14 +32,26 @@
     <div id="closeicon_added"><i class="fas fa-times"></i></div>
     <ul class="navbar-nav navbar-nav_added">
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="Catalog.html#" class="nav-link">Каталог</a>
+        <a href="./Catalog.html" class="nav-link">Каталог</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index.html" class="nav-link">Справка</a>
+        <a href="./Catalog.html" class="nav-link">Справка</a>
+      </li>
+      <li class="nav-item d-none">
+        <a class="nav-link" href="#" data-sectioncontent="14">Корзина</a>
+      </li>
+      <li class="nav-item d-none">
+        <a class="nav-link" href="#" data-sectioncontent="13">Сообщения / Уведомления</a>
+      </li>
+      <li class="nav-item d-none">
+        <a class="nav-link" href="#" data-sectioncontent="12">Личный кабинет</a>
+      </li>
+      <li class="nav-item d-none">
+        <a class="nav-link" href="#" data-sectioncontent="12">Выйти</a>
       </li>
     </ul>
     <div id="searchhover_added"><i class="fas fa-search"></i></div>
-    <form class="form-inline ml-4 mr-4">
+    <form class="form-inline">
       <div class="input-group input-group-sm">
         <input class="form-control form-control-navbar" type="search" placeholder="Поиск" aria-label="Search" />
         <div class="input-group-append">
@@ -122,9 +134,8 @@
             <div class="container-fluid">
               <noindex>
                 <div class="row r-blocks">
-
-                  <div class="col-sm-12 col-md-6 col-lg-4" data-src="https://teleg.run/LinkBazaBot?start=ref=141505811"
-                    data-target="104930">
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-4"
+                    data-src="https://teleg.run/LinkBazaBot?start=ref=141505811" data-target="104930">
                     <div class="col r-blocks-items">
                       <div class="r-image-container">
                         <img src="tgstat_images/dbe31e98a115842249a227b023113cc0.jpg" class="img-thumbnail r-image">
@@ -139,8 +150,8 @@
                       </div>
                     </div>
                   </div>
-
-                  <div class="col-md-6 col-lg-4" data-src="https://ttttt.me/TGStat_Bot" data-target="103151">
+                  <div class="col-12 col-sm-6 col-md-6 col-lg-4 d-none d-sm-block"
+                    data-src="https://ttttt.me/TGStat_Bot" data-target="103151">
                     <div class="col r-blocks-items">
                       <div class="r-image-container">
                         <img src="tgstat_images/7659a51c94158f7026fb13a6702e0009.jpg" class="img-thumbnail r-image">
@@ -154,8 +165,7 @@
                       </div>
                     </div>
                   </div>
-
-                  <div class="col-md-6 col-lg-4" data-src="https://ttttt.me/TGAlertsBot" data-target="103155">
+                  <div class="col-lg-4 d-none d-lg-block" data-src="https://ttttt.me/TGAlertsBot" data-target="103155">
                     <div class="col r-blocks-items">
                       <div class="r-image-container">
                         <img src="tgstat_images/7659a51c94158f7026fb13a6702e00c9.jpg" class="img-thumbnail r-image">
@@ -176,6 +186,12 @@
             <form method="get" enctype="multipart/form-data" id="searchChannels" name="searchChannels" action="">
               <div class="container-fluid">
                 <dl class="sub-nav sub-nav-first">
+                  <dt class="filter-category-name dropdown">
+                    <a href="#" class="more-categories-button" data-default-text="Еще категории">
+                      <span>Категория</span>
+                      <b class="caret"></b>
+                    </a>
+                  </dt>
                   <dd class="active"><a class="filter filter-category" data-category="" href="#">Все</a></dd>
                   <dd class=""><a href="#" class="filter filter-category" data-category="blogs">Блоги</a>
                   </dd>
@@ -187,7 +203,6 @@
                   </dd>
                   <dd class=""><a href="#" class="filter filter-category" data-category="news">Новости и СМИ</a>
                   </dd>
-                  <dt class="filter-category-name">Категория</dt>
                   <dd class="dropdown ">
                     <a href="#" class="more-categories-button" data-default-text="Еще категории">
                       <span>Еще категории</span>
@@ -256,7 +271,8 @@
                 </div>
               </div>
               <div class="container-fluid">
-                <div class="extended-search-container sub-nav hide">
+                <div class="extended-search-container sub-nav">
+                  <!-- hide -->
                   <div class="extended-search-first-part">
                     <span class="select-wrapper">
                       <select id="languageSelect" name="languageSelect" class="form-control2">
@@ -278,7 +294,7 @@
                     </span>
                   </div>
                   <div class="row">
-                    <div class="col col-lg-3 col-md-6">
+                    <div class="col-12 col-lg-3 col-sm-6">
                       <div>
                         <dt class="filter-name">Подписчиков</dt>
                       </div>
@@ -295,7 +311,7 @@
                       </div>
                     </div>
 
-                    <div class="col col-lg-3 col-md-6">
+                    <div class="col-12 col-lg-3 col-sm-6">
                       <div>
                         <dt class="filter-name">Охват 1 поста</dt>
                       </div>
@@ -312,7 +328,7 @@
                       </div>
                     </div>
 
-                    <div class="col col-lg-3 col-md-6">
+                    <div class="col-12 col-lg-3 col-sm-6">
                       <div>
                         <dt class="filter-name">ERR %</dt>
                       </div>
@@ -329,17 +345,17 @@
                       </div>
                     </div>
 
-                    <div class="col col-lg-3 col-md-6">
+                    <div class="col-12 col-lg-3 col-sm-6">
                       <div>
                         <dt class="filter-name">Стоимость рекламы ( руб. )</dt>
                       </div>
                       <div class="clearfix"></div>
                       <div class="row">
-                        <div class="col col-lg-5 col-md-5 col-sm-5">
+                        <div class="col col-lg-6 col-md-6 col-sm-6">
                           <input type="text" value="" name="price[from]" placeholder="от"
                             class="filter filter-search filter-search-from">
                         </div>
-                        <div class="col col-lg-5 col-md-5 col-sm-5">
+                        <div class="col col-lg-6 col-md-6 col-sm-6">
                           <input type="text" value="" name="price[to]" placeholder="до"
                             class="filter filter-search filter-search-to">
                         </div>

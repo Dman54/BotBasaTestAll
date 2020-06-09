@@ -46,6 +46,7 @@ roleList.on("click", function (e) {
 // Отображение всех категорий при клике
 $(".more-categories-button").on("click", function (e) {
   e.preventDefault();
+  $(this).closest('.sub-nav').find('>dd:not(.dropdown)').toggleClass('show');
   $(".more-categories-list").toggleClass("hide");
 });
 // Отображение расширенного поиска при клике
@@ -514,6 +515,10 @@ $('#carouselExampleIndicators3').on('slide.bs.carousel', function (e) {
   postsCarouselDates.removeClass('active');
   $(postsCarouselDates[e.to]).addClass('active');
 })
+
+$('.publication-times-delete-check input[type="checkbox"]').on('change', function (e) {
+  $('.publication-times-delete-timeblock').toggleClass('offnut');
+});
 
 $(function () {
   // $('[data-toggle="popover"]').popover();
