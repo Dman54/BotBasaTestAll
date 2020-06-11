@@ -7125,52 +7125,47 @@ function templateAll(data) {
   <div class="channel-first-part">
     <span class="d-none">${curItem.id}</span>
     <div class="position-relative" data-widget="control-sidebar2" data-slide="true">
-      <img alt="${
-        curItem.service_description
-      }" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
+      <img title="Изображение канала" alt="${curItem.title}" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
         class="b-lazy img-thumbnail b-loaded">
       <span class="verified-channel-img">
-        <img src="tgstat_images/verified.png" title="У канала есть подтвержденный владелец на сайте TGStat">
+        <img src="tgstat_images/verified.png" title="У канала есть подтвержденный владелец на сайте LinkBaza">
       </span>
     </div>
     <div class="channel-block-title">
-      <div class="channel-list-title" data-widget="control-sidebar2" data-slide="true">
+      <div title="Название канала" class="channel-list-title" data-widget="control-sidebar2" data-slide="true">
         <b>${curItem.title}</b>
       </div>
-      <a href="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg" target="_blank" class="goToChannel">
+      <a title="Переход в данный канал в Telegramе" href="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg" target="_blank" class="goToChannel">
         <span>Перейти на канал</span>
         <i class="fas fa-external-link-alt"></i>
       </a>
       <div class="d-none">
-        <a href="/entertainment" class="channel_category_id">${
-          curItem.channel_category_id
-        }</a>
+        <a href="/entertainment" class="channel_category_id">${curItem.channel_category_id}</a>
       </div>
     </div>
   </div>
-  <div class="long-description">
-    ${
-      curItem.service_description ? curItem.service_description : "Нет описания"
-    }
+  <div title="Описание канала" class="long-description">
+    ${curItem.service_description ? curItem.service_description : "Нет описания"}
   </div>
-  <div>
-    <a data-widget="control-sidebar2" data-slide="true" data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
-      href="#" class="popup_ajax table-link">
-      ${curItem.members_count}
+  <div class="channel-subscribes-column">
+    <i title="Количество подписчиков на канале" data-widget="control-sidebar2" data-slide="true" class="fas fa-user-friends"></i>
+    <a title="Количество подписчиков на канале" data-widget="control-sidebar2" data-slide="true" href="#" class="table-link">
+      ${curItem.members_count*9999}
     </a>
   </div>
-  <div>
-    <a data-widget="control-sidebar2" data-slide="true" data-width="800" data-height="200" data-src="/ru/channels/121/subscribers" data-type="ajax"
-      href="#" class="popup_ajax table-link">
-      <span class="green">+1.5k</span>
+  <div class="channel-growsubscribes-column">
+    <i title="Прирост подписчиков на канале за 30 последних дней" data-widget="control-sidebar2" data-slide="true" class="fas fa-chart-line"></i>
+    <a title="Прирост подписчиков на канале за 30 последних дней" data-widget="control-sidebar2" data-slide="true" href="#" class="table-link">
+      <span class="green">${Math.floor(Math.random() * (999999 - (-55555))) + (-55555)}</span>
     </a>
   </div>
   <div class="flex-break"></div>
   <div class="buycolumn">
-    <div class="price-info btn btn-blue">
-      <span data-widget="control-sidebar2" data-slide="true">69&nbsp;900&nbsp;<span class="fa fa-rub price-icon active"></span></span>
+    <div class="buycolumn-text">Стоимость рекламы:</div>
+    <div title="Цена рекламы на канале" class="price-info btn btn-blue">
+      <span data-widget="control-sidebar2" data-slide="true">${Math.floor(Math.random() * (99999 - (100))) + (100)}&nbsp;<span class="fa fa-rub price-icon active"></span></span>
     </div>
-    <div class="buy-info">
+    <div title="Купить рекламу на канале" class="buy-info">
       <i class="fas fa-shopping-cart"></i>
     </div>
   </div>
@@ -7252,11 +7247,11 @@ function templateAll(data) {
     </div>
   </div>
   <div>
-    <div class="ribbon-sign">
+    <div title="Добавить канал в избранное" class="ribbon-sign">
       <i class="fas fa-heart"></i>
     </div>
   </div>
-  <div class="channel-block-button">
+  <div title="Посмотреть подробную информацию о канале" class="channel-block-button">
     <a href="#" onClick="goToDashboard(${curItem.id})"
       class="btn btn-primary btn-sm r-action-btn">${btnText}</a>
   </div>
