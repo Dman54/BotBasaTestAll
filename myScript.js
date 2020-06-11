@@ -121,8 +121,9 @@ $('#channelsList').pagination({
 })
 
 // right sidebar open\close and reload content
-$("#closeicon2_added").on('click', function () {
+$("#closeicon2_added, #sidebar-overlay2").on('click', function () {
   sidebar.removeClass('show');
+  $('body').removeClass('left-sidebar-open');
 });
 let sidebar = $("#rightaside");
 
@@ -212,6 +213,7 @@ function ChangeRightSidebar(el) {
     reloadRightSidebar(id);
     if (!sidebar.hasClass('show')) {
       sidebar.addClass('show');
+      $('body').addClass('left-sidebar-open');
     }
     GlobalIdChannel = id;
     GlobalNameChannel = allChannels.find(function (element) {
@@ -224,15 +226,16 @@ function ChangeRightSidebar(el) {
 
   } else {
     sidebar.toggleClass('show');
+    $('body').toggleClass('left-sidebar-open');
   }
 }
 
 function goToDashboard(id) {
-  AllRoleLinks[2].click();
+  AllRoleLinks[9].click();
 }
 
 function goToChannelsList() {
-  AllRoleLinks[1].click();
+  AllRoleLinks[10].click();
 }
 
 $('.goToChannelsList').on('click', function (e) {
@@ -387,7 +390,7 @@ function DrawRightSidebarPromotion(element) {
         </div>
       </div>
     </div>
-    <button type="button" class="btn">
+    <button type="button" class="btn btn-primary">
       Добавить канал
     </button>
   </div>`);
@@ -399,6 +402,7 @@ function ChangeRightSidebarPromotion() {
     DrawRightSidebarPromotion(id);
     if (!sidebar.hasClass('show')) {
       sidebar.addClass('show');
+      $('body').addClass('left-sidebar-open');
     }
     GlobalIdChannel = id;
     // GlobalNameChannel = allChannels.find(function (element) {
@@ -411,6 +415,7 @@ function ChangeRightSidebarPromotion() {
 
   } else {
     sidebar.toggleClass('show');
+    $('body').toggleClass('left-sidebar-open');
   }
   $('.channels-for-select-vip').on('click', function (e) {
     $(this).toggleClass('active');
@@ -473,7 +478,7 @@ function DrawRightSidebarSelectChannel() {
         </div>
       </div>
     </div>
-    <button type="button" class="btn">
+    <button type="button" class="btn btn-primary">
       Добавить канал
     </button>
   </div>`);
@@ -482,6 +487,7 @@ function DrawRightSidebarSelectChannel() {
 function ChangeRightSidebarSelectChannel() {
   DrawRightSidebarSelectChannel();
   sidebar.toggleClass('show');
+  $('body').toggleClass('left-sidebar-open');
 }
 
 let buttonsSelectChannelToSidebar;
@@ -489,7 +495,7 @@ buttonsSelectChannelToSidebar = $("[data-widget='control-sidebar-select-channel'
 buttonsSelectChannelToSidebar.on('click', ChangeRightSidebarSelectChannel);
 
 // изменение количества записей на странице
-$('#ChangePagesCounter').on('click', function (e) {
+$('#PagesCounter').on('change', function (e) {
   if (curPageSize == +$('#PagesCounter').val()) return;
   curPageSize = +$('#PagesCounter').val();
   dataContainer = $('#channelsList .data-container');
@@ -507,7 +513,9 @@ $('#ChangePagesCounter').on('click', function (e) {
       changeRaitingListeners();
     }
   })
-})
+});
+// $('#ChangePagesCounter').on('click', function (e) {
+// })
 
 let postsCarouselDates = $('.posts-carousel-dates>span');
 $('#carouselExampleIndicators3').on('slide.bs.carousel', function (e) {
