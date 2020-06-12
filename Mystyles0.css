@@ -993,14 +993,22 @@ div.filter-sort.asc a:last-child:after {
   min-width: 70px;
 }
 
+.catalog-page .select-tabs {
+  display: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .catalog-page .channels-sortpanel > *:last-child,
 .catalog-page .channels_list_body div.channel > *:last-child {
   /* max-width: 100px; */
   min-width: 83px;
 }
+
 #secondnav .navbar-nav {
   padding: 0 0.625rem 0 0.25rem;
 }
+
 .catalog-page #secondnav .navbar-nav {
   justify-content: space-between;
   align-items: center;
@@ -1077,6 +1085,7 @@ div.filter-sort.asc a:last-child:after {
   font-size: 19px;
   cursor: pointer;
 }
+
 .buycolumn-text {
   display: none;
   font-size: 0.875rem;
@@ -1085,6 +1094,7 @@ div.filter-sort.asc a:last-child:after {
   position: absolute;
   top: -1.375rem;
 }
+
 .price-info {
   display: inline;
   border-radius: 3px;
@@ -1282,9 +1292,11 @@ a.table-link:hover {
   width: 22%;
   position: relative;
 }
-
+.channel-subscribes-week {
+  width: 26%;
+}
 .channel-subscribes-content > *:not(:last-child) {
-  margin-right: 4%;
+  margin-right: 2.66%;
 }
 
 .channel-views-content > *,
@@ -1879,55 +1891,21 @@ a.table-link:hover {
   color: #dcdcdc;
 }
 
-.channel:not(.ribboned) .ribbon-sign:hover {
+/* .channel:not(.ribboned) .ribbon-sign:hover {
   color: rgba(255, 41, 41, 0.6);
 }
 
 .channel.ribboned .ribbon-sign:hover {
   color: rgba(255, 41, 41, 0.6);
-}
+} */
 
 .ribbon-sign {
-  transition: color 0.2s;
+  /* transition: color 0.2s; */
   color: #ff2929;
   font-size: 1.5rem;
   cursor: pointer;
   display: inline-block;
 }
-
-/* .ribbon-sign {
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: inline-block;
-  width: 20px;
-  height: 32px;
-  background-color: gold;
-  position: relative;
-  right: 0px;
-  top: -1px;
-} */
-
-/* .ribbon-sign:before {
-  content: "";
-  width: 24px;
-  height: 8px;
-  position: absolute;
-  z-index: 0;
-  left: -2px;
-  top: -4px;
-  background-color: #507abd;
-} */
-
-/* .ribbon-sign:after {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  bottom: -10px;
-  border-left: 10px solid gold;
-  border-right: 10px solid gold;
-  border-bottom: 10px solid transparent;
-} */
 
 .channel_category_id {
   color: gray;
@@ -2771,6 +2749,13 @@ input:checked + .slider:before {
   background-color: #ff9393;
 }
 
+.channel-info {
+  padding: 0.5rem 0.625rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  /* background-color: #fff; */
+}
+
 .promotion-table-content-no {
   cursor: pointer;
   min-height: 3.125rem;
@@ -3410,10 +3395,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .catalog-page .channels-sortpanel > div.filter {
     display: none;
   }
+
   .channel-subscribes-column i,
   .channel-growsubscribes-column i {
     display: inline-block;
   }
+
   .buycolumn-text {
     display: block;
   }
@@ -3454,12 +3441,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .modal-left-part {
     flex: 9;
   }
+
   .modal-right-part {
     flex: 10;
   }
+
   .fz-125 {
     font-size: 1rem;
   }
+
   .modal input[type="text"],
   .modal input[type="password"],
   .modal input[type="email"],
@@ -3467,13 +3457,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .modal input[type="text"].search_input {
     width: 200px;
   }
+
   .modal select.form-control2 {
     width: 200px;
   }
+
   #modalCreateChannel .modal-left-part,
   #modalCreateChannel .modal-right-part {
     padding: 1.5rem 0.875rem;
   }
+
   .sub-nav dt.filter-category-name {
     float: left;
     text-align: left;
@@ -3659,6 +3652,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 100%;
     margin-top: 1rem;
   }
+
   .modal input[type="text"],
   .modal input[type="password"],
   .modal input[type="email"],
@@ -3666,23 +3660,29 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .modal input[type="text"].search_input {
     width: 220px;
   }
+
   .modal select.form-control2 {
     width: 220px;
   }
+
   .modal .modal-content {
     flex-direction: column;
   }
+
   .modal-dialog {
     max-width: 310px;
     margin-left: auto;
     margin-right: auto;
   }
+
   .modal-left-part {
     flex: none;
   }
+
   .modal-right-part {
     flex: none;
   }
+
   #modalCreateChannel .modal-left-part,
   #modalCreateChannel .modal-right-part {
     padding: 3rem 1.75rem;
@@ -3704,9 +3704,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* адаптивные изменения при ширине меньше или равно 495px */
 @media (max-width: 490px) {
+  .catalog-page .select-tabs {
+    display: block;
+  }
+
+  .catalog-page .nav-tabs {
+    display: none;
+  }
+
   .navbar-nav-telegram {
     right: 46%;
   }
+
   .navbar-nav-telegram span {
     display: none;
   }
@@ -3738,12 +3747,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding: 6px;
     background: #f2f4f6;
   }
+
   .paginationjs.paginationjs-big .paginationjs-pages li > a {
     min-width: 30px;
     height: 28px;
     line-height: 28px;
     font-size: 14px;
   }
+
   .paginationjs.paginationjs-big .paginationjs-pages li.active > a {
     height: 30px;
     line-height: 30px;
@@ -3754,10 +3765,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .modal-dialog {
     margin-left: 7.5px;
   }
+
   .paginationjs {
     margin-left: -17px;
     margin-right: -17px;
   }
+
   .paginationjs.paginationjs-big .paginationjs-pages li > a {
     min-width: 28px;
   }
@@ -3767,21 +3780,26 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .modal button[data-dismiss="modal"] {
     right: 0;
   }
+
   .modal-dialog {
     margin-left: auto;
   }
+
   .navbar-nav-telegram {
     right: 42%;
   }
+
   #secondnav .channel-adprice-number {
     font-size: 1rem;
     display: flex;
     align-items: center;
   }
+
   #secondnav .channel-adprice-number i.fa-wallet {
     font-size: 1.5rem;
     margin-right: 0.25rem;
   }
+
   .catalog-page .channels-sortpanel > *:nth-child(6),
   .catalog-page .channels_list_body div.channel > *:nth-child(6) {
     order: -1;
@@ -3826,4 +3844,115 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 body.left-sidebar-open #sidebar-overlay2 {
   display: block;
+}
+/* стили чата и сообщений */
+.chat-dialoges-wrapper {
+  margin-left: -1.6rem;
+  width: calc(100% + 3.2rem);
+  display: flex;
+}
+.chat-dialoges {
+  width: 320px;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+.chat-messages {
+  flex: 1;
+  padding: 20px 25px;
+  background-color: #f3f6f9;
+  line-height: 1.3;
+  max-height: 85vh;
+  overflow: auto;
+}
+.chat-dialoges-item {
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.chat-dialoges-item.active {
+  background-color: #5fc6ff;
+  color: #fff;
+}
+.chat-dialoges-item.active .chat-dialoges-date {
+  color: #fff;
+}
+.chat-dialoges-image {
+  margin-right: 10px;
+}
+.chat-dialoges-image .img-thumbnail {
+  max-height: 55px;
+  border: none;
+}
+.chat-dialoges-right-part {
+  line-height: 1;
+}
+.chat-dialoges-name {
+  font-family: "Roboto";
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.chat-dialoges-date {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: #8b8b8b;
+  line-height: 1;
+  font-size: 14px;
+}
+.chat-messages-item {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  border-radius: 3px;
+  width: 60%;
+}
+.chat-messages-item-img img {
+  width: 100%;
+}
+.chat-messages-item-another {
+  background-color: #fff;
+}
+.chat-messages-item-my {
+  background-color: #d7f1ff;
+  margin-left: 40%;
+}
+.chat-messages-item-datetime {
+  color: #8b8b8b;
+  font-size: 14px;
+  line-height: 1;
+  position: absolute;
+  bottom: 2px;
+}
+.chat-messages-item-another .chat-messages-item-datetime {
+  right: -40px;
+}
+.chat-messages-item-my .chat-messages-item-datetime {
+  left: -40px;
+}
+.chat-messages-input {
+  background-color: #fff;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+.chat-messages-input .form-control {
+  border: none;
+  padding: 0 10px;
+  line-height: 1;
+  height: 1rem;
+}
+.chat-messages-input .fa-paperclip {
+  color: #cfcfcf;
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+}
+.chat-messages-input .fa-laugh {
+  color: #e4e4e4;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
 }

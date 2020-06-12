@@ -83,7 +83,7 @@ function printDayHTML(now, withYear = false) {
   weekend = false;
   return '<div class="calendarDate-top" data-toggle="modal" data-target="#exampleModalLong"><div class="calendarDate' + ((weekend) ? (' weekendDay') : ('')) + '"><span class="dayName">' + days[now
       .getDay()] +
-    '</span>, <span class="dayNumber">' + ((now
+    '</span><br /><span class="dayNumber">' + ((now
       .getDate() < 10) ? ('0' + now.getDate()) : (now.getDate())) +
     '</span>.<span class="monthNumber">' +
     ((now.getMonth() < 9) ? ('0' + (now.getMonth() + 1)) : (now.getMonth() + 1)) + '</span>' + ((withYear) ? ('.' +
@@ -531,4 +531,9 @@ $('.publication-times-delete-check input[type="checkbox"]').on('change', functio
 $(function () {
   // $('[data-toggle="popover"]').popover();
   $('[data-toggle="tooltip"]').tooltip();
-})
+  var selectTabs = $('.select-tabs');
+  selectTabs.on('change', function (e) {
+    $(this).next().find('li a').eq($(this).val()).tab('show');
+    // $(this).parent().find('.nav-tabs li a').eq($(this).val()).tab('show');
+  });
+});
