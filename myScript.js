@@ -537,3 +537,25 @@ $(function () {
     // $(this).parent().find('.nav-tabs li a').eq($(this).val()).tab('show');
   });
 });
+
+$(function () {
+  var $chat_messages = $('.chat-messages');
+  var $content = $('.content-wrapper');
+  var $window = $(window).on('resize', function () {
+    // $chat_messages.height(parseInt($content.css('min-height')) - 130 + 'px');
+    $chat_messages.css('height', parseInt($content.css('min-height')) - 130 + 'px');
+  }).trigger('resize');
+
+});
+
+$('.chat-dialoges-item').on('click', function (e) {
+  if ($(window).width() <= 535) {
+    $(this).parent().toggleClass('translateX-100');
+    $(this).closest('.chat-dialoges-wrapper').find('.chat-messages').toggleClass('translateX-100');
+  }
+});
+
+$('.back-to-channels').on('click', function (e) {
+  $(this).closest('.chat-messages').toggleClass('translateX-100');
+  $(this).closest('.chat-dialoges-wrapper').find('.chat-dialoges').toggleClass('translateX-100');
+});
