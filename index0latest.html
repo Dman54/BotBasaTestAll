@@ -367,26 +367,7 @@
             </div>
           </noindex>
         </div>
-        <div class="container-fluid">
-          <ul class="nav nav-tabs" id="custom-content-below-tab0" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="custom-content-below-home-tab0" data-toggle="pill"
-                href="#custom-content-below-channels0" role="tab" aria-controls="custom-content-below-channels0"
-                aria-selected="false">Мои каналы</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="custom-content-below-profile-tab0" data-toggle="pill"
-                href="#custom-content-below-mychannels0" role="tab" aria-controls="custom-content-below-mychannels0"
-                aria-selected="false">Мои каналы 2</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="custom-content-below-messages-tab0" data-toggle="pill"
-                href="#custom-content-below-dchannels0" role="tab" aria-controls="custom-content-below-dchannels0"
-                aria-selected="false">Делегированные каналы</a>
-            </li>
-          </ul>
-        </div>
-        <div class="tab-content" id="custom-content-below-tabContent0">
+        <div class="container-fluid topbuttons-container">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item d-sm-inline-block">
               <div class="btn-group">
@@ -400,6 +381,26 @@
               </div>
             </li>
           </ul>
+        </div>
+        <div class="container-fluid">
+          <select class="select-tabs form-control">
+            <option value="0">Мои каналы</option>
+            <option value="1">Делегированные каналы</option>
+          </select>
+          <ul class="nav nav-tabs" id="custom-content-below-tab0" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="custom-content-below-home-tab0" data-toggle="pill"
+                href="#custom-content-below-channels0" role="tab" aria-controls="custom-content-below-channels0"
+                aria-selected="false">Мои каналы</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="custom-content-below-profile-tab0" data-toggle="pill"
+                href="#custom-content-below-mychannels0" role="tab" aria-controls="custom-content-below-mychannels0"
+                aria-selected="false">Делегированные каналы</a>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content" id="custom-content-below-tabContent0">
           <div class="tab-pane fade active show" id="custom-content-below-channels0" role="tabpanel"
             aria-labelledby="custom-content-below-channels-tab0">
             <div class="container-fluid first-block">
@@ -695,7 +696,27 @@
             </div>
           </noindex>
         </div>
+        <div class="container-fluid topbuttons-container">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item d-sm-inline-block">
+              <div class="btn-group">
+                <button type="button" class="btn btn-blue" data-widget="control-sidebar-select-channel"
+                  data-slide="true">
+                  Выберите канал
+                </button>
+                <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
+                  Добавить канал <span class="plus"></span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
         <div class="container-fluid">
+          <select class="select-tabs form-control">
+            <option value="0">Общая статистика</option>
+            <option value="1">Посты</option>
+            <option value="2">Анализ аудитории</option>
+          </select>
           <ul class="nav nav-tabs" id="custom-content-below-tab1" role="tablist">
             <li class="nav-item">
               <a class="nav-link active" id="custom-content-below-home-tab1" data-toggle="pill"
@@ -715,19 +736,6 @@
           </ul>
         </div>
         <div class="tab-content" id="custom-content-below-tabContent1">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item d-sm-inline-block">
-              <div class="btn-group">
-                <button type="button" class="btn btn-blue" data-widget="control-sidebar-select-channel"
-                  data-slide="true">
-                  Выберите канал
-                </button>
-                <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
-                  Добавить канал <span class="plus"></span>
-                </button>
-              </div>
-            </li>
-          </ul>
           <div class="tab-pane fade active show" id="custom-content-below-stats1" role="tabpanel"
             aria-labelledby="custom-content-below-channels-tab1">
             <div class="container-fluid">
@@ -1053,7 +1061,27 @@
             </div>
           </noindex>
         </div>
+        <div class="container-fluid topbuttons-container">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item d-sm-inline-block">
+              <div class="btn-group">
+                <button type="button" class="btn btn-blue" data-widget="control-sidebar-select-channel"
+                  data-slide="true">
+                  Выберите канал
+                </button>
+                <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#exampleModalLong">
+                  Добавить пост <span class="plus"></span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
         <div class="container-fluid">
+          <select class="select-tabs form-control">
+            <option value="0">Запланированные посты</option>
+            <option value="1">Сохраненные посты</option>
+            <option value="2">Шаблоны</option>
+          </select>
           <ul class="nav nav-tabs" id="custom-content-below-tab2" role="tablist">
             <li class="nav-item">
               <a class="nav-link active" id="custom-content-below-home-tab2" data-toggle="pill"
@@ -1073,26 +1101,6 @@
           </ul>
         </div>
         <div class="tab-content" id="custom-content-below-tabContent2">
-          <ul class="navbar-nav ml-auto">
-
-            <li class="nav-item d-sm-inline-block">
-              <!-- <button type="button" class="btn btn-success btn-sm">
-                <a href="index3.html" class="nav-link">Добавить канал</a>
-              </button> -->
-              <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#exampleModalLong">
-                Добавить пост
-              </button>
-            </li>
-
-
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" data-slide="true" href="#" role="button"><i class="fas fa-phone"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-slide="true" href="#" role="button"><i class="fab fa-instagram"></i></a>
-            </li> -->
-          </ul>
           <div class="tab-pane fade active show" id="custom-content-below-plannposts2" role="tabpanel"
             aria-labelledby="custom-content-below-plannposts-tab2">
             <div class="container-fluid first-block">
@@ -1508,7 +1516,28 @@
             </div>
           </noindex>
         </div>
+        <div class="container-fluid topbuttons-container">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item d-sm-inline-block">
+              <div class="btn-group">
+                <button type="button" class="btn btn-blue" data-widget="control-sidebar-select-channel"
+                  data-slide="true">
+                  Выберите канал
+                </button>
+                <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
+                  Добавить канал <span class="plus"></span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
         <div class="container-fluid">
+          <select class="select-tabs form-control">
+            <option value="0">Подборки</option>
+            <option value="1">Взаимный пиар</option>
+            <option value="2">Реклама</option>
+            <option value="3">Рассылки</option>
+          </select>
           <ul class="nav nav-tabs" id="custom-content-below-tab3" role="tablist">
             <li class="nav-item">
               <a class="nav-link active" id="custom-content-below-home-tab3" data-toggle="pill"
@@ -2080,23 +2109,7 @@
       </section>
 
       <section data-sectionNumber='4' class="channels">
-
-        <div class="container-fluid">
-          <ul class="nav nav-tabs" id="custom-content-below-tab4" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="custom-content-below-home-tab4" data-toggle="pill"
-                href="#custom-content-below-botscatalog4" role="tab" aria-controls="custom-content-below-botscatalog4"
-                aria-selected="false">Каталог ботов</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="custom-content-below-profile-tab4" data-toggle="pill"
-                href="#custom-content-below-mybots4" role="tab" aria-controls="custom-content-below-mybots4"
-                aria-selected="false">Мои боты</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="tab-content" id="custom-content-below-tabContent4">
+        <div class="container-fluid topbuttons-container">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item d-sm-inline-block">
               <div class="btn-group">
@@ -2118,6 +2131,27 @@
               </div>
             </li>
           </ul>
+        </div>
+        <div class="container-fluid">
+          <select class="select-tabs form-control">
+            <option value="0">Каталог ботов</option>
+            <option value="1">Мои боты</option>
+          </select>
+          <ul class="nav nav-tabs" id="custom-content-below-tab4" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="custom-content-below-home-tab4" data-toggle="pill"
+                href="#custom-content-below-botscatalog4" role="tab" aria-controls="custom-content-below-botscatalog4"
+                aria-selected="false">Каталог ботов</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="custom-content-below-profile-tab4" data-toggle="pill"
+                href="#custom-content-below-mybots4" role="tab" aria-controls="custom-content-below-mybots4"
+                aria-selected="false">Мои боты</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="custom-content-below-tabContent4">
           <div class="tab-pane fade active show" id="custom-content-below-botscatalog4" role="tabpanel"
             aria-labelledby="custom-content-below-botscatalog-tab4">
             <div class="container-fluid">
@@ -2146,22 +2180,7 @@
       </section>
 
       <section data-sectionNumber='8' class="channels">
-        <div class="container-fluid">
-          <ul class="nav nav-tabs" id="custom-content-below-tab8" role="tablist">
-            <li class="nav-item">
-              <a class="nav-link active" id="custom-content-below-home-tab8" data-toggle="pill"
-                href="#custom-content-below-chatscatalog8" role="tab" aria-controls="custom-content-below-chatscatalog8"
-                aria-selected="false">Каталог чатов</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" id="custom-content-below-profile-tab8" data-toggle="pill"
-                href="#custom-content-below-mychats8" role="tab" aria-controls="custom-content-below-mychats8"
-                aria-selected="false">Мои чаты</a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="tab-content" id="custom-content-below-tabContent8">
+        <div class="container-fluid topbuttons-container">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item d-sm-inline-block">
               <div class="btn-group">
@@ -2183,6 +2202,27 @@
               </div>
             </li>
           </ul>
+        </div>
+        <div class="container-fluid">
+          <select class="select-tabs form-control">
+            <option value="0">Каталог чатов</option>
+            <option value="1">Мои чаты</option>
+          </select>
+          <ul class="nav nav-tabs" id="custom-content-below-tab8" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="custom-content-below-home-tab8" data-toggle="pill"
+                href="#custom-content-below-chatscatalog8" role="tab" aria-controls="custom-content-below-chatscatalog8"
+                aria-selected="false">Каталог чатов</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="custom-content-below-profile-tab8" data-toggle="pill"
+                href="#custom-content-below-mychats8" role="tab" aria-controls="custom-content-below-mychats8"
+                aria-selected="false">Мои чаты</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="custom-content-below-tabContent8">
           <div class="tab-pane fade active show" id="custom-content-below-chatscatalog8" role="tabpanel"
             aria-labelledby="custom-content-below-botscatalog-tab8">
             <div class="container-fluid">
@@ -2206,7 +2246,27 @@
         <h2>Секция 12 для data-sectionNumber='11' class="promotion-section"</h2>
       </section>
       <section data-sectionNumber='12' class="profile">
+        <div class="container-fluid topbuttons-container">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item d-sm-inline-block">
+              <div class="btn-group">
+                <button type="button" class="btn btn-blue" data-widget="control-sidebar-select-channel"
+                  data-slide="true">
+                  Выберите канал
+                </button>
+                <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
+                  Добавить канал <span class="plus"></span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
         <div class="container-fluid">
+          <select class="select-tabs form-control">
+            <option value="0">Личный кабинет</option>
+            <option value="1">Реферальная программа</option>
+            <option value="2">Мои заказы</option>
+          </select>
           <ul class="nav nav-tabs" id="custom-content-below-tab12" role="tablist">
             <li class="nav-item">
               <a class="nav-link active" id="custom-content-below-home-tab12" data-toggle="pill"
@@ -2218,25 +2278,17 @@
                 href="#custom-content-below-mychats12" role="tab" aria-controls="custom-content-below-mychats12"
                 aria-selected="false">Реферальная программа</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" id="custom-content-below-profile-tab12" data-toggle="pill"
+                href="#custom-content-below-mychats121" role="tab" aria-controls="custom-content-below-mychats121"
+                aria-selected="false">Мои заказы</a>
+            </li>
           </ul>
         </div>
 
         <div class="tab-content" id="custom-content-below-tabContent12">
           <div class="tab-pane fade active show" id="custom-content-below-chatscatalog12" role="tabpanel"
             aria-labelledby="custom-content-below-botscatalog-tab12">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item d-sm-inline-block">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-blue" data-widget="control-sidebar-select-channel"
-                    data-slide="true">
-                    Выберите канал
-                  </button>
-                  <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
-                    Добавить канал <span class="plus"></span>
-                  </button>
-                </div>
-              </li>
-            </ul>
             <form method="get" enctype="multipart/form-data" id="searchChannels" name="searchChannels" action="">
               <div class="container-fluid">
                 <div class="profile-block profile-block-flex profile-header">
@@ -2343,19 +2395,6 @@
           </div>
           <div class="tab-pane fade" id="custom-content-below-mychats12" role="tabpanel"
             aria-labelledby="custom-content-below-mychats12-tab12">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item d-sm-inline-block">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-blue" data-widget="control-sidebar-select-channel"
-                    data-slide="true">
-                    Выберите канал
-                  </button>
-                  <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
-                    Добавить канал <span class="plus"></span>
-                  </button>
-                </div>
-              </li>
-            </ul>
             <div class="container-fluid">
               <div class="profile-block profile-header">
                 <div class="referal-header-name">
@@ -2487,10 +2526,35 @@
               </div>
             </div>
           </div>
+          <div class="tab-pane fade" id="custom-content-below-mychats121" role="tabpanel"
+            aria-labelledby="custom-content-below-mychats12-tab121">
+            <div class="container-fluid">
+            </div>
+          </div>
         </div>
       </section>
       <section data-sectionNumber='13' class="chatMessages">
+        <div class="container-fluid topbuttons-container">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item d-sm-inline-block">
+              <div class="btn-group">
+                <button type="button" class="btn btn-blue" data-widget="control-sidebar-select-channel"
+                  data-slide="true">
+                  Сделать рассылку
+                </button>
+                <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
+                  Добавить бота <span class="plus"></span>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
         <div class="container-fluid">
+          <select class="select-tabs form-control">
+            <option value="0">Все диалоги</option>
+            <option value="1">Бот номер 1</option>
+            <option value="2">Бот номер 2</option>
+          </select>
           <ul class="nav nav-tabs" id="custom-content-below-tab13" role="tablist">
             <li class="nav-item">
               <a class="nav-link active" id="custom-content-below-home-tab13" data-toggle="pill"

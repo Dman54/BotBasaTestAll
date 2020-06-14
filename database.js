@@ -7266,7 +7266,7 @@ function templateAll(data) {
       class="btn btn-primary btn-sm r-action-btn">${btnText}</a>
   </div>
 </div>
-${x < 2 ? `<div class="channel-info bg-warning">
+${x < 2 ? `<div class="channel-info">
 Какая-то инфа о канале, может появиться при взаимодействии
 </div>` : ""}
 ` +
