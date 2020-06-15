@@ -82,13 +82,13 @@ function printDayHTML(now, withYear = false) {
   let weekend = now.getDay() == 0 || now.getDay() == 6;
   weekend = false;
   return '<div class="calendarDate-top" data-toggle="modal" data-target="#exampleModalLong"><div class="calendarDate' + ((weekend) ? (' weekendDay') : ('')) + '"><span class="dayName">' + days[now
-      .getDay()] +
+    .getDay()] +
     '</span><br /><span class="dayNumber">' + ((now
       .getDate() < 10) ? ('0' + now.getDate()) : (now.getDate())) +
     '</span>.<span class="monthNumber">' +
     ((now.getMonth() < 9) ? ('0' + (now.getMonth() + 1)) : (now.getMonth() + 1)) + '</span>' + ((withYear) ? ('.' +
       now
-      .getFullYear()) : '') + '</div><div class="calendarDate-after">+</div></div>';
+        .getFullYear()) : '') + '</div><div class="calendarDate-after">+</div></div>';
 }
 
 let WeekBegin = new Date();
@@ -530,7 +530,11 @@ $('.publication-times-delete-check input[type="checkbox"]').on('change', functio
 
 $(function () {
   // $('[data-toggle="popover"]').popover();
-  $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="tooltip"]').each(function () {
+    $(this).tooltip({
+      container: $(this)
+    });
+  });
   var selectTabs = $('.select-tabs');
   selectTabs.on('change', function (e) {
     $(this).next().find('li a').eq($(this).val()).tab('show');
