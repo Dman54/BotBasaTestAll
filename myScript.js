@@ -71,6 +71,14 @@ let days = ['Воскресенье',
   'Пятница',
   'Суббота'
 ];
+let daysSmall = ['Вс',
+  'Пн',
+  'Вт',
+  'Ср',
+  'Чт',
+  'Пт',
+  'Сб'
+];
 
 function printDay(now, withYear = false) {
   return '' + days[now.getDay()] + ', ' + ((now.getDate() < 10) ? ('0' + now.getDate()) : (now.getDate())) + '.' +
@@ -81,8 +89,9 @@ function printDay(now, withYear = false) {
 function printDayHTML(now, withYear = false) {
   let weekend = now.getDay() == 0 || now.getDay() == 6;
   weekend = false;
-  return '<div class="calendarDate-top" data-toggle="modal" data-target="#exampleModalLong"><div class="calendarDate' + ((weekend) ? (' weekendDay') : ('')) + '"><span class="dayName">' + days[now
-    .getDay()] +
+  return '<div class="calendarDate-top" data-toggle="modal" data-target="#exampleModalLong">' +
+    '<div class="calendarDate' + ((weekend) ? (' weekendDay') : ('')) + '"><span class="dayName">' + days[now
+      .getDay()] + '</span><span class="dayNameSmall">' + daysSmall[now.getDay()] +
     '</span><br /><span class="dayNumber">' + ((now
       .getDate() < 10) ? ('0' + now.getDate()) : (now.getDate())) +
     '</span>.<span class="monthNumber">' +
@@ -231,11 +240,11 @@ function ChangeRightSidebar(el) {
 }
 
 function goToDashboard(id) {
-  AllRoleLinks[9].click();
+  AllRoleLinks[10].click();
 }
 
 function goToChannelsList() {
-  AllRoleLinks[10].click();
+  AllRoleLinks[11].click();
 }
 
 $('.goToChannelsList').on('click', function (e) {
@@ -263,6 +272,19 @@ $('label[for="useTelegramDescription"]').on('click', function (e) {
 // добавление в закладки
 $('.ribbon-sign').on('click', function () {
   $(this).closest('.channel').toggleClass('ribboned');
+})
+
+// добавление заметки к каналу
+$('.note-sign').on('click', function () {
+  if ($(this).closest('.channel').hasClass('noted')) {
+    $(this).closest('.channel').next('.channel-info').removeClass('show');
+  } else {
+    $(this).closest('.channel').next('.channel-info').addClass('show');
+  }
+  $(this).closest('.channel').toggleClass('noted');
+  if (!$(this).closest('.channel').hasClass('ribboned')) {
+    $(this).closest('.channel').addClass('ribboned');
+  }
 })
 
 // кнопки продвижения
