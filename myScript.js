@@ -585,3 +585,21 @@ $('.back-to-channels').on('click', function (e) {
   $(this).closest('.chat-messages').toggleClass('translateX-100');
   $(this).closest('.chat-dialoges-wrapper').find('.chat-dialoges').toggleClass('translateX-100');
 });
+
+$('.editChannel').on('click', function (e) {
+  let curcarouselitem = $(this).closest('.tab-pane').find('.dashboard-carousel .carousel-item.active');
+  if ($(this).hasClass('editing')) {
+    curcarouselitem.find('.short-description').attr('contenteditable', 'false').toggleClass('editable-el');
+    curcarouselitem.find('.goToChannel').attr('contenteditable', 'false').toggleClass('editable-el');
+    curcarouselitem.find('.channel-language>*:last-child').attr('contenteditable', 'false').toggleClass('editable-el');
+    curcarouselitem.find('.channel-category>*:last-child').attr('contenteditable', 'false').toggleClass('editable-el');
+    curcarouselitem.find('.channel-adprice-number').attr('contenteditable', 'false').toggleClass('editable-el');
+  } else {
+    curcarouselitem.find('.short-description').attr('contenteditable', 'true').toggleClass('editable-el');
+    curcarouselitem.find('.goToChannel').attr('contenteditable', 'true').toggleClass('editable-el');
+    curcarouselitem.find('.channel-language>*:last-child').attr('contenteditable', 'true').toggleClass('editable-el');
+    curcarouselitem.find('.channel-category>*:last-child').attr('contenteditable', 'true').toggleClass('editable-el');
+    curcarouselitem.find('.channel-adprice-number').attr('contenteditable', 'true').toggleClass('editable-el');
+  }
+  $(this).toggleClass('editing');
+});

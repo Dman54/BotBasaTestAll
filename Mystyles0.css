@@ -1,3 +1,17 @@
+.editable-el {
+  border: 1px solid #007BFF;
+  background-color: #fff;
+}
+.editChannel.editing .editpart {
+  display: none;
+}
+.editChannel .savepart {
+  display: none;
+}
+.editChannel.editing .savepart {
+  display: block;
+}
+
 .content-wrapper {
   padding-top: 4.5rem;
   margin-top: -4.5rem;
