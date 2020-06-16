@@ -422,19 +422,24 @@
                       <div class="carousel-item-header">
                         <div class="promotion-itemText">
                           <h3>Академия Джо Рогана</h3>
-                          <div class="short-description">
-                            Джо Роган в Телеграмме
+                          <div class="editable short-description">
+                            <span>Джо Роган в Телеграмме</span>
+                            <input maxlength="30" title="Описание канала" type="text" value="Джо Роган в Телеграмме">
                           </div>
                           <div class="subscibes-count">
                             <span>22907</span>
                             <span>подписчиков</span>
                           </div>
                           <a href="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg" target="_blank"
-                            class="goToChannel">
+                            class="goToChannel editable editable-links">
                             <span>Перейти на канал</span>
                             <i class="fas fa-external-link-alt"></i>
+                            <input title="Общая ссылка" type="text"
+                              value="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg">
+                            <input title="Приватная ссылка" type="text"
+                              value="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg2">
                           </a>
-                          <div class="clearfix"></div>
+                          <!-- <div class="clearfix"></div> -->
                         </div>
                       </div>
                       <div class="carousel-item-description">
@@ -446,12 +451,31 @@
                     </div>
                     <div class="carousel-item-content">
                       <div class="channel-language">
-                        <div class="">Гео и язык канала</div>
-                        <div class="">Россия, Русский</div>
+                        <div>Гео и язык канала</div>
+                        <div class="editable editable-select">
+                          <span>Россия, Русский</span>
+                          <!-- class="form-control2" -->
+                          <select title="Гео и язык канала" name="editable-language" id="editable-language">
+                            <option selected="" value="Россия, Русский">Россия, Русский</option>
+                            <option value="UK, English">UK, English</option>
+                            <option value="Deutsch">Deutsch</option>
+                            <option value="Another">Another</option>
+                          </select>
+                        </div>
                       </div>
                       <div class="channel-category">
-                        <div class="">Категория</div>
-                        <div class="">Юмор и развлечения</div>
+                        <div>Категория</div>
+                        <div class="editable editable-select">
+                          <span>Юмор и развлечения</span>
+                          <!-- class="form-control2" -->
+                          <select title="Категория канала" name="editable-category" id="editable-category">
+                            <option selected="" value="Юмор и развлечения">Юмор и развлечения</option>
+                            <option value="Юмор и развлечения1">Юмор и развлечения1</option>
+                            <option value="Юмор и развлечения2">Юмор и развлечения2</option>
+                            <option value="Юмор и развлечения3">Юмор и развлечения3</option>
+                            <option value="Юмор и развлечения4">Юмор и развлечения4</option>
+                          </select>
+                        </div>
                       </div>
                       <div class="channel-adprice">
                         <div class="channel-adprice-name">
@@ -459,65 +483,10 @@
                         </div>
                         <div class="channel-adprice-content">
                           <div class="channel-adprice-number">
-                            56100&nbsp;<span class="fa fa-rub"></span>
-                          </div>
-                          <div class="price-info">
-                            <span><i class="far fa-clock"></i> 1/24</span>
-                          </div>
-                          <button type="button" class="btn btn-primary">
-                            <i class="fas fa-shopping-cart"></i> В корзину
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="carousel-item-wrapper">
-                      <span class="channel-id d-none">-1001371894354</span>
-                      <div class="carousel-item-img">
-                        <img src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
-                      </div>
-                      <div class="carousel-item-header">
-                        <div class="promotion-itemText">
-                          <h3>Академия Джо Рогана</h3>
-                          <div class="short-description">
-                            Джо Роган в Телеграмме
-                          </div>
-                          <div class="subscibes-count">
-                            <span>22907</span>
-                            <span>подписчиков</span>
-                          </div>
-                          <a href="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg" target="_blank"
-                            class="goToChannel">
-                            <span>Перейти на канал</span>
-                            <i class="fas fa-external-link-alt"></i>
-                          </a>
-                          <div class="clearfix"></div>
-                        </div>
-                      </div>
-                      <div class="carousel-item-description">
-                        <div>Привет, гайсы! Подкаст Joe Rogan Experience теперь на русском в телеграмме! Стендап-комик и
-                          ММА
-                          популяризатор Джо Роган, приглашает интересных гостей, которых не увидишь ни в одном другом
-                          подкасте. Только на нашем канале подкасты в аудиоформате.</div>
-                      </div>
-                    </div>
-                    <div class="carousel-item-content">
-                      <div class="channel-language">
-                        <div class="">Гео и язык канала</div>
-                        <div class="">Россия, Русский</div>
-                      </div>
-                      <div class="channel-category">
-                        <div class="">Категория</div>
-                        <div class="">Юмор и развлечения</div>
-                      </div>
-                      <div class="channel-adprice">
-                        <div class="channel-adprice-name">
-                          Стоимость рекламы:
-                        </div>
-                        <div class="channel-adprice-content">
-                          <div class="channel-adprice-number">
-                            56100&nbsp;<span class="fa fa-rub"></span>
+                            <span class="editable">
+                              <span>56100</span>
+                              <input title="Цена рекламы на канале" type="number" value="56100">
+                            </span>&nbsp;<span class="fa fa-rub"></span>
                           </div>
                           <div class="price-info">
                             <span><i class="far fa-clock"></i> 1/24</span>

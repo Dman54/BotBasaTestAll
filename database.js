@@ -7119,13 +7119,13 @@ function templateAll(data) {
     elements =
       elements +
       `
-<div class="channel${x % 2 == 0 ? " ribboned noted" : ""}${x < 3 ? " top" : ""}${
+<div itemscope itemtype="http://schema.org/Product" class="channel${x % 2 == 0 ? " ribboned noted" : ""}${x < 3 ? " top" : ""}${
       x % 5 > 1 ? " new" : ""
       }">
   <div class="channel-first-part">
     <span class="d-none">${curItem.id}</span>
     <div class="position-relative" data-widget="control-sidebar2" data-slide="true">
-      <img title="Изображение канала" alt="${
+      <img itemprop="image" title="Изображение канала" alt="${
       curItem.title
       }" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
         class="b-lazy img-thumbnail b-loaded">
@@ -7135,7 +7135,7 @@ function templateAll(data) {
     </div>
     <div class="channel-block-title">
       <div title="Название канала" class="channel-list-title" data-widget="control-sidebar2" data-slide="true">
-        <b>${curItem.title}</b>
+        <b itemprop="name">${curItem.title}</b>
       </div>
       <a title="Переход в данный канал в Telegramе" href="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg" target="_blank" class="goToChannel">
         <span>Перейти на канал</span>
@@ -7148,7 +7148,7 @@ function templateAll(data) {
       </div>
     </div>
   </div>
-  <div title="Описание канала" class="long-description">
+  <div itemprop="description" title="Описание канала" class="long-description">
     ${
       curItem.service_description ? curItem.service_description : "Нет описания"
       }
@@ -7170,12 +7170,12 @@ function templateAll(data) {
   <div class="flex-break"></div>
   <div class="buycolumn">
     <div class="buycolumn-text">Реклама:</div>
-    <div title="Цена рекламы на канале" class="price-info btn btn-blue">
-      <span data-widget="control-sidebar2" data-slide="true">${
+    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" title="Цена рекламы на канале" class="price-info btn btn-blue">
+      <span itemprop="price" content="1000.00" data-widget="control-sidebar2" data-slide="true">${
       Math.floor(Math.random() * (99999 - 100)) + 100
-      }&nbsp;<span class="fa fa-rub price-icon active"></span></span>
+      }</span>&nbsp;<span itemprop="priceCurrency" content="RUB" class="fa fa-rub price-icon active"></span>
     </div>
-    <div title="Купить рекламу на канале" class="buy-info">
+    <div itemprop="url" href="save-a-lot-monitors.com/dell-30.html" title="Купить рекламу на канале" class="buy-info">
       <i class="fas fa-shopping-cart"></i>
     </div>
   </div>

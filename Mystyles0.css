@@ -1,7 +1,7 @@
-.editable-el {
+/* .editable-el {
   border: 1px solid #007BFF;
   background-color: #fff;
-}
+} */
 .editChannel.editing .editpart {
   display: none;
 }
@@ -10,6 +10,24 @@
 }
 .editChannel.editing .savepart {
   display: block;
+}
+
+.editable input,
+.editable select {
+  display: none;
+}
+.editable.editing>* {
+  display: none;
+}
+.editable.editing>input,
+.editable.editing>select {
+  display: inline-block;
+}
+.editable-links.editing>input {
+  display: block;
+}
+a.editing {
+  padding: 0;
 }
 
 .content-wrapper {
@@ -1265,8 +1283,11 @@ a.table-link:hover {
   /* margin-right: 1.75rem; */
 }
 
-.channel-adprice-number span {
+.channel-adprice-number span.fa {
   font-size: 1rem;
+}
+.channel-adprice-number input {
+  max-width: 80px;
 }
 
 .channel-adprice-content button {
@@ -4194,6 +4215,8 @@ body.left-sidebar-open #sidebar-overlay2 {
 }
 
 @media (max-width: 696px) {
+  
+  .buttons-row button>div>span,
   .buttons-row button>span {
     display: none;
   }
