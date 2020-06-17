@@ -607,7 +607,8 @@ $('.editChannel').on('click', function (e) {
     curcarouselitem.find('.channel-language .editable>span').html(curcarouselitem.find('.channel-language .editable>select').val());
     curcarouselitem.find('.channel-category .editable>span').html(curcarouselitem.find('.channel-category .editable>select').val());
     curcarouselitem.find('.channel-adprice-number .editable>span').html(curcarouselitem.find('.channel-adprice-number .editable>input').val());
-    curcarouselitem.find('a.editable').removeAttr("onclick");
+    curcarouselitem.find('a.editable').attr("href", before.href1);
+    // curcarouselitem.find('a.editable').removeAttr("onclick");
   } else {
     before.short_description = curcarouselitem.find('.short-description>span').html();
     before.href1 = curcarouselitem.find('.goToChannel').attr('href');
@@ -615,7 +616,8 @@ $('.editChannel').on('click', function (e) {
     before.channel_language = curcarouselitem.find('.channel-language .editable>span').html();
     before.channel_category = curcarouselitem.find('.channel-category .editable>span').html();
     before.channel_adprice_number = curcarouselitem.find('.channel-adprice-number .editable>span').html();
-    curcarouselitem.find('a.editable').attr('onclick', 'return false;');
+    curcarouselitem.find('a.editable').removeAttr("href");
+    // curcarouselitem.find('a.editable').attr('onclick', 'return false;');
   }
   curcarouselitem.find('.editable').toggleClass('editing');
   // if ($(this).hasClass('editing')) {

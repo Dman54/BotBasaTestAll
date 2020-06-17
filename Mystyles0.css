@@ -16,6 +16,9 @@
 .editable select {
   display: none;
 }
+.editable-links .editable-link {
+  display: none;
+}
 .editable.editing>* {
   display: none;
 }
@@ -23,11 +26,17 @@
 .editable.editing>select {
   display: inline-block;
 }
-.editable-links.editing>input {
+.editable-links.editing .editable-link {
   display: block;
+}
+.editable-links.editing .editable-link>input {
+  display: inline-block;
 }
 a.editing {
   padding: 0;
+}
+a.editing:hover {
+  color: unset;
 }
 
 .content-wrapper {
@@ -393,7 +402,9 @@ nav[data-selectRoleContent_added].displayok {
 .carousel-item-description {
   background-color: #f0f5fd;
 }
-
+.carousel-item-description>*:last-child {
+  margin-top: 8px;
+}
 .carousel-item-wrapper {
   display: flex;
 }
@@ -436,7 +447,7 @@ nav[data-selectRoleContent_added].displayok {
 .carousel-item-content .channel-adprice {
   line-height: 1.15;
   padding: 0;
-  width: 290px;
+  width: 300px;
 }
 
 .carousel-item-content .btn {
@@ -1287,7 +1298,7 @@ a.table-link:hover {
   font-size: 1rem;
 }
 .channel-adprice-number input {
-  max-width: 80px;
+  max-width: 90px;
 }
 
 .channel-adprice-content button {
