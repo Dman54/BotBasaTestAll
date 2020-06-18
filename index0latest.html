@@ -1857,6 +1857,7 @@
                 <div class="filter filter-sort" data-sort="description" data-direction="desc">Автопилот<a href="#"></a>
                 </div>
                 <div class="filter filter-sort" data-sort="description" data-direction="desc">VIP<a href="#"></a></div>
+                <div class="flex-break"></div>
                 <div class="filter filter-sort" data-sort="description" data-direction="desc">Категория<a href="#"></a>
                 </div>
                 <div class="filter filter-sort" data-sort="description" data-direction="desc">История<a href="#"></a>
@@ -1880,30 +1881,43 @@
                   </div>
                   <!-- </div> -->
                   <!-- <div class="col-sm-12 col-md-12 col-lg-9 col"> -->
-                  <div>19:00</div>
                   <div>
+                    <div class="column-name">Время</div>
+                    19:00
+                  </div>
+                  <div>
+                    <div class="column-name">Участие</div>
                     <label class="switch">
                       <input type="checkbox" checked>
                       <span class="slider round"></span>
                     </label>
                   </div>
                   <div>
+                    <div class="column-name">Автопилот</div>
                     <label class="switch">
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
                   </div>
                   <div>
+                    <div class="column-name">VIP</div>
                     <label class="switch">
                       <input type="checkbox">
                       <span class="slider round"></span>
                     </label>
                   </div>
-                  <div>Юмор и развлечения от 1000 до 5000</div>
+                  <div class="flex-break"></div>
+                  <div>
+                    <div class="column-name">Категория</div>
+                    Юмор и развлечения от 1000 до 5000
+                  </div>
                   <div>
                     <i class="fas fa-history orangebg bigfa cursor-pointer"></i>
                   </div>
-                  <div>30</div>
+                  <div>
+                    <div class="column-name">ТИП</div>
+                    30
+                  </div>
                   <!-- </div> -->
                   <!-- </div> -->
                 </div>
@@ -1930,14 +1944,17 @@
                     <option value="Поделиться ссылкой">Поделиться ссылкой</option>
                   </select>
                 </span>
-                <div class="filter filter-sort desc" data-sort="description" data-direction="desc">
-                  Время<br>публикации
-                  <a href="#"></a></div>
-                <div class="filter filter-sort" data-sort="description" data-direction="desc">Просмотров<br>до
-                  удаления
-                  <a href="#"></a></div>
-                <div class="filter filter-sort" data-sort="description" data-direction="desc">Времени<br>до удаления
-                  (ч)<a href="#"></a></div>
+                <div class="promotions-row">
+                  <div class="filter filter-sort desc" data-sort="description" data-direction="desc">
+                    Время<br>публикации
+                    <a href="#"></a></div>
+                  <div class="filter filter-sort" data-sort="description" data-direction="desc">Просмотров<br>до
+                    удаления
+                    <a href="#"></a></div>
+                  <div class="filter filter-sort" data-sort="description" data-direction="desc">Времени<br>до удаления
+                    (ч)<a href="#"></a></div>
+                </div>
+                <div class="flex-break"></div>
                 <div class="filter filter-sort" data-sort="description" data-direction="desc">История<br>публикаций
                   <a href="#"></a></div>
                 <div class="filter filter-sort" data-sort="description" data-direction="desc">Поделиться<br>ссылкой
@@ -1975,9 +1992,20 @@
                   </div>
                   <!-- </div> -->
                   <!-- <div class="col-sm-12 col-md-12 col-lg-9 col"> -->
-                  <div>10:00</div>
-                  <div>8000</div>
-                  <div>12</div>
+                  <div class="promotions-row">
+                    <div>
+                      <div class="column-name">Время публикации:</div>
+                      10:00
+                    </div>
+                    <div>
+                      <div class="column-name">Просмотров до удаления:</div>
+                      8000
+                    </div>
+                    <div>
+                      <div class="column-name">Времени до удаления (ч):</div>
+                      12
+                    </div>
+                  </div>
                   <div>
                     <i class="fas fa-history orangebg bigfa cursor-pointer"></i>
                   </div>
@@ -1996,46 +2024,59 @@
               </div>
               <div class="my-promotion-wrapper">
                 <div class="my-promotion promotion">
-                  <span class="d-none">3</span>
-                  <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-3 col">
-                      <div>
-                        <label class="switch">
-                          <input type="checkbox">
-                          <span class="slider round"></span>
-                        </label>
-                      </div>
-                      <div class="my-promotion-left-2">
-                        <div class="channel-list-title">
-                          <b>Развлекательные каналы</b>
-                        </div>
-                        <div class="my-promotion-left-22">
-                          <div data-widget="control-sidebar-promotion" data-slide="true" class="promotion-number">
-                            2
-                          </div>
-                          <button data-widget="control-sidebar-promotion" data-slide="true" type="button"
-                            class="btn btn-default btn-blue">
-                            <span class="">Каналы в подборке</span>
-                          </button>
-                        </div>
-                      </div>
+                  <!-- <div class="row"> -->
+                  <!-- <div class="col-sm-12 col-md-12 col-lg-3 col"> -->
+                  <div class="promotion-first-part">
+                    <span class="d-none">3</span>
+                    <div>
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
                     </div>
-                    <div class="col-sm-12 col-md-12 col-lg-9 col">
-                      <div>18:00</div>
-                      <div>25000</div>
-                      <div>5</div>
-                      <div>
-                        <i class="fas fa-history orangebg bigfa cursor-pointer"></i>
+                    <div class="my-promotion-left-2">
+                      <div class="channel-list-title">
+                        <b>Развлекательные каналы</b>
                       </div>
-                      <div>
-                        <i class="fas fa-link orangebg bigfa cursor-pointer"></i>
-                      </div>
-                      <div>
-                        <i class="fas fa-pen whitebg bluetext midfa pad8 br3 cursor-pointer" data-toggle="modal"
-                          data-target="#promotionEditing"></i>
+                      <div class="my-promotion-left-22">
+                        <div data-widget="control-sidebar-promotion" data-slide="true" class="promotion-number">
+                          2
+                        </div>
+                        <button data-widget="control-sidebar-promotion" data-slide="true" type="button"
+                          class="btn btn-default btn-blue">
+                          <span class="">Каналы в подборке</span>
+                        </button>
                       </div>
                     </div>
                   </div>
+                  <!-- </div> -->
+                  <!-- <div class="col-sm-12 col-md-12 col-lg-9 col"> -->
+                  <div class="promotions-row">
+                    <div>
+                      <div class="column-name">Время публикации:</div>
+                      18:00
+                    </div>
+                    <div>
+                      <div class="column-name">Просмотров до удаления:</div>
+                      25000
+                    </div>
+                    <div>
+                      <div class="column-name">Времени до удаления (ч):</div>
+                      5
+                    </div>
+                  </div>
+                  <div>
+                    <i class="fas fa-history orangebg bigfa cursor-pointer"></i>
+                  </div>
+                  <div>
+                    <i class="fas fa-link orangebg bigfa cursor-pointer"></i>
+                  </div>
+                  <div>
+                    <i class="fas fa-pen whitebg bluetext midfa pad8 br3 cursor-pointer" data-toggle="modal"
+                      data-target="#promotionEditing"></i>
+                  </div>
+                  <!-- </div> -->
+                  <!-- </div> -->
                 </div>
                 <div class="promotion-info">
                   Ошибка: В подборке может учавствовать от 3 до 50 каналов
@@ -2043,46 +2084,59 @@
               </div>
               <div class="my-promotion-wrapper">
                 <div class="my-promotion promotion">
-                  <span class="d-none">4</span>
-                  <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-3 col">
-                      <div>
-                        <label class="switch">
-                          <input type="checkbox">
-                          <span class="slider round"></span>
-                        </label>
-                      </div>
-                      <div class="my-promotion-left-2">
-                        <div class="channel-list-title">
-                          <b>Своя подборка 1</b>
-                        </div>
-                        <div class="my-promotion-left-22">
-                          <div data-widget="control-sidebar-promotion" data-slide="true" class="promotion-number">
-                            13
-                          </div>
-                          <button data-widget="control-sidebar-promotion" data-slide="true" type="button"
-                            class="btn btn-default btn-blue">
-                            <span class="">Каналы в подборке</span>
-                          </button>
-                        </div>
-                      </div>
+                  <!-- <div class="row"> -->
+                  <!-- <div class="col-sm-12 col-md-12 col-lg-3 col"> -->
+                  <div class="promotion-first-part">
+                    <span class="d-none">4</span>
+                    <div>
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
                     </div>
-                    <div class="col-sm-12 col-md-12 col-lg-9 col">
-                      <div>18:00</div>
-                      <div>1000</div>
-                      <div>2</div>
-                      <div>
-                        <i class="fas fa-history orangebg bigfa cursor-pointer"></i>
+                    <div class="my-promotion-left-2">
+                      <div class="channel-list-title">
+                        <b>Своя подборка 1</b>
                       </div>
-                      <div>
-                        <i class="fas fa-link orangebg bigfa cursor-pointer"></i>
-                      </div>
-                      <div>
-                        <i class="fas fa-pen whitebg bluetext midfa pad8 br3 cursor-pointer" data-toggle="modal"
-                          data-target="#promotionEditing"></i>
+                      <div class="my-promotion-left-22">
+                        <div data-widget="control-sidebar-promotion" data-slide="true" class="promotion-number">
+                          13
+                        </div>
+                        <button data-widget="control-sidebar-promotion" data-slide="true" type="button"
+                          class="btn btn-default btn-blue">
+                          <span class="">Каналы в подборке</span>
+                        </button>
                       </div>
                     </div>
                   </div>
+                  <!-- </div> -->
+                  <!-- <div class="col-sm-12 col-md-12 col-lg-9 col"> -->
+                  <div class="promotions-row">
+                    <div>
+                      <div class="column-name">Время публикации:</div>
+                      18:00
+                    </div>
+                    <div>
+                      <div class="column-name">Просмотров до удаления:</div>
+                      1000
+                    </div>
+                    <div>
+                      <div class="column-name">Времени до удаления (ч):</div>
+                      2
+                    </div>
+                  </div>
+                  <div>
+                    <i class="fas fa-history orangebg bigfa cursor-pointer"></i>
+                  </div>
+                  <div>
+                    <i class="fas fa-link orangebg bigfa cursor-pointer"></i>
+                  </div>
+                  <div>
+                    <i class="fas fa-pen whitebg bluetext midfa pad8 br3 cursor-pointer" data-toggle="modal"
+                      data-target="#promotionEditing"></i>
+                  </div>
+                  <!-- </div> -->
+                  <!-- </div> -->
                 </div>
                 <!-- <div class="promotion-info">
                 </div> -->
@@ -3273,8 +3327,8 @@
   <div class="modal fade bd-example-modal-lg" id="promotionCreation" tabindex="-1" role="dialog"
     aria-labelledby="promotionCreationTitle" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
-      <button type="button" class="btn" data-dismiss="modal"><i class="fas fa-times"></i></button>
       <div class="modal-content">
+        <button type="button" class="btn" data-dismiss="modal"><i class="fas fa-times"></i></button>
         <div class="modal-left-part">
           <form method="post" enctype="multipart/form-data" id="addpromotionForm" name="addpromotionForm" action="">
             <div class="modal-left-part-name nomt">
@@ -3348,8 +3402,8 @@
   <div class="modal fade bd-example-modal-lg" id="promotionEditing" tabindex="-1" role="dialog"
     aria-labelledby="promotionEditingTitle" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
-      <button type="button" class="btn" data-dismiss="modal"><i class="fas fa-times"></i></button>
       <div class="modal-content">
+        <button type="button" class="btn" data-dismiss="modal"><i class="fas fa-times"></i></button>
         <div class="modal-left-part">
           <form method="post" enctype="multipart/form-data" id="editpromotionForm" name="editpromotionForm" action="">
             <div class="modal-left-part-name nomt">
@@ -3427,8 +3481,8 @@
   <div class="modal fade bd-example-modal-lg" id="modalCreateChannel" tabindex="-1" role="dialog"
     aria-labelledby="modalCreateChannelTitle" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
-      <button type="button" class="btn" data-dismiss="modal"><i class="fas fa-times"></i></button>
       <div class="modal-content">
+        <button type="button" class="btn" data-dismiss="modal"><i class="fas fa-times"></i></button>
         <div class="modal-left-part">
           <form method="post" enctype="multipart/form-data" id="addChannelForm" name="addChannelForm" action="">
             <div class="modal-left-part-name nomt">
@@ -3482,9 +3536,9 @@
   <div class="modal fade bd-example-modal-md" id="exampleModalLong" tabindex="-1" role="dialog"
     aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog modal-md" role="document">
-      <button type="button" class="btn" data-dismiss="modal"><i class="fas fa-times"></i></button>
       <form method="post" enctype="multipart/form-data" id="addPostForm" name="addPostForm" action="">
         <div class="modal-header">
+          <button type="button" class="btn" data-dismiss="modal"><i class="fas fa-times"></i></button>
           <div class="modal-header-name">Новый пост</div>
           <div class="modal-header-channels">
             <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
