@@ -23,38 +23,38 @@ $(function () {
       "Июль",
     ],
     datasets: [{
-        label: "Telegram",
-        backgroundColor: "rgba(60,141,188,0.9)",
-        borderColor: "rgba(60,141,188,0.8)",
-        pointRadius: false,
-        pointColor: "#3b8bba",
-        pointStrokeColor: "rgba(60,141,188,1)",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(60,141,188,1)",
-        data: [28, 48, 40, 19, 86, 27, 90],
-      },
-      {
-        label: "Facebook",
-        backgroundColor: "rgba(210, 214, 222, 1)",
-        borderColor: "rgba(210, 214, 222, 1)",
-        pointRadius: false,
-        pointColor: "rgba(210, 214, 222, 1)",
-        pointStrokeColor: "#c1c7d1",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(220,220,220,1)",
-        data: [65, 59, 80, 81, 56, 55, 40],
-      },
-      {
-        label: "Instagram",
-        backgroundColor: "rgba(180, 150, 70, 1)",
-        borderColor: "rgba(180, 150, 70, 1)",
-        pointRadius: false,
-        pointColor: "rgba(180, 150, 70, 1)",
-        pointStrokeColor: "#dee",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(180, 150, 70, 1)",
-        data: [70, 62, 10, 30, 40, 50, 60],
-      },
+      label: "Telegram",
+      backgroundColor: "rgba(60,141,188,0.9)",
+      borderColor: "rgba(60,141,188,0.8)",
+      pointRadius: false,
+      pointColor: "#3b8bba",
+      pointStrokeColor: "rgba(60,141,188,1)",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(60,141,188,1)",
+      data: [28, 48, 40, 19, 86, 27, 90],
+    },
+    {
+      label: "Facebook",
+      backgroundColor: "rgba(210, 214, 222, 1)",
+      borderColor: "rgba(210, 214, 222, 1)",
+      pointRadius: false,
+      pointColor: "rgba(210, 214, 222, 1)",
+      pointStrokeColor: "#c1c7d1",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(220,220,220,1)",
+      data: [65, 59, 80, 81, 56, 55, 40],
+    },
+    {
+      label: "Instagram",
+      backgroundColor: "rgba(180, 150, 70, 1)",
+      borderColor: "rgba(180, 150, 70, 1)",
+      pointRadius: false,
+      pointColor: "rgba(180, 150, 70, 1)",
+      pointStrokeColor: "#dee",
+      pointHighlightFill: "#fff",
+      pointHighlightStroke: "rgba(180, 150, 70, 1)",
+      data: [70, 62, 10, 30, 40, 50, 60],
+    },
     ],
   };
 
@@ -69,12 +69,12 @@ $(function () {
         gridLines: {
           display: false,
         },
-      }, ],
+      },],
       yAxes: [{
         gridLines: {
           display: false,
         },
-      }, ],
+      },],
     },
   };
 
@@ -222,7 +222,7 @@ $(function () {
   // $(function () {
 
   // изменение текущего канала и его контента при переключении слайдов в Dashboard
-  let $carousel = $('#carouselExampleIndicators2'); // only for dashboard carousel
+  let $carousel = $('.dashboard-carousel'); // only for dashboard carousel
   let channelStats = $('.channel-stats');
   let channelChart = $('.channel-chart');
 

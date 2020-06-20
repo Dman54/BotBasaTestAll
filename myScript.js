@@ -1,3 +1,23 @@
+function saveGlobalVar(name, value) {
+  localStorage.setItem(name, value); // сохраняем в localStorage значение
+}
+function getGlobalVar(name) {
+  return localStorage.getItem(name); // получаем значение свойства localStorage
+}
+
+$(function () {
+  let sectionnumber = +getGlobalVar('data-sectionContent');
+  console.log(sectionnumber);
+  if (sectionnumber != 0) {
+    localStorage.removeItem('data-sectionContent');
+    // AllRoleLinks[sectionnumber].click();
+    AllRoleLinks.removeClass("active");
+    AllRoleSections.removeClass("active");
+    $(`[data-sectionContent=${sectionnumber}]`).addClass("active");
+    $(`[data-sectionNumber=${sectionnumber}]`).addClass("active");
+  }
+});
+
 // скрипты для открытия и закрытия меню на небольших экранах (клик по гамбургеру и значку закрытия или самому новому меню)
 $("#gamburger_added, #closeicon_added").on("click", function (e) {
   $(".navbar-nav_added").toggleClass("displayok");
@@ -19,16 +39,25 @@ $("#searchhover_added").on("click", function (e) {
 let roleNavList = $("nav[data-selectRoleContent_added]");
 let roleList = $("ul[data-selectRole_added='true'] li a");
 let AllRoleSections = $("[data-sectionNumber]");
+let AllRoleLinksToAnotherPage = $("[data-sectionContent][data-page]");
 let AllRoleLinks = $("[data-sectionContent]");
+
+AllRoleLinksToAnotherPage.on("click", function (e) {
+  e.preventDefault();
+  saveGlobalVar('data-sectionContent', $(this).attr('data-sectionContent'));
+  window.location.href = "./index0latest.html";
+});
 
 // загрузка разного основного контента в зависимости от активного пункта меню слева
 AllRoleLinks.on("click", function (e) {
   e.preventDefault();
   if ($(this).hasClass("active")) return;
   let indexOfAllRoleLinks = $(this).attr('data-sectionContent');
+  if ($(`[data-sectionContent=${indexOfAllRoleLinks}]`).hasClass("active")) return;
   AllRoleLinks.removeClass("active");
   AllRoleSections.removeClass("active");
   $(this).addClass("active");
+  $(`[data-sectionContent=${indexOfAllRoleLinks}]`).addClass("active");
   $(`[data-sectionNumber=${indexOfAllRoleLinks}]`).addClass("active");
 });
 
@@ -199,7 +228,7 @@ function DrawRightSidebar(element) {
         <div class="channel-err-mounth"><div>За месяц </div> <div>60%</div></div>
       </div>
     </div>
-    <button type="button" onClick="goToDashboard(${element.id});$('#closeicon2_added').click();" class="btn btn-blue w100 br0">
+    <button type="button" onClick="${$("body").hasClass("catalog-page") ? "goToDashboardCatalog" : "goToDashboard"}(${element.id});$('#closeicon2_added').click();" class="btn btn-blue w100 br0">
       Подробнее
     </button>`)
 }
@@ -237,6 +266,13 @@ function ChangeRightSidebar(el) {
     sidebar.toggleClass('show');
     $('body').toggleClass('left-sidebar-open');
   }
+}
+
+function goToDashboardCatalog(id) {
+  let AllRoleSections = $("[data-sectionNumber]");
+  AllRoleSections.removeClass("active");
+  $(`[data-sectionNumber="1"`).addClass("active");
+  // ${$(this).attr('data-sectionContent')}]
 }
 
 function goToDashboard(id) {
@@ -512,6 +548,10 @@ function ChangeRightSidebarSelectChannel() {
   $('body').toggleClass('left-sidebar-open');
 }
 
+let buttonsStartBuy;
+buttonsStartBuy = $("[data-widget='control-sidebar-start-buy']");
+buttonsStartBuy.on('click', ChangeRightSidebarSelectChannel);
+
 let buttonsSelectChannelToSidebar;
 buttonsSelectChannelToSidebar = $("[data-widget='control-sidebar-select-channel']");
 buttonsSelectChannelToSidebar.on('click', ChangeRightSidebarSelectChannel);
@@ -607,7 +647,14 @@ $('.editChannel').on('click', function (e) {
     curcarouselitem.find('.channel-language .editable>span').html(curcarouselitem.find('.channel-language .editable>select').val());
     curcarouselitem.find('.channel-category .editable>span').html(curcarouselitem.find('.channel-category .editable>select').val());
     curcarouselitem.find('.channel-adprice-number .editable>span').html(curcarouselitem.find('.channel-adprice-number .editable>input').val());
-    curcarouselitem.find('a.editable').attr("href", before.href1);
+    newHref = before.href1;
+    inputhrefs = curcarouselitem.find('.editable-links .editable-link input[type="text"]');
+    if (curcarouselitem.find('.editable-links input[type="checkbox"]').prop('checked')) {
+      newHref = inputhrefs.eq(1).val();
+    } else {
+      newHref = inputhrefs.eq(0).val();
+    }
+    curcarouselitem.find('a.editable').attr("href", newHref);
     // curcarouselitem.find('a.editable').removeAttr("onclick");
   } else {
     before.short_description = curcarouselitem.find('.short-description>span').html();
@@ -635,3 +682,12 @@ $('.editChannel').on('click', function (e) {
   // }
   $(this).toggleClass('editing');
 });
+
+$('.buy-info').on('click', function (e) {
+  let elWithColItemsToBuy = $('.badge.badge-danger.navbar-badge');
+  elWithColItemsToBuy.html(+elWithColItemsToBuy.html() + 1);
+});
+
+// $('.posts-textarea-tools >*').on('click', function (e) {
+//   let curindex = $(this).index('.posts-textarea-tools >*');
+// });

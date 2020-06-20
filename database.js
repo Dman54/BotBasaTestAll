@@ -7106,173 +7106,334 @@ let allChannels = [{
 
 function templateAll(data) {
   var elements = "";
-  let btnText;
+  let btnText, goToDashboard;
   if ($("body").hasClass("catalog-page")) {
     btnText = "Подробнее";
+    goToDashboard = "goToDashboardCatalog";
+    for (x = 0; x < data.length; x++) {
+      let curItem = data[x];
+      // if (!curItem.errors == "NULL" || !curItem.status == "active" || curItem.members_count < 1000) continue;
+      elements =
+        elements +
+        `
+  <div itemscope itemtype="http://schema.org/Product" class="channel${x % 2 == 0 ? " ribboned noted" : ""}${x < 3 ? " top" : ""}${
+        x % 5 > 1 ? " new" : ""
+        }">
+    <div class="channel-first-part">
+      <span class="d-none">${curItem.id}</span>
+      <div class="position-relative" data-widget="control-sidebar2" data-slide="true">
+        <img itemprop="image" title="Изображение канала" alt="${
+        curItem.title
+        }" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
+          class="b-lazy img-thumbnail b-loaded">
+        <span class="verified-channel-img">
+          <img src="tgstat_images/verified.png" title="У канала есть подтвержденный владелец на сайте LinkBaza">
+        </span>
+      </div>
+      <div class="channel-block-title">
+        <div title="Название канала" class="channel-list-title" data-widget="control-sidebar2" data-slide="true">
+          <b itemprop="name">${curItem.title}</b>
+        </div>
+        <a title="Переход в данный канал в Telegramе" href="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg" target="_blank" class="goToChannel">
+          <span>Перейти на канал</span>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <div class="d-none">
+          <a href="/entertainment" class="channel_category_id">${
+        curItem.channel_category_id
+        }</a>
+        </div>
+      </div>
+    </div>
+    <div itemprop="description" title="Описание канала" class="long-description">
+      ${
+        curItem.service_description ? curItem.service_description : "Нет описания"
+        }
+    </div>
+    <div class="channel-subscribes-column">
+      <i title="Количество подписчиков на канале" data-widget="control-sidebar2" data-slide="true" class="fas fa-user-friends"></i>
+      <a title="Количество подписчиков на канале" data-widget="control-sidebar2" data-slide="true" href="#" class="table-link">
+        ${curItem.members_count * 9999}
+      </a>
+    </div>
+    <div class="channel-growsubscribes-column">
+      <i title="Прирост подписчиков на канале за 30 последних дней" data-widget="control-sidebar2" data-slide="true" class="fas fa-chart-line"></i>
+      <a title="Прирост подписчиков на канале за 30 последних дней" data-widget="control-sidebar2" data-slide="true" href="#" class="table-link">
+        <span class="green">${
+        Math.floor(Math.random() * (999999 - -55555)) + -55555
+        }</span>
+      </a>
+    </div>
+    <div class="flex-break"></div>
+    <div class="buycolumn">
+      <div class="buycolumn-text">Реклама:</div>
+      <div data-widget="control-sidebar2" data-slide="true" itemprop="offers" itemscope itemtype="http://schema.org/Offer" title="Цена рекламы на канале" class="price-info btn btn-blue">
+        <span itemprop="price" content="1000.00">${
+        Math.floor(Math.random() * (99999 - 100)) + 100
+        }</span>&nbsp;<span itemprop="priceCurrency" content="RUB" class="fa fa-rub price-icon active"></span>
+      </div>
+      <div itemprop="url" href="save-a-lot-monitors.com/dell-30.html" title="Купить рекламу на канале" class="buy-info">
+        <i class="fas fa-shopping-cart"></i>
+      </div>
+    </div>
+    <div>
+      <!-- star rating #1 -->
+      <div class="star-rating__container">
+        <div class="star-rating__wrapper" itemprop="aggregateRating" itemscope
+          itemtype="http://schema.org/AggregateRating">
+          <div class="d-none star-rating__avg" itemprop="ratingValue"></div>
+          <div title="Средний рейтинг: 5" class="star-rating star-rating_active" data-id="page-${
+        x + 1
+        }">
+            <div class="star-rating__bg">
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+            </div>
+            <div class="star-rating__live">
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                data-rating="1">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                data-rating="2">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                data-rating="3">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                data-rating="4">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                data-rating="5">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+            </div>
+          </div>
+          <div class="star-rating__votes">
+            <div class="star-rating__votes_count d-none"><span class="star-rating__votes_number"
+                itemprop="reviewCount"></span><span class="star-rating__votes_text"></span></div>
+            <div class="star-rating__votes_message d-none"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div title="Добавить канал в избранное" class="ribbon-sign">
+        <i class="fas fa-heart"></i>
+      </div>
+      <div title="Добавить заметку к каналу" class="note-sign">
+        <i class="fas fa-edit"></i>
+      </div>
+    </div>
+    <div title="Посмотреть подробную информацию о канале" class="channel-block-button">
+      <a href="#" onClick="${goToDashboard}(${curItem.id})"
+        class="btn btn-primary btn-sm r-action-btn">${btnText}</a>
+    </div>
+  </div>
+  <div class="channel-info">
+    <input type="test" placeholder="Введите текст заметки">
+  </div>` +
+        "\n";
+    }
   } else {
     btnText = "Выбрать";
-  }
-
-  for (x = 0; x < data.length; x++) {
-    let curItem = data[x];
-    // if (!curItem.errors == "NULL" || !curItem.status == "active" || curItem.members_count < 1000) continue;
-    elements =
-      elements +
-      `
-<div itemscope itemtype="http://schema.org/Product" class="channel${x % 2 == 0 ? " ribboned noted" : ""}${x < 3 ? " top" : ""}${
-      x % 5 > 1 ? " new" : ""
-      }">
-  <div class="channel-first-part">
-    <span class="d-none">${curItem.id}</span>
-    <div class="position-relative" data-widget="control-sidebar2" data-slide="true">
-      <img itemprop="image" title="Изображение канала" alt="${
-      curItem.title
-      }" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
-        class="b-lazy img-thumbnail b-loaded">
-      <span class="verified-channel-img">
-        <img src="tgstat_images/verified.png" title="У канала есть подтвержденный владелец на сайте LinkBaza">
-      </span>
-    </div>
-    <div class="channel-block-title">
-      <div title="Название канала" class="channel-list-title" data-widget="control-sidebar2" data-slide="true">
-        <b itemprop="name">${curItem.title}</b>
+    goToDashboard = "goToDashboard";
+    for (x = 0; x < data.length; x++) {
+      let curItem = data[x];
+      // if (!curItem.errors == "NULL" || !curItem.status == "active" || curItem.members_count < 1000) continue;
+      elements =
+        elements +
+        `
+  <div class="channel${x % 2 == 0 ? " ribboned noted" : ""}${x < 3 ? " top" : ""}${
+        x % 5 > 1 ? " new" : ""
+        }">
+    <div class="channel-first-part">
+      <span class="d-none">${curItem.id}</span>
+      <div class="position-relative" data-widget="control-sidebar2" data-slide="true">
+        <img title="Изображение канала" alt="${
+        curItem.title
+        }" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
+          class="b-lazy img-thumbnail b-loaded">
+        <span class="verified-channel-img">
+          <img src="tgstat_images/verified.png" title="У канала есть подтвержденный владелец на сайте LinkBaza">
+        </span>
       </div>
-      <a title="Переход в данный канал в Telegramе" href="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg" target="_blank" class="goToChannel">
-        <span>Перейти на канал</span>
-        <i class="fas fa-external-link-alt"></i>
+      <div class="channel-block-title">
+        <div title="Название канала" class="channel-list-title" data-widget="control-sidebar2" data-slide="true">
+          <b>${curItem.title}</b>
+        </div>
+        <a title="Переход в данный канал в Telegramе" href="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg" target="_blank" class="goToChannel">
+          <span>Перейти на канал</span>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+        <div class="d-none">
+          <a href="/entertainment" class="channel_category_id">${
+        curItem.channel_category_id
+        }</a>
+        </div>
+      </div>
+    </div>
+    <div title="Описание канала" class="long-description">
+      ${
+        curItem.service_description ? curItem.service_description : "Нет описания"
+        }
+    </div>
+    <div class="channel-subscribes-column">
+      <i title="Количество подписчиков на канале" data-widget="control-sidebar2" data-slide="true" class="fas fa-user-friends"></i>
+      <a title="Количество подписчиков на канале" data-widget="control-sidebar2" data-slide="true" href="#" class="table-link">
+        ${curItem.members_count * 9999}
       </a>
-      <div class="d-none">
-        <a href="/entertainment" class="channel_category_id">${
-      curItem.channel_category_id
-      }</a>
+    </div>
+    <div class="channel-growsubscribes-column">
+      <i title="Прирост подписчиков на канале за 30 последних дней" data-widget="control-sidebar2" data-slide="true" class="fas fa-chart-line"></i>
+      <a title="Прирост подписчиков на канале за 30 последних дней" data-widget="control-sidebar2" data-slide="true" href="#" class="table-link">
+        <span class="green">${
+        Math.floor(Math.random() * (999999 - -55555)) + -55555
+        }</span>
+      </a>
+    </div>
+    <div class="flex-break"></div>
+    <div class="buycolumn">
+      <div class="buycolumn-text">Реклама:</div>
+      <div data-widget="control-sidebar2" data-slide="true" itemprop="offers" itemscope itemtype="http://schema.org/Offer" title="Цена рекламы на канале" class="price-info btn btn-blue">
+        <span>${
+        Math.floor(Math.random() * (99999 - 100)) + 100
+        }</span>&nbsp;<span class="fa fa-rub price-icon active"></span>
+      </div>
+      <div title="Купить рекламу на канале" class="buy-info">
+        <i class="fas fa-shopping-cart"></i>
       </div>
     </div>
-  </div>
-  <div itemprop="description" title="Описание канала" class="long-description">
-    ${
-      curItem.service_description ? curItem.service_description : "Нет описания"
-      }
-  </div>
-  <div class="channel-subscribes-column">
-    <i title="Количество подписчиков на канале" data-widget="control-sidebar2" data-slide="true" class="fas fa-user-friends"></i>
-    <a title="Количество подписчиков на канале" data-widget="control-sidebar2" data-slide="true" href="#" class="table-link">
-      ${curItem.members_count * 9999}
-    </a>
-  </div>
-  <div class="channel-growsubscribes-column">
-    <i title="Прирост подписчиков на канале за 30 последних дней" data-widget="control-sidebar2" data-slide="true" class="fas fa-chart-line"></i>
-    <a title="Прирост подписчиков на канале за 30 последних дней" data-widget="control-sidebar2" data-slide="true" href="#" class="table-link">
-      <span class="green">${
-      Math.floor(Math.random() * (999999 - -55555)) + -55555
-      }</span>
-    </a>
-  </div>
-  <div class="flex-break"></div>
-  <div class="buycolumn">
-    <div class="buycolumn-text">Реклама:</div>
-    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" title="Цена рекламы на канале" class="price-info btn btn-blue">
-      <span itemprop="price" content="1000.00" data-widget="control-sidebar2" data-slide="true">${
-      Math.floor(Math.random() * (99999 - 100)) + 100
-      }</span>&nbsp;<span itemprop="priceCurrency" content="RUB" class="fa fa-rub price-icon active"></span>
-    </div>
-    <div itemprop="url" href="save-a-lot-monitors.com/dell-30.html" title="Купить рекламу на канале" class="buy-info">
-      <i class="fas fa-shopping-cart"></i>
-    </div>
-  </div>
-  <div>
-    <!-- star rating #1 -->
-    <div class="star-rating__container">
-      <div class="star-rating__wrapper" itemprop="aggregateRating" itemscope
-        itemtype="http://schema.org/AggregateRating">
-        <div class="d-none star-rating__avg" itemprop="ratingValue"></div>
-        <div title="Средний рейтинг: 5" class="star-rating star-rating_active" data-id="page-${
-      x + 1
-      }">
-          <div class="star-rating__bg">
-            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-              <path fill="currentColor"
-                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-              </path>
-            </svg>
-            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-              <path fill="currentColor"
-                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-              </path>
-            </svg>
-            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-              <path fill="currentColor"
-                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-              </path>
-            </svg>
-            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-              <path fill="currentColor"
-                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-              </path>
-            </svg>
-            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-              <path fill="currentColor"
-                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-              </path>
-            </svg>
+    <div>
+      <!-- star rating #1 -->
+      <div class="star-rating__container">
+        <div class="star-rating__wrapper">
+          <div class="d-none star-rating__avg"></div>
+          <div title="Средний рейтинг: 5" class="star-rating star-rating_active" data-id="page-${
+        x + 1
+        }">
+            <div class="star-rating__bg">
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+            </div>
+            <div class="star-rating__live">
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                data-rating="1">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                data-rating="2">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                data-rating="3">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                data-rating="4">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+              <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
+                data-rating="5">
+                <path fill="currentColor"
+                  d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                </path>
+              </svg>
+            </div>
           </div>
-          <div class="star-rating__live">
-            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
-              data-rating="1">
-              <path fill="currentColor"
-                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-              </path>
-            </svg>
-            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
-              data-rating="2">
-              <path fill="currentColor"
-                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-              </path>
-            </svg>
-            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
-              data-rating="3">
-              <path fill="currentColor"
-                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-              </path>
-            </svg>
-            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
-              data-rating="4">
-              <path fill="currentColor"
-                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-              </path>
-            </svg>
-            <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
-              data-rating="5">
-              <path fill="currentColor"
-                d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-              </path>
-            </svg>
+          <div class="star-rating__votes">
+            <div class="star-rating__votes_count d-none"><span class="star-rating__votes_number"
+                ></span><span class="star-rating__votes_text"></span></div>
+            <div class="star-rating__votes_message d-none"></div>
           </div>
-        </div>
-        <div class="star-rating__votes">
-          <div class="star-rating__votes_count d-none"><span class="star-rating__votes_number"
-              itemprop="reviewCount"></span><span class="star-rating__votes_text"></span></div>
-          <div class="star-rating__votes_message d-none"></div>
         </div>
       </div>
     </div>
-  </div>
-  <div>
-    <div title="Добавить канал в избранное" class="ribbon-sign">
-      <i class="fas fa-heart"></i>
+    <div>
+      <div title="Добавить канал в избранное" class="ribbon-sign">
+        <i class="fas fa-heart"></i>
+      </div>
+      <div title="Добавить заметку к каналу" class="note-sign">
+        <i class="fas fa-edit"></i>
+      </div>
     </div>
-    <div title="Добавить заметку к каналу" class="note-sign">
-      <i class="fas fa-edit"></i>
+    <div title="Посмотреть подробную информацию о канале" class="channel-block-button">
+      <a href="#" onClick="${goToDashboard}(${curItem.id})"
+        class="btn btn-primary btn-sm r-action-btn">${btnText}</a>
     </div>
   </div>
-  <div title="Посмотреть подробную информацию о канале" class="channel-block-button">
-    <a href="#" onClick="goToDashboard(${curItem.id})"
-      class="btn btn-primary btn-sm r-action-btn">${btnText}</a>
-  </div>
-</div>
-<div class="channel-info">
-  <input type="test" placeholder="Введите текст заметки">
-</div>` +
-      "\n";
+  <div class="channel-info">
+    <input type="test" placeholder="Введите текст заметки">
+  </div>` +
+        "\n";
+    }
   }
   return elements;
 }

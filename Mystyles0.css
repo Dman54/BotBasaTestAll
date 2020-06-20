@@ -1878,6 +1878,39 @@ a.table-link:hover {
   transition: all 0.3s;
 }
 
+#posts-textarea {
+  height: 290px;
+  font-size: 12px;
+  line-height: 1.3;
+  border-radius: 0px;
+  border: none;
+  outline: none;
+  background-color: transparent !important;
+  padding: 0;
+  width: 294px;
+}
+
+.posts-textarea-tools {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.posts-textarea-tools > *:not(:last-child){
+  background-color: #F5F5F5;
+  /* display: block; */
+  border-radius: 3px;
+  padding: 2px;
+  color: #959595;
+  font-size: 12px;
+  cursor: pointer;
+}
+.posts-textarea-tools > *:last-child {
+  color: #E4E4E4;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 .center {
   text-align: center;
 }
