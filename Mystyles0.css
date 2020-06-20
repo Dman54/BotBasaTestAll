@@ -1,3 +1,9 @@
+.catalog-page #channelsList .buycolumn {
+  visibility: hidden;
+}
+.catalog-page #channelsList .channels_list_body div.channel > *:nth-child(8) {
+  visibility: hidden;
+}
 /* .editable-el {
   border: 1px solid #007BFF;
   background-color: #fff;
@@ -2944,6 +2950,9 @@ input:checked + .slider:before {
 .channel-info.show {
   display: block;
 }
+.channel-info input {
+  width: 100%;
+}
 .promotion-table-content-no {
   cursor: pointer;
   min-height: 3.125rem;
@@ -3751,6 +3760,11 @@ body.left-sidebar-open #sidebar-overlay2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-direction: column;
+}
+/* .surfing-carousel .carousel-item-content-part2 {} */
+.surfing-carousel .carousel-item-content-part2 button {
+  margin-top: 12px;
 }
 .goToChannel-graytext {
   font-size: 14px;
@@ -4839,12 +4853,6 @@ body.left-sidebar-open #sidebar-overlay2 {
   }
   .surfing-carousel .goToChannel i {
     margin-left: 0;
-  }
-  .surfing-carousel .carousel-item-content-part2 {
-    flex-direction: column;
-  }
-  .surfing-carousel .carousel-item-content-part2 button {
-    margin-top: 12px;
   }
   .navbar-nav-telegram {
     left: unset;
