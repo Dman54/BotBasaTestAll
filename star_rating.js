@@ -51,7 +51,7 @@ function changeRaitingListeners() {
   //     });
   // });
 
-  var starRatingItems = $('.star-rating__live .star-rating__item');
+  var starRatingItems = $('.surfing-carousel .star-rating__live .star-rating__item');
   starRatingItems.on('mouseover', function () {
     var
       rating = $(this).attr('data-rating'),

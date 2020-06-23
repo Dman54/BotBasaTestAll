@@ -35,11 +35,15 @@
 .editable-links.editing .editable-link {
   display: block;
 }
+.editable-links.editing .editable-link:nth-child(3) {
+  margin-top: 7px;
+}
 .editable-links.editing .editable-link>input {
   display: inline-block;
 }
 a.editing {
-  padding: 0;
+  padding: 0 !important;
+  position: static !important;
 }
 a.editing:hover {
   color: unset;
@@ -406,7 +410,9 @@ section.promotion-section {
   background-color: #F3F6F9;
   padding: 10px;
 }
-/* .carousel-item-header */
+.carousel-item-header {
+  position: relative;
+}
 /* .carousel-item-img */
 
 .carousel-item-description {
@@ -2099,7 +2105,7 @@ a.table-link:hover {
   left: 0;
 }
 
-.star-rating_active:hover .star-rating__live {
+.surfing-carousel .star-rating_active:hover .star-rating__live {
   overflow: auto;
   width: 100% !important;
   color: #e0e0e0;
@@ -2307,6 +2313,10 @@ select.form-control2 {
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+}
+.btn-group>.btn-group:not(:first-child)>.btn, .btn-group>.btn:not(:first-child) {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
 
 .channel.new:before {
@@ -2696,6 +2706,17 @@ select#PagesCounter.form-control2 {
   margin-right: 16px;
   background-color: #f0f5fd;
   box-shadow: none;
+}
+.small-box .icon>i {
+  right: 5px;
+}
+.small-box .icon>i.fa,
+.small-box .icon>i.fab,
+.small-box .icon>i.far,
+.small-box .icon>i.fas,
+.small-box .icon>i.glyphicon,
+.small-box .icon>i.ion {
+  top: 5px;
 }
 .channel-stats>.small-box:last-child {
   margin-right: 0;
@@ -4034,6 +4055,45 @@ body.left-sidebar-open #sidebar-overlay2 {
   .prev-name-channel>span:last-child {
     display: none;
   }
+  .carousel-item-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .dashboard-carousel .carousel-item-description {
+    min-width: 100%;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .carousel-item-header .promotion-itemText {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .subscibes-count {
+    margin-top: 0;
+    margin-bottom: 9px;
+    line-height: 1;
+  }
+  .carousel-item-img {
+    max-width: 70px;
+  }
+  .carousel-item-img img {
+    width: 70px;
+  }
+  .short-description {
+    font-size: 0.875rem;
+  }
+  .promotion-itemText h3 {
+    font-size: 18px;
+    margin-bottom: 7px;
+  }
+  .subscibes-count *:first-child {
+    font-size: 16px;
+  }
+  .carousel-item-header-right .goToChannel {
+    font-size: 14px;
+    padding: 3px 8px;
+  }
 }
 
 @media (max-width: 1250px) {
@@ -4329,6 +4389,10 @@ body.left-sidebar-open #sidebar-overlay2 {
 }
 
 @media (max-width: 991px) {
+  .small-box .icon {
+    display: none;
+  }
+
   .modal-left-part {
     flex: 9;
   }
@@ -4413,23 +4477,18 @@ body.left-sidebar-open #sidebar-overlay2 {
   .chat-messages-item-my {
     margin-left: 15%;
   }
-}
-
-@media (max-width: 767px) {
-  .carousel-item-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .dashboard-carousel .carousel-item-description {
-    min-width: 100%;
-    margin-left: 0;
-    margin-top: 10px;
-  }
   .carousel-item-content {
     margin-left: 0;
     display: block;
     /* flex-direction: column;
     align-items: unset; */
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-item-content .channel-adprice {
+    width: 100%;
+    max-width: 360px;
   }
   .channel-language,
   .channel-category {
@@ -4882,12 +4941,6 @@ body.left-sidebar-open #sidebar-overlay2 {
 }
 
 @media (max-width: 510px) {
-  .carousel-item-img {
-    max-width: 100px;
-  }
-  .carousel-item-img img {
-    width: 100px;
-  }
   .main-body_added.layout-fixed .brand-link {
     width: 150%;
   }
@@ -4899,6 +4952,37 @@ body.left-sidebar-open #sidebar-overlay2 {
   }
   .posts-carousel-dates {
     padding: 0 3px;
+  }
+  .carousel-item-header {
+    padding: 5px;
+  }
+  .carousel-item-header .promotion-itemText {
+    display: block;
+  }
+  .promotion-itemText h3 {
+    margin-bottom: 0;
+    margin-bottom: 1px;
+    font-size: 16px;
+  }
+  .short-description {
+    font-size: 12px;
+    margin-bottom: 9px;
+  }
+  .subscibes-count {
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+  .subscibes-count *:first-child {
+    font-size: 12px;
+  }
+  .carousel-item-header-right .goToChannel span {
+    display: none;
+  } 
+  .carousel-item-header-right .goToChannel {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -4969,30 +5053,8 @@ body.left-sidebar-open #sidebar-overlay2 {
   .channel-stats .small-box:last-child {
     width: 100%;
   }
-  .promotion-itemText h3 {
-    font-size: 18px;
-  }
-  .short-description {
-    font-size: 14px;
-  }
-  .subscibes-count {
-    font-size: 14px;
-    margin: 4px auto 4px auto;
-  }
-  .subscibes-count *:first-child {
-    font-size: 14px;
-  }
   .carousel-item-description {
     font-size: 13px;
-  }
-  .carousel-item-header .goToChannel {
-    font-size: 14px;
-  }
-  .carousel-item-img {
-    max-width: 70px;
-  }
-  .carousel-item-img img {
-    width: 70px;
   }
   .carousel-item .channel-language,
   .carousel-item .channel-category,
@@ -5003,6 +5065,9 @@ body.left-sidebar-open #sidebar-overlay2 {
   .carousel-item .channel-category div:last-child,
   .carousel-item .channel-adprice-number {
     font-size: 16px;
+  }
+  .channel-adprice-number input {
+    max-width: 62px;
   }
   .surfing-carousel .promotion-itemText {
     min-height: 72px;
@@ -5030,6 +5095,9 @@ body.left-sidebar-open #sidebar-overlay2 {
 }
 
 @media (max-width: 400px) {
+  .carousel-item-content .channel-adprice {
+    width: auto;
+  }
   .profile-block .channel-adprice-content:first-child {
     flex-wrap: wrap;
     justify-content: unset;
@@ -5071,18 +5139,18 @@ body.left-sidebar-open #sidebar-overlay2 {
     flex-direction: column;
     align-items: flex-start;
   } */
-  .carousel-item-content .channel-adprice {
-    width: auto;
-  }
-  .carousel-item .channel-adprice-content {
+  /* .carousel-item .channel-adprice-content {
     flex-wrap: wrap;
     justify-content: unset;
-  }
-  .carousel-item .channel-adprice-content .price-info {
+  } */
+  /* .carousel-item .channel-adprice-content .price-info {
     margin: 8px 50px 10px 10px;
-  }
+  } */
   .topbuttons-container .btn-group {
     flex-direction: column;
+  }
+  .btn-group > *:not(:last-child) {
+    margin-right: 0;
   }
   .topbuttons-container .btn-group>*:not(:last-child) {
     margin-bottom: 10px;
