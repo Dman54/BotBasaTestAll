@@ -7181,7 +7181,7 @@ function templateAll(data) {
       <div class="star-rating__container">
         <div class="star-rating__wrapper" itemprop="aggregateRating" itemscope
           itemtype="http://schema.org/AggregateRating">
-          <div class="d-none star-rating__avg" itemprop="ratingValue"></div>
+          <div class="d-none star-rating__avg" itemprop="ratingValue">5</div>
           <div title="Средний рейтинг: 5" class="star-rating star-rating_active" data-id="page-${
         x + 1
         }">
@@ -7247,7 +7247,7 @@ function templateAll(data) {
           </div>
           <div class="star-rating__votes">
             <div class="star-rating__votes_count d-none"><span class="star-rating__votes_number"
-                itemprop="reviewCount"></span><span class="star-rating__votes_text"></span></div>
+                itemprop="reviewCount">1</span><span class="star-rating__votes_text"></span></div>
             <div class="star-rating__votes_message d-none"></div>
           </div>
         </div>

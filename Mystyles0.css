@@ -1070,6 +1070,11 @@ div.filter-sort.asc span:last-child:after {
   min-width: 78px;
 }
 
+.channels_list_body div.channel > *:nth-child(3),
+.channels_list_body div.channel > *:nth-child(4) {
+  cursor: pointer;
+}
+
 .channels-sortpanel > *:nth-child(6),
 .channels_list_body div.channel > *:nth-child(6) {
   min-width: 128px;
