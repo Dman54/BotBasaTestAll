@@ -747,7 +747,10 @@ section.promotion-section {
 
 .sub-nav dt a,
 .sub-nav dd a,
-.sub-nav li a {
+.sub-nav li a,
+.sub-nav dt span,
+.sub-nav dd span,
+.sub-nav li span {
   text-decoration: none;
   color: #5f5f5f;
   cursor: default;
@@ -761,7 +764,13 @@ section.promotion-section {
 .sub-nav dd.active a,
 .sub-nav dd a:hover,
 .sub-nav li.active a,
-.sub-nav li a:hover {
+.sub-nav li a:hover,
+.sub-nav dt.active span,
+.sub-nav dt span:hover,
+.sub-nav dd.active span,
+.sub-nav dd span:hover,
+.sub-nav li.active span,
+.sub-nav li span:hover {
   border-radius: 3px;
   background: #5f5f5f;
   color: #ffffff;
@@ -969,6 +978,7 @@ div.r-blocks .r-action-btn {
   color: #444444;
 }
 
+div.filter-sort span,
 div.filter-sort a {
   color: black;
   text-decoration: none;
@@ -976,17 +986,21 @@ div.filter-sort a {
 }
 
 div.filter-sort.desc a,
-div.filter-sort.asc a {
+div.filter-sort.asc a,
+div.filter-sort.desc span,
+div.filter-sort.asc span {
   border-bottom: 1px #2199e8 dotted;
   /* text-decoration: none; */
   font-weight: bold;
 }
 
-div.filter-sort.desc a:last-child:after {
+div.filter-sort.desc a:last-child:after,
+div.filter-sort.desc span:last-child:after {
   content: "↓";
 }
 
-div.filter-sort.asc a:last-child:after {
+div.filter-sort.asc a:last-child:after,
+div.filter-sort.asc span:last-child:after {
   content: "↑";
 }
 
@@ -2212,8 +2226,13 @@ select.form-control2 {
   width: 100px;
   margin-right: 1.25rem;
 }
-
-/* .search-container .button-extended {} */
+.button-extended {
+  color: #007bff;
+  cursor: pointer;
+}
+.button-extended:hover {
+  color: #0056b3; 
+}
 
 .buycolumn {
   position: relative;

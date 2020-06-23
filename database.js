@@ -7139,9 +7139,9 @@ function templateAll(data) {
           <i class="fas fa-external-link-alt"></i>
         </a>
         <div class="d-none">
-          <a href="/entertainment" class="channel_category_id">${
+          <span class="channel_category_id">${
         curItem.channel_category_id
-        }</a>
+        }</span>
         </div>
       </div>
     </div>
@@ -7152,17 +7152,17 @@ function templateAll(data) {
     </div>
     <div class="channel-subscribes-column">
       <i title="Количество подписчиков на канале" data-widget="control-sidebar2" data-slide="true" class="fas fa-user-friends"></i>
-      <a title="Количество подписчиков на канале" data-widget="control-sidebar2" data-slide="true" href="#" class="table-link">
+      <span title="Количество подписчиков на канале" data-widget="control-sidebar2" data-slide="true" class="table-link">
         ${curItem.members_count * 9999}
-      </a>
+      </span>
     </div>
     <div class="channel-growsubscribes-column">
       <i title="Прирост подписчиков на канале за 30 последних дней" data-widget="control-sidebar2" data-slide="true" class="fas fa-chart-line"></i>
-      <a title="Прирост подписчиков на канале за 30 последних дней" data-widget="control-sidebar2" data-slide="true" href="#" class="table-link">
+      <span title="Прирост подписчиков на канале за 30 последних дней" data-widget="control-sidebar2" data-slide="true" class="table-link">
         <span class="green">${
         Math.floor(Math.random() * (999999 - -55555)) + -55555
         }</span>
-      </a>
+      </span>
     </div>
     <div class="flex-break"></div>
     <div class="buycolumn">
@@ -7172,7 +7172,7 @@ function templateAll(data) {
         Math.floor(Math.random() * (99999 - 100)) + 100
         }</span>&nbsp;<span itemprop="priceCurrency" content="RUB" class="fa fa-rub price-icon active"></span>
       </div>
-      <div itemprop="url" href="save-a-lot-monitors.com/dell-30.html" title="Купить рекламу на канале" class="buy-info">
+      <div title="Купить рекламу на канале" class="buy-info">
         <i class="fas fa-shopping-cart"></i>
       </div>
     </div>
@@ -7262,8 +7262,8 @@ function templateAll(data) {
       </div>
     </div>
     <div title="Посмотреть подробную информацию о канале" class="channel-block-button">
-      <a href="#" onClick="${goToDashboard}(${curItem.id})"
-        class="btn btn-primary btn-sm r-action-btn">${btnText}</a>
+      <span onClick="${goToDashboard}(${curItem.id})"
+        class="btn btn-primary btn-sm r-action-btn">${btnText}</span>
     </div>
   </div>
   <div class="channel-info">
@@ -7303,9 +7303,9 @@ function templateAll(data) {
           <i class="fas fa-external-link-alt"></i>
         </a>
         <div class="d-none">
-          <a href="/entertainment" class="channel_category_id">${
+          <span class="channel_category_id">${
         curItem.channel_category_id
-        }</a>
+        }</span>
         </div>
       </div>
     </div>
@@ -7316,17 +7316,17 @@ function templateAll(data) {
     </div>
     <div class="channel-subscribes-column">
       <i title="Количество подписчиков на канале" data-widget="control-sidebar2" data-slide="true" class="fas fa-user-friends"></i>
-      <a title="Количество подписчиков на канале" data-widget="control-sidebar2" data-slide="true" href="#" class="table-link">
+      <span title="Количество подписчиков на канале" data-widget="control-sidebar2" data-slide="true" class="table-link">
         ${curItem.members_count * 9999}
-      </a>
+      </span>
     </div>
     <div class="channel-growsubscribes-column">
       <i title="Прирост подписчиков на канале за 30 последних дней" data-widget="control-sidebar2" data-slide="true" class="fas fa-chart-line"></i>
-      <a title="Прирост подписчиков на канале за 30 последних дней" data-widget="control-sidebar2" data-slide="true" href="#" class="table-link">
+      <span title="Прирост подписчиков на канале за 30 последних дней" data-widget="control-sidebar2" data-slide="true" class="table-link">
         <span class="green">${
         Math.floor(Math.random() * (999999 - -55555)) + -55555
         }</span>
-      </a>
+      </span>
     </div>
     <div class="flex-break"></div>
     <div class="buycolumn">
@@ -7425,8 +7425,8 @@ function templateAll(data) {
       </div>
     </div>
     <div title="Посмотреть подробную информацию о канале" class="channel-block-button">
-      <a href="#" onClick="${goToDashboard}(${curItem.id})"
-        class="btn btn-primary btn-sm r-action-btn">${btnText}</a>
+      <span onClick="${goToDashboard}(${curItem.id})"
+        class="btn btn-primary btn-sm r-action-btn">${btnText}</span>
     </div>
   </div>
   <div class="channel-info">

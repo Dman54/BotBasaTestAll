@@ -576,8 +576,6 @@ $('#PagesCounter').on('change', function (e) {
     }
   })
 });
-// $('#ChangePagesCounter').on('click', function (e) {
-// })
 
 let postsCarouselDates = $('.posts-carousel-dates>span');
 $('#carouselExampleIndicators3').on('slide.bs.carousel', function (e) {
@@ -691,3 +689,7 @@ $('.buy-info').on('click', function (e) {
 // $('.posts-textarea-tools >*').on('click', function (e) {
 //   let curindex = $(this).index('.posts-textarea-tools >*');
 // });
+$('.filter-category').on('click', function (e) {
+  $('.filter-category').parent().removeClass('active');
+  $(this).parent().addClass('active');
+});
