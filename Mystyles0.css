@@ -202,7 +202,9 @@ a.editing:hover {
   /* right: 0;
   transform: translateX(-10%); */
 }
-
+span.nav-link {
+  cursor: pointer;
+}
 .navbar-expand .navbar-nav .navbar-nav-telegram .nav-link {
   display: inline-block;
   line-height: 40px;
@@ -240,7 +242,8 @@ a.editing:hover {
 }
 
 /*Выравнивание первого элемента во втором меню*/
-.paddingmenu a {
+.paddingmenu a,
+.paddingmenu span {
   padding: 4px;
 }
 
@@ -3551,6 +3554,15 @@ body.left-sidebar-open #sidebar-overlay2 {
   overflow: auto;
 }
 
+a.chat-dialoges-item {
+  color: #212529;
+}
+.nav-tabs  a.chat-dialoges-item:hover {
+  color: #212529;
+}
+.nav-tabs  a.chat-dialoges-item.active:hover {
+  color: #fff;
+}
 .chat-dialoges-item {
   cursor: pointer;
   padding: 10px;
