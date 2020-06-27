@@ -302,6 +302,10 @@ section.promotion-section {
   margin-bottom: 2rem;
 }
 
+section.help {
+  padding-top: 1rem;
+}
+
 /* Отступ снизу для блоков продвижения */
 .promotion .promotion-item {
   max-height: 250px;
