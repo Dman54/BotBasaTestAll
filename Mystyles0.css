@@ -246,7 +246,9 @@ span.nav-link {
 .paddingmenu span {
   padding: 4px;
 }
-
+.help-page .paddingmenu {
+  display: none;
+}
 /* Отступ сверху и нижняя граница для блока с выбором роли в левом сайдбаре */
 #leftaside .nav-sidebar {
   margin-top: 0.5rem;
@@ -4429,6 +4431,9 @@ a.chat-dialoges-item {
 }
 
 @media (max-width: 991px) {
+  .help-page .paddingmenu {
+    display: block;
+  }
   .small-box .icon {
     display: none;
   }
