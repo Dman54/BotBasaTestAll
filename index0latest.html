@@ -387,16 +387,16 @@
             <div class="container-fluid first-block">
               <div id="carouselExampleIndicators" class="carousel dashboard-carousel slide" data-interval="false">
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
+                  <div itemscope itemtype="http://schema.org/Product" class="carousel-item active">
                     <div class="carousel-item-wrapper">
                       <span class="channel-id d-none">-1001371894354</span>
                       <div class="carousel-item-img">
-                        <img src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
+                        <img itemprop="image" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
                       </div>
                       <div class="carousel-item-header">
                         <div class="promotion-itemText">
                           <div class="carousel-item-header-left">
-                            <h3>Академия Джо Рогана</h3>
+                            <h3 itemprop="name">Академия Джо Рогана</h3>
                             <div class="editable short-description">
                               <span>Джо Роган в Телеграмме</span>
                               <input maxlength="30" title="Описание канала" type="text" value="Джо Роган в Телеграмме">
@@ -411,6 +411,8 @@
                               class="goToChannel editable editable-links">
                               <span>Перейти на канал</span>
                               <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <div class="editable editable-links">
                               <span class="editable-link">
                                 Главная ссылка - приватная
                                 <input type="checkbox">
@@ -428,19 +430,20 @@
                                 <input title="Приватная ссылка" type="text"
                                   value="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg2">
                               </span>
-                            </a>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="carousel-item-description">
+                      <div itemprop="description" class="carousel-item-description">
                         <div>Привет, гайсы! Подкаст Joe Rogan Experience теперь на русском в телеграмме! Стендап-комик и
                           ММА
                           популяризатор Джо Роган, приглашает интересных гостей, которых не увидишь ни в одном другом
                           подкасте. Только на нашем канале подкасты в аудиоформате.</div>
                         <div>
                           <div class="star-rating__container">
-                            <div class="star-rating__wrapper">
-                              <div class="d-none star-rating__avg">5</div>
+                            <div class="star-rating__wrapper" itemprop="aggregateRating" itemscope=""
+                              itemtype="http://schema.org/AggregateRating">
+                              <div class="d-none star-rating__avg" itemprop="ratingValue">5</div>
                               <div title="Средний рейтинг: 5" class="star-rating star-rating_active" data-id="page-1">
                                 <div class="star-rating__bg">
                                   <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
@@ -508,9 +511,8 @@
                                 </div>
                               </div>
                               <div class="star-rating__votes">
-                                <div class="star-rating__votes_count d-none"><span
-                                    class="star-rating__votes_number">1</span><span
-                                    class="star-rating__votes_text"></span></div>
+                                <div class="star-rating__votes_count d-none"><span class="star-rating__votes_number"
+                                    itemprop="reviewCount">1</span><span class="star-rating__votes_text"></span></div>
                                 <div class="star-rating__votes_message d-none"></div>
                               </div>
                             </div>
@@ -544,16 +546,16 @@
                           </select>
                         </div>
                       </div>
-                      <div class="channel-adprice">
+                      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="channel-adprice">
                         <div class="channel-adprice-name">
                           Стоимость рекламы:
                         </div>
                         <div class="channel-adprice-content">
                           <div class="channel-adprice-number">
                             <span class="editable">
-                              <span>56100</span>
+                              <span itemprop="price" content="56100.00">56100</span>
                               <input title="Цена рекламы на канале" type="number" value="56100">
-                            </span>&nbsp;<span class="fa fa-rub"></span>
+                            </span>&nbsp;<span itemprop="priceCurrency" content="RUB" class="fa fa-rub"></span>
                           </div>
                           <div class="price-info">
                             <span><i class="far fa-clock"></i> 1/24</span>
@@ -565,16 +567,16 @@
                       </div>
                     </div>
                   </div>
-                  <div class="carousel-item">
+                  <div itemscope itemtype="http://schema.org/Product" class="carousel-item">
                     <div class="carousel-item-wrapper">
                       <span class="channel-id d-none">-1001371894354</span>
                       <div class="carousel-item-img">
-                        <img src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
+                        <img itemprop="image" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
                       </div>
                       <div class="carousel-item-header">
                         <div class="promotion-itemText">
                           <div class="carousel-item-header-left">
-                            <h3>Академия Джо Рогана</h3>
+                            <h3 itemprop="name">Академия Джо Рогана</h3>
                             <div class="editable short-description">
                               <span>Джо Роган в Телеграмме</span>
                               <input maxlength="30" title="Описание канала" type="text" value="Джо Роган в Телеграмме">
@@ -589,6 +591,8 @@
                               class="goToChannel editable editable-links">
                               <span>Перейти на канал</span>
                               <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <div class="editable editable-links">
                               <span class="editable-link">
                                 Главная ссылка - приватная
                                 <input type="checkbox">
@@ -606,19 +610,20 @@
                                 <input title="Приватная ссылка" type="text"
                                   value="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg2">
                               </span>
-                            </a>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="carousel-item-description">
+                      <div itemprop="description" class="carousel-item-description">
                         <div>Привет, гайсы! Подкаст Joe Rogan Experience теперь на русском в телеграмме! Стендап-комик и
                           ММА
                           популяризатор Джо Роган, приглашает интересных гостей, которых не увидишь ни в одном другом
                           подкасте. Только на нашем канале подкасты в аудиоформате.</div>
                         <div>
                           <div class="star-rating__container">
-                            <div class="star-rating__wrapper">
-                              <div class="d-none star-rating__avg">5</div>
+                            <div class="star-rating__wrapper" itemprop="aggregateRating" itemscope=""
+                              itemtype="http://schema.org/AggregateRating">
+                              <div class="d-none star-rating__avg" itemprop="ratingValue">5</div>
                               <div title="Средний рейтинг: 5" class="star-rating star-rating_active" data-id="page-1">
                                 <div class="star-rating__bg">
                                   <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
@@ -686,9 +691,8 @@
                                 </div>
                               </div>
                               <div class="star-rating__votes">
-                                <div class="star-rating__votes_count d-none"><span
-                                    class="star-rating__votes_number">1</span><span
-                                    class="star-rating__votes_text"></span></div>
+                                <div class="star-rating__votes_count d-none"><span class="star-rating__votes_number"
+                                    itemprop="reviewCount">1</span><span class="star-rating__votes_text"></span></div>
                                 <div class="star-rating__votes_message d-none"></div>
                               </div>
                             </div>
@@ -722,16 +726,16 @@
                           </select>
                         </div>
                       </div>
-                      <div class="channel-adprice">
+                      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="channel-adprice">
                         <div class="channel-adprice-name">
                           Стоимость рекламы:
                         </div>
                         <div class="channel-adprice-content">
                           <div class="channel-adprice-number">
                             <span class="editable">
-                              <span>56100</span>
+                              <span itemprop="price" content="56100.00">56100</span>
                               <input title="Цена рекламы на канале" type="number" value="56100">
-                            </span>&nbsp;<span class="fa fa-rub"></span>
+                            </span>&nbsp;<span itemprop="priceCurrency" content="RUB" class="fa fa-rub"></span>
                           </div>
                           <div class="price-info">
                             <span><i class="far fa-clock"></i> 1/24</span>
@@ -750,12 +754,12 @@
             <div class="container-fluid first-block">
               <div class="row buttons-row">
                 <div class="col">
-                  <button type="button" class="btn btn-default btn-blue">
+                  <div class="btn btn-default btn-blue">
                     <a class="" href="#carouselExampleIndicators" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="prev-name-channel"><span>Предыдущий</span><span> канал</span></span>
                     </a>
-                  </button>
+                  </div>
                 </div>
                 <div class="col">
                   <button type="button" class="editChannel btn btn-default btn-blue">
@@ -782,12 +786,12 @@
                   </button>
                 </div>
                 <div class="col">
-                  <button type="button" class="btn btn-default btn-blue">
+                  <div class="btn btn-default btn-blue">
                     <a class="" href="#carouselExampleIndicators" role="button" data-slide="next">
                       <span class="next-name-channel"><span>Следующий</span><span> канал</span></span>
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     </a>
-                  </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -964,16 +968,16 @@
             <div class="container-fluid first-block">
               <div id="carouselExampleIndicators2" class="carousel dashboard-carousel slide" data-interval="false">
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
+                  <div itemscope itemtype="http://schema.org/Product" class="carousel-item active">
                     <div class="carousel-item-wrapper">
                       <span class="channel-id d-none">-1001371894354</span>
                       <div class="carousel-item-img">
-                        <img src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
+                        <img itemprop="image" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
                       </div>
                       <div class="carousel-item-header">
                         <div class="promotion-itemText">
                           <div class="carousel-item-header-left">
-                            <h3>Академия Джо Рогана</h3>
+                            <h3 itemprop="name">Академия Джо Рогана</h3>
                             <div class="editable short-description">
                               <span>Джо Роган в Телеграмме</span>
                               <input maxlength="30" title="Описание канала" type="text" value="Джо Роган в Телеграмме">
@@ -988,6 +992,8 @@
                               class="goToChannel editable editable-links">
                               <span>Перейти на канал</span>
                               <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <div class="editable editable-links">
                               <span class="editable-link">
                                 Главная ссылка - приватная
                                 <input type="checkbox">
@@ -1005,19 +1011,20 @@
                                 <input title="Приватная ссылка" type="text"
                                   value="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg2">
                               </span>
-                            </a>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="carousel-item-description">
+                      <div itemprop="description" class="carousel-item-description">
                         <div>Привет, гайсы! Подкаст Joe Rogan Experience теперь на русском в телеграмме! Стендап-комик и
                           ММА
                           популяризатор Джо Роган, приглашает интересных гостей, которых не увидишь ни в одном другом
                           подкасте. Только на нашем канале подкасты в аудиоформате.</div>
                         <div>
                           <div class="star-rating__container">
-                            <div class="star-rating__wrapper">
-                              <div class="d-none star-rating__avg">5</div>
+                            <div class="star-rating__wrapper" itemprop="aggregateRating" itemscope=""
+                              itemtype="http://schema.org/AggregateRating">
+                              <div class="d-none star-rating__avg" itemprop="ratingValue">5</div>
                               <div title="Средний рейтинг: 5" class="star-rating star-rating_active" data-id="page-1">
                                 <div class="star-rating__bg">
                                   <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
@@ -1085,9 +1092,8 @@
                                 </div>
                               </div>
                               <div class="star-rating__votes">
-                                <div class="star-rating__votes_count d-none"><span
-                                    class="star-rating__votes_number">1</span><span
-                                    class="star-rating__votes_text"></span></div>
+                                <div class="star-rating__votes_count d-none"><span class="star-rating__votes_number"
+                                    itemprop="reviewCount">1</span><span class="star-rating__votes_text"></span></div>
                                 <div class="star-rating__votes_message d-none"></div>
                               </div>
                             </div>
@@ -1121,16 +1127,16 @@
                           </select>
                         </div>
                       </div>
-                      <div class="channel-adprice">
+                      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="channel-adprice">
                         <div class="channel-adprice-name">
                           Стоимость рекламы:
                         </div>
                         <div class="channel-adprice-content">
                           <div class="channel-adprice-number">
                             <span class="editable">
-                              <span>56100</span>
+                              <span itemprop="price" content="56100.00">56100</span>
                               <input title="Цена рекламы на канале" type="number" value="56100">
-                            </span>&nbsp;<span class="fa fa-rub"></span>
+                            </span>&nbsp;<span itemprop="priceCurrency" content="RUB" class="fa fa-rub"></span>
                           </div>
                           <div class="price-info">
                             <span><i class="far fa-clock"></i> 1/24</span>
@@ -1142,16 +1148,16 @@
                       </div>
                     </div>
                   </div>
-                  <div class="carousel-item">
+                  <div itemscope itemtype="http://schema.org/Product" class="carousel-item">
                     <div class="carousel-item-wrapper">
                       <span class="channel-id d-none">-1001371894354</span>
                       <div class="carousel-item-img">
-                        <img src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
+                        <img itemprop="image" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
                       </div>
                       <div class="carousel-item-header">
                         <div class="promotion-itemText">
                           <div class="carousel-item-header-left">
-                            <h3>Академия Джо Рогана</h3>
+                            <h3 itemprop="name">Академия Джо Рогана</h3>
                             <div class="editable short-description">
                               <span>Джо Роган в Телеграмме</span>
                               <input maxlength="30" title="Описание канала" type="text" value="Джо Роган в Телеграмме">
@@ -1166,6 +1172,8 @@
                               class="goToChannel editable editable-links">
                               <span>Перейти на канал</span>
                               <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <div class="editable editable-links">
                               <span class="editable-link">
                                 Главная ссылка - приватная
                                 <input type="checkbox">
@@ -1183,19 +1191,20 @@
                                 <input title="Приватная ссылка" type="text"
                                   value="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg2">
                               </span>
-                            </a>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="carousel-item-description">
+                      <div itemprop="description" class="carousel-item-description">
                         <div>Привет, гайсы! Подкаст Joe Rogan Experience теперь на русском в телеграмме! Стендап-комик и
                           ММА
                           популяризатор Джо Роган, приглашает интересных гостей, которых не увидишь ни в одном другом
                           подкасте. Только на нашем канале подкасты в аудиоформате.</div>
                         <div>
                           <div class="star-rating__container">
-                            <div class="star-rating__wrapper">
-                              <div class="d-none star-rating__avg">5</div>
+                            <div class="star-rating__wrapper" itemprop="aggregateRating" itemscope=""
+                              itemtype="http://schema.org/AggregateRating">
+                              <div class="d-none star-rating__avg" itemprop="ratingValue">5</div>
                               <div title="Средний рейтинг: 5" class="star-rating star-rating_active" data-id="page-1">
                                 <div class="star-rating__bg">
                                   <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
@@ -1263,9 +1272,8 @@
                                 </div>
                               </div>
                               <div class="star-rating__votes">
-                                <div class="star-rating__votes_count d-none"><span
-                                    class="star-rating__votes_number">1</span><span
-                                    class="star-rating__votes_text"></span></div>
+                                <div class="star-rating__votes_count d-none"><span class="star-rating__votes_number"
+                                    itemprop="reviewCount">1</span><span class="star-rating__votes_text"></span></div>
                                 <div class="star-rating__votes_message d-none"></div>
                               </div>
                             </div>
@@ -1299,16 +1307,16 @@
                           </select>
                         </div>
                       </div>
-                      <div class="channel-adprice">
+                      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="channel-adprice">
                         <div class="channel-adprice-name">
                           Стоимость рекламы:
                         </div>
                         <div class="channel-adprice-content">
                           <div class="channel-adprice-number">
                             <span class="editable">
-                              <span>56100</span>
+                              <span itemprop="price" content="56100.00">56100</span>
                               <input title="Цена рекламы на канале" type="number" value="56100">
-                            </span>&nbsp;<span class="fa fa-rub"></span>
+                            </span>&nbsp;<span itemprop="priceCurrency" content="RUB" class="fa fa-rub"></span>
                           </div>
                           <div class="price-info">
                             <span><i class="far fa-clock"></i> 1/24</span>
@@ -1327,12 +1335,12 @@
             <div class="container-fluid first-block">
               <div class="row buttons-row">
                 <div class="col">
-                  <button type="button" class="btn btn-default btn-blue">
+                  <div class="btn btn-default btn-blue">
                     <a class="" href="#carouselExampleIndicators2" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="prev-name-channel"><span>Предыдущий</span><span> канал</span></span>
                     </a>
-                  </button>
+                  </div>
                 </div>
                 <div class="col">
                   <button type="button" class="editChannel btn btn-default btn-blue">
@@ -1359,12 +1367,12 @@
                   </button>
                 </div>
                 <div class="col">
-                  <button type="button" class="btn btn-default btn-blue">
+                  <div class="btn btn-default btn-blue">
                     <a class="" href="#carouselExampleIndicators2" role="button" data-slide="next">
                       <span class="next-name-channel"><span>Следующий</span><span> канал</span></span>
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     </a>
-                  </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1559,16 +1567,16 @@
             <div class="container-fluid first-block">
               <div id="carouselExampleIndicators5" class="carousel dashboard-carousel slide" data-interval="false">
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
+                  <div itemscope itemtype="http://schema.org/Product" class="carousel-item active">
                     <div class="carousel-item-wrapper">
                       <span class="channel-id d-none">-1001371894354</span>
                       <div class="carousel-item-img">
-                        <img src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
+                        <img itemprop="image" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
                       </div>
                       <div class="carousel-item-header">
                         <div class="promotion-itemText">
                           <div class="carousel-item-header-left">
-                            <h3>Академия Джо Рогана</h3>
+                            <h3 itemprop="name">Академия Джо Рогана</h3>
                             <div class="editable short-description">
                               <span>Джо Роган в Телеграмме</span>
                               <input maxlength="30" title="Описание канала" type="text" value="Джо Роган в Телеграмме">
@@ -1583,6 +1591,8 @@
                               class="goToChannel editable editable-links">
                               <span>Перейти на канал</span>
                               <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <div class="editable editable-links">
                               <span class="editable-link">
                                 Главная ссылка - приватная
                                 <input type="checkbox">
@@ -1600,19 +1610,20 @@
                                 <input title="Приватная ссылка" type="text"
                                   value="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg2">
                               </span>
-                            </a>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="carousel-item-description">
+                      <div itemprop="description" class="carousel-item-description">
                         <div>Привет, гайсы! Подкаст Joe Rogan Experience теперь на русском в телеграмме! Стендап-комик и
                           ММА
                           популяризатор Джо Роган, приглашает интересных гостей, которых не увидишь ни в одном другом
                           подкасте. Только на нашем канале подкасты в аудиоформате.</div>
                         <div>
                           <div class="star-rating__container">
-                            <div class="star-rating__wrapper">
-                              <div class="d-none star-rating__avg">5</div>
+                            <div class="star-rating__wrapper" itemprop="aggregateRating" itemscope=""
+                              itemtype="http://schema.org/AggregateRating">
+                              <div class="d-none star-rating__avg" itemprop="ratingValue">5</div>
                               <div title="Средний рейтинг: 5" class="star-rating star-rating_active" data-id="page-1">
                                 <div class="star-rating__bg">
                                   <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
@@ -1680,9 +1691,8 @@
                                 </div>
                               </div>
                               <div class="star-rating__votes">
-                                <div class="star-rating__votes_count d-none"><span
-                                    class="star-rating__votes_number">1</span><span
-                                    class="star-rating__votes_text"></span></div>
+                                <div class="star-rating__votes_count d-none"><span class="star-rating__votes_number"
+                                    itemprop="reviewCount">1</span><span class="star-rating__votes_text"></span></div>
                                 <div class="star-rating__votes_message d-none"></div>
                               </div>
                             </div>
@@ -1716,16 +1726,16 @@
                           </select>
                         </div>
                       </div>
-                      <div class="channel-adprice">
+                      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="channel-adprice">
                         <div class="channel-adprice-name">
                           Стоимость рекламы:
                         </div>
                         <div class="channel-adprice-content">
                           <div class="channel-adprice-number">
                             <span class="editable">
-                              <span>56100</span>
+                              <span itemprop="price" content="56100.00">56100</span>
                               <input title="Цена рекламы на канале" type="number" value="56100">
-                            </span>&nbsp;<span class="fa fa-rub"></span>
+                            </span>&nbsp;<span itemprop="priceCurrency" content="RUB" class="fa fa-rub"></span>
                           </div>
                           <div class="price-info">
                             <span><i class="far fa-clock"></i> 1/24</span>
@@ -1737,16 +1747,16 @@
                       </div>
                     </div>
                   </div>
-                  <div class="carousel-item">
+                  <div itemscope itemtype="http://schema.org/Product" class="carousel-item">
                     <div class="carousel-item-wrapper">
                       <span class="channel-id d-none">-1001371894354</span>
                       <div class="carousel-item-img">
-                        <img src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
+                        <img itemprop="image" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
                       </div>
                       <div class="carousel-item-header">
                         <div class="promotion-itemText">
                           <div class="carousel-item-header-left">
-                            <h3>Академия Джо Рогана</h3>
+                            <h3 itemprop="name">Академия Джо Рогана</h3>
                             <div class="editable short-description">
                               <span>Джо Роган в Телеграмме</span>
                               <input maxlength="30" title="Описание канала" type="text" value="Джо Роган в Телеграмме">
@@ -1761,6 +1771,8 @@
                               class="goToChannel editable editable-links">
                               <span>Перейти на канал</span>
                               <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <div class="editable editable-links">
                               <span class="editable-link">
                                 Главная ссылка - приватная
                                 <input type="checkbox">
@@ -1778,19 +1790,20 @@
                                 <input title="Приватная ссылка" type="text"
                                   value="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg2">
                               </span>
-                            </a>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="carousel-item-description">
+                      <div itemprop="description" class="carousel-item-description">
                         <div>Привет, гайсы! Подкаст Joe Rogan Experience теперь на русском в телеграмме! Стендап-комик и
                           ММА
                           популяризатор Джо Роган, приглашает интересных гостей, которых не увидишь ни в одном другом
                           подкасте. Только на нашем канале подкасты в аудиоформате.</div>
                         <div>
                           <div class="star-rating__container">
-                            <div class="star-rating__wrapper">
-                              <div class="d-none star-rating__avg">5</div>
+                            <div class="star-rating__wrapper" itemprop="aggregateRating" itemscope=""
+                              itemtype="http://schema.org/AggregateRating">
+                              <div class="d-none star-rating__avg" itemprop="ratingValue">5</div>
                               <div title="Средний рейтинг: 5" class="star-rating star-rating_active" data-id="page-1">
                                 <div class="star-rating__bg">
                                   <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
@@ -1858,9 +1871,8 @@
                                 </div>
                               </div>
                               <div class="star-rating__votes">
-                                <div class="star-rating__votes_count d-none"><span
-                                    class="star-rating__votes_number">1</span><span
-                                    class="star-rating__votes_text"></span></div>
+                                <div class="star-rating__votes_count d-none"><span class="star-rating__votes_number"
+                                    itemprop="reviewCount">1</span><span class="star-rating__votes_text"></span></div>
                                 <div class="star-rating__votes_message d-none"></div>
                               </div>
                             </div>
@@ -1894,16 +1906,16 @@
                           </select>
                         </div>
                       </div>
-                      <div class="channel-adprice">
+                      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="channel-adprice">
                         <div class="channel-adprice-name">
                           Стоимость рекламы:
                         </div>
                         <div class="channel-adprice-content">
                           <div class="channel-adprice-number">
                             <span class="editable">
-                              <span>56100</span>
+                              <span itemprop="price" content="56100.00">56100</span>
                               <input title="Цена рекламы на канале" type="number" value="56100">
-                            </span>&nbsp;<span class="fa fa-rub"></span>
+                            </span>&nbsp;<span itemprop="priceCurrency" content="RUB" class="fa fa-rub"></span>
                           </div>
                           <div class="price-info">
                             <span><i class="far fa-clock"></i> 1/24</span>
@@ -1921,12 +1933,12 @@
             <div class="container-fluid first-block">
               <div class="row buttons-row">
                 <div class="col">
-                  <button type="button" class="btn btn-default btn-blue">
+                  <div class="btn btn-default btn-blue">
                     <a class="" href="#carouselExampleIndicators5" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="prev-name-channel"><span>Предыдущий</span><span> канал</span></span>
                     </a>
-                  </button>
+                  </div>
                 </div>
                 <div class="col">
                   <button type="button" class="editChannel btn btn-default btn-blue">
@@ -1953,12 +1965,12 @@
                   </button>
                 </div>
                 <div class="col">
-                  <button type="button" class="btn btn-default btn-blue">
+                  <div class="btn btn-default btn-blue">
                     <a class="" href="#carouselExampleIndicators5" role="button" data-slide="next">
                       <span class="next-name-channel"><span>Следующий</span><span> канал</span></span>
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     </a>
-                  </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2300,16 +2312,16 @@
             <div class="container-fluid first-block">
               <div id="carouselExampleIndicators4" class="carousel dashboard-carousel slide" data-interval="false">
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
+                  <div itemscope itemtype="http://schema.org/Product" class="carousel-item active">
                     <div class="carousel-item-wrapper">
                       <span class="channel-id d-none">-1001371894354</span>
                       <div class="carousel-item-img">
-                        <img src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
+                        <img itemprop="image" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
                       </div>
                       <div class="carousel-item-header">
                         <div class="promotion-itemText">
                           <div class="carousel-item-header-left">
-                            <h3>Академия Джо Рогана</h3>
+                            <h3 itemprop="name">Академия Джо Рогана</h3>
                             <div class="editable short-description">
                               <span>Джо Роган в Телеграмме</span>
                               <input maxlength="30" title="Описание канала" type="text" value="Джо Роган в Телеграмме">
@@ -2324,6 +2336,8 @@
                               class="goToChannel editable editable-links">
                               <span>Перейти на канал</span>
                               <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <div class="editable editable-links">
                               <span class="editable-link">
                                 Главная ссылка - приватная
                                 <input type="checkbox">
@@ -2341,19 +2355,20 @@
                                 <input title="Приватная ссылка" type="text"
                                   value="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg2">
                               </span>
-                            </a>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="carousel-item-description">
+                      <div itemprop="description" class="carousel-item-description">
                         <div>Привет, гайсы! Подкаст Joe Rogan Experience теперь на русском в телеграмме! Стендап-комик и
                           ММА
                           популяризатор Джо Роган, приглашает интересных гостей, которых не увидишь ни в одном другом
                           подкасте. Только на нашем канале подкасты в аудиоформате.</div>
                         <div>
                           <div class="star-rating__container">
-                            <div class="star-rating__wrapper">
-                              <div class="d-none star-rating__avg">5</div>
+                            <div class="star-rating__wrapper" itemprop="aggregateRating" itemscope=""
+                              itemtype="http://schema.org/AggregateRating">
+                              <div class="d-none star-rating__avg" itemprop="ratingValue">5</div>
                               <div title="Средний рейтинг: 5" class="star-rating star-rating_active" data-id="page-1">
                                 <div class="star-rating__bg">
                                   <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
@@ -2421,9 +2436,8 @@
                                 </div>
                               </div>
                               <div class="star-rating__votes">
-                                <div class="star-rating__votes_count d-none"><span
-                                    class="star-rating__votes_number">1</span><span
-                                    class="star-rating__votes_text"></span></div>
+                                <div class="star-rating__votes_count d-none"><span class="star-rating__votes_number"
+                                    itemprop="reviewCount">1</span><span class="star-rating__votes_text"></span></div>
                                 <div class="star-rating__votes_message d-none"></div>
                               </div>
                             </div>
@@ -2457,16 +2471,16 @@
                           </select>
                         </div>
                       </div>
-                      <div class="channel-adprice">
+                      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="channel-adprice">
                         <div class="channel-adprice-name">
                           Стоимость рекламы:
                         </div>
                         <div class="channel-adprice-content">
                           <div class="channel-adprice-number">
                             <span class="editable">
-                              <span>56100</span>
+                              <span itemprop="price" content="56100.00">56100</span>
                               <input title="Цена рекламы на канале" type="number" value="56100">
-                            </span>&nbsp;<span class="fa fa-rub"></span>
+                            </span>&nbsp;<span itemprop="priceCurrency" content="RUB" class="fa fa-rub"></span>
                           </div>
                           <div class="price-info">
                             <span><i class="far fa-clock"></i> 1/24</span>
@@ -2478,16 +2492,16 @@
                       </div>
                     </div>
                   </div>
-                  <div class="carousel-item">
+                  <div itemscope itemtype="http://schema.org/Product" class="carousel-item">
                     <div class="carousel-item-wrapper">
                       <span class="channel-id d-none">-1001371894354</span>
                       <div class="carousel-item-img">
-                        <img src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
+                        <img itemprop="image" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
                       </div>
                       <div class="carousel-item-header">
                         <div class="promotion-itemText">
                           <div class="carousel-item-header-left">
-                            <h3>Академия Джо Рогана</h3>
+                            <h3 itemprop="name">Академия Джо Рогана</h3>
                             <div class="editable short-description">
                               <span>Джо Роган в Телеграмме</span>
                               <input maxlength="30" title="Описание канала" type="text" value="Джо Роган в Телеграмме">
@@ -2502,6 +2516,8 @@
                               class="goToChannel editable editable-links">
                               <span>Перейти на канал</span>
                               <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <div class="editable editable-links">
                               <span class="editable-link">
                                 Главная ссылка - приватная
                                 <input type="checkbox">
@@ -2519,19 +2535,20 @@
                                 <input title="Приватная ссылка" type="text"
                                   value="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg2">
                               </span>
-                            </a>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="carousel-item-description">
+                      <div itemprop="description" class="carousel-item-description">
                         <div>Привет, гайсы! Подкаст Joe Rogan Experience теперь на русском в телеграмме! Стендап-комик и
                           ММА
                           популяризатор Джо Роган, приглашает интересных гостей, которых не увидишь ни в одном другом
                           подкасте. Только на нашем канале подкасты в аудиоформате.</div>
                         <div>
                           <div class="star-rating__container">
-                            <div class="star-rating__wrapper">
-                              <div class="d-none star-rating__avg">5</div>
+                            <div class="star-rating__wrapper" itemprop="aggregateRating" itemscope=""
+                              itemtype="http://schema.org/AggregateRating">
+                              <div class="d-none star-rating__avg" itemprop="ratingValue">5</div>
                               <div title="Средний рейтинг: 5" class="star-rating star-rating_active" data-id="page-1">
                                 <div class="star-rating__bg">
                                   <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
@@ -2599,9 +2616,8 @@
                                 </div>
                               </div>
                               <div class="star-rating__votes">
-                                <div class="star-rating__votes_count d-none"><span
-                                    class="star-rating__votes_number">1</span><span
-                                    class="star-rating__votes_text"></span></div>
+                                <div class="star-rating__votes_count d-none"><span class="star-rating__votes_number"
+                                    itemprop="reviewCount">1</span><span class="star-rating__votes_text"></span></div>
                                 <div class="star-rating__votes_message d-none"></div>
                               </div>
                             </div>
@@ -2635,16 +2651,16 @@
                           </select>
                         </div>
                       </div>
-                      <div class="channel-adprice">
+                      <div itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="channel-adprice">
                         <div class="channel-adprice-name">
                           Стоимость рекламы:
                         </div>
                         <div class="channel-adprice-content">
                           <div class="channel-adprice-number">
                             <span class="editable">
-                              <span>56100</span>
+                              <span itemprop="price" content="56100.00">56100</span>
                               <input title="Цена рекламы на канале" type="number" value="56100">
-                            </span>&nbsp;<span class="fa fa-rub"></span>
+                            </span>&nbsp;<span itemprop="priceCurrency" content="RUB" class="fa fa-rub"></span>
                           </div>
                           <div class="price-info">
                             <span><i class="far fa-clock"></i> 1/24</span>
@@ -2663,12 +2679,12 @@
             <div class="container-fluid first-block">
               <div class="row buttons-row">
                 <div class="col">
-                  <button type="button" class="btn btn-default btn-blue">
+                  <div class="btn btn-default btn-blue">
                     <a class="" href="#carouselExampleIndicators4" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="prev-name-channel"><span>Предыдущий</span><span> канал</span></span>
                     </a>
-                  </button>
+                  </div>
                 </div>
                 <div class="col">
                   <button type="button" class="editChannel btn btn-default btn-blue">
@@ -2695,12 +2711,12 @@
                   </button>
                 </div>
                 <div class="col">
-                  <button type="button" class="btn btn-default btn-blue">
+                  <div class="btn btn-default btn-blue">
                     <a class="" href="#carouselExampleIndicators4" role="button" data-slide="next">
                       <span class="next-name-channel"><span>Следующий</span><span> канал</span></span>
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     </a>
-                  </button>
+                  </div>
                 </div>
               </div>
             </div>

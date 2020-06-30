@@ -672,6 +672,8 @@
                               class="goToChannel editable editable-links">
                               <span>Перейти на канал</span>
                               <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <div class="editable editable-links">
                               <span class="editable-link">
                                 Главная ссылка - приватная
                                 <input type="checkbox">
@@ -689,7 +691,7 @@
                                 <input title="Приватная ссылка" type="text"
                                   value="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg2">
                               </span>
-                            </a>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -834,37 +836,43 @@
                       </div>
                       <div class="carousel-item-header">
                         <div class="promotion-itemText">
-                          <h3 itemprop="name">Академия Джо Рогана</h3>
-                          <div class="editable short-description">
-                            <span>Джо Роган в Телеграмме</span>
-                            <input maxlength="30" title="Описание канала" type="text" value="Джо Роган в Телеграмме">
+                          <div class="carousel-item-header-left">
+                            <h3 itemprop="name">Академия Джо Рогана</h3>
+                            <div class="editable short-description">
+                              <span>Джо Роган в Телеграмме</span>
+                              <input maxlength="30" title="Описание канала" type="text" value="Джо Роган в Телеграмме">
+                            </div>
                           </div>
-                          <div class="subscibes-count">
-                            <span>22907</span>
-                            <span>подписчиков</span>
+                          <div class="carousel-item-header-right">
+                            <div class="subscibes-count">
+                              <span>22907</span>
+                              <span>подписчиков</span>
+                            </div>
+                            <a href="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg" target="_blank"
+                              class="goToChannel editable editable-links">
+                              <span>Перейти на канал</span>
+                              <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <div class="editable editable-links">
+                              <span class="editable-link">
+                                Главная ссылка - приватная
+                                <input type="checkbox">
+                                <span class="promotions-name-question" data-toggle="tooltip" data-html="true"
+                                  data-placement="right" title=""
+                                  data-original-title="<b>Выбирая данный тип ссылки основным, Вы будете сильно ограничены в возможностях продвижения через данный сайт.</b>">?</span>
+                              </span>
+                              <span class="editable-link">
+                                Публичная ссылка
+                                <input title="Публичная ссылка" type="text"
+                                  value="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg">
+                              </span>
+                              <span class="editable-link">
+                                Приватная ссылка
+                                <input title="Приватная ссылка" type="text"
+                                  value="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg2">
+                              </span>
+                            </div>
                           </div>
-                          <a href="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg" target="_blank"
-                            class="goToChannel editable editable-links">
-                            <span>Перейти на канал</span>
-                            <i class="fas fa-external-link-alt"></i>
-                            <span class="editable-link">
-                              Главная ссылка - приватная
-                              <input type="checkbox">
-                              <span class="promotions-name-question" data-toggle="tooltip" data-html="true"
-                                data-placement="right" title=""
-                                data-original-title="<b>Выбирая данный тип ссылки основным, Вы будете сильно ограничены в возможностях продвижения через данный сайт.</b>">?</span>
-                            </span>
-                            <span class="editable-link">
-                              Публичная ссылка
-                              <input title="Публичная ссылка" type="text"
-                                value="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg">
-                            </span>
-                            <span class="editable-link">
-                              Приватная ссылка
-                              <input title="Приватная ссылка" type="text"
-                                value="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg2">
-                            </span>
-                          </a>
                         </div>
                       </div>
                       <div itemprop="description" class="carousel-item-description">
@@ -1460,10 +1468,10 @@
 
   <div class="modal fade bd-example-modal-lg" id="modalCreateChannel" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
-      <button type="button" class="btn" data-dismiss="modal">
-        <i class="fas fa-times"></i>
-      </button>
       <div class="modal-content">
+        <button type="button" class="btn" data-dismiss="modal">
+          <i class="fas fa-times"></i>
+        </button>
         <div class="modal-left-part">
           <form method="post" enctype="multipart/form-data" id="addChannelForm" name="addChannelForm"
             action="./modalCreateChannel.php">

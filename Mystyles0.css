@@ -4703,6 +4703,12 @@ a.chat-dialoges-item {
   .channel-stats .small-box:nth-child(2n) {
     margin-right: 0;
   }
+  .dashboard-carousel .carousel-item-header .promotion-itemText.dblock {
+    display: block;
+  }
+  .dashboard-carousel .short-description.editing{
+    margin-bottom: 9px;
+  }
 }
 
 @media (max-width: 684px) {
@@ -5066,6 +5072,15 @@ a.chat-dialoges-item {
     right: 5px;
     top: 50%;
     transform: translateY(-50%);
+  }
+  .editable.editable-links.editing {
+    font-size: 12px;
+  }
+  .tooltip {
+    font-size: 12px;;
+  }
+  .tooltip-inner {
+    padding: 6px;
   }
 }
 

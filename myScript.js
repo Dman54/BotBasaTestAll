@@ -7,7 +7,7 @@ function getGlobalVar(name) {
 
 $(function () {
   let sectionnumber = +getGlobalVar('data-sectionContent');
-  console.log(sectionnumber);
+  // console.log(sectionnumber);
   if (sectionnumber != 0) {
     localStorage.removeItem('data-sectionContent');
     // AllRoleLinks[sectionnumber].click();
@@ -75,7 +75,7 @@ roleList.on("click", function (e) {
 // Отображение всех категорий при клике
 $(".more-categories-button").on("click", function (e) {
   e.preventDefault();
-  $(this).closest('.sub-nav').find('>dd:not(.dropdown)').toggleClass('show');
+  $(this).closest('.sub-nav').find('>li:not(.dropdown)').toggleClass('show');
   $(".more-categories-list").toggleClass("hide");
 });
 // Отображение расширенного поиска при клике
@@ -640,8 +640,6 @@ $('.editChannel').on('click', function (e) {
       return;
     }
     curcarouselitem.find('.short-description>span').html(curcarouselitem.find('.short-description>input').val());
-    curcarouselitem.find('.goToChannel').attr('href', curcarouselitem.find('.goToChannel input').val());
-    curcarouselitem.find('.goToChannel').attr('href', curcarouselitem.find('.goToChannel input').val());
     curcarouselitem.find('.channel-language .editable>span').html(curcarouselitem.find('.channel-language .editable>select').val());
     curcarouselitem.find('.channel-category .editable>span').html(curcarouselitem.find('.channel-category .editable>select').val());
     curcarouselitem.find('.channel-adprice-number .editable>span').html(curcarouselitem.find('.channel-adprice-number .editable>input').val());
@@ -653,16 +651,14 @@ $('.editChannel').on('click', function (e) {
       newHref = inputhrefs.eq(0).val();
     }
     curcarouselitem.find('a.editable').attr("href", newHref);
-    // curcarouselitem.find('a.editable').removeAttr("onclick");
   } else {
     before.short_description = curcarouselitem.find('.short-description>span').html();
-    before.href1 = curcarouselitem.find('.goToChannel').attr('href');
-    before.href2 = curcarouselitem.find('.goToChannel').attr('href');
+    before.href1 = curcarouselitem.find('a.editable').attr("href");
+    // before.href2 = ;
     before.channel_language = curcarouselitem.find('.channel-language .editable>span').html();
     before.channel_category = curcarouselitem.find('.channel-category .editable>span').html();
     before.channel_adprice_number = curcarouselitem.find('.channel-adprice-number .editable>span').html();
-    curcarouselitem.find('a.editable').removeAttr("href");
-    // curcarouselitem.find('a.editable').attr('onclick', 'return false;');
+    // curcarouselitem.find('a.editable').removeAttr("href");
   }
   curcarouselitem.find('.editable').toggleClass('editing');
   // if ($(this).hasClass('editing')) {
@@ -678,6 +674,7 @@ $('.editChannel').on('click', function (e) {
   //   curcarouselitem.find('.channel-category>*:last-child').attr('contenteditable', 'true').toggleClass('editable-el');
   //   curcarouselitem.find('.channel-adprice-number').attr('contenteditable', 'true').toggleClass('editable-el');
   // }
+  curcarouselitem.find('.carousel-item-header .promotion-itemText').toggleClass('dblock');
   $(this).toggleClass('editing');
 });
 
