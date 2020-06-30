@@ -988,7 +988,10 @@ div.r-blocks .r-action-btn {
   pointer-events: none;
   text-transform: uppercase;
 }
-ul.more-categories-list {
+.more-categories-list {
+  margin: 0 !important;
+}
+.more-categories-list ul {
   padding: 0;
 }
 
