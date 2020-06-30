@@ -734,6 +734,10 @@ section.help {
   margin-top: 1rem;
 }
 
+ul.sub-nav-first li {
+  list-style: none;
+}
+
 .sub-nav dt {
   text-transform: uppercase;
   font-weight: normal;
@@ -785,6 +789,11 @@ section.help {
   font-weight: normal;
   /* padding: 0.16667rem 0.88889rem; */
   padding: 0.16667rem 7px;
+}
+
+.sub-nav li.active span span,
+.sub-nav li span:hover span{
+  color: #ffffff;
 }
 
 .sub-nav input:not([type="checkbox"]) {
@@ -969,13 +978,14 @@ div.r-blocks .r-action-btn {
   padding: 0.25rem;
 } */
 
-.sub-nav dt.filter-category-name {
+.sub-nav .filter-category-name {
   float: right;
   text-align: right;
   pointer-events: none;
+  text-transform: uppercase;
 }
 
-.sub-nav dt.filter-category-name .caret {
+.sub-nav .filter-category-name .caret {
   display: none;
 }
 
@@ -4466,7 +4476,7 @@ a.chat-dialoges-item {
     padding: 1.5rem 0.875rem;
   }
 
-  .sub-nav dt.filter-category-name {
+  .sub-nav .filter-category-name {
     float: left;
     text-align: left;
     pointer-events: all;
@@ -4474,7 +4484,7 @@ a.chat-dialoges-item {
     position: relative;
   }
 
-  .sub-nav dt.filter-category-name .caret {
+  .sub-nav .filter-category-name .caret {
     display: block;
     position: absolute;
     right: 1rem;
@@ -4489,11 +4499,11 @@ a.chat-dialoges-item {
     display: none;
   }
 
-  #searchChannels .sub-nav > dd {
+  #searchChannels .sub-nav > li:not(.filter-category-name) {
     display: none;
   }
 
-  #searchChannels .sub-nav > dd.show {
+  #searchChannels .sub-nav > li.show {
     display: inline-block;
   }
 }

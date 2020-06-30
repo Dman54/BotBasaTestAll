@@ -78,7 +78,8 @@
         </a>
       </li>
       <li class="nav-item dropdown show">
-        <span class="nav-link dropdown-toggle user-panel_added" data-toggle="dropdown" aria-expanded="true">
+        <span role="button" class="nav-link dropdown-toggle user-panel_added" data-toggle="dropdown"
+          aria-expanded="true">
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
         </span>
         <div class="dropdown-menu">
@@ -200,7 +201,7 @@
         </div>
         <div class="tab-content" id="custom-content-below-tabContent">
           <div class="tab-pane fade active show" id="custom-content-below-channels" role="tabpanel"
-            aria-labelledby="custom-content-below-channels">
+            aria-labelledby="custom-content-below-home-tab">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item d-sm-inline-block">
                 <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
@@ -209,143 +210,143 @@
               </li>
             </ul>
 
-            <form method="get" enctype="multipart/form-data" id="searchChannels" name="searchChannels" action="">
+            <form method="get" enctype="multipart/form-data" id="searchChannels" name="searchChannels"
+              action="./searchChannels.php">
               <div class="container-fluid">
-                <dl class="sub-nav sub-nav-first">
-                  <dt class="filter-category-name dropdown">
+                <ul class="sub-nav sub-nav-first">
+                  <li class="filter-category-name dropdown">
                     <span class="more-categories-button" data-default-text="Еще категории">
                       <span>Категория</span>
                       <b class="caret"></b>
                     </span>
-                  </dt>
-                  <dd class="active">
+                  </li>
+                  <li class="active">
                     <span class="filter filter-category" data-category="">Все</span>
-                  </dd>
-                  <dd class="">
+                  </li>
+                  <li class="">
                     <span class="filter filter-category" data-category="blogs">Блоги</span>
-                  </dd>
-                  <dd class="">
+                  </li>
+                  <li class="">
                     <span class="filter filter-category" data-category="entertainment">Юмор и развлечения</span>
-                  </dd>
-                  <dd class="">
+                  </li>
+                  <li class="">
                     <span class="filter filter-category" data-category="business">Бизнес и стартапы</span>
-                  </dd>
-                  <dd class="">
+                  </li>
+                  <li class="">
                     <span class="filter filter-category" data-category="news">Новости и СМИ</span>
-                  </dd>
-                  <dd class="dropdown">
+                  </li>
+                  <li class="dropdown">
                     <span class="more-categories-button" data-default-text="Еще категории">
                       <span>Еще категории</span>
                       <b class="caret"></b>
                     </span>
-                  </dd>
+                  </li>
                   <div class="clearfix"></div>
                   <div class="more-categories-list hide">
-                    <dd>
+                    <li>
                       <span class="filter filter-category" data-category="sales">Продажи</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="music">Музыка</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="crypto">Криптовалюты</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="art">Искусство и фото</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="sport">Здоровье и Спорт</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="politics">Политика</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="video">Видео и фильмы</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="marketing">Маркетинг, PR, реклама</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="edutainment">Познавательное</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="tech">Технологии</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="education">Образование</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="travels">Путешествия</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="psychology">Психология</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="books">Книги</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="beauty">Мода и красота</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="gaming">Игры и приложения</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="quotes">Цитаты</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="economics">Экономика</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="career">Карьера</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="food">Еда и кулинария</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="auto">Авто</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="language">Лингвистика</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="religion">Религия</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="design">Дизайн</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="catalogs">Каталоги каналов и ботов</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="telegram">Telegram</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="babies">Семья и дети</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="animals">Животные</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="health">Медицина</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="handmade">Рукоделие</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="stickers">Каталоги стикеров</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="lifehack">Лайфхаки</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="adult">Для взрослых</span>
-                    </dd>
-                    <dd>
+                    </li>
+                    <li>
                       <span class="filter filter-category" data-category="other">Другое</span>
-                    </dd>
+                    </li>
                   </div>
-                </dl>
-                <div class="clearfix"></div>
+                </ul>
               </div>
               <div class="container-fluid">
                 <div class="search-container">
@@ -522,7 +523,7 @@
             </div>
           </div>
           <div class="tab-pane fade" id="custom-content-below-bots" role="tabpanel"
-            aria-labelledby="custom-content-below-bots">
+            aria-labelledby="custom-content-below-profile-tab">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item d-sm-inline-block">
                 <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
@@ -532,7 +533,7 @@
             </ul>
           </div>
           <div class="tab-pane fade" id="custom-content-below-chats" role="tabpanel"
-            aria-labelledby="custom-content-below-chats">
+            aria-labelledby="custom-content-below-messages-tab">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item d-sm-inline-block">
                 <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
@@ -639,7 +640,7 @@
         </div>
         <div class="tab-content" id="custom-content-below-tabContent1">
           <div class="tab-pane fade active show" id="custom-content-below-stats1" role="tabpanel"
-            aria-labelledby="custom-content-below-channels-tab1">
+            aria-labelledby="custom-content-below-home-tab1">
             <div class="container-fluid">
             </div>
             <div class="container-fluid first-block">
@@ -781,7 +782,7 @@
                         <div>Гео и язык канала</div>
                         <div class="editable editable-select">
                           <span>Россия, Русский</span>
-                          <select title="Гео и язык канала" name="editable-language" id="editable-language">
+                          <select title="Гео и язык канала" name="editable-language">
                             <option selected="" value="Россия, Русский">Россия, Русский</option>
                             <option value="UK, English">UK, English</option>
                             <option value="Deutsch">Deutsch</option>
@@ -793,7 +794,7 @@
                         <div>Категория</div>
                         <div class="editable editable-select">
                           <span>Юмор и развлечения</span>
-                          <select title="Категория канала" name="editable-category" id="editable-category">
+                          <select title="Категория канала" name="editable-category">
                             <option selected="" value="Юмор и развлечения">Юмор и развлечения</option>
                             <option value="Юмор и развлечения1">Юмор и развлечения1</option>
                             <option value="Юмор и развлечения2">Юмор и развлечения2</option>
@@ -955,7 +956,7 @@
                         <div>Гео и язык канала</div>
                         <div class="editable editable-select">
                           <span>Россия, Русский</span>
-                          <select title="Гео и язык канала" name="editable-language" id="editable-language">
+                          <select title="Гео и язык канала" name="editable-language">
                             <option selected="" value="Россия, Русский">Россия, Русский</option>
                             <option value="UK, English">UK, English</option>
                             <option value="Deutsch">Deutsch</option>
@@ -967,7 +968,7 @@
                         <div>Категория</div>
                         <div class="editable editable-select">
                           <span>Юмор и развлечения</span>
-                          <select title="Категория канала" name="editable-category" id="editable-category">
+                          <select title="Категория канала" name="editable-category">
                             <option selected="" value="Юмор и развлечения">Юмор и развлечения</option>
                             <option value="Юмор и развлечения1">Юмор и развлечения1</option>
                             <option value="Юмор и развлечения2">Юмор и развлечения2</option>
@@ -1013,14 +1014,14 @@
                 </div>
                 <div class="col">
                   <button type="button" class="editChannel btn btn-default btn-blue">
-                    <div class="editpart">
+                    <span class="editpart">
                       <i class="fas fa-pen"></i>
                       <span class="">Редактировать</span>
-                    </div>
-                    <div class="savepart">
+                    </span>
+                    <span class="savepart">
                       <i class="fas fa-save"></i>
                       <span class="">Сохранить</span>
-                    </div>
+                    </span>
                   </button>
                 </div>
                 <div class="col">
@@ -1124,13 +1125,13 @@
             </div>
           </div>
           <div class="tab-pane fade" id="custom-content-below-stats2" role="tabpanel"
-            aria-labelledby="custom-content-below-mychannels-tab1">
+            aria-labelledby="custom-content-below-profile-tab1">
             <div class="container-fluid">
               <div class="row">Контент статистики 2</div>
             </div>
           </div>
           <div class="tab-pane fade" id="custom-content-below-stats3" role="tabpanel"
-            aria-labelledby="custom-content-below-dchannels-tab1">
+            aria-labelledby="custom-content-below-messages-tab1">
             <div class="container-fluid">
               <div class="row">Контент статистики 3</div>
             </div>
@@ -1196,7 +1197,7 @@
         <div class="container-fluid">
           <div class="channels-sortpanel">
             <span class="select-wrapper">
-              <select id="filterSelect" name="filterSelect" class="form-control2">
+              <select id="shopfilterSelect" name="shopfilterSelect" class="form-control2">
                 <option selected="" disabled="" value="Сортировать по">Сортировать по</option>
                 <option value="Название">Название</option>
                 <option value="Стоимость">Стоимость рекламы</option>
@@ -1275,7 +1276,7 @@
               </div>
             </div>
             <div class="channel-info">
-              <input type="test" placeholder="Введите текст заметки">
+              <input type="text" placeholder="Введите текст заметки">
             </div>
 
             <div class="channel top">
@@ -1326,7 +1327,7 @@
               </div>
             </div>
             <div class="channel-info">
-              <input type="test" placeholder="Введите текст заметки">
+              <input type="text" placeholder="Введите текст заметки">
             </div>
 
             <div class="channel ribboned noted top new">
@@ -1377,7 +1378,7 @@
               </div>
             </div>
             <div class="channel-info">
-              <input type="test" placeholder="Введите текст заметки">
+              <input type="text" placeholder="Введите текст заметки">
             </div>
 
           </div>
@@ -1455,15 +1456,15 @@
 
   </div>
 
-  <div class="modal fade bd-example-modal-lg" id="modalCreateChannel" tabindex="-1" role="dialog"
-    aria-labelledby="modalCreateChannel" aria-hidden="true">
+  <div class="modal fade bd-example-modal-lg" id="modalCreateChannel" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <button type="button" class="btn" data-dismiss="modal">
         <i class="fas fa-times"></i>
       </button>
       <div class="modal-content">
         <div class="modal-left-part">
-          <form method="post" enctype="multipart/form-data" id="addChannelForm" name="addChannelForm" action="">
+          <form method="post" enctype="multipart/form-data" id="addChannelForm" name="addChannelForm"
+            action="./modalCreateChannel.php">
             <div class="modal-left-part-name nomt">
               Введите ссылку на канал
             </div>
@@ -1476,7 +1477,7 @@
               Выберите категорию
             </div>
             <span class="select-wrapper">
-              <select id="languageSelect" name="languageSelect" class="form-control2">
+              <select id="categorySelect" name="categorySelect" class="form-control2">
                 <option selected="" value="Юмор и развлечения">Юмор и развлечения</option>
                 <option value="Юмор и развлечения1">Юмор и развлечения1</option>
                 <option value="Юмор и развлечения2">Юмор и развлечения2</option>
