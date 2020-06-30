@@ -7262,8 +7262,7 @@ function templateAll(data) {
       </div>
     </div>
     <div title="Посмотреть подробную информацию о канале" class="channel-block-button">
-      <span onClick="${goToDashboard}(${curItem.id})"
-        class="btn btn-primary btn-sm r-action-btn">${btnText}</span>
+      <a href="./dashboard.html" class="btn btn-primary btn-sm r-action-btn">${btnText}</a>
     </div>
   </div>
   <div class="channel-info">
