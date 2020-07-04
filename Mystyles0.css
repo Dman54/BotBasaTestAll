@@ -1,7 +1,9 @@
 .main-body_added .nav-header_added .navbar-nav_added.displayok li a.nav-link.active {
   color: rgba(0, 0, 0, 0.9);
 }
-
+.nav-sidebar>.nav-item.has-treeview.menu-open .nav-icon {
+  margin-right: 14px;
+}
 li.clearfix {
   float: none !important;
   margin: 0 !important;
