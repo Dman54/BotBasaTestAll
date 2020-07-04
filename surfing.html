@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>LinkBaza личный кабинет</title>
+  <meta name="description" content="Каталог Telegram каналов для продвижения, раскрутки, рекламы, постинга, подборок">
+  <meta name="Keywords" content="каталог, Telegram, канал, реклама, продвижение, раскрутки, постинга, подборка">
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css" />
+  <link rel="stylesheet" href="dist/css/adminlte.min.css" />
+  <link rel="stylesheet" href="https://pagination.js.org/dist/2.0.7/pagination.css">
+  <link rel="stylesheet" href="Mystyles0.css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="firstbody" class="sidebar-mini layout-fixed main-body_added">
+  <nav id="firstnav" class="header nav-header_added navbar navbar-expand navbar-white navbar-light">
+    <a href="./my_channels.html" class="brand-link">
+      <img src="Logo.png" alt="LinkBaza Logo" class="brand-image" />
+    </a>
+    <div id="gamburger_added" class="navbar-nav gamburger_added">
+      <span class="nav-link"><i class="fas fa-bars"></i></span>
+    </div>
+    <div id="closeicon_added"><i class="fas fa-times"></i></div>
+    <ul class="navbar-nav navbar-nav_added">
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="./catalog.html" class="nav-link">Каталог</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a target="_blank" href="https://teletype.in/@botbaza/8CntyGIzBI" class="nav-link">Справка</a>
+      </li>
+      <li class="nav-item d-none">
+        <a class="nav-link" href="./shop.html">Корзина</a>
+      </li>
+      <li class="nav-item d-none">
+        <a class="nav-link" href="./chat.html">Сообщения / Уведомления</a>
+      </li>
+      <li class="nav-item d-none">
+        <a class="nav-link" href="./profile.html">Личный кабинет</a>
+      </li>
+      <li class="nav-item d-none">
+        <a class="nav-link" href="./login.html">Выйти</a>
+      </li>
+    </ul>
+    <div id="searchhover_added"><i class="fas fa-search"></i></div>
+    <form class="form-inline" action="./search.php">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Поиск" aria-label="Search" />
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown Fontsizeicon">
+        <a class="nav-link" href="./shop.html">
+          <i class="fas fa-shopping-basket"></i>
+          <span class="shopcount badge badge-danger navbar-badge">0</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown Fontsizeicon">
+        <a class="nav-link" href="./chat.html">
+          <i class="fas fa-comments"></i>
+          <span class="messagescount badge badge-danger navbar-badge">1</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown Fontsizeicon">
+        <a class="nav-link" href="./chat.html">
+          <i class="fas fa-bell"></i>
+          <span class="notificationscount badge badge-warning navbar-badge">2</span>
+        </a>
+      </li>
+      <li class="nav-item dropdown show">
+        <span role="button" class="nav-link dropdown-toggle user-panel_added" data-toggle="dropdown"
+          aria-expanded="true">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+        </span>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" tabindex="-1" href="./profile.html">Личный кабинет</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" tabindex="-1" href="./login.html">Выйти</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="firstwrapper" class="wrapper">
+    <nav id="secondnav" class="main-header navbar navbar-expand navbar-white navbar-light">
+      <ul class="navbar-nav">
+        <li class="nav-item Fontsizeicon paddingmenu">
+          <span class="nav-link" data-widget="pushmenu" role="button"><i class="fas fa-grip-vertical"></i></span>
+        </li>
+        <li>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./my_channels.html">Home</a></li>
+            <li class="breadcrumb-item active">index</li>
+          </ol>
+        </li>
+        <li>
+          <div class="channel-adprice-number">
+            <i class="nav-icon fas fa-wallet"></i>
+            56100&nbsp;<span class="fa fa-rub"></span>
+          </div>
+          <div class="ribbon-sign">
+            <i class="fas fa-heart"></i>
+          </div>
+          <div class="navbar-nav-telegram">
+            <a class="nav-link" data-widget="pushmenu" href="./my_channels.html">
+              <img src="img/telegram.png" alt="Telegram каталог"> <span>Telegram каталог</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <aside id="leftaside" class="main-sidebar sidebar-dark-primary elevation-4">
+      <div class="sidebar">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item has-treeview menu-open">
+            <span class="nav-link">
+              <i class="nav-icon fas fa-user-tag"></i>
+              Выбрать роль
+              <i class="right fas fa-angle-left"></i>
+            </span>
+            <ul data-selectRole_added="true" class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./my_channels.html" data-Role_added='1' class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Каналы</p>
+                </a>
+              </li>
+              <li class="nav-item" style="display: none !important;">
+                <a href="./my_bots.html" data-Role_added='2' class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Боты</p>
+                </a>
+              </li>
+              <li class="nav-item" style="display: none !important;">
+                <a href="./my_chats.html" data-Role_added='3' class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Чаты</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <nav data-selectRoleContent_added="0" class="mt-2 displayok">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+              <a href="./my_channels.html" class="nav-link channels-link">
+                <i class="nav-icon fas fa-tv"></i>
+                <p>
+                  Мои каналы
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./dashboard_channels.html" class="nav-link dashboard-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard
+                </p>
+              </a>
+            </li>
+            <li class="nav-item" style="display: none !important;">
+              <a href="./posts.html" class="nav-link management-link">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>
+                  Посты
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./surfing.html" class="nav-link dashboard-link active">
+                <i class="nav-icon fas fa-star-half-alt"></i>
+                <p>
+                  Сёрфинг
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./promotions.html" class="nav-link promotions-link">
+                <i class="nav-icon fas fa-chart-line"></i>
+                <p>
+                  Продвижение
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav data-selectRoleContent_added="1" class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+              <a href="./my_bots.html" class="nav-link channels-link">
+                <i class="nav-icon fas fa-robot"></i>
+                <p>
+                  Мои боты
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./dashboard_bots.html" class="nav-link dashboard-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard 2
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./promotions_bots.html" class="nav-link management-link">
+                <i class="nav-icon fas fa-chart-line"></i>
+                <p>
+                  Продвижение 2
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav data-selectRoleContent_added="2" class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+              <a href="./my_chats.html" class="nav-link channels-link">
+                <i class="nav-icon fas fa-comments-dollar"></i>
+                <p>
+                  Мои чаты
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./dashboard_chats.html" class="nav-link dashboard-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard 3
+                  <span class="right badge badge-success">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./posts_chats.html" class="nav-link management-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                  Посты 3
+                  <span class="right badge badge-default">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./promotions_chats.html" class="nav-link promotions-link">
+                <i class="nav-icon fas fa-chart-line"></i>
+                <p>
+                  Продвижение 3
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+            <a href="./chat.html" class="nav-link channels-link">
+              <i class="nav-icon far fa-comments"></i>
+              <p>
+                Сообщения
+                <span class="right badge badge-warning">New</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./profile.html" class="nav-link dashboard-link">
+              <i class="nav-icon fas fa-id-card"></i>
+              <p>
+                Личный кабиент
+                <span class="right badge badge-info">New</span>
+              </p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <div id="content" class="content-wrapper surfing">
+      <div class="container-fluid topbuttons-container">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item d-sm-inline-block">
+            <div class="btn-group">
+              <button type="button" class="btn btn-blue" data-widget="control-sidebar-select-channel" data-slide="true">
+                Сделать рассылку
+              </button>
+              <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
+                Добавить бота <span class="plus"></span>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="container-fluid">
+        <select class="select-tabs form-control">
+          <option value="0">Основная подборка</option>
+          <option value="1">Подборка 18+</option>
+        </select>
+        <ul class="nav nav-tabs" id="custom-content-below-tab15" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="custom-content-below-home-tab15" data-toggle="pill"
+              href="#custom-content-below-chatscatalog15" role="tab" aria-controls="custom-content-below-chatscatalog15"
+              aria-selected="false">Основная подборка</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="custom-content-below-profile-tab15" data-toggle="pill"
+              href="#custom-content-below-mychats15" role="tab" aria-controls="custom-content-below-mychats15"
+              aria-selected="false">Подборка 18+</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-content" id="custom-content-below-tabContent15">
+        <div class="tab-pane fade active show" id="custom-content-below-chatscatalog15" role="tabpanel"
+          aria-labelledby="custom-content-below-home-tab15">
+          <div class="container-fluid">
+            <div class="surfingcarousel-wrapper">
+              <div id="surfingcarousel" class="carousel surfing-carousel slide" data-interval="false">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="carousel-item-wrapper">
+                      <span class="channel-id d-none">-1001371894354</span>
+                      <div class="first-part">
+                        <div class="carousel-item-img">
+                          <img src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
+                        </div>
+                        <div class="carousel-item-header">
+                          <div class="promotion-itemText">
+                            <div class="promotion-itemText-firstpart">
+                              <h3>Академия Джо Рогана</h3>
+                              <div class="short-description">
+                                Джо Роган в Телеграмме
+                              </div>
+                            </div>
+                            <div class="subscibes-count">
+                              <span>22907</span>
+                              <span>подписчиков</span>
+                            </div>
+                            <a href="./favorite.html" class="goToChannel">
+                              <i class="fas fa-heart"></i>
+                              <span>В избранное</span>
+                            </a>
+                            <div class="sack-dollar" data-toggle="tooltip" data-html="true" data-placement="right"
+                              data-original-title="Этот канал платит за подписку">💰</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item-description">
+                        <div>Привет, гайсы! Подкаст Joe Rogan Experience теперь на русском в телеграмме! Стендап-комик
+                          и
+                          ММА
+                          популяризатор Джо Роган, приглашает интересных гостей, которых не увидишь ни в одном другом
+                          подкасте. Только на нашем канале подкасты в аудиоформате.</div>
+                      </div>
+                      <div class="carousel-item-content">
+                        <div class="small-header">Оцените канал, чтоб перейти к следующему</div>
+                        <div class="carousel-item-content-part2">
+                          <div class="star-rating__container">
+                            <div class="star-rating__wrapper">
+                              <div class="d-none star-rating__avg">5</div>
+                              <div title="Средний рейтинг: 5" class="star-rating star-rating_active"
+                                data-id="channelid">
+                                <div class="star-rating__bg">
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                </div>
+                                <div class="star-rating__live">
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512" data-rating="1">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512" data-rating="2">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512" data-rating="3">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512" data-rating="4">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512" data-rating="5">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="star-rating__votes d-none">
+                                <div class="star-rating__votes_count d-none">
+                                  <span class="star-rating__votes_number">1</span>
+                                  <span class="star-rating__votes_text"></span>
+                                </div>
+                                <div class="star-rating__votes_message d-none"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <button type="button" class="btn btn-blue">
+                            Подписаться на канал
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-item-wrapper">
+                      <span class="channel-id d-none">-1001371894354</span>
+                      <div class="first-part">
+                        <div class="carousel-item-img">
+                          <img src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="ЖЮ">
+                        </div>
+                        <div class="carousel-item-header">
+                          <div class="promotion-itemText">
+                            <div class="promotion-itemText-firstpart">
+                              <h3>Академия Джо Рогана</h3>
+                              <div class="short-description">
+                                Джо Роган в Телеграмме
+                              </div>
+                            </div>
+                            <div class="subscibes-count">
+                              <span>22907</span>
+                              <span>подписчиков</span>
+                            </div>
+                            <a href="./favorite.html" class="goToChannel">
+                              <i class="fas fa-heart"></i>
+                              <span>В избранное</span>
+                            </a>
+                            <div class="sack-dollar" data-toggle="tooltip" data-html="true" data-placement="right"
+                              data-original-title="Этот канал платит за подписку">💰</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item-description">
+                        <div>Привет, гайсы! Подкаст Joe Rogan Experience теперь на русском в телеграмме! Стендап-комик
+                          и
+                          ММА
+                          популяризатор Джо Роган, приглашает интересных гостей, которых не увидишь ни в одном другом
+                          подкасте. Только на нашем канале подкасты в аудиоформате.</div>
+                      </div>
+                      <div class="carousel-item-content">
+                        <div class="small-header">Оцените канал, чтоб перейти к следующему</div>
+                        <div class="carousel-item-content-part2">
+                          <div class="star-rating__container">
+                            <div class="star-rating__wrapper">
+                              <div class="d-none star-rating__avg">5</div>
+                              <div title="Средний рейтинг: 5" class="star-rating star-rating_active"
+                                data-id="channelid">
+                                <div class="star-rating__bg">
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                </div>
+                                <div class="star-rating__live">
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512" data-rating="1">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512" data-rating="2">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512" data-rating="3">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512" data-rating="4">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                  <svg class="star-rating__item" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 576 512" data-rating="5">
+                                    <path fill="currentColor"
+                                      d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                                    </path>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="star-rating__votes d-none">
+                                <div class="star-rating__votes_count d-none">
+                                  <span class="star-rating__votes_number">1</span>
+                                  <span class="star-rating__votes_text"></span>
+                                </div>
+                                <div class="star-rating__votes_message d-none"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <button type="button" class="btn btn-blue">
+                            Подписаться на канал
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-information">
+                Если вы считаете, что содержание этого канала неприемлемо или не подходит для основной подборки, то
+                сообщите нам об этом
+                <div class="goToChannel goToChannel-graytext">
+                  Неприемлемый контент
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+        <div class="tab-pane fade" id="custom-content-below-mychats15" role="tabpanel"
+          aria-labelledby="custom-content-below-profile-tab15">
+          <div class="container-fluid">
+            <div class="surfingcarousel-wrapper surfingcarousel-wrapper-clear">
+              <div>
+                Каналы в этой подборке относятся к категории 18+
+                <br>
+                Продолжая просмотр вы подтверждаете, что вам исполнилось 18 лет
+              </div>
+              <button type="button" class="btn btn-primary">
+                Начать просмотр
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside id="rightaside" class="control-sidebar">
+      <div id="closeicon2_added" class="closeicon displayok"><i class="fas fa-times"></i></div>
+      <div class="channel-selected">
+      </div>
+    </aside>
+
+    <footer id="mainfooter" class="main-footer">
+      All rights reserved.
+      <strong>Copyright &copy; 2020
+        <a href="http://LinkBaza.com">LinkBaza.com</a>.</strong>
+    </footer>
+    <div id="sidebar-overlay2"></div>
+  </div>
+
+  <div class="modal fade bd-example-modal-lg" id="modalCreateChannel" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <button type="button" class="btn" data-dismiss="modal"><i class="fas fa-times"></i></button>
+        <div class="modal-left-part">
+          <form method="post" enctype="multipart/form-data" id="addChannelForm" name="addChannelForm"
+            action="./modalCreateChannel.php">
+            <div class="modal-left-part-name nomt">
+              Введите ссылку на канал
+            </div>
+            <input type="text" name="ChannelLink" id="ChannelLink">
+            <div class="modal-left-part-name">
+              Название канала<span> (до 70 символов)</span>
+            </div>
+            <input type="text" name="ChannelName" id="ChannelName">
+            <div class="modal-left-part-name">
+              Выберите категорию
+            </div>
+            <span class="select-wrapper">
+              <select id="categorySelect" name="categorySelect" class="form-control2">
+                <option selected="" value="Юмор и развлечения">Юмор и развлечения</option>
+                <option value="Юмор и развлечения1">Юмор и развлечения1</option>
+                <option value="Юмор и развлечения2">Юмор и развлечения2</option>
+                <option value="Юмор и развлечения3">Юмор и развлечения3</option>
+                <option value="Юмор и развлечения4">Юмор и развлечения4</option>
+              </select>
+            </span>
+            <button type="submit" class="btn btn-primary w100 mt-175">Добавить канал</button>
+          </form>
+        </div>
+        <div class="modal-right-part">
+          <div class="modal-right-part-name modal-right-part-name--big">
+            Добавление канала
+          </div>
+          <div class="modal-right-part-content">
+            Добавить канал в каталог можно с помощью этой формы или через нашего <b class="tdu">бота</b> в Telegram.
+          </div>
+          <div class="modal-right-part-content">
+            Вне зависимости от выбранного способа <b class="orange-text fz-125">обязательно сделайте бота
+              администратором канала</b>
+          </div>
+          <div class="goToChannel">
+            <i class="fas fa-robot"></i>
+            Перейти в бота
+          </div>
+        </div>
+      </div>
+      <div class="CreateChannel-info">
+        Ошибка: Бот не является администратором канала
+      </div>
+    </div>
+  </div>
+
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+  <script src="dist/js/adminlte.min.js"></script>
+  <script src="plugins/chart.js/Chart.min.js"></script>
+  <script src="https://pagination.js.org/dist/2.1.5/pagination.min.js"></script>
+  <script src="star_rating.js"></script>
+  <script src="database.js"></script>
+  <script src="dashboard.js"></script>
+
+</body>
+
+</html>

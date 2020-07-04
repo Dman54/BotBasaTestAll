@@ -35,7 +35,7 @@
         <a target="_blank" href="https://teletype.in/@botbaza/8CntyGIzBI" class="nav-link">Справка</a>
       </li>
       <li class="nav-item d-none">
-        <a class="nav-link" href="./shop.html">Корзина</a>
+        <a class="nav-link active" href="./shop.html">Корзина</a>
       </li>
       <li class="nav-item d-none">
         <a class="nav-link" href="./chat.html">Сообщения / Уведомления</a>
@@ -60,7 +60,7 @@
     </form>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown Fontsizeicon">
-        <a class="nav-link" href="./shop.html">
+        <a class="nav-link active" href="./shop.html">
           <i class="fas fa-shopping-basket"></i>
           <span class="shopcount badge badge-danger navbar-badge">0</span>
         </a>
@@ -153,7 +153,7 @@
         <nav data-selectRoleContent_added="0" class="mt-2 displayok">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item">
-              <a href="./my_channels.html" class="nav-link channels-link active">
+              <a href="./my_channels.html" class="nav-link channels-link">
                 <i class="nav-icon fas fa-tv"></i>
                 <p>
                   Мои каналы
@@ -290,7 +290,245 @@
       </div>
     </aside>
 
-    <div id="content" class="content-wrapper surfing">
+    <div id="content" class="content-wrapper shop">
+      <div class="container-fluid">
+        <div class="row r-blocks">
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-src="https://teleg.run/LinkBazaBot?start=ref=141505811"
+            data-target="104930">
+            <div class="col r-blocks-items">
+              <div class="r-image-container">
+                <img src="./favicon.ico" alt="@LinkBazaBot - бот для продвижения telegram каналов"
+                  class="img-thumbnail r-image br0">
+              </div>
+              <div class="r-title">Бот для продвижения telegram каналов</div>
+              <div>
+                <div class="r-description ">Автоматическое продвижение каналов через подборки</div>
+                <div class="r-action-container">
+                  <a target="_blank" href="https://linkbaza.com/" class="btn btn-default btn-sm r-action-btn">Добавить
+                    канал</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 col-lg-4 d-none d-sm-block" data-src="https://ttttt.me/Fun_vidos"
+            data-target="103151">
+            <div class="col r-blocks-items">
+              <div class="r-image-container">
+                <img src="./img/funvideos.jpg" alt="Смешные Видео" class="img-thumbnail r-image">
+              </div>
+              <div class="r-title">Канал Смешные Видео</div>
+              <div>
+                <div class="r-description ">Самый смешной канал с лучшими видео и приколами со всего мира. Новые видео
+                  каждый день!</div>
+                <div class="r-action-container">
+                  <a target="_blank" href="https://ttttt.me/Fun_vidos"
+                    class="btn btn-default btn-sm r-action-btn">Перейти в канал</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 d-none d-lg-block" data-src="https://hosthub.space/" data-target="103155">
+            <div class="col r-blocks-items">
+              <div class="r-image-container">
+                <img src="./img/hosthubspace.png" alt="hosthub.space" class="img-thumbnail r-image">
+              </div>
+              <div class="r-title">Хостинг hosthub.space</div>
+              <div>
+                <div class="r-description ">Самые выгодные цены на .ru, .рф домены</div>
+                <div class="r-action-container">
+                  <a target="_blank" href="https://hosthub.space/" class="btn btn-default btn-sm r-action-btn">Перейти
+                    на сайт</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="channels-sortpanel">
+          <span class="select-wrapper">
+            <select id="shopfilterSelect" name="shopfilterSelect" class="form-control2">
+              <option selected="" disabled="" value="Сортировать по">Сортировать по</option>
+              <option value="Название">Название</option>
+              <option value="Стоимость">Стоимость рекламы</option>
+              <option value="Условия">Условия рекламы</option>
+              <option value="Тех задание">Тех задание</option>
+            </select>
+          </span>
+          <div class="filter filter-sort" data-sort="ad_price" data-direction="desc">
+            <span title="Стоимость рекламы">Стоимость рекламы</span>
+            <span></span>
+          </div>
+          <div class="filter filter-sort" data-sort="raitings" data-direction="desc">
+            <span title="Условия рекламы">Условия рекламы</span>
+            <span></span>
+          </div>
+          <div class="filter filter-sort" data-sort="favorites" data-direction="desc">
+            <span title="техническое задание">ТЗ</span>
+            <span></span>
+          </div>
+          <div class="filter filter-sort invisible" data-sort="raitings" data-direction="desc">
+            <span title="окно оплаты">окно оплаты</span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      Корзина: как продвижение, поля: Название канала, стоимость рекламы, условия рекламы, ТЗ. Окно оплаты.
+      <div class="inner-left preview" id="shopList">
+        <div class="data-container container-fluid channels_list_body sticky-canceller-container">
+
+          <div class="channel ribboned noted top">
+            <div class="channel-first-part">
+              <span class="d-none">-1001371894354</span>
+              <div class="position-relative" data-widget="control-sidebar2" data-slide="true">
+                <img title="Изображение канала" alt="Академия Джо Рогана"
+                  src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" class="b-lazy img-thumbnail b-loaded">
+                <span class="verified-channel-img">
+                  <img src="tgstat_images/verified.png" title="У канала есть подтвержденный владелец на сайте LinkBaza">
+                </span>
+              </div>
+              <div class="channel-block-title">
+                <div title="Название канала" class="channel-list-title" data-widget="control-sidebar2"
+                  data-slide="true">
+                  <b>Академия Джо Рогана</b>
+                </div>
+                <a title="Переход в данный канал в Telegramе" href="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg"
+                  target="_blank" class="goToChannel">
+                  <span>Перейти на канал</span>
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <div class="d-none">
+                  <span class="channel_category_id">21</span>
+                </div>
+              </div>
+            </div>
+            <div class="buycolumn">
+              <div class="buycolumn-text">Реклама:</div>
+              <div data-widget="control-sidebar2" data-slide="true" title="Цена рекламы на канале"
+                class="price-info btn btn-blue">
+                <span>12610</span>&nbsp;<span class="fa fa-rub price-icon active"></span>
+              </div>
+              <div title="Купить рекламу на канале" class="buy-info">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+            <div title="Условия рекламы канала" class="long-description">
+              Нужно не удалять пост 10 дней...
+            </div>
+            <div title="Техническое задание" class="techzadanie">
+              файлы, инструкции
+            </div>
+            <div title="Посмотреть подробную информацию о канале" class="channel-block-button">
+              <span data-widget="control-sidebar-start-buy" class="btn btn-primary btn-sm r-action-btn">К
+                оплате</span>
+            </div>
+          </div>
+          <div class="channel-info">
+            <input type="text" placeholder="Введите текст заметки">
+          </div>
+
+          <div class="channel top">
+            <div class="channel-first-part">
+              <span class="d-none">-1001205651894</span>
+              <div class="position-relative" data-widget="control-sidebar2" data-slide="true">
+                <img title="Изображение канала" alt="Казино онлайн лицензионное"
+                  src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" class="b-lazy img-thumbnail b-loaded">
+                <span class="verified-channel-img">
+                  <img src="tgstat_images/verified.png" title="У канала есть подтвержденный владелец на сайте LinkBaza">
+                </span>
+              </div>
+              <div class="channel-block-title">
+                <div title="Название канала" class="channel-list-title" data-widget="control-sidebar2"
+                  data-slide="true">
+                  <b>Казино онлайн лицензионное</b>
+                </div>
+                <a title="Переход в данный канал в Telegramе" href="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg"
+                  target="_blank" class="goToChannel">
+                  <span>Перейти на канал</span>
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <div class="d-none">
+                  <span class="channel_category_id">27</span>
+                </div>
+              </div>
+            </div>
+            <div class="buycolumn">
+              <div class="buycolumn-text">Реклама:</div>
+              <div data-widget="control-sidebar2" data-slide="true" title="Цена рекламы на канале"
+                class="price-info btn btn-blue">
+                <span>34601</span>&nbsp;<span class="fa fa-rub price-icon active"></span>
+              </div>
+              <div title="Купить рекламу на канале" class="buy-info">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+            <div title="Условия рекламы канала" class="long-description">
+              Нужно не удалять пост 10 дней...
+            </div>
+            <div title="Техническое задание" class="techzadanie">
+              файлы, инструкции
+            </div>
+            <div title="Посмотреть подробную информацию о канале" class="channel-block-button">
+              <span data-widget="control-sidebar-start-buy" class="btn btn-primary btn-sm r-action-btn">К
+                оплате</span>
+            </div>
+          </div>
+          <div class="channel-info">
+            <input type="text" placeholder="Введите текст заметки">
+          </div>
+
+          <div class="channel ribboned noted top new">
+            <div class="channel-first-part">
+              <span class="d-none">-1001379358740</span>
+              <div class="position-relative" data-widget="control-sidebar2" data-slide="true">
+                <img title="Изображение канала" alt="Hot🔥Ladies💦"
+                  src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" class="b-lazy img-thumbnail b-loaded">
+                <span class="verified-channel-img">
+                  <img src="tgstat_images/verified.png" title="У канала есть подтвержденный владелец на сайте LinkBaza">
+                </span>
+              </div>
+              <div class="channel-block-title">
+                <div title="Название канала" class="channel-list-title" data-widget="control-sidebar2"
+                  data-slide="true">
+                  <b>Hot🔥Ladies💦</b>
+                </div>
+                <a title="Переход в данный канал в Telegramе" href="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg"
+                  target="_blank" class="goToChannel">
+                  <span>Перейти на канал</span>
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+                <div class="d-none">
+                  <span class="channel_category_id">27</span>
+                </div>
+              </div>
+            </div>
+            <div class="buycolumn">
+              <div class="buycolumn-text">Реклама:</div>
+              <div data-widget="control-sidebar2" data-slide="true" title="Цена рекламы на канале"
+                class="price-info btn btn-blue">
+                <span>53410</span>&nbsp;<span class="fa fa-rub price-icon active"></span>
+              </div>
+              <div title="Купить рекламу на канале" class="buy-info">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+            </div>
+            <div title="Условия рекламы канала" class="long-description">
+              Нужно не удалять пост 10 дней...
+            </div>
+            <div title="Техническое задание" class="techzadanie">
+              файлы, инструкции
+            </div>
+            <div title="Посмотреть подробную информацию о канале" class="channel-block-button">
+              <span data-widget="control-sidebar-start-buy" class="btn btn-primary btn-sm r-action-btn">К
+                оплате</span>
+            </div>
+          </div>
+          <div class="channel-info">
+            <input type="text" placeholder="Введите текст заметки">
+          </div>
+
+        </div>
+      </div>
     </div>
 
     <aside id="rightaside" class="control-sidebar">
@@ -553,8 +791,7 @@
   <script src="https://pagination.js.org/dist/2.1.5/pagination.min.js"></script>
   <script src="star_rating.js"></script>
   <script src="database.js"></script>
-  <script src="myScript.js"></script>
-  <script src="ChartsScript.js"></script>
+  <script src="dashboard.js"></script>
 
 </body>
 

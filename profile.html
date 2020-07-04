@@ -41,7 +41,7 @@
         <a class="nav-link" href="./chat.html">Сообщения / Уведомления</a>
       </li>
       <li class="nav-item d-none">
-        <a class="nav-link" href="./profile.html">Личный кабинет</a>
+        <a class="nav-link active" href="./profile.html">Личный кабинет</a>
       </li>
       <li class="nav-item d-none">
         <a class="nav-link" href="./login.html">Выйти</a>
@@ -83,7 +83,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
         </span>
         <div class="dropdown-menu">
-          <a class="dropdown-item" tabindex="-1" href="./profile.html">Личный кабинет</a>
+          <a class="dropdown-item active" tabindex="-1" href="./profile.html">Личный кабинет</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" tabindex="-1" href="./login.html">Выйти</a>
         </div>
@@ -153,7 +153,7 @@
         <nav data-selectRoleContent_added="0" class="mt-2 displayok">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item">
-              <a href="./my_channels.html" class="nav-link channels-link active">
+              <a href="./my_channels.html" class="nav-link channels-link">
                 <i class="nav-icon fas fa-tv"></i>
                 <p>
                   Мои каналы
@@ -278,7 +278,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="./profile.html" class="nav-link dashboard-link">
+            <a href="./profile.html" class="nav-link dashboard-link active">
               <i class="nav-icon fas fa-id-card"></i>
               <p>
                 Личный кабиент
@@ -290,7 +290,279 @@
       </div>
     </aside>
 
-    <div id="content" class="content-wrapper surfing">
+    <div id="content" class="content-wrapper profile">
+      <div class="container-fluid topbuttons-container">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item d-sm-inline-block">
+            <div class="btn-group">
+              <button type="button" class="btn btn-blue" data-widget="control-sidebar-select-channel" data-slide="true">
+                Выберите канал
+              </button>
+              <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
+                Добавить канал <span class="plus"></span>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="container-fluid">
+        <select class="select-tabs form-control">
+          <option value="0">Личный кабинет</option>
+          <option value="1">Реферальная программа</option>
+          <option value="2">Мои заказы +</option>
+          <option value="3">Мои заказы -</option>
+        </select>
+        <ul class="nav nav-tabs" id="custom-content-below-tab12" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="custom-content-below-home-tab12" data-toggle="pill"
+              href="#custom-content-below-chatscatalog12" role="tab" aria-controls="custom-content-below-chatscatalog12"
+              aria-selected="false">Личный кабинет</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="custom-content-below-profile-tab12" data-toggle="pill"
+              href="#custom-content-below-mychats12" role="tab" aria-controls="custom-content-below-mychats12"
+              aria-selected="false">Реферальная программа</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="custom-content-below-checouts-tab12" data-toggle="pill"
+              href="#custom-content-below-mychats121" role="tab" aria-controls="custom-content-below-mychats121"
+              aria-selected="false">Мои заказы +</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="custom-content-below-checouts-tab13" data-toggle="pill"
+              href="#custom-content-below-mychats122" role="tab" aria-controls="custom-content-below-mychats122"
+              aria-selected="false">Мои заказы -</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-content" id="custom-content-below-tabContent12">
+        <div class="tab-pane fade active show" id="custom-content-below-chatscatalog12" role="tabpanel"
+          aria-labelledby="custom-content-below-home-tab12">
+          <form method="get" enctype="multipart/form-data" id="searchChannels" name="searchChannels"
+            action="./searchChannels.php">
+            <div class="container-fluid">
+              <div class="profile-block profile-block-flex profile-header">
+                <div class="profile-header-left">
+                  <div class="profile-header-img">
+                    <img src="dist/img/user3-128x128.jpg" alt="Nina Mcintire">
+                  </div>
+                  <div class="profile-header-name">
+                    <h2>Nina Mcintire</h2>
+                    <div class="">Software Engineer</div>
+                  </div>
+                </div>
+                <div class="profile-header-right">
+                  <div class="profile-header-right-part">
+                    <div class="div">Каналов</div>
+                    <div class="div">3</div>
+                  </div>
+                  <div class="profile-header-right-part">
+                    <div class="div">Ботов</div>
+                    <div class="div">1</div>
+                  </div>
+                  <div class="profile-header-right-part">
+                    <div class="div">Чатов</div>
+                    <div class="div">0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="profile-block profile-block-flex">
+                <div class="channel-adprice-content">
+                  <div class="balance">
+                    Баланс:
+                  </div>
+                  <div class="channel-adprice-number">
+                    256100&nbsp;<span class="fa fa-rub"></span>
+                  </div>
+                  <button type="button" class="btn btn-primary">
+                    Пополнить баланс
+                  </button>
+                </div>
+                <div class="channel-adprice-content">
+                  <div class="referal-balance balance">
+                    Реферальный баланс:
+                  </div>
+                  <div class="channel-adprice-number">
+                    6100&nbsp;<span class="fa fa-rub"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="profile-block">
+                <div><label for="profile-email">Email:</label></div>
+                <div><input id="profile-email" name="profile-email" type="email" class="form-control2"
+                    placeholder="daisy.watson@example.com">
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="profile-block">
+                <div><label for="profile-pass-new">Новый пароль:</label></div>
+                <div><input id="profile-pass-new" name="profile-pass-new" type="password" class="form-control2"></div>
+                <div><label for="profile-pass-check">Повторите пароль:</label></div>
+                <div><input id="profile-pass-check" name="profile-pass-check" type="password" class="form-control2">
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="profile-block profile-block-accounts">
+                <div>Привязать дополнительные аккаунты:</div>
+                <div class="socials">
+                  <img src="img/facebook.svg" alt="facebook.com">
+                  <img src="img/telegram.png" alt="telegram.com">
+                  <img src="img/vkcom.svg" alt="vk.com">
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <div class="profile-block profile-block-changes">
+                <div>Язык:</div>
+                <select id="languageChange" name="languageChange" class="form-control2">
+                  <option selected value="Русский">Русский</option>
+                  <option value="English">English</option>
+                  <option value="Deutsch">Deutsch</option>
+                  <option value="Another">Another</option>
+                </select>
+                <div>Часовой пояс:</div>
+                <select id="hourChange" name="hourChange" class="form-control2">
+                  <option selected value="(UTC +3) Europe - Moscow">(UTC +3) Europe - Moscow</option>
+                  <option value="Русский">Русский</option>
+                  <option value="English">English</option>
+                  <option value="Deutsch">Deutsch</option>
+                  <option value="Another">Another</option>
+                </select>
+              </div>
+            </div>
+            <div class="container-fluid text-center">
+              <button type="submit" class="btn btn-blue mb-175 mt-15 w200px">
+                Сохранить
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="tab-pane fade" id="custom-content-below-mychats12" role="tabpanel"
+          aria-labelledby="custom-content-below-profile-tab12">
+          <div class="container-fluid">
+            <div class="profile-block profile-header">
+              <div class="referal-header-name">
+                <h2>Реферальная программа</h2>
+              </div>
+              <div>Получайте комиссию 2% с каждого клиента, которого вы привели в LinkBaza. Процент начисляется в
+                баллах со всех платежей, сделанных клиентом в течение года после регистрации.</div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="profile-blocks">
+              <div class="profile-block">
+                <div class="profile-name">Ваша ссылка</div>
+                <div class="profile-links">
+                  <span class="goToChannel ">https://t.me/LinkBazaBot?start=ref=14150581</span>
+                  <i class="fas fa-copy goToChannel"></i>
+                </div>
+                <div class="mt-4">Вы можете отправить клиенту прямую ссылку, чтобы подключить его к своей реферальной
+                  программе.
+                </div>
+              </div>
+              <div class="profile-block">
+                <div class="profile-name">Поделитесь ссылкой в соцсетях</div>
+                <div class="socials">
+                  <img src="img/facebook.svg" alt="facebook.com">
+                  <img src="img/telegram.png" alt="telegram.com">
+                  <img src="img/vkcom.svg" alt="vk.com">
+                </div>
+                <div class="mt-4">Разместите ссылку на LinkBaza в социальной сети и все пользователи, которые
+                  зарегистрируются по
+                  ней, будут автоматически подключены к вашей реферальной программе.</div>
+              </div>
+              <div class="profile-block profile-block-buttons">
+                <div class="profile-name">Отправьте приглашение на почту</div>
+                <div contenteditable="true" class="goToChannel ">Введите E-mail</div>
+                <button type="button" class="btn btn-primary">
+                  Отправить
+                </button>
+                <div>На указанный адрес будет отправлено приглашение в LinkBaza. Вы можете отправлять только 3
+                  приглашения раз в 10 минут.</div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid profile-block-statistics">
+            <h3>Статистика по месяцам</h3>
+            <div class="statistic-table">
+              <div class="statistic-table-header">
+                <div class="text-left">Месяц</div>
+                <div class="text-left">Рефералы</div>
+                <div class="text-right">
+                  <span class="display-first">Сумма вознаграждения (<i class="fa fa-rub" aria-hidden="true"></i>)</span>
+                  <span class="display-second">Выплата (<i class="fa fa-rub" aria-hidden="true"></i>)</span>
+                </div>
+                <div class="text-right">Окончание срока выплат</div>
+              </div>
+              <div class="statistic-table-content-no">
+                <div>Пока что не было регистраций</div>
+              </div>
+              <div class="statistic-table-content">
+                <div class="statistic-table-content-row">
+                  <div class="text-left">Апрель</div>
+                  <div class="text-left">Bernard Murphy</div>
+                  <div class="text-right">1142.06</div>
+                  <div class="text-right">5 Января 2021</div>
+                </div>
+                <div class="statistic-table-content-row">
+                  <div class="text-left"></div>
+                  <div class="text-left">Kristin Russell</div>
+                  <div class="text-right">2534.46</div>
+                  <div class="text-right">23 Июня 2021</div>
+                </div>
+                <div class="statistic-table-content-row">
+                  <div class="text-left"></div>
+                  <div class="text-left">Tanya Cooper</div>
+                  <div class="text-right">866.17</div>
+                  <div class="text-right">15 Октября 2021</div>
+                </div>
+                <div class="statistic-table-content-row">
+                  <div class="text-left"></div>
+                  <div class="text-left">Cody Watson</div>
+                  <div class="text-right">3664.57</div>
+                  <div class="text-right">18 Мая 2022</div>
+                </div>
+                <div class="statistic-table-content-row">
+                  <div class="text-left"></div>
+                  <div class="text-left">Calvin Edwards</div>
+                  <div class="text-right">1776.80</div>
+                  <div class="text-right">31 Июля 2021</div>
+                </div>
+                <div class="statistic-table-content-row">
+                  <div class="text-left"></div>
+                  <div class="text-left">Pat Lane</div>
+                  <div class="text-right">5620.36</div>
+                  <div class="text-right">16 Февраля 2022</div>
+                </div>
+                <div class="statistic-table-content-row">
+                  <div class="text-left"></div>
+                  <div class="text-left">Francisco Mccoy</div>
+                  <div class="text-right">2912.07</div>
+                  <div class="text-right">29 Апреля 2022</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="custom-content-below-mychats121" role="tabpanel"
+          aria-labelledby="custom-content-below-checouts-tab12">
+          <div class="container-fluid">
+
+          </div>
+        </div>
+        <div class="tab-pane fade" id="custom-content-below-mychats122" role="tabpanel"
+          aria-labelledby="custom-content-below-checouts-tab13">
+          <div class="container-fluid">
+
+          </div>
+        </div>
+      </div>
     </div>
 
     <aside id="rightaside" class="control-sidebar">
@@ -360,191 +632,6 @@
     </div>
   </div>
 
-  <div class="modal fade bd-example-modal-md" id="exampleModalLong" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-md" role="document">
-      <form method="post" enctype="multipart/form-data" id="addPostForm" name="addPostForm"
-        action="./modalCreatePost.php">
-        <div class="modal-header">
-          <button type="button" class="btn" data-dismiss="modal"><i class="fas fa-times"></i></button>
-          <div class="modal-header-name">Новый пост</div>
-          <div class="modal-header-channels">
-            <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
-              class="b-lazy img-thumbnail b-loaded">
-            <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
-              class="b-lazy img-thumbnail b-loaded">
-            <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
-              class="b-lazy img-thumbnail b-loaded">
-            <span>...</span>
-            <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
-              class="b-lazy img-thumbnail b-loaded">
-            <span class="b-lazy img-thumbnail b-loaded">+</span>
-          </div>
-        </div>
-        <div class="modal-content">
-          <div class="modal-left-part">
-            <ul class="nav nav-tabs" id="custom-content-below-exampleModalLong" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" id="custom-content-below-home-exampleModalLong" data-toggle="pill"
-                  href="#exampleModalLong0" role="tab" aria-controls="exampleModalLong0" aria-selected="false">Дата и
-                  время публикации</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="custom-content-below-profile-exampleModalLong" data-toggle="pill"
-                  href="#exampleModalLong1" role="tab" aria-controls="exampleModalLong1" aria-selected="false">Тип
-                  поста</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="custom-content-below-messages-exampleModalLong" data-toggle="pill"
-                  href="#exampleModalLong2" role="tab" aria-controls="exampleModalLong2"
-                  aria-selected="false">Сообщение</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="custom-content-below-profile-exampleModalLong1" data-toggle="pill"
-                  href="#exampleModalLong3" role="tab" aria-controls="exampleModalLong3"
-                  aria-selected="false">Вложения</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="custom-content-below-messages-exampleModalLong1" data-toggle="pill"
-                  href="#exampleModalLong4" role="tab" aria-controls="exampleModalLong4" aria-selected="false">Добавить
-                  реакции</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="custom-content-below-profile-exampleModalLong2" data-toggle="pill"
-                  href="#exampleModalLong5" role="tab" aria-controls="exampleModalLong5" aria-selected="false">Добавить
-                  кнопки</a>
-              </li>
-            </ul>
-          </div>
-          <div class="modal-right-part">
-            <div class="tab-content" id="custom-content-below-exampleModalLongcontent">
-              <div class="tab-pane fade active show" id="exampleModalLong0" role="tabpanel"
-                aria-labelledby="custom-content-below-home-exampleModalLong">
-                <div class="modal-right-part-name mb-15px modal-right-part-name--big">
-                  Дата и время публикации:
-                </div>
-                <ul class='publication-times-list'>
-                  <li class='publication-times-item'>
-                    <input type="datetime-local" class="d-none" value="2020-05-08T15:00">
-                    <div class='publication-times-item-date'>08.05.2020</div>
-                    <div class='publication-times-item-hour'>15:00</div>
-                    <div class='publication-times-item-edit'><i class="fas fa-pen lightbluetext"></i>
-                    </div>
-                    <div class='publication-times-item-delete'><i class="fas fa-times"></i>
-                    </div>
-                  </li>
-                  <li class='publication-times-item'>
-                    <input type="datetime-local" class="d-none" value="2020-05-21T15:00">
-                    <div class='publication-times-item-date'>21.05.2020</div>
-                    <div class='publication-times-item-hour'>15:00</div>
-                    <div class='publication-times-item-edit'><i class="fas fa-pen lightbluetext cursor-pointer"></i>
-                    </div>
-                    <div class='publication-times-item-delete'><i class="fas fa-times"></i>
-                    </div>
-                  </li>
-                  <li class='publication-times-item'>
-                    <input type="datetime-local" class="d-none" value="2020-06-01T15:00">
-                    <div class='publication-times-item-date'>01.06.2020</div>
-                    <div class='publication-times-item-hour'>15:00</div>
-                    <div class='publication-times-item-edit'><i class="fas fa-pen lightbluetext cursor-pointer"></i>
-                    </div>
-                    <div class='publication-times-item-delete'><i class="fas fa-times"></i>
-                    </div>
-                    <div class='publication-times-item-add'><i class="fas fa-plus"></i>
-                    </div>
-                  </li>
-                </ul>
-                <div class="publication-times-delete-check">
-                  <div class="modal-right-part-name mb-0 modal-right-part-name--big">
-                    Удалить через:
-                  </div>
-                  <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                  </label>
-                </div>
-                <div class="publication-times-delete-timeblock offnut">
-                  <div class="publication-times-delete-time">
-                    5 часов 10 минут
-                  </div>
-                  <div class='publication-times-item-edit'><i class="fas fa-pen lightbluetext"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="exampleModalLong1" role="tabpanel"
-                aria-labelledby="custom-content-below-profile-exampleModalLong">
-                <div>
-                  <span class="custom-control custom-checkbox">
-                    <input id="usetype1" name="usetype1" type="checkbox" checked="checked" class="custom-control-input">
-                    <label for="usetype1" class="custom-control-label form-check-label"></label>
-                  </span>
-                  <span>Тип поста 1</span>
-                </div>
-                <div>
-                  <span class="custom-control custom-checkbox">
-                    <input id="usetype2" name="usetype2" type="checkbox" checked="checked" class="custom-control-input">
-                    <label for="usetype2" class="custom-control-label form-check-label"></label>
-                  </span>
-                  <span>Тип поста 2</span>
-                </div>
-                <div>
-                  <span class="custom-control custom-checkbox">
-                    <input id="usetype3" name="usetype3" type="checkbox" checked="checked" class="custom-control-input">
-                    <label for="usetype3" class="custom-control-label form-check-label"></label>
-                  </span>
-                  <span>Тип поста 3</span>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="exampleModalLong2" role="tabpanel"
-                aria-labelledby="custom-content-below-messages-exampleModalLong">
-                <textarea name="posts-textarea"
-                  id="posts-textarea">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor aliquam ullamcorper arcu et dui nibh venenatis. Justo sem justo adipiscing sapien sit elit, id sed. Congue sed diam ac praesent euismod convallis scelerisque iaculis dictum.</textarea>
-                <div class="posts-textarea-tools">
-                  <b>жирный</b>
-                  <i>курсив</i>
-                  <s>зачёркнутый</s>
-                  <i class="far fa-laugh"></i>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="exampleModalLong3" role="tabpanel"
-                aria-labelledby="custom-content-below-profile-exampleModalLong1">
-                Добавьте изображения, видео или любой другой файл, выбрав их на компьтере или перетащите в это окно
-                <img src="./NoAvatarChannel_300x300.png" alt="test">
-                <img src="./NoAvatarChannel_300x300.png" alt="test">
-                Изображения альбомом
-                Изображения
-                отдельными файлами
-                Как документ (без сжатия)
-              </div>
-              <div class="tab-pane fade" id="exampleModalLong4" role="tabpanel"
-                aria-labelledby="custom-content-below-messages-exampleModalLong1">
-                Выберите эмодзи и добавьте текст, если он требуется
-                Нравится
-                Не нравится
-                Введите текст
-              </div>
-              <div class="tab-pane fade" id="exampleModalLong5" role="tabpanel"
-                aria-labelledby="custom-content-below-profile-exampleModalLong2">
-                Выберите текст кнопки и ссылку
-                Открыть сайт
-                https://www.google.com
-                Текст кнопки
-                Введите ссылку
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn goToChannel">Отмена</button>
-          <div>
-            <button type="submit" class="btn goToChannel">Черновик</button>
-            <button type="submit" class="btn goToChannel">Разместить сейчас</button>
-            <button type="submit" class="btn btn-primary">Сохранить</button>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-
   <script src="plugins/jquery/jquery.min.js"></script>
   <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
@@ -553,8 +640,7 @@
   <script src="https://pagination.js.org/dist/2.1.5/pagination.min.js"></script>
   <script src="star_rating.js"></script>
   <script src="database.js"></script>
-  <script src="myScript.js"></script>
-  <script src="ChartsScript.js"></script>
+  <script src="dashboard.js"></script>
 
 </body>
 

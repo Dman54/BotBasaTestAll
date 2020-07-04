@@ -5,22 +5,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>LinkBaza. Канал Академия Джо Рогана</title>
+  <title>LinkBaza личный кабинет</title>
   <meta name="description" content="Каталог Telegram каналов для продвижения, раскрутки, рекламы, постинга, подборок">
   <meta name="Keywords" content="каталог, Telegram, канал, реклама, продвижение, раскрутки, постинга, подборка">
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css" />
   <link rel="stylesheet" href="dist/css/adminlte.min.css" />
-  <link rel="stylesheet" href="https://pagination.js.org/dist/2.0.7/pagination.css" />
+  <link rel="stylesheet" href="https://pagination.js.org/dist/2.0.7/pagination.css">
   <link rel="stylesheet" href="Mystyles0.css" />
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body id="firstbody" class="catalog-page layout-fixed main-body_added sidebar-collapse">
+<body id="firstbody" class="sidebar-mini layout-fixed main-body_added">
   <nav id="firstnav" class="header nav-header_added navbar navbar-expand navbar-white navbar-light">
-    <a href="./catalog.html" class="brand-link">
+    <a href="./my_channels.html" class="brand-link">
       <img src="Logo.png" alt="LinkBaza Logo" class="brand-image" />
     </a>
     <div id="gamburger_added" class="navbar-nav gamburger_added">
@@ -34,21 +34,21 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a target="_blank" href="https://teletype.in/@botbaza/8CntyGIzBI" class="nav-link">Справка</a>
       </li>
-      <li class="nav-item d-none" style="display: none !important;">
+      <li class="nav-item d-none">
         <a class="nav-link" href="./shop.html">Корзина</a>
       </li>
-      <li class="nav-item d-none" style="display: none !important;">
+      <li class="nav-item d-none">
         <a class="nav-link" href="./chat.html">Сообщения / Уведомления</a>
       </li>
-      <li class="nav-item d-none" style="display: none !important;">
+      <li class="nav-item d-none">
         <a class="nav-link" href="./profile.html">Личный кабинет</a>
       </li>
-      <li class="nav-item d-none" style="display: none !important;">
-        <a class="nav-link" href="./logout.html">Выйти</a>
+      <li class="nav-item d-none">
+        <a class="nav-link" href="./login.html">Выйти</a>
       </li>
     </ul>
     <div id="searchhover_added"><i class="fas fa-search"></i></div>
-    <form class="form-inline">
+    <form class="form-inline" action="./search.php">
       <div class="input-group input-group-sm">
         <input class="form-control form-control-navbar" type="search" placeholder="Поиск" aria-label="Search" />
         <div class="input-group-append">
@@ -58,7 +58,7 @@
         </div>
       </div>
     </form>
-    <ul class="navbar-nav ml-auto" style="display: none !important;">
+    <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown Fontsizeicon">
         <a class="nav-link" href="./shop.html">
           <i class="fas fa-shopping-basket"></i>
@@ -83,10 +83,9 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
         </span>
         <div class="dropdown-menu">
-          <a class="dropdown-item" tabindex="-1" href="./profile.html">Личный
-            кабинет</a>
+          <a class="dropdown-item" tabindex="-1" href="./profile.html">Личный кабинет</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" tabindex="-1" href="./logout.html">Выйти</a>
+          <a class="dropdown-item" tabindex="-1" href="./login.html">Выйти</a>
         </div>
       </li>
     </ul>
@@ -95,30 +94,204 @@
   <div id="firstwrapper" class="wrapper">
     <nav id="secondnav" class="main-header navbar navbar-expand navbar-white navbar-light">
       <ul class="navbar-nav">
+        <li class="nav-item Fontsizeicon paddingmenu">
+          <span class="nav-link" data-widget="pushmenu" role="button"><i class="fas fa-grip-vertical"></i></span>
+        </li>
         <li>
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="./catalog.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="./my_channels.html">Home</a></li>
             <li class="breadcrumb-item active">index</li>
           </ol>
         </li>
         <li>
-          <div class="channel-adprice-number" style="display: none !important;">
+          <div class="channel-adprice-number">
             <i class="nav-icon fas fa-wallet"></i>
             56100&nbsp;<span class="fa fa-rub"></span>
           </div>
-          <div class="ribbon-sign" style="display: none !important;">
+          <div class="ribbon-sign">
             <i class="fas fa-heart"></i>
           </div>
           <div class="navbar-nav-telegram">
-            <a class="nav-link" href="./catalog.html">
+            <a class="nav-link" data-widget="pushmenu" href="./my_channels.html">
               <img src="img/telegram.png" alt="Telegram каталог"> <span>Telegram каталог</span>
             </a>
           </div>
         </li>
       </ul>
     </nav>
+    <aside id="leftaside" class="main-sidebar sidebar-dark-primary elevation-4">
+      <div class="sidebar">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item has-treeview menu-open">
+            <span class="nav-link">
+              <i class="nav-icon fas fa-user-tag"></i>
+              Выбрать роль
+              <i class="right fas fa-angle-left"></i>
+            </span>
+            <ul data-selectRole_added="true" class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./my_channels.html" data-Role_added='1' class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Каналы</p>
+                </a>
+              </li>
+              <li class="nav-item" style="display: none !important;">
+                <a href="./my_bots.html" data-Role_added='2' class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Боты</p>
+                </a>
+              </li>
+              <li class="nav-item" style="display: none !important;">
+                <a href="./my_chats.html" data-Role_added='3' class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Чаты</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <nav data-selectRoleContent_added="0" class="mt-2 displayok">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+              <a href="./my_channels.html" class="nav-link channels-link active">
+                <i class="nav-icon fas fa-tv"></i>
+                <p>
+                  Мои каналы
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./dashboard_channels.html" class="nav-link dashboard-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard
+                </p>
+              </a>
+            </li>
+            <li class="nav-item" style="display: none !important;">
+              <a href="./posts.html" class="nav-link management-link">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>
+                  Посты
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./surfing.html" class="nav-link dashboard-link">
+                <i class="nav-icon fas fa-star-half-alt"></i>
+                <p>
+                  Сёрфинг
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./promotions.html" class="nav-link promotions-link">
+                <i class="nav-icon fas fa-chart-line"></i>
+                <p>
+                  Продвижение
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav data-selectRoleContent_added="1" class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+              <a href="./my_bots.html" class="nav-link channels-link">
+                <i class="nav-icon fas fa-robot"></i>
+                <p>
+                  Мои боты
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./dashboard_bots.html" class="nav-link dashboard-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard 2
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./promotions_bots.html" class="nav-link management-link">
+                <i class="nav-icon fas fa-chart-line"></i>
+                <p>
+                  Продвижение 2
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav data-selectRoleContent_added="2" class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+              <a href="./my_chats.html" class="nav-link channels-link">
+                <i class="nav-icon fas fa-comments-dollar"></i>
+                <p>
+                  Мои чаты
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./dashboard_chats.html" class="nav-link dashboard-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard 3
+                  <span class="right badge badge-success">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./posts_chats.html" class="nav-link management-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                  Посты 3
+                  <span class="right badge badge-default">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./promotions_chats.html" class="nav-link promotions-link">
+                <i class="nav-icon fas fa-chart-line"></i>
+                <p>
+                  Продвижение 3
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
 
-    <div id="content" class="content-wrapper dashboard">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+            <a href="./chat.html" class="nav-link channels-link">
+              <i class="nav-icon far fa-comments"></i>
+              <p>
+                Сообщения
+                <span class="right badge badge-warning">New</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./profile.html" class="nav-link dashboard-link">
+              <i class="nav-icon fas fa-id-card"></i>
+              <p>
+                Личный кабиент
+                <span class="right badge badge-info">New</span>
+              </p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <div id="content" class="content-wrapper channels">
+
       <div class="container-fluid">
         <div class="row r-blocks">
           <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-src="https://teleg.run/LinkBazaBot?start=ref=141505811"
@@ -188,35 +361,27 @@
       </div>
       <div class="container-fluid">
         <select class="select-tabs form-control">
-          <option value="0">Общая статистика</option>
-          <option value="1" style="display: none !important;">Посты</option>
-          <option value="2" style="display: none !important;">Анализ аудитории</option>
+          <option value="0">Мои каналы</option>
+          <option value="1" style="display: none !important;">Делегированные каналы</option>
         </select>
-        <ul class="nav nav-tabs" id="custom-content-below-tab1" role="tablist">
+        <ul class="nav nav-tabs" id="custom-content-below-tab0" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" id="custom-content-below-home-tab1" data-toggle="pill"
-              href="#custom-content-below-stats1" role="tab" aria-controls="custom-content-below-stats1"
-              aria-selected="false">Общая статистика</a>
+            <a class="nav-link active" id="custom-content-below-home-tab0" data-toggle="pill"
+              href="#custom-content-below-channels0" role="tab" aria-controls="custom-content-below-channels0"
+              aria-selected="false">Мои каналы</a>
           </li>
           <li class="nav-item" style="display: none !important;">
-            <a class="nav-link" id="custom-content-below-profile-tab1" data-toggle="pill"
-              href="#custom-content-below-stats2" role="tab" aria-controls="custom-content-below-stats2"
-              aria-selected="false">Посты</a>
-          </li>
-          <li class="nav-item" style="display: none !important;">
-            <a class="nav-link" id="custom-content-below-messages-tab1" data-toggle="pill"
-              href="#custom-content-below-stats3" role="tab" aria-controls="custom-content-below-stats3"
-              aria-selected="false">Анализ аудитории</a>
+            <a class="nav-link" id="custom-content-below-profile-tab0" data-toggle="pill"
+              href="#custom-content-below-mychannels0" role="tab" aria-controls="custom-content-below-mychannels0"
+              aria-selected="false">Делегированные каналы</a>
           </li>
         </ul>
       </div>
-      <div class="tab-content" id="custom-content-below-tabContent1">
-        <div class="tab-pane fade active show" id="custom-content-below-stats1" role="tabpanel"
-          aria-labelledby="custom-content-below-home-tab1">
-          <div class="container-fluid">
-          </div>
+      <div class="tab-content" id="custom-content-below-tabContent0">
+        <div class="tab-pane fade active show" id="custom-content-below-channels0" role="tabpanel"
+          aria-labelledby="custom-content-below-home-tab0">
           <div class="container-fluid first-block">
-            <div id="carouselExampleIndicators2" class="carousel dashboard-carousel slide" data-interval="false">
+            <div id="carouselExampleIndicators" class="carousel dashboard-carousel slide" data-interval="false">
               <div class="carousel-inner">
                 <div itemscope itemtype="http://schema.org/Product" class="carousel-item active">
                   <div class="carousel-item-wrapper">
@@ -576,7 +741,7 @@
             <div class="row buttons-row">
               <div class="col">
                 <div class="btn btn-default btn-blue">
-                  <a class="" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                  <a class="" href="#carouselExampleIndicators" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="prev-name-channel"><span>Предыдущий</span><span> канал</span></span>
                   </a>
@@ -608,7 +773,7 @@
               </div>
               <div class="col">
                 <div class="btn btn-default btn-blue">
-                  <a class="" href="#carouselExampleIndicators2" role="button" data-slide="next">
+                  <a class="" href="#carouselExampleIndicators" role="button" data-slide="next">
                     <span class="next-name-channel"><span>Следующий</span><span> канал</span></span>
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   </a>
@@ -617,94 +782,73 @@
             </div>
           </div>
 
-          <div class="container-fluid first-block channel-stats">
-            <div class="small-box">
-              <div class="inner">
-                <h3>22907</h3>
-
-                <p>Подписчики</p>
+          <div class="container-fluid">
+            <div class="channels-sortpanel">
+              <span class="select-wrapper">
+                <select id="filterSelect" name="filterSelect" class="form-control2">
+                  <option selected="" disabled="" value="Сортировать по">Сортировать по</option>
+                  <option value="Название">Название</option>
+                  <option value="Подписчики">Подписчики</option>
+                  <option value="Прирост">Прирост</option>
+                  <option value="Стоимость">Стоимость рекламы</option>
+                  <option value="Рейтинг">Рейтинг</option>
+                </select>
+              </span>
+              <div class="filter filter-sort" data-sort="description" data-direction="desc">
+                <span title="Описание канала не более 70 символов">Описание</span>
+                <span></span>
               </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
+              <div class="filter filter-sort desc" data-sort="members" data-direction="desc">
+                <span title="Количество подписчиков на данный момент">Подписчики</span>
+                <span></span>
               </div>
-            </div>
-            <div class="small-box">
-              <div class="inner">
-                <h3>93</h3>
-
-                <p>Посты (30 дней)</p>
+              <div class="filter filter-sort " data-sort="members_growth" data-direction="desc">
+                <span title="Количество новых подписчиков за выбранный период">Прирост</span>
+                <span></span>
               </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
+              <div class="flex-break"></div>
+              <div class="filter filter-sort" data-sort="ad_price" data-direction="desc">
+                <span title="Стоимость рекламы">Стоимость рекламы</span>
+                <span></span>
               </div>
-            </div>
-            <div class="small-box">
-              <div class="inner">
-                <h3>47.15%</h3>
-                <p>ERR%</p>
+              <div class="filter filter-sort" data-sort="raitings" data-direction="desc">
+                <span title="Рейтинг канала по пятибалльной шкале">Рейтинг</span>
+                <span></span>
               </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
+              <div class="filter filter-sort" data-sort="favorites" data-direction="desc">
+                <span title="Находится ли канал в избранном">Избранное</span>
+                <span></span>
               </div>
-            </div>
-            <div class="small-box">
-              <div class="inner">
-                <h3>10956</h3>
-                <p>Средний охват (30 дней)</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-            </div>
-            <div class="small-box">
-              <div class="inner">
-                <h3>12605</h3>
-                <p>Суммарный охват (сутки)</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+              <div class="filter filter-sort invisible" data-sort="raitings" data-direction="desc">
+                <span title="Рейтинг канала по пятибалльной шкале">Рейтинг</span>
+                <span></span>
               </div>
             </div>
           </div>
-          <div class="container-fluid first-block channel-chart">
-            <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Подписчики</h3>
-
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i
-                      class="fas fa-times"></i></button>
-                </div>
-              </div>
-              <div class="card-body">
-                <div class="chart">
-                  <div class="chartjs-size-monitor">
-                    <div class="chartjs-size-monitor-expand">
-                      <div class=""></div>
-                    </div>
-                    <div class="chartjs-size-monitor-shrink">
-                      <div class=""></div>
-                    </div>
-                  </div>
-                  <canvas id="areaChart" class="chartjs-render-monitor"></canvas>
-                </div>
-              </div>
+          <div class="inner-left preview" id="channelsList">
+            <div class="data-container container-fluid channels_list_body sticky-canceller-container">
             </div>
+          </div>
+          <div class="pagesCounter">
+            <span>Записей на странице </span>
+            <span class="select-wrapper">
+              <select id="PagesCounter" name="PagesCounter" class="form-control2">
+                <option selected="" value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="75">75</option>
+                <option value="100">100</option>
+              </select>
+            </span>
           </div>
         </div>
-        <div class="tab-pane fade" id="custom-content-below-stats2" role="tabpanel"
-          aria-labelledby="custom-content-below-profile-tab1">
-          <div class="container-fluid">
-            <div class="row">Контент статистики 2</div>
-          </div>
+        <div class="tab-pane fade" id="custom-content-below-mychannels0" role="tabpanel"
+          aria-labelledby="custom-content-below-profile-tab0">
+          <div class="container-fluid"></div>
         </div>
-        <div class="tab-pane fade" id="custom-content-below-stats3" role="tabpanel"
-          aria-labelledby="custom-content-below-messages-tab1">
-          <div class="container-fluid">
-            <div class="row">Контент статистики 3</div>
-          </div>
+        <div class="tab-pane fade" id="custom-content-below-dchannels0" role="tabpanel"
+          aria-labelledby="custom-content-below-profile-tab0">
+          <div class="container-fluid"></div>
         </div>
       </div>
     </div>
@@ -720,29 +864,24 @@
       <strong>Copyright &copy; 2020
         <a href="http://LinkBaza.com">LinkBaza.com</a>.</strong>
     </footer>
-
     <div id="sidebar-overlay2"></div>
-
-
   </div>
 
   <div class="modal fade bd-example-modal-lg" id="modalCreateChannel" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
-        <button type="button" class="btn" data-dismiss="modal">
-          <i class="fas fa-times"></i>
-        </button>
+        <button type="button" class="btn" data-dismiss="modal"><i class="fas fa-times"></i></button>
         <div class="modal-left-part">
           <form method="post" enctype="multipart/form-data" id="addChannelForm" name="addChannelForm"
             action="./modalCreateChannel.php">
             <div class="modal-left-part-name nomt">
               Введите ссылку на канал
             </div>
-            <input type="text" name="ChannelLink" id="ChannelLink" />
+            <input type="text" name="ChannelLink" id="ChannelLink">
             <div class="modal-left-part-name">
               Название канала<span> (до 70 символов)</span>
             </div>
-            <input type="text" name="ChannelName" id="ChannelName" />
+            <input type="text" name="ChannelName" id="ChannelName">
             <div class="modal-left-part-name">
               Выберите категорию
             </div>
@@ -755,9 +894,7 @@
                 <option value="Юмор и развлечения4">Юмор и развлечения4</option>
               </select>
             </span>
-            <button type="submit" class="btn btn-primary w100 mt-175">
-              Добавить канал
-            </button>
+            <button type="submit" class="btn btn-primary w100 mt-175">Добавить канал</button>
           </form>
         </div>
         <div class="modal-right-part">
@@ -765,12 +902,11 @@
             Добавление канала
           </div>
           <div class="modal-right-part-content">
-            Добавить канал в каталог можно с помощью этой формы или через
-            нашего <b class="tdu">бота</b> в Telegram.
+            Добавить канал в каталог можно с помощью этой формы или через нашего <b class="tdu">бота</b> в Telegram.
           </div>
           <div class="modal-right-part-content">
-            Вне зависимости от выбранного способа
-            <b class="orange-text fz-125">обязательно сделайте бота администратором канала</b>
+            Вне зависимости от выбранного способа <b class="orange-text fz-125">обязательно сделайте бота
+              администратором канала</b>
           </div>
           <div class="goToChannel">
             <i class="fas fa-robot"></i>
@@ -792,8 +928,8 @@
   <script src="https://pagination.js.org/dist/2.1.5/pagination.min.js"></script>
   <script src="star_rating.js"></script>
   <script src="database.js"></script>
-  <script src="dashboard.js"></script>
-  <script src="ChartsScript.js"></script>
+  <script src="myScript.js"></script>
+
 </body>
 
 </html>

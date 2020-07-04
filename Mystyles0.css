@@ -1,3 +1,7 @@
+.main-body_added .nav-header_added .navbar-nav_added.displayok li a.nav-link.active {
+  color: rgba(0, 0, 0, 0.9);
+}
+
 li.clearfix {
   float: none !important;
   margin: 0 !important;
@@ -1178,10 +1182,6 @@ body:not(.catalog-page) #secondnav .navbar-nav > li:last-child {
 #secondnav .navbar-nav > li:last-child > * {
   margin-left: 1rem;
 }
-
-/* .channels_list_body div.row {
-  background-color: #f9f9f9;
-} */
 
 .long-description {
   max-height: 4.5rem;
@@ -4798,7 +4798,7 @@ a.chat-dialoges-item {
   }
   .modal .modal-left-part-datetime .promotionHour,
   .modal .modal-left-part-datetime .promotionMinute {
-    max-width: 36px;
+    max-width: 44px;
   }
 }
 

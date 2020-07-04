@@ -5,22 +5,22 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>LinkBaza. Канал Академия Джо Рогана</title>
+  <title>LinkBaza личный кабинет</title>
   <meta name="description" content="Каталог Telegram каналов для продвижения, раскрутки, рекламы, постинга, подборок">
   <meta name="Keywords" content="каталог, Telegram, канал, реклама, продвижение, раскрутки, постинга, подборка">
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
   <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css" />
   <link rel="stylesheet" href="dist/css/adminlte.min.css" />
-  <link rel="stylesheet" href="https://pagination.js.org/dist/2.0.7/pagination.css" />
+  <link rel="stylesheet" href="https://pagination.js.org/dist/2.0.7/pagination.css">
   <link rel="stylesheet" href="Mystyles0.css" />
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
-<body id="firstbody" class="catalog-page layout-fixed main-body_added sidebar-collapse">
+<body id="firstbody" class="sidebar-mini layout-fixed main-body_added">
   <nav id="firstnav" class="header nav-header_added navbar navbar-expand navbar-white navbar-light">
-    <a href="./catalog.html" class="brand-link">
+    <a href="./my_channels.html" class="brand-link">
       <img src="Logo.png" alt="LinkBaza Logo" class="brand-image" />
     </a>
     <div id="gamburger_added" class="navbar-nav gamburger_added">
@@ -34,21 +34,21 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a target="_blank" href="https://teletype.in/@botbaza/8CntyGIzBI" class="nav-link">Справка</a>
       </li>
-      <li class="nav-item d-none" style="display: none !important;">
+      <li class="nav-item d-none">
         <a class="nav-link" href="./shop.html">Корзина</a>
       </li>
-      <li class="nav-item d-none" style="display: none !important;">
+      <li class="nav-item d-none">
         <a class="nav-link" href="./chat.html">Сообщения / Уведомления</a>
       </li>
-      <li class="nav-item d-none" style="display: none !important;">
+      <li class="nav-item d-none">
         <a class="nav-link" href="./profile.html">Личный кабинет</a>
       </li>
-      <li class="nav-item d-none" style="display: none !important;">
-        <a class="nav-link" href="./logout.html">Выйти</a>
+      <li class="nav-item d-none">
+        <a class="nav-link" href="./login.html">Выйти</a>
       </li>
     </ul>
     <div id="searchhover_added"><i class="fas fa-search"></i></div>
-    <form class="form-inline">
+    <form class="form-inline" action="./search.php">
       <div class="input-group input-group-sm">
         <input class="form-control form-control-navbar" type="search" placeholder="Поиск" aria-label="Search" />
         <div class="input-group-append">
@@ -58,7 +58,7 @@
         </div>
       </div>
     </form>
-    <ul class="navbar-nav ml-auto" style="display: none !important;">
+    <ul class="navbar-nav ml-auto">
       <li class="nav-item dropdown Fontsizeicon">
         <a class="nav-link" href="./shop.html">
           <i class="fas fa-shopping-basket"></i>
@@ -83,10 +83,9 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
         </span>
         <div class="dropdown-menu">
-          <a class="dropdown-item" tabindex="-1" href="./profile.html">Личный
-            кабинет</a>
+          <a class="dropdown-item" tabindex="-1" href="./profile.html">Личный кабинет</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" tabindex="-1" href="./logout.html">Выйти</a>
+          <a class="dropdown-item" tabindex="-1" href="./login.html">Выйти</a>
         </div>
       </li>
     </ul>
@@ -95,30 +94,203 @@
   <div id="firstwrapper" class="wrapper">
     <nav id="secondnav" class="main-header navbar navbar-expand navbar-white navbar-light">
       <ul class="navbar-nav">
+        <li class="nav-item Fontsizeicon paddingmenu">
+          <span class="nav-link" data-widget="pushmenu" role="button"><i class="fas fa-grip-vertical"></i></span>
+        </li>
         <li>
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="./catalog.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="./my_channels.html">Home</a></li>
             <li class="breadcrumb-item active">index</li>
           </ol>
         </li>
         <li>
-          <div class="channel-adprice-number" style="display: none !important;">
+          <div class="channel-adprice-number">
             <i class="nav-icon fas fa-wallet"></i>
             56100&nbsp;<span class="fa fa-rub"></span>
           </div>
-          <div class="ribbon-sign" style="display: none !important;">
+          <div class="ribbon-sign">
             <i class="fas fa-heart"></i>
           </div>
           <div class="navbar-nav-telegram">
-            <a class="nav-link" href="./catalog.html">
+            <a class="nav-link" data-widget="pushmenu" href="./my_channels.html">
               <img src="img/telegram.png" alt="Telegram каталог"> <span>Telegram каталог</span>
             </a>
           </div>
         </li>
       </ul>
     </nav>
+    <aside id="leftaside" class="main-sidebar sidebar-dark-primary elevation-4">
+      <div class="sidebar">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item has-treeview menu-open">
+            <span class="nav-link">
+              <i class="nav-icon fas fa-user-tag"></i>
+              Выбрать роль
+              <i class="right fas fa-angle-left"></i>
+            </span>
+            <ul data-selectRole_added="true" class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="./my_channels.html" data-Role_added='1' class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Каналы</p>
+                </a>
+              </li>
+              <li class="nav-item" style="display: none !important;">
+                <a href="./my_bots.html" data-Role_added='2' class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Боты</p>
+                </a>
+              </li>
+              <li class="nav-item" style="display: none !important;">
+                <a href="./my_chats.html" data-Role_added='3' class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Чаты</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <nav data-selectRoleContent_added="0" class="mt-2 displayok">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+              <a href="./my_channels.html" class="nav-link channels-link">
+                <i class="nav-icon fas fa-tv"></i>
+                <p>
+                  Мои каналы
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./dashboard_channels.html" class="nav-link dashboard-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard
+                </p>
+              </a>
+            </li>
+            <li class="nav-item" style="display: none !important;">
+              <a href="./posts.html" class="nav-link management-link">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>
+                  Посты
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./surfing.html" class="nav-link dashboard-link">
+                <i class="nav-icon fas fa-star-half-alt"></i>
+                <p>
+                  Сёрфинг
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./promotions.html" class="nav-link promotions-link active">
+                <i class="nav-icon fas fa-chart-line"></i>
+                <p>
+                  Продвижение
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav data-selectRoleContent_added="1" class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+              <a href="./my_bots.html" class="nav-link channels-link">
+                <i class="nav-icon fas fa-robot"></i>
+                <p>
+                  Мои боты
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./dashboard_bots.html" class="nav-link dashboard-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard 2
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./promotions_bots.html" class="nav-link management-link">
+                <i class="nav-icon fas fa-chart-line"></i>
+                <p>
+                  Продвижение 2
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav data-selectRoleContent_added="2" class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <li class="nav-item">
+              <a href="./my_chats.html" class="nav-link channels-link">
+                <i class="nav-icon fas fa-comments-dollar"></i>
+                <p>
+                  Мои чаты
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./dashboard_chats.html" class="nav-link dashboard-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard 3
+                  <span class="right badge badge-success">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./posts_chats.html" class="nav-link management-link">
+                <i class="nav-icon fas fa-th"></i>
+                <p>
+                  Посты 3
+                  <span class="right badge badge-default">New</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="./promotions_chats.html" class="nav-link promotions-link">
+                <i class="nav-icon fas fa-chart-line"></i>
+                <p>
+                  Продвижение 3
+                  <span class="right badge badge-danger">New</span>
+                </p>
+              </a>
+            </li>
+          </ul>
+        </nav>
 
-    <div id="content" class="content-wrapper dashboard">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-item">
+            <a href="./chat.html" class="nav-link channels-link">
+              <i class="nav-icon far fa-comments"></i>
+              <p>
+                Сообщения
+                <span class="right badge badge-warning">New</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./profile.html" class="nav-link dashboard-link">
+              <i class="nav-icon fas fa-id-card"></i>
+              <p>
+                Личный кабиент
+                <span class="right badge badge-info">New</span>
+              </p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <div id="content" class="content-wrapper promotion-section">
       <div class="container-fluid">
         <div class="row r-blocks">
           <div class="col-12 col-sm-6 col-md-6 col-lg-4" data-src="https://teleg.run/LinkBazaBot?start=ref=141505811"
@@ -188,35 +360,40 @@
       </div>
       <div class="container-fluid">
         <select class="select-tabs form-control">
-          <option value="0">Общая статистика</option>
-          <option value="1" style="display: none !important;">Посты</option>
-          <option value="2" style="display: none !important;">Анализ аудитории</option>
+          <option value="0">Подборки</option>
+          <option value="1" style="display: none !important;">Взаимный пиар</option>
+          <option value="2" style="display: none !important;">Реклама</option>
+          <option value="3" style="display: none !important;">Рассылки</option>
         </select>
-        <ul class="nav nav-tabs" id="custom-content-below-tab1" role="tablist">
+        <ul class="nav nav-tabs" id="custom-content-below-tab3" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" id="custom-content-below-home-tab1" data-toggle="pill"
-              href="#custom-content-below-stats1" role="tab" aria-controls="custom-content-below-stats1"
-              aria-selected="false">Общая статистика</a>
+            <a class="nav-link active" id="custom-content-below-home-tab3" data-toggle="pill"
+              href="#custom-content-below-compilations3" role="tab" aria-controls="custom-content-below-compilations3"
+              aria-selected="false">Подборки</a>
           </li>
           <li class="nav-item" style="display: none !important;">
-            <a class="nav-link" id="custom-content-below-profile-tab1" data-toggle="pill"
-              href="#custom-content-below-stats2" role="tab" aria-controls="custom-content-below-stats2"
-              aria-selected="false">Посты</a>
+            <a class="nav-link" id="custom-content-below-profile-tab3" data-toggle="pill"
+              href="#custom-content-below-mutualPR3" role="tab" aria-controls="custom-content-below-mutualPR3"
+              aria-selected="false">Взаимный пиар</a>
           </li>
           <li class="nav-item" style="display: none !important;">
-            <a class="nav-link" id="custom-content-below-messages-tab1" data-toggle="pill"
-              href="#custom-content-below-stats3" role="tab" aria-controls="custom-content-below-stats3"
-              aria-selected="false">Анализ аудитории</a>
+            <a class="nav-link" id="custom-content-below-messages-tab3" data-toggle="pill"
+              href="#custom-content-below-advertising3" role="tab" aria-controls="custom-content-below-advertising3"
+              aria-selected="false">Реклама</a>
+          </li>
+          <li class="nav-item" style="display: none !important;">
+            <a class="nav-link" id="custom-content-below-another-tab3" data-toggle="pill"
+              href="#custom-content-below-mailinglists3" role="tab" aria-controls="custom-content-below-mailinglists3"
+              aria-selected="false">Рассылки</a>
           </li>
         </ul>
       </div>
-      <div class="tab-content" id="custom-content-below-tabContent1">
-        <div class="tab-pane fade active show" id="custom-content-below-stats1" role="tabpanel"
-          aria-labelledby="custom-content-below-home-tab1">
-          <div class="container-fluid">
-          </div>
+      <div class="tab-content" id="custom-content-below-tabContent3">
+        <div class="tab-pane fade active show" id="custom-content-below-compilations3" role="tabpanel"
+          aria-labelledby="custom-content-below-home-tab3">
+
           <div class="container-fluid first-block">
-            <div id="carouselExampleIndicators2" class="carousel dashboard-carousel slide" data-interval="false">
+            <div id="carouselExampleIndicators4" class="carousel dashboard-carousel slide" data-interval="false">
               <div class="carousel-inner">
                 <div itemscope itemtype="http://schema.org/Product" class="carousel-item active">
                   <div class="carousel-item-wrapper">
@@ -576,7 +753,7 @@
             <div class="row buttons-row">
               <div class="col">
                 <div class="btn btn-default btn-blue">
-                  <a class="" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                  <a class="" href="#carouselExampleIndicators4" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="prev-name-channel"><span>Предыдущий</span><span> канал</span></span>
                   </a>
@@ -608,7 +785,7 @@
               </div>
               <div class="col">
                 <div class="btn btn-default btn-blue">
-                  <a class="" href="#carouselExampleIndicators2" role="button" data-slide="next">
+                  <a class="" href="#carouselExampleIndicators4" role="button" data-slide="next">
                     <span class="next-name-channel"><span>Следующий</span><span> канал</span></span>
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   </a>
@@ -617,93 +794,328 @@
             </div>
           </div>
 
-          <div class="container-fluid first-block channel-stats">
-            <div class="small-box">
-              <div class="inner">
-                <h3>22907</h3>
-
-                <p>Подписчики</p>
+          <div class="container-fluid night-promotions promotions">
+            <h2 class="promotions-name">
+              Ночные подборки
+            </h2>
+            <span class="promotions-name-question" data-toggle="tooltip" data-html="true" data-placement="right"
+              title="Подборки представляют из себя единый, оформленный в виде поста список каналов -  участников подборки. Все участники подборки в определенное время размещают на своих каналах данный пост. Таким образом происходит взаимная реклама и обмен подписчиками.<br><br>Ночные подборки публикуются на каналах в 19:00  (UTC +3) и удаляются автоматически через 12 часов.<br><br><b>Запрещено удалять и перекрывать подборки другими постами. Бот сам удалит подборку, после ее окончания.</b>">?</span>
+            <div class="channels-sortpanel">
+              <span class="select-wrapper">
+                <select id="filterSelectnight-promotions" name="filterSelectnight-promotions" class="form-control2">
+                  <option selected="" disabled="" value="Сортировать по">Сортировать по</option>
+                  <option value="Время">Время</option>
+                  <option value="Участие">Участие</option>
+                  <option value="Автопилот">Автопилот</option>
+                  <option value="VIP">VIP</option>
+                  <option value="Категория">Категория</option>
+                  <option value="История">История</option>
+                  <option value="ТИП">ТИП</option>
+                </select>
+              </span>
+              <div class="filter filter-sort desc" data-sort="description" data-direction="desc">
+                Время
+                <span></span>
               </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
+              <div class="filter filter-sort" data-sort="description" data-direction="desc">
+                Участие
+                <span></span>
+              </div>
+              <div class="filter filter-sort" data-sort="description" data-direction="desc">
+                Автопилот
+                <span></span>
+              </div>
+              <div class="filter filter-sort" data-sort="description" data-direction="desc">
+                VIP
+                <span></span>
+              </div>
+              <div class="flex-break"></div>
+              <div class="filter filter-sort" data-sort="description" data-direction="desc">
+                Категория
+                <span></span>
+              </div>
+              <div class="filter filter-sort" data-sort="description" data-direction="desc">
+                История
+                <span></span>
+              </div>
+              <div class="filter filter-sort" data-sort="description" data-direction="desc">
+                ТИП
+                <span></span>
               </div>
             </div>
-            <div class="small-box">
-              <div class="inner">
-                <h3>93</h3>
-
-                <p>Посты (30 дней)</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
-              </div>
-            </div>
-            <div class="small-box">
-              <div class="inner">
-                <h3>47.15%</h3>
-                <p>ERR%</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-            </div>
-            <div class="small-box">
-              <div class="inner">
-                <h3>10956</h3>
-                <p>Средний охват (30 дней)</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-            </div>
-            <div class="small-box">
-              <div class="inner">
-                <h3>12605</h3>
-                <p>Суммарный охват (сутки)</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+            <div class="night-promotion-wrapper">
+              <div class="night-promotion promotion">
+                <div class="promotion-first-part">
+                  <span class="d-none">1</span>
+                  <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
+                    class="b-lazy img-thumbnail b-loaded">
+                  <button data-widget="control-sidebar-promotion" data-slide="true" type="button"
+                    class="btn btn-default btn-blue">
+                    <span class="">Каналы в подборке</span>
+                  </button>
+                </div>
+                <div>
+                  <div class="column-name">Время</div>
+                  19:00
+                </div>
+                <div>
+                  <div class="column-name">Участие</div>
+                  <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+                <div>
+                  <div class="column-name">Автопилот</div>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+                <div>
+                  <div class="column-name">VIP</div>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+                <div class="flex-break"></div>
+                <div>
+                  <div class="column-name">Категория</div>
+                  Юмор и развлечения от 1000 до 5000
+                </div>
+                <div>
+                  <i class="fas fa-history orangebg bigfa cursor-pointer"></i>
+                </div>
+                <div>
+                  <div class="column-name">ТИП</div>
+                  30
+                </div>
               </div>
             </div>
           </div>
-          <div class="container-fluid first-block channel-chart">
-            <div class="card card-primary">
-              <div class="card-header">
-                <h3 class="card-title">Подписчики</h3>
 
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
-                  </button>
-                  <button type="button" class="btn btn-tool" data-card-widget="remove"><i
-                      class="fas fa-times"></i></button>
+          <div class="container-fluid my-promotions promotions">
+            <h2 class="promotions-name">
+              Свои подборки
+            </h2>
+            <span class="promotions-name-question" data-toggle="tooltip" data-html="true" data-placement="right"
+              title="Подборки представляют из себя единый, оформленный в виде поста список каналов -  участников подборки. Все участники подборки в определенное время размещают на своих каналах данный пост. Таким образом происходит взаимная реклама и обмен подписчиками.<br><br>Ночные подборки публикуются на каналах в 19:00  (UTC +3) и удаляются автоматически через 12 часов.<br><br><b>Запрещено удалять и перекрывать подборки другими постами. Бот сам удалит подборку, после ее окончания.</b>">?</span>
+            <div class="channels-sortpanel">
+              <span class="select-wrapper">
+                <select id="filterSelectmy-promotions" name="filterSelectmy-promotions" class="form-control2">
+                  <option selected="" disabled="" value="Сортировать по">Сортировать по</option>
+                  <option value="Время публикации">Время публикации</option>
+                  <option value="Просмотров до удаления">Просмотров до удаления</option>
+                  <option value="Времени до удаления (ч)">Времени до удаления (ч)</option>
+                  <option value="История публикаций">История публикаций</option>
+                  <option value="Поделиться ссылкой">Поделиться ссылкой</option>
+                </select>
+              </span>
+              <div class="promotions-row">
+                <div class="filter filter-sort desc" data-sort="description" data-direction="desc">
+                  Время<br>публикации
+                  <span></span>
+                </div>
+                <div class="filter filter-sort" data-sort="description" data-direction="desc">
+                  Просмотров<br>до удаления
+                  <span></span>
+                </div>
+                <div class="filter filter-sort" data-sort="description" data-direction="desc">
+                  Времени<br>до удаления (ч)
+                  <span></span>
                 </div>
               </div>
-              <div class="card-body">
-                <div class="chart">
-                  <div class="chartjs-size-monitor">
-                    <div class="chartjs-size-monitor-expand">
-                      <div class=""></div>
+              <div class="flex-break"></div>
+              <div class="filter filter-sort" data-sort="description" data-direction="desc">
+                История<br>публикаций
+                <span></span>
+              </div>
+              <div class="filter filter-sort" data-sort="description" data-direction="desc">
+                Поделиться<br>ссылкой
+                <span></span>
+              </div>
+              <div class="filter filter-sort" data-sort="description" data-direction="desc">
+                <span></span>
+              </div>
+            </div>
+            <div class="my-promotion-wrapper">
+              <div class="my-promotion promotion">
+                <div class="promotion-first-part">
+                  <span class="d-none">2</span>
+                  <div>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider round"></span>
+                    </label>
+                  </div>
+                  <div class="my-promotion-left-2">
+                    <div class="channel-list-title">
+                      <b>Развлекательные каналы</b>
                     </div>
-                    <div class="chartjs-size-monitor-shrink">
-                      <div class=""></div>
+                    <div class="my-promotion-left-22">
+                      <div data-widget="control-sidebar-promotion" data-slide="true" class="promotion-number orange">
+                        38
+                      </div>
+                      <button data-widget="control-sidebar-promotion" data-slide="true" type="button"
+                        class="btn btn-default btn-blue">
+                        <span class="">Каналы в подборке</span>
+                      </button>
                     </div>
                   </div>
-                  <canvas id="areaChart" class="chartjs-render-monitor"></canvas>
+                </div>
+                <div class="promotions-row">
+                  <div>
+                    <div class="column-name">Время публикации:</div>
+                    10:00
+                  </div>
+                  <div>
+                    <div class="column-name">Просмотров до удаления:</div>
+                    8000
+                  </div>
+                  <div>
+                    <div class="column-name">Времени до удаления (ч):</div>
+                    12
+                  </div>
+                </div>
+                <div>
+                  <i class="fas fa-history orangebg bigfa cursor-pointer"></i>
+                </div>
+                <div>
+                  <i class="fas fa-link orangebg bigfa cursor-pointer"></i>
+                </div>
+                <div>
+                  <i class="fas fa-pen whitebg bluetext midfa pad8 br3 cursor-pointer" data-toggle="modal"
+                    data-target="#promotionEditing"></i>
                 </div>
               </div>
             </div>
+            <div class="my-promotion-wrapper">
+              <div class="my-promotion promotion">
+                <div class="promotion-first-part">
+                  <span class="d-none">3</span>
+                  <div>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </div>
+                  <div class="my-promotion-left-2">
+                    <div class="channel-list-title">
+                      <b>Развлекательные каналы</b>
+                    </div>
+                    <div class="my-promotion-left-22">
+                      <div data-widget="control-sidebar-promotion" data-slide="true" class="promotion-number">
+                        2
+                      </div>
+                      <button data-widget="control-sidebar-promotion" data-slide="true" type="button"
+                        class="btn btn-default btn-blue">
+                        <span class="">Каналы в подборке</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="promotions-row">
+                  <div>
+                    <div class="column-name">Время публикации:</div>
+                    18:00
+                  </div>
+                  <div>
+                    <div class="column-name">Просмотров до удаления:</div>
+                    25000
+                  </div>
+                  <div>
+                    <div class="column-name">Времени до удаления (ч):</div>
+                    5
+                  </div>
+                </div>
+                <div>
+                  <i class="fas fa-history orangebg bigfa cursor-pointer"></i>
+                </div>
+                <div>
+                  <i class="fas fa-link orangebg bigfa cursor-pointer"></i>
+                </div>
+                <div>
+                  <i class="fas fa-pen whitebg bluetext midfa pad8 br3 cursor-pointer" data-toggle="modal"
+                    data-target="#promotionEditing"></i>
+                </div>
+              </div>
+              <div class="promotion-info">
+                Ошибка: В подборке может учавствовать от 3 до 50 каналов
+              </div>
+            </div>
+            <div class="my-promotion-wrapper">
+              <div class="my-promotion promotion">
+                <div class="promotion-first-part">
+                  <span class="d-none">4</span>
+                  <div>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                  </div>
+                  <div class="my-promotion-left-2">
+                    <div class="channel-list-title">
+                      <b>Своя подборка 1</b>
+                    </div>
+                    <div class="my-promotion-left-22">
+                      <div data-widget="control-sidebar-promotion" data-slide="true" class="promotion-number">
+                        13
+                      </div>
+                      <button data-widget="control-sidebar-promotion" data-slide="true" type="button"
+                        class="btn btn-default btn-blue">
+                        <span class="">Каналы в подборке</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="promotions-row">
+                  <div>
+                    <div class="column-name">Время публикации:</div>
+                    18:00
+                  </div>
+                  <div>
+                    <div class="column-name">Просмотров до удаления:</div>
+                    1000
+                  </div>
+                  <div>
+                    <div class="column-name">Времени до удаления (ч):</div>
+                    2
+                  </div>
+                </div>
+                <div>
+                  <i class="fas fa-history orangebg bigfa cursor-pointer"></i>
+                </div>
+                <div>
+                  <i class="fas fa-link orangebg bigfa cursor-pointer"></i>
+                </div>
+                <div>
+                  <i class="fas fa-pen whitebg bluetext midfa pad8 br3 cursor-pointer" data-toggle="modal"
+                    data-target="#promotionEditing"></i>
+                </div>
+              </div>
+            </div>
+            <div data-toggle="modal" data-target="#promotionCreation" class="promotion-table-content-no">
+              <div>Создать новую подборку<span class="plus"></span></div>
+            </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="custom-content-below-stats2" role="tabpanel"
-          aria-labelledby="custom-content-below-profile-tab1">
+        <div class="tab-pane fade" id="custom-content-below-mutualPR3" role="tabpanel"
+          aria-labelledby="custom-content-below-profile-tab3">
           <div class="container-fluid">
-            <div class="row">Контент статистики 2</div>
+
           </div>
         </div>
-        <div class="tab-pane fade" id="custom-content-below-stats3" role="tabpanel"
-          aria-labelledby="custom-content-below-messages-tab1">
+        <div class="tab-pane fade" id="custom-content-below-advertising3" role="tabpanel"
+          aria-labelledby="custom-content-below-messages-tab3">
           <div class="container-fluid">
-            <div class="row">Контент статистики 3</div>
+
+          </div>
+        </div>
+        <div class="tab-pane fade" id="custom-content-below-mailinglists3" role="tabpanel"
+          aria-labelledby="custom-content-below-another-tab3">
+          <div class="container-fluid">
+
           </div>
         </div>
       </div>
@@ -720,29 +1132,174 @@
       <strong>Copyright &copy; 2020
         <a href="http://LinkBaza.com">LinkBaza.com</a>.</strong>
     </footer>
-
     <div id="sidebar-overlay2"></div>
+  </div>
 
+  <div class="modal fade bd-example-modal-lg" id="promotionCreation" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <button type="button" class="btn" data-dismiss="modal"><i class="fas fa-times"></i></button>
+        <div class="modal-left-part">
+          <form method="post" enctype="multipart/form-data" id="addpromotionForm" name="addpromotionForm"
+            action="./promotionCreation.php">
+            <div class="modal-left-part-name nomt">
+              Название
+            </div>
+            <input placeholder="Своя подборка 1" value="Своя подборка 1" type="text" name="promotionNameCreate"
+              id="promotionNameCreate">
+            <div class="modal-left-part-name">
+              Время и дата публикации
+            </div>
+            <div class="modal-left-part-datetime">
+              <div class="modal-left-part-time">
+                <input class="promotionHour" type="number" min="0" max="23" value="15" /> :
+                <input class="promotionMinute" type="number" min="0" max="59" value="00" />
+              </div>
+              <div class="modal-left-part-date">
+                <input type="date" id="startCreate" name="trip-start" value="2021-05-15" min="2020-06-06"
+                  max="2022-05-15">
+                <label for="startCreate"><i class="far fa-calendar"></i></label>
+              </div>
+            </div>
+            <div class="modal-left-part-name">
+              Просмотров до удаления
+            </div>
+            <input type="number" min="0" max="10000000" value="10000" step="100" />
+            <div class="modal-left-part-name">
+              Времени до удаления
+            </div>
+            <div class="modal-left-part-deletetime">
+              <span class="modal-left-part-time">
+                <input class="promotionMinute" type="number" min="0" max="23" value="5" />
+              </span>
+              часов
+            </div>
+            <div class="modal-left-part-buttons">
+              <button type="submit" class="btn goToChannel">Отмена</button>
+              <button type="submit" class="btn btn-primary">Создать</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-right-part">
+          <h3 class="modal-right-part-name modal-right-part-name--orange modal-right-part-name--big">
+            Новая подборка
+          </h3>
+          <div class="modal-right-part-content">
+            После создания добавьте в подборку каналы. Вы можете добавить не только свои, но и чужие каналы, с помощью
+            ссылки-приглашения, которая сгенерируется после создания.
+            <br />
+            <br />
+            В подборке может участвовать от 3 до 50 каналов.
+          </div>
+          <div class="modal-right-part-name modal-right-part-name--orange">
+            Просмотры до удаления
+          </div>
+          <div class="modal-right-part-content">
+            При достижении заданного количества просмотров подборка удаляется с канала.
+          </div>
+          <div class="modal-right-part-name modal-right-part-name--orange">
+            Время до удаления
+          </div>
+          <div>
+            Через заданное количество часов подборка удаляется с канала.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="modal fade bd-example-modal-lg" id="promotionEditing" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <button type="button" class="btn" data-dismiss="modal"><i class="fas fa-times"></i></button>
+        <div class="modal-left-part">
+          <form method="post" enctype="multipart/form-data" id="editpromotionForm" name="editpromotionForm"
+            action="./promotionEditing.php">
+            <div class="modal-left-part-name nomt">
+              Название
+            </div>
+            <input placeholder="Своя подборка 1" value="Своя подборка 1" type="text" name="promotionNameEdit"
+              id="promotionNameEdit">
+            <div class="modal-left-part-name">
+              Время и дата публикации
+            </div>
+            <div class="modal-left-part-datetime">
+              <div class="modal-left-part-time">
+                <input class="promotionHour" type="number" min="0" max="23" value="15" /> :
+                <input class="promotionMinute" type="number" min="0" max="59" value="00" />
+              </div>
+              <div class="modal-left-part-date">
+                <input type="date" id="startEdit" name="trip-start" value="2021-05-15" min="2020-06-06"
+                  max="2022-05-15">
+                <label for="startEdit"><i class="far fa-calendar"></i></label>
+              </div>
+            </div>
+            <div class="modal-left-part-name">
+              Просмотров до удаления
+            </div>
+            <input type="number" min="0" max="10000000" value="10000" step="100" />
+            <div class="modal-left-part-name">
+              Времени до удаления
+            </div>
+            <div class="modal-left-part-deletetime">
+              <span class="modal-left-part-time">
+                <input class="promotionMinute" type="number" min="0" max="23" value="5" />
+              </span>
+              часов
+            </div>
+            <div class="modal-left-part-buttons">
+              <button type="submit" class="btn goToChannel"><i class="fas fa-trash-alt"></i> Удалить</button>
+              <button type="submit" class="btn btn-primary">Сохранить</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-right-part">
+          <h3 class="modal-right-part-name modal-right-part-name--orange modal-right-part-name--big">
+            Редактирование подборки
+          </h3>
+          <div class="modal-right-part-name modal-right-part-name--orange">
+            Ссылка на подборку
+          </div>
+          <div class="modal-right-part-content nomb">Перейдя по этой ссылке участник может записаться в вашу подборку
+          </div>
+          <div class="modal-right-part-link">
+            <div class="promotion-link">
+              https://t.me/LinkBazaBot?start=pc=3ca2ef...
+            </div>
+            <i class="fas fa-copy goToChannel"></i>
+          </div>
+          <div class="modal-right-part-name modal-right-part-name--orange">
+            Просмотры до удаления
+          </div>
+          <div class="modal-right-part-content">
+            При достижении заданного количества просмотров подборка удаляется с канала.
+          </div>
+          <div class="modal-right-part-name modal-right-part-name--orange">
+            Время до удаления
+          </div>
+          <div>
+            Через заданное количество часов подборка удаляется с канала.
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="modal fade bd-example-modal-lg" id="modalCreateChannel" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
-        <button type="button" class="btn" data-dismiss="modal">
-          <i class="fas fa-times"></i>
-        </button>
+        <button type="button" class="btn" data-dismiss="modal"><i class="fas fa-times"></i></button>
         <div class="modal-left-part">
           <form method="post" enctype="multipart/form-data" id="addChannelForm" name="addChannelForm"
             action="./modalCreateChannel.php">
             <div class="modal-left-part-name nomt">
               Введите ссылку на канал
             </div>
-            <input type="text" name="ChannelLink" id="ChannelLink" />
+            <input type="text" name="ChannelLink" id="ChannelLink">
             <div class="modal-left-part-name">
               Название канала<span> (до 70 символов)</span>
             </div>
-            <input type="text" name="ChannelName" id="ChannelName" />
+            <input type="text" name="ChannelName" id="ChannelName">
             <div class="modal-left-part-name">
               Выберите категорию
             </div>
@@ -755,9 +1312,7 @@
                 <option value="Юмор и развлечения4">Юмор и развлечения4</option>
               </select>
             </span>
-            <button type="submit" class="btn btn-primary w100 mt-175">
-              Добавить канал
-            </button>
+            <button type="submit" class="btn btn-primary w100 mt-175">Добавить канал</button>
           </form>
         </div>
         <div class="modal-right-part">
@@ -765,12 +1320,11 @@
             Добавление канала
           </div>
           <div class="modal-right-part-content">
-            Добавить канал в каталог можно с помощью этой формы или через
-            нашего <b class="tdu">бота</b> в Telegram.
+            Добавить канал в каталог можно с помощью этой формы или через нашего <b class="tdu">бота</b> в Telegram.
           </div>
           <div class="modal-right-part-content">
-            Вне зависимости от выбранного способа
-            <b class="orange-text fz-125">обязательно сделайте бота администратором канала</b>
+            Вне зависимости от выбранного способа <b class="orange-text fz-125">обязательно сделайте бота
+              администратором канала</b>
           </div>
           <div class="goToChannel">
             <i class="fas fa-robot"></i>
@@ -793,7 +1347,6 @@
   <script src="star_rating.js"></script>
   <script src="database.js"></script>
   <script src="dashboard.js"></script>
-  <script src="ChartsScript.js"></script>
 </body>
 
 </html>

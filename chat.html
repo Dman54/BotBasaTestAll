@@ -38,7 +38,7 @@
         <a class="nav-link" href="./shop.html">Корзина</a>
       </li>
       <li class="nav-item d-none">
-        <a class="nav-link" href="./chat.html">Сообщения / Уведомления</a>
+        <a class="nav-link active" href="./chat.html">Сообщения / Уведомления</a>
       </li>
       <li class="nav-item d-none">
         <a class="nav-link" href="./profile.html">Личный кабинет</a>
@@ -66,13 +66,13 @@
         </a>
       </li>
       <li class="nav-item dropdown Fontsizeicon">
-        <a class="nav-link" href="./chat.html">
+        <a class="nav-link active" href="./chat.html">
           <i class="fas fa-comments"></i>
           <span class="messagescount badge badge-danger navbar-badge">1</span>
         </a>
       </li>
       <li class="nav-item dropdown Fontsizeicon">
-        <a class="nav-link" href="./chat.html">
+        <a class="nav-link active" href="./chat.html">
           <i class="fas fa-bell"></i>
           <span class="notificationscount badge badge-warning navbar-badge">2</span>
         </a>
@@ -153,7 +153,7 @@
         <nav data-selectRoleContent_added="0" class="mt-2 displayok">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="nav-item">
-              <a href="./my_channels.html" class="nav-link channels-link active">
+              <a href="./my_channels.html" class="nav-link channels-link">
                 <i class="nav-icon fas fa-tv"></i>
                 <p>
                   Мои каналы
@@ -269,7 +269,7 @@
 
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="./chat.html" class="nav-link channels-link">
+            <a href="./chat.html" class="nav-link channels-link active">
               <i class="nav-icon far fa-comments"></i>
               <p>
                 Сообщения
@@ -290,7 +290,190 @@
       </div>
     </aside>
 
-    <div id="content" class="content-wrapper surfing">
+    <div id="content" class="content-wrapper chatMessages">
+      <div class="container-fluid topbuttons-container">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item d-sm-inline-block">
+            <div class="btn-group">
+              <button type="button" class="btn btn-blue" data-widget="control-sidebar-select-channel" data-slide="true">
+                Сделать рассылку
+              </button>
+              <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#modalCreateChannel">
+                Добавить бота <span class="plus"></span>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="container-fluid">
+        <select class="select-tabs form-control">
+          <option value="0">Все диалоги</option>
+          <option value="1">Бот номер 1</option>
+          <option value="2">Бот номер 2</option>
+        </select>
+        <ul class="nav nav-tabs" id="custom-content-below-tab13" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="custom-content-below-home-tab13" data-toggle="pill"
+              href="#custom-content-below-chatscatalog13" role="tab" aria-controls="custom-content-below-chatscatalog13"
+              aria-selected="false">Все диалоги</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="custom-content-below-profile-tab130" data-toggle="pill"
+              href="#custom-content-below-mychats130" role="tab" aria-controls="custom-content-below-mychats130"
+              aria-selected="false">Бот номер 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="custom-content-below-profile-tab131" data-toggle="pill"
+              href="#custom-content-below-mychats131" role="tab" aria-controls="custom-content-below-mychats131"
+              aria-selected="false">Бот номер 2</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-content" id="custom-content-below-tabContent13">
+        <div class="tab-pane fade active show" id="custom-content-below-chatscatalog13" role="tablist"
+          aria-labelledby="custom-content-below-home-tab13">
+          <div class="chat-dialoges-wrapper">
+            <div class="chat-dialoges nav nav-tabs">
+              <a class="chat-dialoges-item active" data-toggle="pill" href="#chat-dialoges-content0" role="tab">
+                <div class="chat-dialoges-image">
+                  <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
+                    class="b-lazy img-thumbnail b-loaded">
+                </div>
+                <div class="chat-dialoges-right-part">
+                  <div class="chat-dialoges-name">
+                    Уведомления
+                  </div>
+                  <div class="chat-dialoges-lastmessage">
+                    Volutpat ipsum, porttitor id iac...
+                  </div>
+                </div>
+                <div class="chat-dialoges-date">
+                  25.07.20
+                </div>
+              </a>
+              <a class="chat-dialoges-item" data-toggle="pill" href="#chat-dialoges-content1" role="tab">
+                <div class="chat-dialoges-image">
+                  <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
+                    class="b-lazy img-thumbnail b-loaded">
+                </div>
+                <div class="chat-dialoges-right-part">
+                  <div class="chat-dialoges-name">
+                    Служба поддержки
+                  </div>
+                  <div class="chat-dialoges-lastmessage">
+                    Помогите, плиз! Снова не получилось...
+                  </div>
+                </div>
+                <div class="chat-dialoges-date">
+                  01.07.20
+                </div>
+              </a>
+              <a class="chat-dialoges-item" data-toggle="pill" href="#chat-dialoges-content2" role="tab">
+                <div class="chat-dialoges-image">
+                  <img alt="Джо Роган в Телеграмме" src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg"
+                    class="b-lazy img-thumbnail b-loaded">
+                </div>
+                <div class="chat-dialoges-right-part">
+                  <div class="chat-dialoges-name">
+                    Savannah Nguyen
+                  </div>
+                  <div class="chat-dialoges-lastmessage">
+                    Ornare dui, condimentum cras et
+                  </div>
+                </div>
+                <div class="chat-dialoges-date">
+                  25.07.20
+                </div>
+              </a>
+            </div>
+            <div class="tab-content chat-messages" id="custom-content-below-tabContent-all">
+              <div class="tab-pane fade active show" id="chat-dialoges-content0" role="tabpanel"
+                aria-labelledby="custom-content-below-chatscatalog13">
+                <div class="back-to-channels">
+                  <i class="fas fa-arrow-left"></i>
+                </div>
+                <div class="chat-messages-item chat-messages-item-another">
+                  <div class="chat-messages-item-img">
+                    <img src="img/express.jpg" alt="express">
+                  </div>
+                  <div class="chat-messages-item-text">
+                    Diam cursus aliquam metus elit diam in. Elementum augue nisi cras laoreet.
+                  </div>
+                  <div class="chat-messages-item-datetime">17:03</div>
+                </div>
+                <div class="chat-messages-item chat-messages-item-my">
+                  <div class="chat-messages-item-text">
+                    Neque posuere iaculis
+                  </div>
+                  <div class="chat-messages-item-datetime">17:03</div>
+                </div>
+                <div class="chat-messages-item chat-messages-item-my">
+                  <div class="chat-messages-item-text">
+                    Ullamcorper
+                  </div>
+                  <div class="chat-messages-item-datetime">17:03</div>
+                </div>
+                <div class="chat-messages-item chat-messages-item-another">
+                  <div class="chat-messages-item-text">
+                    Venenatis et suspendisse
+                  </div>
+                  <div class="chat-messages-item-datetime">17:03</div>
+                </div>
+                <div class="chat-messages-item chat-messages-item-another">
+                  <div class="chat-messages-item-text">
+                    Sagittis nisi aliquam tortor tellus, neque pellentesque consectetur. Quisque varius aliquam, leo
+                    nunc
+                    nunc, feugiat cras maecenas. Quam sed nisi sed elit a metus, ipsum. Diam cursus aliquam metus elit
+                    diam
+                    in. Elementum augue nisi cras laoreet.
+                  </div>
+                  <div class="chat-messages-item-datetime">17:03</div>
+                </div>
+                <div class="chat-messages-item chat-messages-item-my">
+                  <div class="chat-messages-item-text">
+                    Eget arcu odio vivamus pellentesque tellus enim in eu ut. Viverra magnis ac eu iaculis dictum
+                    facilisis
+                    nullam sed. Sit pellentesque tellus erat sit sed ante nascetur morbi mattis.
+                  </div>
+                  <div class="chat-messages-item-datetime">17:03</div>
+                </div>
+                <div class="chat-messages-item chat-messages-item-another">
+                  <div class="chat-messages-item-text">
+                    Venenatis et suspendisse
+                  </div>
+                  <div class="chat-messages-item-datetime">17:03</div>
+                </div>
+
+                <div class="chat-messages-input">
+                  <i class="fas fa-paperclip"></i>
+                  <input class="form-control" placeholder="input text" value="Pharetra, dapibus odio" type="text"
+                    name="chat-messages-inputtext" id="chat-messages-inputtext">
+                  <i class="far fa-laugh"></i>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="chat-dialoges-content1" role="tabpanel"
+                aria-labelledby="custom-content-below-chatscatalog13">
+                <div class="back-to-channels">
+                  <i class="fas fa-arrow-left"></i>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="chat-dialoges-content2" role="tabpanel"
+                aria-labelledby="custom-content-below-chatscatalog13">
+                <div class="back-to-channels">
+                  <i class="fas fa-arrow-left"></i>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane fade" id="custom-content-below-mychats130" role="tabpanel"
+          aria-labelledby="custom-content-below-profile-tab130">
+        </div>
+        <div class="tab-pane fade" id="custom-content-below-mychats131" role="tabpanel"
+          aria-labelledby="custom-content-below-profile-tab131">
+        </div>
+      </div>
     </div>
 
     <aside id="rightaside" class="control-sidebar">
@@ -553,8 +736,7 @@
   <script src="https://pagination.js.org/dist/2.1.5/pagination.min.js"></script>
   <script src="star_rating.js"></script>
   <script src="database.js"></script>
-  <script src="myScript.js"></script>
-  <script src="ChartsScript.js"></script>
+  <script src="dashboard.js"></script>
 
 </body>
 
