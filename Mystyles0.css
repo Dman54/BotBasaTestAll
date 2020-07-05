@@ -5438,6 +5438,7 @@ a.chat-dialoges-item {
 }
 .shop-order .shop-order-line {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 16px;
 }
 .shop-order .shop-order-line:first-child {
@@ -5452,7 +5453,7 @@ a.chat-dialoges-item {
   margin-right: 20px;
 }
 .shop-order .input-wrapper {
-  width: 100%;
+  width: calc(100% - 240px);
 }
 .shop-order .input-wrapper input[type="text"] {
   width: 100%;
