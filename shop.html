@@ -350,21 +350,20 @@
             <select id="shopfilterSelect" name="shopfilterSelect" class="form-control2">
               <option selected="" disabled="" value="Сортировать по">Сортировать по</option>
               <option value="Название">Название</option>
+              <option value="Подписчики">Подписчики</option>
               <option value="Стоимость">Стоимость рекламы</option>
-              <option value="Условия">Условия рекламы</option>
-              <option value="Тех задание">Тех задание</option>
             </select>
           </span>
+          <div class="filter filter-sort" data-sort="description" data-direction="desc">
+            <span title="Описание канала не более 70 символов">Описание</span>
+            <span></span>
+          </div>
+          <div class="filter filter-sort desc" data-sort="members" data-direction="desc">
+            <span title="Количество подписчиков на данный момент">Подписчики</span>
+            <span></span>
+          </div>
           <div class="filter filter-sort" data-sort="ad_price" data-direction="desc">
             <span title="Стоимость рекламы">Стоимость рекламы</span>
-            <span></span>
-          </div>
-          <div class="filter filter-sort" data-sort="raitings" data-direction="desc">
-            <span title="Условия рекламы">Условия рекламы</span>
-            <span></span>
-          </div>
-          <div class="filter filter-sort" data-sort="favorites" data-direction="desc">
-            <span title="техническое задание">ТЗ</span>
             <span></span>
           </div>
           <div class="filter filter-sort invisible" data-sort="raitings" data-direction="desc">
@@ -373,7 +372,6 @@
           </div>
         </div>
       </div>
-      Корзина: как продвижение, поля: Название канала, стоимость рекламы, условия рекламы, ТЗ. Окно оплаты.
       <div class="inner-left preview" id="shopList">
         <div class="data-container container-fluid channels_list_body sticky-canceller-container">
 
@@ -402,75 +400,26 @@
                 </div>
               </div>
             </div>
+            <div title="Описание канала" class="long-description">
+              Джо Роган в Телеграмме
+            </div>
+            <div class="channel-subscribes-column">
+              <i title="Количество подписчиков на канале" data-widget="control-sidebar2" data-slide="true"
+                class="fas fa-user-friends"></i>
+              <span title="Количество подписчиков на канале" data-widget="control-sidebar2" data-slide="true"
+                class="table-link">
+                7779222
+              </span>
+            </div>
             <div class="buycolumn">
               <div class="buycolumn-text">Реклама:</div>
               <div data-widget="control-sidebar2" data-slide="true" title="Цена рекламы на канале"
                 class="price-info btn btn-blue">
                 <span>12610</span>&nbsp;<span class="fa fa-rub price-icon active"></span>
               </div>
-              <div title="Купить рекламу на канале" class="buy-info">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
             </div>
-            <div title="Условия рекламы канала" class="long-description">
-              Нужно не удалять пост 10 дней...
-            </div>
-            <div title="Техническое задание" class="techzadanie">
-              файлы, инструкции
-            </div>
-            <div title="Посмотреть подробную информацию о канале" class="channel-block-button">
-              <span data-widget="control-sidebar-start-buy" class="btn btn-primary btn-sm r-action-btn">К
-                оплате</span>
-            </div>
-          </div>
-          <div class="channel-info">
-            <input type="text" placeholder="Введите текст заметки">
-          </div>
-
-          <div class="channel top">
-            <div class="channel-first-part">
-              <span class="d-none">-1001205651894</span>
-              <div class="position-relative" data-widget="control-sidebar2" data-slide="true">
-                <img title="Изображение канала" alt="Казино онлайн лицензионное"
-                  src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" class="b-lazy img-thumbnail b-loaded">
-                <span class="verified-channel-img">
-                  <img src="tgstat_images/verified.png" title="У канала есть подтвержденный владелец на сайте LinkBaza">
-                </span>
-              </div>
-              <div class="channel-block-title">
-                <div title="Название канала" class="channel-list-title" data-widget="control-sidebar2"
-                  data-slide="true">
-                  <b>Казино онлайн лицензионное</b>
-                </div>
-                <a title="Переход в данный канал в Telegramе" href="https://ttttt.me/joinchat/AAAAAEDvhYLA-ZoI1386Eg"
-                  target="_blank" class="goToChannel">
-                  <span>Перейти на канал</span>
-                  <i class="fas fa-external-link-alt"></i>
-                </a>
-                <div class="d-none">
-                  <span class="channel_category_id">27</span>
-                </div>
-              </div>
-            </div>
-            <div class="buycolumn">
-              <div class="buycolumn-text">Реклама:</div>
-              <div data-widget="control-sidebar2" data-slide="true" title="Цена рекламы на канале"
-                class="price-info btn btn-blue">
-                <span>34601</span>&nbsp;<span class="fa fa-rub price-icon active"></span>
-              </div>
-              <div title="Купить рекламу на канале" class="buy-info">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-            </div>
-            <div title="Условия рекламы канала" class="long-description">
-              Нужно не удалять пост 10 дней...
-            </div>
-            <div title="Техническое задание" class="techzadanie">
-              файлы, инструкции
-            </div>
-            <div title="Посмотреть подробную информацию о канале" class="channel-block-button">
-              <span data-widget="control-sidebar-start-buy" class="btn btn-primary btn-sm r-action-btn">К
-                оплате</span>
+            <div class="channel-block-button">
+              <input type="checkbox" class="big-checkbox cursor-pointer">
             </div>
           </div>
           <div class="channel-info">
@@ -502,31 +451,112 @@
                 </div>
               </div>
             </div>
+            <div title="Описание канала" class="long-description">
+              БАН
+            </div>
+            <div class="channel-subscribes-column">
+              <i title="Количество подписчиков на канале" data-widget="control-sidebar2" data-slide="true"
+                class="fas fa-user-friends"></i>
+              <span title="Количество подписчиков на канале" data-widget="control-sidebar2" data-slide="true"
+                class="table-link">
+                7779222
+              </span>
+            </div>
             <div class="buycolumn">
               <div class="buycolumn-text">Реклама:</div>
               <div data-widget="control-sidebar2" data-slide="true" title="Цена рекламы на канале"
                 class="price-info btn btn-blue">
                 <span>53410</span>&nbsp;<span class="fa fa-rub price-icon active"></span>
               </div>
-              <div title="Купить рекламу на канале" class="buy-info">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
             </div>
-            <div title="Условия рекламы канала" class="long-description">
-              Нужно не удалять пост 10 дней...
-            </div>
-            <div title="Техническое задание" class="techzadanie">
-              файлы, инструкции
-            </div>
-            <div title="Посмотреть подробную информацию о канале" class="channel-block-button">
-              <span data-widget="control-sidebar-start-buy" class="btn btn-primary btn-sm r-action-btn">К
-                оплате</span>
+            <div class="channel-block-button">
+              <input type="checkbox" class="big-checkbox cursor-pointer">
             </div>
           </div>
           <div class="channel-info">
             <input type="text" placeholder="Введите текст заметки">
           </div>
 
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="shop-results">
+          <div>Итого: <span class="shop-results-price">0</span> <span class="fa fa-rub"></span></div>
+          <div>Аудитория: <span class="shop-results-subscribes">0</span></div>
+        </div>
+        <button type="submit" class="btn btn btn-yellow">Заказать</button>
+        <div class="shop-order d-none">
+          <div class="shop-order-line">
+            <label class="forselect">Выбрать из созданных постов:&emsp;
+              <select id=shop-orderSelect" name="shop-orderSelect" class="form-control2">
+                <option selected="" value="Нет постов">Нет постов</option>
+                <option value="Пост1">Пост1</option>
+                <option value="Пост2">Пост2</option>
+                <option value="Пост3">Пост3</option>
+                <option value="Пост4">Пост4</option>
+              </select>
+            </label>
+            <button type="button" class="btn btn-yellow" data-toggle="modal" data-target="#exampleModalLong">
+              Добавить пост <span class="plus"></span>
+            </button>
+          </div>
+          <div class="shop-order-line">
+            <label for="order_link">Ссылка на ваш проект:</label>
+            <div class="input-wrapper">
+              <input placeholder="https://t.me/linkbazabot" type="text" value="" name="order[link]" id="order_link">
+              <div class="error-wrapper"></div>
+            </div>
+          </div>
+          <div class="shop-order-line">
+            <label for="order_text">Текст рекламной записи:</label>
+            <div class="input-wrapper">
+              <textarea placeholder="Аренда машин в Москве по низким ценам только на vk.com/rent_car_moscow!"
+                name="order[text]" id="order_text"></textarea>
+              <div class="error-wrapper"></div>
+            </div>
+          </div>
+          <div class="shop-order-line form-image-field">
+            <label for="order_image">Изображение:</label>
+            <div class="input-wrapper file_upload">
+              <div class="upload-btn-wrapper">
+                <input placeholder="Изображение" type="file" name="order[image]" id="order_image">
+              </div>
+              <div class="field_hint">
+                Формат изображений: jpg, png, не более 1280х1080px
+              </div>
+              <div class="error-wrapper"></div>
+            </div>
+          </div>
+          <div class="shop-order-line textarea_row">
+            <label for="order_start_date">Дата выполнения:</label>
+            <div class="input-wrapper">
+              <div class="input-two-wrapper">
+                <input type="datetime-local" name="order[start_date]" id="order_start_date">
+                <span>или</span>
+                <input name="order[without_date]" type="hidden" value="0"><input type="checkbox" value="1"
+                  checked="checked" name="order[without_date]" id="order_without_date">
+                <label for="order_without_date">В самое ближайшее время</label>
+              </div>
+              <div class="error-wrapper"></div>
+            </div>
+          </div>
+          <div class="shop-order-line textarea_row">
+            <label for="order_comment">Пожелания?:</label>
+            <div class="input-wrapper">
+              <textarea
+                placeholder="Укажите отдельные пожелания к форматированию (оформлению) поста или любую другую информацию, которую должен учесть Вебмастер при публикации вашего проекта. Пожелания Рекламодателя в заявке являются обязательными к исполнению."
+                name="order[comment]" id="order_comment"></textarea>
+              <div class="error-wrapper"></div>
+            </div>
+          </div>
+          <div class="rules_checkbox_wrapper">
+            <input name="order[rules]" type="hidden" value="0"><input type="checkbox" value="1" name="order[rules]"
+              id="order_rules">
+            <label for="order_rules">Ознакомлен с <a target="_blank" href="./help.html">Правилами пользования
+                сервисом</a></label>
+            <div class="error-wrapper"></div>
+          </div>
+          <button type="submit" class="btn btn btn-yellow">К оплате</button>
         </div>
       </div>
     </div>
@@ -708,25 +738,25 @@
                   </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="exampleModalLong1" role="tabpanel"
+              <div class="tab-pane fade posts-types" id="exampleModalLong1" role="tabpanel"
                 aria-labelledby="custom-content-below-profile-exampleModalLong">
                 <div>
                   <span class="custom-control custom-checkbox">
-                    <input id="usetype1" name="usetype1" type="checkbox" checked="checked" class="custom-control-input">
+                    <input id="usetype1" name="usetype" type="radio" checked="checked" class="custom-control-input">
                     <label for="usetype1" class="custom-control-label form-check-label"></label>
                   </span>
                   <span>Тип поста 1</span>
                 </div>
                 <div>
                   <span class="custom-control custom-checkbox">
-                    <input id="usetype2" name="usetype2" type="checkbox" checked="checked" class="custom-control-input">
+                    <input id="usetype2" name="usetype" type="radio" class="custom-control-input">
                     <label for="usetype2" class="custom-control-label form-check-label"></label>
                   </span>
                   <span>Тип поста 2</span>
                 </div>
                 <div>
                   <span class="custom-control custom-checkbox">
-                    <input id="usetype3" name="usetype3" type="checkbox" checked="checked" class="custom-control-input">
+                    <input id="usetype3" name="usetype" type="radio" class="custom-control-input">
                     <label for="usetype3" class="custom-control-label form-check-label"></label>
                   </span>
                   <span>Тип поста 3</span>
@@ -734,39 +764,116 @@
               </div>
               <div class="tab-pane fade" id="exampleModalLong2" role="tabpanel"
                 aria-labelledby="custom-content-below-messages-exampleModalLong">
-                <textarea name="posts-textarea"
-                  id="posts-textarea">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor aliquam ullamcorper arcu et dui nibh venenatis. Justo sem justo adipiscing sapien sit elit, id sed. Congue sed diam ac praesent euismod convallis scelerisque iaculis dictum.</textarea>
+                <div id="posts-textarea" class="posts-textarea-editor" contenteditable>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor aliquam ullamcorper arcu et dui
+                    nibh venenatis. Justo sem justo adipiscing sapien sit elit, id sed. Congue sed diam ac praesent
+                    euismod convallis scelerisque iaculis dictum.</p>
+                </div>
+                <!-- <textarea name="posts-textarea"
+                  id="posts-textarea">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor aliquam ullamcorper arcu et dui nibh venenatis. Justo sem justo adipiscing sapien sit elit, id sed. Congue sed diam ac praesent euismod convallis scelerisque iaculis dictum.</textarea> -->
                 <div class="posts-textarea-tools">
-                  <b>жирный</b>
-                  <i>курсив</i>
-                  <s>зачёркнутый</s>
-                  <i class="far fa-laugh"></i>
+                  <b onlick='document.execCommand("bold", false, "");return false;'>жирный</b>
+                  <i onlick='document.execCommand("italic", false, "");return false;'>курсив</i>
+                  <s onlick='document.execCommand("strikeThrough", false, "");return false;'>зачёркнутый</s>
+                  <span class="far fa-laugh"></span>
                 </div>
               </div>
               <div class="tab-pane fade" id="exampleModalLong3" role="tabpanel"
                 aria-labelledby="custom-content-below-profile-exampleModalLong1">
-                Добавьте изображения, видео или любой другой файл, выбрав их на компьтере или перетащите в это окно
-                <img src="./NoAvatarChannel_300x300.png" alt="test">
-                <img src="./NoAvatarChannel_300x300.png" alt="test">
-                Изображения альбомом
-                Изображения
-                отдельными файлами
-                Как документ (без сжатия)
+                <p>Добавьте изображения, видео или любой другой файл, выбрав их на компьтере или перетащите в это окно
+                </p>
+                <div class="post-create-images">
+                  <img src="./NoAvatarChannel_300x300.png" alt="test">
+                  <img src="./NoAvatarChannel_300x300.png" alt="test">
+                  <img src="./NoAvatarChannel_300x300.png" alt="test">
+                  <img src="./NoAvatarChannel_300x300.png" alt="test">
+                  <div class="img-holder"><label for="post_image">+</label>
+                    <input placeholder="Изображение" type="file" name="post[image]" id="post_image">
+                  </div>
+                </div>
+
+                <div class="posts-images-type">
+                  <span class="custom-control custom-checkbox">
+                    <input id="imagesView1" name="imagesView" type="radio" checked="checked"
+                      class="custom-control-input">
+                    <label for="imagesView1" class="custom-control-label form-check-label"></label>
+                  </span>
+                  <span>Изображения альбомом</span>
+                </div>
+                <div class="posts-images-type">
+                  <span class="custom-control custom-checkbox">
+                    <input id="imagesView2" name="imagesView" type="radio" checked="checked"
+                      class="custom-control-input">
+                    <label for="imagesView2" class="custom-control-label form-check-label"></label>
+                  </span>
+                  <span>Изображения отдельными файлами</span>
+                </div>
+                <div class="posts-images-type">
+                  <span class="custom-control custom-checkbox">
+                    <input id="imagesView3" name="imagesView" type="radio" checked="checked"
+                      class="custom-control-input">
+                    <label for="imagesView3" class="custom-control-label form-check-label"></label>
+                  </span>
+                  <span>Как документ (без сжатия)</span>
+                </div>
+
               </div>
               <div class="tab-pane fade" id="exampleModalLong4" role="tabpanel"
                 aria-labelledby="custom-content-below-messages-exampleModalLong1">
-                Выберите эмодзи и добавьте текст, если он требуется
-                Нравится
-                Не нравится
-                Введите текст
+                <p>Выберите эмодзи и добавьте текст, если он требуется</p>
+                <div class="posts-reaction">
+                  <div class="posts-reaction-icon"><i class="fas fa-thumbs-up"></i></div>
+                  <div class="posts-reaction-text">Нравится</div>
+                  <div class="posts-reaction-delete">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+                <div class="posts-reaction">
+                  <div class="posts-reaction-icon"><i class="fas fa-thumbs-down"></i></div>
+                  <div class="posts-reaction-text">Не нравится</div>
+                  <div class="posts-reaction-delete">
+                    <i class="fas fa-times"></i>
+                  </div>
+                </div>
+                <div class="posts-reaction">
+                  <div class="posts-reaction-icon"><span class="far fa-laugh"></span></div>
+                  <div class="posts-reaction-text"><input type="text" placeholder="Введите текст"></div>
+                  <div class="posts-reaction-delete">
+                    <i class="fas fa-times"></i>
+                  </div>
+                  <div class="posts-reaction-add">
+                    <i class="fas fa-plus"></i>
+                  </div>
+                </div>
               </div>
               <div class="tab-pane fade" id="exampleModalLong5" role="tabpanel"
                 aria-labelledby="custom-content-below-profile-exampleModalLong2">
-                Выберите текст кнопки и ссылку
-                Открыть сайт
-                https://www.google.com
-                Текст кнопки
-                Введите ссылку
+                <p>Выберите текст кнопки и ссылку</p>
+                <div class="posts-button">
+                  <div class="posts-button-left">
+                    <div class="posts-button-text">Открыть сайт</div>
+                    <div class="posts-button-href">https://www.google.com</div>
+                  </div>
+                  <div class="posts-button-right">
+                    <div class="posts-reaction-delete">
+                      <i class="fas fa-times"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="posts-button">
+                  <div class="posts-button-left">
+                    <div class="posts-button-text"><input type="text" placeholder="Текст кнопки"></div>
+                    <div class="posts-button-href"><input type="text" placeholder="Введите ссылку"></div>
+                  </div>
+                  <div class="posts-button-right">
+                    <div class="posts-reaction-delete">
+                      <i class="fas fa-times"></i>
+                    </div>
+                    <div class="posts-reaction-add">
+                      <i class="fas fa-plus"></i>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

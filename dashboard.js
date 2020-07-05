@@ -642,10 +642,95 @@ $('.buy-info').on('click', function (e) {
   elWithColItemsToBuy.html(+elWithColItemsToBuy.html() + 1);
 });
 
-// $('.posts-textarea-tools >*').on('click', function (e) {
-//   let curindex = $(this).index('.posts-textarea-tools >*');
-// });
 $('.filter-category').on('click', function (e) {
   $('.filter-category').parent().removeClass('active');
   $(this).parent().addClass('active');
 });
+
+$('.channel-block-button input[type="checkbox"]').on('change', function (e) {
+  let allPrice = 0;
+  let allSubscribes = 0;
+  $('.shop .channel').each(function (e) {
+    if ($(this).find('input[type="checkbox"]').is(":checked")) {
+      allPrice += +$(this).find('.channel-subscribes-column span').text();
+      allSubscribes += +$(this).find('.buycolumn span:not(.fa)').text();
+    }
+  });
+  $('.shop-results-price').html(allPrice);
+  $('.shop-results-subscribes').html(allSubscribes);
+});
+
+$('.shop button[type="submit"]').on('click', function (e) {
+  $('.shop-order').toggleClass('d-none');
+});
+
+// $('.posts-textarea-tools >*').on('click', function (e) {
+//   let curindex = $(this).index('.posts-textarea-tools >*');
+// });
+
+// function format(command, value) {
+//   // value = window.getSelection().toString();
+//   // console.log(command);
+//   // console.log(value);
+//   document.execCommand(command, false, "");
+// }
+
+// $(".posts-textarea-tools b").on('click', function (e) {
+//   e.preventDefault();
+//   document.execCommand("bold", false, null);
+//   return;
+// })
+
+// var editButtons = document.querySelectorAll(".posts-textarea-tools>*");
+
+// [].forEach.call(editButtons, function (el) {
+//   el.addEventListener("click", edit, false);
+// });
+
+// function edit(event) {
+//   event.preventDefault();
+//   let tgN = this.tagName;
+//   if (tgN == "B") {
+//     cmd = "bold";
+//   } else if (tgN == "I") {
+//     cmd = "italic";
+//   } else if (tgN == "S") {
+//     cmd = "strikeThrough";
+//   } else {
+//     cmd = "delete";
+//   }
+//   document.execCommand(cmd, false, null);
+// }
+
+// var editor = document.getElementById("posts-textarea");
+// // Just tackling one of the more cross-browser contenteditable nightmares:
+// function fixEmptyEditor(event) {
+//   // When all content is removed - make sure we always have an empty paragraph
+//   var html = this.innerHTML.replace(/^\s*(&nbsp;\s*)+/g, "").replace(/^\s+|\s+$/g, "");
+//   if (html === "" || html === "<br>" || html === "</br>") {
+//     this.innerHTML = "<p><br></p>";
+//     var rng = document.createRange(),
+//       sel = window.getSelection();
+//     rng.setStart(this.childNodes[0], 0);
+//     rng.collapse(true);
+//     sel.removeAllRanges();
+//     sel.addRange(rng);
+//     event.preventDefault();
+//   }
+// }
+// editor.addEventListener("input", fixEmptyEditor, false);
+
+// $('').on('click', function (e) {
+//   e.preventDefault();
+//   let tgN = $(this).prop("tagName");
+//   if (tgN == "B") {
+//     document.execCommand("bold", false);
+//     format("bold");
+//   } else if (tgN == "I") {
+//     format("italic");
+//   } else if (tgN == "S") {
+//     format("strikeThrough");
+//   } else {
+//     format('none');
+//   }
+// });
