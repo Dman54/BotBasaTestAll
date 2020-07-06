@@ -664,10 +664,6 @@ $('.shop button[type="submit"]').on('click', function (e) {
   $('.shop-order').toggleClass('d-none');
 });
 
-// $('.posts-textarea-tools >*').on('click', function (e) {
-//   let curindex = $(this).index('.posts-textarea-tools >*');
-// });
-
 // function format(command, value) {
 //   // value = window.getSelection().toString();
 //   // console.log(command);
@@ -720,17 +716,20 @@ $('.shop button[type="submit"]').on('click', function (e) {
 // }
 // editor.addEventListener("input", fixEmptyEditor, false);
 
-// $('').on('click', function (e) {
-//   e.preventDefault();
-//   let tgN = $(this).prop("tagName");
-//   if (tgN == "B") {
-//     document.execCommand("bold", false);
-//     format("bold");
-//   } else if (tgN == "I") {
-//     format("italic");
-//   } else if (tgN == "S") {
-//     format("strikeThrough");
-//   } else {
-//     format('none');
-//   }
-// });
+$('.posts-textarea-tools>*').on('click', function (e) {
+  let curindex = $(this).index('.posts-textarea-tools >*');
+  e.preventDefault();
+  switch (curindex) {
+    case 0:
+      document.execCommand("bold", false);
+      break;
+    case 1:
+      document.execCommand("italic", false);
+      break;
+    case 2:
+      document.execCommand("strikeThrough", false);
+      break;
+    default:
+      break;
+  }
+});

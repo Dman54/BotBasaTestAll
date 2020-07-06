@@ -2013,12 +2013,18 @@ a.table-link:hover {
   color: #959595;
   font-size: 12px;
   cursor: pointer;
+  border: none;
+  outline: none;
 }
 .posts-textarea-tools > *:last-child {
   color: #E4E4E4;
   font-size: 30px;
   cursor: pointer;
   line-height: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+}
 }
 
 .center {
