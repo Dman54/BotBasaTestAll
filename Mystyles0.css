@@ -378,9 +378,9 @@ section.help {
   margin-bottom: 0;
 }
 
-.short-description {
-  /* font-size: 0.875rem; */
-}
+/* .short-description {
+  font-size: 0.875rem;
+} */
 
 .subscibes-count {
   margin: 0.5rem auto 0.875rem auto;
@@ -2024,7 +2024,6 @@ a.table-link:hover {
   border: none;
   outline: none;
   background: transparent;
-}
 }
 
 .center {
