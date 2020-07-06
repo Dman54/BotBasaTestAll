@@ -1,3 +1,6 @@
+p {
+  margin-bottom: 0;
+}
 .main-body_added .nav-header_added .navbar-nav_added.displayok li a.nav-link.active {
   color: rgba(0, 0, 0, 0.9);
 }
@@ -1038,16 +1041,24 @@ div.filter-sort.asc span {
   /* text-decoration: none; */
   font-weight: bold;
 }
-
-div.filter-sort.desc a:last-child:after,
-div.filter-sort.desc span:last-child:after {
+div.filter-sort.desc a:first-child:after,
+div.filter-sort.desc span:first-child:after {
   content: "↓";
 }
-
-div.filter-sort.asc a:last-child:after,
-div.filter-sort.asc span:last-child:after {
+div.filter-sort.asc a:first-child:after,
+div.filter-sort.asc span:first-child:after {
   content: "↑";
 }
+
+/* div.filter-sort.desc a:last-child:after,
+div.filter-sort.desc span:last-child:after {
+  content: "↓";
+} */
+
+/* div.filter-sort.asc a:last-child:after,
+div.filter-sort.asc span:last-child:after {
+  content: "↑";
+} */
 
 .filter-sort {
   text-align: center;
@@ -1320,6 +1331,8 @@ a.table-link:hover {
 
 .channel-name {
   font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
   margin-bottom: 0;
   font-family: "Roboto";
   max-height: 1.875rem;
@@ -1374,7 +1387,8 @@ a.table-link:hover {
   /* margin-right: 1.75rem; */
 }
 
-.channel-adprice-number span.fa {
+.channel-adprice-number span.fa,
+.channel-adprice-number i.fa {
   font-size: 1rem;
 }
 .channel-adprice-number input {
@@ -2809,11 +2823,11 @@ select#PagesCounter.form-control2 {
 .channel-stats>.small-box:last-child {
   margin-right: 0;
 }
-.channel-stats .small-box p {
+.channel-stats .small-box .text {
   font-size: 14px;
   margin-bottom: 0;
 }
-.channel-stats .small-box h3 {
+.channel-stats .small-box .count {
   font-size: 24px;
   font-weight: bold;
   line-height: 1;
@@ -3746,7 +3760,6 @@ a.chat-dialoges-item {
   line-height: 1;
   cursor: pointer;
 }
-
 
 .surfing .carousel-item-content {
   flex-direction: column;
@@ -4914,8 +4927,11 @@ a.chat-dialoges-item {
   .channel.new.top:before,
   .channel.new.top:after {
     line-height: 1rem;
+    left: 13px;
   }
-
+  .channels_list_body div.channel {
+    padding: 10px 0.5rem 10px 1.125rem;
+  }
   .chat-messages {
     padding: 10px 12px;
   }
@@ -5603,3 +5619,6 @@ a.chat-dialoges-item {
 /* .post-create-images img:nth-child(4n) {
   margin-right: 0;
 } */
+.card-title {
+  line-height: 1.2;
+}

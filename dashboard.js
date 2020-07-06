@@ -131,12 +131,12 @@ function DrawRightSidebar(element) {
         <img src="tgstat_images/4c56ff4ce4aaf9573aa5dff913df997a.jpg" alt="${element.title}<">
       </div>
       <div class="channel-header">
-        <h3 class="channel-name">${element.title}</h3>
+        <div class="channel-name">${element.title}</div>
         <div class="channel-category">Юмор и развлечения</div>
       </div>
     </div>
     <div class="channel-description">
-      ${element.description}
+      <p>${element.description}</p>
     </div>
     <div class="channel-adprice">
       <div class="channel-adprice-name">
