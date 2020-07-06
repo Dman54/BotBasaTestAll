@@ -494,7 +494,7 @@
         <div class="shop-order d-none">
           <div class="shop-order-line">
             <label class="forselect">Выбрать из созданных постов:&emsp;
-              <select id=shop-orderSelect" name="shop-orderSelect" class="form-control2">
+              <select id="shop-orderSelect" name="shop-orderSelect" class="form-control2">
                 <option selected="" value="Нет постов">Нет постов</option>
                 <option value="Пост1">Пост1</option>
                 <option value="Пост2">Пост2</option>
@@ -525,7 +525,7 @@
             <label for="order_image">Изображение:</label>
             <div class="input-wrapper file_upload">
               <div class="upload-btn-wrapper">
-                <input placeholder="Изображение" type="file" name="order[image]" id="order_image">
+                <input type="file" name="order[image]" id="order_image">
               </div>
               <div class="field_hint">
                 Формат изображений: jpg, png, не более 1280х1080px
@@ -792,10 +792,18 @@
                 <!-- <textarea name="posts-textarea"
                   id="posts-textarea">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Porttitor aliquam ullamcorper arcu et dui nibh venenatis. Justo sem justo adipiscing sapien sit elit, id sed. Congue sed diam ac praesent euismod convallis scelerisque iaculis dictum.</textarea> -->
                 <div class="posts-textarea-tools">
-                  <b onlick='document.execCommand("bold", false, "");return false;'>жирный</b>
-                  <i onlick='document.execCommand("italic", false, "");return false;'>курсив</i>
-                  <s onlick='document.execCommand("strikeThrough", false, "");return false;'>зачёркнутый</s>
-                  <span class="far fa-laugh"></span>
+                  <div onlick='document.execCommand("bold", false, "");return false;'>
+                    <b>жирный</b>
+                  </div>
+                  <div onlick='document.execCommand("italic", false, "");return false;'>
+                    <i>курсив</i>
+                  </div>
+                  <div onlick='document.execCommand("strikeThrough", false, "");return false;'>
+                    <s>зачёркнутый</s>
+                  </div>
+                  <div>
+                    <span class="far fa-laugh"></span>
+                  </div>
                 </div>
               </div>
               <div class="tab-pane fade" id="exampleModalLong3" role="tabpanel"
@@ -808,7 +816,7 @@
                   <img src="./NoAvatarChannel_300x300.png" alt="test">
                   <img src="./NoAvatarChannel_300x300.png" alt="test">
                   <div class="img-holder"><label for="post_image">+</label>
-                    <input placeholder="Изображение" type="file" name="post[image]" id="post_image">
+                    <input type="file" name="post[image]" id="post_image">
                   </div>
                 </div>
 

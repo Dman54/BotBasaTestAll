@@ -2018,6 +2018,7 @@ a.table-link:hover {
   color: #E4E4E4;
   font-size: 30px;
   cursor: pointer;
+  line-height: 1;
 }
 
 .center {
