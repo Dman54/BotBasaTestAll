@@ -20,12 +20,12 @@ li.clearfix {
   float: none !important;
   margin: 0 !important;
 }
-.catalog-page #channelsList .buycolumn {
+/* .catalog-page #channelsList .buycolumn {
   visibility: hidden;
 }
 .catalog-page #channelsList .channels_list_body div.channel > *:nth-child(8) {
   visibility: hidden;
-}
+} */
 /* .editable-el {
   border: 1px solid #007BFF;
   background-color: #fff;
